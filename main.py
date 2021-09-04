@@ -60,6 +60,16 @@ def vai():
     # starting and empty input default
     return render_template("vai.html", name1="World")
 
+@app.route('/siya/', methods=['GET', 'POST'])
+def siya():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("siya.html", name1=name)
+    # starting and empty input default
+    return render_template("siya.html", name1="World")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
