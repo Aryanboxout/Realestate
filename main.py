@@ -32,8 +32,8 @@ def stub():
     return render_template("stub.html")
 
 
-@app.route('/siya/', methods=['GET', 'POST'])
-def siya():
+@app.route('/vai/', methods=['GET', 'POST'])
+def vai():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
