@@ -8,7 +8,8 @@ app = Flask(__name__)
 # connects default URL of server to render kangaroos.html
 @app.route('/')
 def index():
-        return render_template("index.html")
+    return render_template("index.html")
+
 
 # connects /kangaroos path to render kangaroos.html
 @app.route('/kangaroos/')
@@ -60,6 +61,7 @@ def vai():
     # starting and empty input default
     return render_template("vai.html", name1="World")
 
+
 @app.route('/siya/', methods=['GET', 'POST'])
 def siya():
     # submit button has been pushed
@@ -69,6 +71,7 @@ def siya():
             return render_template("siya.html", name1=name)
     # starting and empty input default
     return render_template("siya.html", name1="World")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
