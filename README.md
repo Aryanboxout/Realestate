@@ -18,7 +18,7 @@
 
 ## Pair Share Journals
 ####[Link to Arushi and Prisha's folder](https://drive.google.com/drive/folders/1lAGEYf1xUNd2nVyBDTbtBG3iw19oqlLf?usp=sharing)
-#### [Link to Vaishavi and Siya's folder]()
+#### [Link to Vaishavi and Siya's folder](https://drive.google.com/drive/folders/1WgWdcEz5cxUhApYIO5JbOppFFExOk9yT?usp=sharing)
 
 ## Ideation
 ### Main Idea:
