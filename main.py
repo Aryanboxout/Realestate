@@ -73,6 +73,16 @@ def siya():
     return render_template("siya.html", name1="World")
 
 
+@app.route('/binary/')
+def binary():
+    return render_template("binary.html")
+
+
+@app.route('/mini_labs/')
+def mini_labs():
+    return render_template("mini_labs.html")
+
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
