@@ -28,7 +28,7 @@
 #### Organize with Bootstrap menu. 
 #### Add drop down menu and search bar in navbar. 
 #### Use embed function to show different pictures of technology. 
-####Use hrefs to embed links to personal about pages. Also use hrefs to send users to different places based on what they click.
+#### Use hrefs to embed links to personal about pages. Also use hrefs to send users to different places based on what they click.
 ### [Initial Project Wireframe](https://www.figma.com/file/34Q5XZSHGzzPKVHUDV0Jsl/Untitled?node-id=0%3A1)
 #
 ## Implementation progress <a id="progress" name="progress"></a>
