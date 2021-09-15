@@ -17,7 +17,7 @@
 | Siya Dixit | [@siya-dixit](https://github.com/siya-dixit) | [Tasks](https://github.com/arushi10/flask_portfolio/issues/assigned/siya-dixit) | [Scrum Board](https://github.com/arushi10/flask_portfolio/projects/1) | [Commits](https://github.com/arushi10/flask_portfolio/commits?author=siya-dixit)
 
 ## Pair Share Journals
-####[Link to Arushi and Prisha's folder](https://drive.google.com/drive/folders/1lAGEYf1xUNd2nVyBDTbtBG3iw19oqlLf?usp=sharing)
+#### [Link to Arushi and Prisha's folder](https://drive.google.com/drive/folders/1lAGEYf1xUNd2nVyBDTbtBG3iw19oqlLf?usp=sharing)
 #### [Link to Vaishavi and Siya's folder](https://drive.google.com/drive/folders/1WgWdcEz5cxUhApYIO5JbOppFFExOk9yT?usp=sharing)
 
 ## Ideation
