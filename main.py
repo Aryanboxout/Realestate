@@ -37,7 +37,7 @@ def arushi():
         if len(name) != 0:  # input field has content
             return render_template("arushi.html", name1=name)
     # starting and empty input default
-    return render_template("arushi.html", name1="World")
+    return render_template("arushi.html", name1="TechFish User")
 
 
 @app.route('/prisha/', methods=['GET', 'POST'])
@@ -48,7 +48,7 @@ def prisha():
         if len(name) != 0:  # input field has content
             return render_template("prisha.html", name1=name)
     # starting and empty input default
-    return render_template("prisha.html", name1="World")
+    return render_template("prisha.html", name1="TechFish User")
 
 
 @app.route('/vai/', methods=['GET', 'POST'])
@@ -59,7 +59,7 @@ def vai():
         if len(name) != 0:  # input field has content
             return render_template("vai.html", name1=name)
     # starting and empty input default
-    return render_template("vai.html", name1="World")
+    return render_template("vai.html", name1="TechFish User")
 
 
 @app.route('/siya/', methods=['GET', 'POST'])
@@ -70,7 +70,7 @@ def siya():
         if len(name) != 0:  # input field has content
             return render_template("siya.html", name1=name)
     # starting and empty input default
-    return render_template("siya.html", name1="World")
+    return render_template("siya.html", name1="TechFish User")
 
 
 @app.route('/binary/')
@@ -81,6 +81,10 @@ def binary():
 @app.route('/mini_labs/')
 def mini_labs():
     return render_template("mini_labs.html")
+
+@app.route('/explore/')
+def explore():
+    return render_template("explore.html")
 
 
 # runs the application on the development server
