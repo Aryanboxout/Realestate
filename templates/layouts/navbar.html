@@ -1,3 +1,10 @@
+<head>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+</head>
 <!-- Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
@@ -9,14 +16,25 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
+            <a class="nav-link" href={{ url_for('index') }}>Home</a>
             <!-- stub is shown using the name of the route -->
-            <a class="nav-link" href="{{ url_for('arushi') }}">Arushi</a>
-            <a class="nav-link" href="{{ url_for('prisha') }}">Prisha</a>
-            <a class="nav-link" href="{{ url_for('vai') }}">Vaishavi</a>
-            <a class="nav-link" href="{{ url_for('siya') }}">Siya</a>
-            <a class="nav-link" href="{{ url_for('binary') }}">Binary</a>
-            <a class="nav-link" href="{{ url_for('mini_labs') }}">Mini_labs</a>
+            <a class="nav-link" href="{{ url_for('arushi') }}">Explore</a>
+            <a class="nav-link" href="{{ url_for('prisha') }}">Shop</a>
+            <a class="nav-link" href="{{ url_for('vai') }}">Cart</a>
+            <a class="nav-link" href="{{ url_for('siya') }}">Mission</a>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Extra
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ url_for('binary') }}">Binary</a>
+                        <a class="dropdown-item" href="{{ url_for('mini_labs') }}">Mini_labs</a>
+                    </div>
+                </li>
+            </div>
 
         </div>
     </div>
