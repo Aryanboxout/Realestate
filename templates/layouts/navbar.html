@@ -18,9 +18,9 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="nav-link" href={{ url_for('index') }}>Home</a>
             <!-- stub is shown using the name of the route -->
-            <a class="nav-link" href={{ url_for('arushi') }}>Explore</a>
-            <a class="nav-link" href={{ url_for('prisha') }}>Shop</a>
-            <a class="nav-link" href={{ url_for('vai') }}>Cart</a>
+            <a class="nav-link" href={{ url_for('explore') }}>Explore</a>
+            <a class="nav-link" href={{ url_for('index') }}>Shop</a>
+            <a class="nav-link" href={{ url_for('index') }}>Cart</a>
 
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -38,8 +38,6 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         About Us
                     </a>
-                    </div>
-
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="nav-link" href="{{ url_for('arushi') }}">Arushi</a>
                         <a class="nav-link" href="{{ url_for('prisha') }}">Prisha</a>
