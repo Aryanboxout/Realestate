@@ -13,7 +13,7 @@
            send initial value and updated values to form via Python render_template -->
 <!-- Hack: use 8 as default
        Change to an input box-->
-{% set BITS = 16 %}
+{% set BITS = 8 %}
 {% set MAX = ((2 ** BITS) - 1) %}
 
 <!-- Hack: Set bulbs and pass as variables via Python render_template
@@ -26,6 +26,12 @@
 
 {% block body %}
     <title>Binary page</title>
+    <div class="col-12">
+        <form>
+            <label for="BITS">Number of BITS?</label>
+            <input BITS="BITS" id="BITS">
+            <input type="submit" value="submit">
+        </form>
     <script>
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
         // return string with current value of each bit
@@ -44,7 +50,7 @@
             // DOM assignment to Hexadecimal conversion
             document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
             // DOM assignment to Decimal conversion
-            document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(7);
+            document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
             /* Hack: show ASCII printable character(s) for each 8 bits
              DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
              below ASCII for more ideas of where to make changes
