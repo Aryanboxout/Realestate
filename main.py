@@ -11,24 +11,6 @@ def index():
     return render_template("index.html")
 
 
-# connects /kangaroos path to render kangaroos.html
-@app.route('/kangaroos/')
-def kangaroos():
-    return render_template("kangaroos.html")
-
-
-# connects /walruses path to render walruses.html
-@app.route('/walruses/')
-def walruses():
-    return render_template("walruses.html")
-
-
-# connects /walruses path to render walruses.html
-@app.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
-
-
 @app.route('/arushi/', methods=['GET', 'POST'])
 def arushi():
     # submit button has been pushed
@@ -97,6 +79,30 @@ def explore():
             return render_template("explore.html", name1=name)
     # starting and empty input default
     return render_template("explore.html", name1=" ")
+
+
+@app.route('/cart/', methods=['GET', 'POST'])
+def cart():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("cart.html", name1=name)
+    # starting and empty input default
+    return render_template("cart.html", name1=" ")
+
+@app.route('/blog')
+def blog():
+    return'''
+     <html>
+    <head>Techfish  Home . . . Explore . . . Cart . . . Account . . . Mini Labs . . . About Us . . . </head>
+    <body>
+        <h2> Welcome to TechFish, the best place to buy the best waterproof tech gear! </h2>
+        <p> We sell waterproof tech gear! </p>
+    </body>
+    </html>
+    '''
+
 
 
 # runs the application on the development server
