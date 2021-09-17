@@ -2,7 +2,7 @@
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
-{% set project = "Explore" %}
+{% set project = "Arushi's" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
@@ -10,13 +10,13 @@
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
 
         <div class="col-12">
-            <p>Searching for: {{name1}}</p>
+            <p>What would you like to shop for? {{name1}}</p>
         </div>
         <div class="col-12">
             <form action= "/explore/" id="explore" method="POST">
-                <label for="explore">What would you like to shop for?</label>
+                <label for="name">Search </label>
                 <input name="name" id="name">
-                <input type="submit" value="Search">
+                <input type="submit" value="Submit">
             </form>
         </div>
         <div class="col-12">
@@ -30,5 +30,6 @@
 <!- This is turning off birds background from base.html -->
 {% block background %}
 {% endblock %}
+
 
 

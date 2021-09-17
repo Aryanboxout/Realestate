@@ -82,9 +82,16 @@ def binary():
 def mini_labs():
     return render_template("mini_labs.html")
 
-@app.route('/explore/')
+
+@app.route('/explore/', methods=['GET', 'POST'])
 def explore():
-    return render_template("explore.html")
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("explore.html", name1=name)
+    # starting and empty input default
+    return render_template("explore.html", name1=" ")
 
 
 # runs the application on the development server
