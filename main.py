@@ -91,6 +91,17 @@ def cart():
     # starting and empty input default
     return render_template("cart.html", name1=" ")
 
+
+@app.route('/account/', methods=['GET', 'POST'])
+def account():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("account.html", name1=name)
+    # starting and empty input default
+    return render_template("account.html", name1=" ")
+
 @app.route('/blog')
 def blog():
     return'''
