@@ -37,4 +37,4 @@
 | Week 0 | [video](https://drive.google.com/file/d/1BAJstuaF_2IjEaQy2tUoSbzXyshC-5Yw/view?usp=sharing), [slideshow](https://docs.google.com/presentation/d/1DXjuatCa1kNI5u5Jn1TSqNIcV9H1_o0ji6_ceScYdmM/edit?usp=sharing), [journals](https://drive.google.com/drive/folders/1Uk1q0Qu81vBN7ehMrA7DYf6q5P8glnQZ?usp=sharing)| 
 | Week 1 and Week 2 | [video](https://drive.google.com/file/d/1I_GtPVAsDd5E7xhBEfZXf8Jyouk7Bt-n/view?usp=sharing), [Greet code](https://github.com/arushi10/flask_portfolio/commit/6f03deaea91f89a59362b42591b5e2bef2684508)| 
 | Week 3 | [repository - README with Markdown, Mini-labs with Bootstrap Grid layout](https://github.com/arushi10/flask_portfolio/commit/f11ff293e6c28d6c18ad01d663c4f4270dc7d63b) |
-| Week 4 | [repository - binary, dropdown menu](https://github.com/arushi10/flask_portfolio/commit/7322211edfaef51ae5a65dde9fec1b23188fa3b2), [video]()|
+| Week 4 | [repository - binary, dropdown menu](https://github.com/arushi10/flask_portfolio/commit/7322211edfaef51ae5a65dde9fec1b23188fa3b2), [video](https://drive.google.com/file/d/1TJr9IsJiK7rCQFlS2qPCeEa0G2FSUPJe/view)|
