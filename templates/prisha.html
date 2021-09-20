@@ -2,25 +2,15 @@
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
-{% set project = "Prisha's" %}
+{% set project = "Vaishavi's" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-    <!- Try building a new body here ->
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
-
         <div class="col-12">
-            <p>Hello, {{name1}}!</p>
-        </div>
-        <div class="col-12">
-            <form action= "/prisha/" id="prisha" method="POST">
-                <label for="name">What would you like to shop for?</label>
-                <input name="name" id="name">
-                <input type="submit" value="Greetings!">
-            </form>
-        </div>
-        <div class="col-12">
-            <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" alt = "Python Flask">
+            <div class="col-12">
+                <div class=""paragraph"><p>Hi, I'm Prisha Booredy! I am an Operations Officer of TechFish!</p></div>
+            <img src="/static/assets/prishaslack.jpg" style="height: 400px" alt = "no">
         </div>
     </div>
 
@@ -30,5 +20,3 @@
 <!- This is turning off birds background from base.html -->
 {% block background %}
 {% endblock %}
-
-
