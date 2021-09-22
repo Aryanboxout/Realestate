@@ -55,7 +55,7 @@ def siya():
     return render_template("siya.html", name1="TechFish User")
 
 
-@app.route("/binary", methods=['GET','POST'])
+@app.route("/binary", methods=['GET', 'POST'])
 def binary():
     if request.form:
         bits = request.form.get("bits")
@@ -102,6 +102,7 @@ def account():
     # starting and empty input default
     return render_template("account.html", name1=" ")
 
+
 @app.route('/blog')
 def blog():
     return'''
@@ -114,6 +115,10 @@ def blog():
     </html>
     '''
 
+
+@app.route('/rgb/')
+def rgb():
+    return render_template("rgb.html")
 
 
 # runs the application on the development server
