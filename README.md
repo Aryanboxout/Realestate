@@ -85,7 +85,7 @@
 | Navigator/Tester.  Build a video showing design and runtime of prototype(s). | [video](https://drive.google.com/file/d/1I_GtPVAsDd5E7xhBEfZXf8Jyouk7Bt-n/view) |
 | Groomers/Developers.  Groom Scrum Board before delivery, moving Issues to Review, and including Tangible Assets. Time boxed README entries that point to Issues! | |
 
-### Individual PBL
+### Individual PBL <a id="pbl" name="pbl"></a>
 #### [Arushi and Prisha's Journal Week 3](https://docs.google.com/document/d/1hdGF7D4X7JkkrtMfOJIR6JH2kLcnd5ox9CqEXeOjQJI/edit)
 #### [Arushi and Prisha's Journal Week 4](https://docs.google.com/document/d/1LuPTiCTLw4ARhsRxPBSzySErwW8Sq25fioEkrUnXuig/edit)
 #### [Vaishavi and Siya's Journal Week 3](https://docs.google.com/document/d/1OvZ3c_YAUE8ETYB-p9Fo43T_qYTqYxtCO6uYfnqM5Xo/edit)
@@ -95,14 +95,17 @@
 ### Individual Scoring
 | Name | Requirements | Evidence | Score |
 |:---|:---|:---|:---|
-| Arushi |  |  | 2/2 |
-| Prisha |  |  | 2/2 |
-| Vai |  |  |  2/2 |
-| Siya |  |  | 2/2 |
+| Arushi | Complete Mini-labs by implementing Bootstrap grid layout. Also worked on Binary.html | link to [tangible](https://github.com/arushi10/flask_portfolio/commit/ed06aff1a8a7d47e09db0a6bf76bc7f79afd87cd) | 2/2 |
+| Prisha | Update ReadMe and worked on Binary.html. Also helped a bit with CSS. | Link to [tangible](https://github.com/arushi10/flask_portfolio/commit/c7eb77c2227f5ed01c60d0a0def5050cabd943f8) | 2/2 |
+| Vai | Worked on CSS for website. Also worked on implementing a dropdown menu on the website. | link to [tangible]( |  2/2 |
+| Siya | Worked on CSS for website. Also worked on implementing a dropdown menu on the website. | link to [tangible]( | 2/2 |
 ##
 ### Week 5-6 <a id="five" name="five"></a>
 #### Team Points Week 5: 3/3
 #### Team Points Week 6:
 | Requirement | Evidence |
 |:----|:---|
-|
+| Scrum/Pair activity.  Listen to OO's and TO's introduction.  Write about OOs' and TOs roles in your journal.  Brainstorm on how you think fellow student can help you in Test Prep.  Review idea with Scrum Team, then review again with Crossover team.  Each Scrum Team create summary and provide ideas to OO's | look at peer [journals](#pbl) |
+| Scrum/Pair activity and journal. Unit 3.1 work.   Follow instructions and guidance from OO's | same as above |
+| Scrum/Pair activity and journal. Unit 3.2 work.   Follow instructions and guidance from OO's | same as above |
+| Complete RGB.html | see [repository](
