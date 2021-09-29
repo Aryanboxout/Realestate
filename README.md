@@ -53,7 +53,7 @@
 | Scrum/Pair activity and journal. Unit 3.1 work.   Follow instructions and guidance from OO's | same as above |
 | Scrum/Pair activity and journal. Unit 3.2 work.   Follow instructions and guidance from OO's | same as above |
 | Complete RGB.html | see [repository](https://github.com/arushi10/flask_portfolio) |
-### Individual PBL <a id="journalfive' name="journalfive"></a>
+### Individual PBL <a id="journal5" name="journal5"></a>
 #### [Arushi and Prisha's Journal Week 5](https://docs.google.com/document/d/1dEqBTzGBRVXmCpnkx5OEtnf5KQdtc1avz0yIqAmfRa8/edit)
 #### [Arushi and Prisha's Journal Week 6](https://docs.google.com/document/d/14SVw_ZA496D7wqcoAQ8PcbaCeqzZgPamT-bkG2e2_5c/edit)
 #### [Vaishavi and Siya's Journal Week 5](https://docs.google.com/document/d/1zomj1pCGm6hdcCjeyCqZuvsJI8_RhQ8S_J3c45hXpks/edit)
@@ -63,10 +63,10 @@
 ### Individual Scoring
 | Name | Requirements | Evidence | Score |
 |:---|:----|:----|:----|
-| Arushi | Assign issues, help take notes, fix default RGB.html | check [journal](#journalfive), [commits](https://github.com/arushi10/flask_portfolio/commit/2b87d9f3c0a2eb5a9238c3a094bcb106f877dfd0) | 
-| Prisha | Update README.md, help take notes | check [journal](#journalfive) and README.md |
-| Vai | Work on CSS for website, help take notes, attempt first hack | check [journal](#journalfive), [commits](https://github.com/arushi10/flask_portfolio/tree/193db67adcaa0a26d6f0b4b6aec63ad2a7af4c35/templates) |
-| Siya | Work on CSS for website, help take notes | check [journal](#journalfive), css edits not completed yet |
+| Arushi | Assign issues, help take notes, fix default RGB.html | check [journal](#journal5), [commits](https://github.com/arushi10/flask_portfolio/commit/2b87d9f3c0a2eb5a9238c3a094bcb106f877dfd0) | 
+| Prisha | Update README.md, help take notes | check [journal](#journal5) and README.md |
+| Vai | Work on CSS for website, help take notes, attempt first hack | check [journal](#journal5), [commits](https://github.com/arushi10/flask_portfolio/tree/193db67adcaa0a26d6f0b4b6aec63ad2a7af4c35/templates) |
+| Siya | Work on CSS for website, help take notes | check [journal](#journal5), css edits not completed yet |
 ##
 ### Week 3-4 <a id="three" name="three"></a>
 | Requirement | Evidence |
