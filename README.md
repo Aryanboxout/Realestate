@@ -89,8 +89,8 @@
 |:---|:---|:---|:---|
 | Arushi | Complete Mini-labs by implementing Bootstrap grid layout. Also worked on Binary.html | link to [tangible](https://github.com/arushi10/flask_portfolio/commit/ed06aff1a8a7d47e09db0a6bf76bc7f79afd87cd) | 2/2 |
 | Prisha | Update ReadMe and worked on Binary.html. Also helped a bit with CSS. | Link to [tangible](https://github.com/arushi10/flask_portfolio/commit/c7eb77c2227f5ed01c60d0a0def5050cabd943f8) | 2/2 |
-| Vai | Worked on CSS for website. Also worked on implementing a dropdown menu on the website. | link to [tangible]( |  2/2 |
-| Siya | Worked on CSS for website. Also worked on implementing a dropdown menu on the website. | link to [tangible]( | 2/2 |
+| Vai | Worked on CSS for website. Also worked on implementing a dropdown menu on the website. | link to [tangible](https://github.com/arushi10/flask_portfolio/commit/951a154bd26c111b7a4506115afdc89061a794b3) |  2/2 |
+| Siya | Worked on CSS for website. Also worked on implementing a dropdown menu on the website. | link to [tangible](https://github.com/arushi10/flask_portfolio/commit/7def556f36e4b781a65be515e7c6a4ef47fd44d9) | 2/2 |
 ##
 ### Week 1-2 <a id="two" name="two"></a>
 | Requirement | Evidence |
