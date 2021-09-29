@@ -42,13 +42,57 @@
 
 ## Weekly Progress <a id="weekly" name="weekly"></a>
 ## Mini TOC
-### 1. [Week 1-2](#two)
+### 1. [Week 5-6](#five)
 ### 2. [Week 3-4](#three)
-### 3. [Week 5-6](#five)
+### 3. [Week 1-2](#two)
+##
+### Week 5-6 <a id="five" name="five"></a>
+| Requirement | Evidence |
+|:----|:---|
+| Scrum/Pair activity.  Listen to OO's and TO's introduction.  Write about OOs' and TOs roles in your journal.  Brainstorm on how you think fellow student can help you in Test Prep.  Review idea with Scrum Team, then review again with Crossover team.  Each Scrum Team create summary and provide ideas to OO's | look at peer [journals](#pbl) |
+| Scrum/Pair activity and journal. Unit 3.1 work.   Follow instructions and guidance from OO's | same as above |
+| Scrum/Pair activity and journal. Unit 3.2 work.   Follow instructions and guidance from OO's | same as above |
+| Complete RGB.html | see [repository](https://github.com/arushi10/flask_portfolio) |
+### Individual PBL <a id="journalfive' name="journalfive"></a>
+#### [Arushi and Prisha's Journal Week 5](https://docs.google.com/document/d/1dEqBTzGBRVXmCpnkx5OEtnf5KQdtc1avz0yIqAmfRa8/edit)
+#### [Arushi and Prisha's Journal Week 6](https://docs.google.com/document/d/14SVw_ZA496D7wqcoAQ8PcbaCeqzZgPamT-bkG2e2_5c/edit)
+#### [Vaishavi and Siya's Journal Week 5](https://docs.google.com/document/d/1zomj1pCGm6hdcCjeyCqZuvsJI8_RhQ8S_J3c45hXpks/edit)
+#### [Vaishavi and Siya's Journal Week 6](https://docs.google.com/document/d/1aq47Wbhh-m9E98xqy90z85pHWFkNHqHgBnFjwsnRL00/edit)
+#### [Scrumboard evidence of contribution](https://github.com/arushi10/flask_portfolio/projects/1)
+##
+### Individual Scoring
+| Name | Requirements | Evidence | Score |
+|:---|:----|:----|:----|
+| Arushi | Assign issues, help take notes, fix default RGB.html | check [journal](#journalfive), [commits](https://github.com/arushi10/flask_portfolio/commit/2b87d9f3c0a2eb5a9238c3a094bcb106f877dfd0) | 
+| Prisha | Update README.md, help take notes | check [journal](#journalfive) and README.md |
+| Vai | Work on CSS for website, help take notes, attempt first hack | check [journal](#journalfive), [commits](https://github.com/arushi10/flask_portfolio/tree/193db67adcaa0a26d6f0b4b6aec63ad2a7af4c35/templates) |
+| Siya | Work on CSS for website, help take notes | check [journal](#journalfive), css edits not completed yet |
+##
+### Week 3-4 <a id="three" name="three"></a>
+| Requirement | Evidence |
+|:------------|:-----|
+| Scrum Master.  Continue planning best practice, be prepared for review during class on Wednesday, for points.| see [scrumboard](https://github.com/arushi10/flask_portfolio/projects/1) |
+| Developers.  Ensure each person has Prototype and/or TT3 hack coding task.  TT3 Binary Math must be included in project with all "Hack" suggestions.  Duplicating a Hack task for multiple individuals and integrating into their personal page(s), would be wise for someone who is behind on code commits. Everyone needs code commits. | see [repository](https://github.com/arushi10/flask_portfolio) |
+| Designer.  Ensure there is a Design or Research asset for prototyping work. | see [wireframe](#wireframe) |
+| Navigator/Tester.  Build a video showing design and runtime of prototype(s). | [video](https://drive.google.com/file/d/1I_GtPVAsDd5E7xhBEfZXf8Jyouk7Bt-n/view) |
+| Groomers/Developers.  Groom Scrum Board before delivery, moving Issues to Review, and including Tangible Assets. Time boxed README entries that point to Issues! | |
+
+### Individual PBL <a id="pbl" name="pbl"></a>
+#### [Arushi and Prisha's Journal Week 3](https://docs.google.com/document/d/1hdGF7D4X7JkkrtMfOJIR6JH2kLcnd5ox9CqEXeOjQJI/edit)
+#### [Arushi and Prisha's Journal Week 4](https://docs.google.com/document/d/1LuPTiCTLw4ARhsRxPBSzySErwW8Sq25fioEkrUnXuig/edit)
+#### [Vaishavi and Siya's Journal Week 3](https://docs.google.com/document/d/1OvZ3c_YAUE8ETYB-p9Fo43T_qYTqYxtCO6uYfnqM5Xo/edit)
+#### [Vaishavi and Siya's Journal Week 4](https://docs.google.com/document/d/1A2KDoFBLGZ9pqt6DuBa7WIIFUIAzs4gKwdlekOFo61M/edit)
+#### [Scrumboard evidence of contribution](https://github.com/arushi10/flask_portfolio/projects/1)
+##
+### Individual Scoring
+| Name | Requirements | Evidence | Score |
+|:---|:---|:---|:---|
+| Arushi | Complete Mini-labs by implementing Bootstrap grid layout. Also worked on Binary.html | link to [tangible](https://github.com/arushi10/flask_portfolio/commit/ed06aff1a8a7d47e09db0a6bf76bc7f79afd87cd) | 2/2 |
+| Prisha | Update ReadMe and worked on Binary.html. Also helped a bit with CSS. | Link to [tangible](https://github.com/arushi10/flask_portfolio/commit/c7eb77c2227f5ed01c60d0a0def5050cabd943f8) | 2/2 |
+| Vai | Worked on CSS for website. Also worked on implementing a dropdown menu on the website. | link to [tangible]( |  2/2 |
+| Siya | Worked on CSS for website. Also worked on implementing a dropdown menu on the website. | link to [tangible]( | 2/2 |
 ##
 ### Week 1-2 <a id="two" name="two"></a>
-#### Team Points Week 1: 3/3
-#### Team Points Week 2: 3/3
 | Requirement | Evidence |
 |:------------|:-----|
 |Scrum master:  Define tasks and place assignments to in-progress on the Scrum board| [Scrum board](https://github.com/arushi10/flask_portfolio/projects/1)
@@ -74,38 +118,3 @@
 |Vai| 7/7 | [Individual greet](https://github.com/arushi10/flask_portfolio/blob/4a7c1d9286fac9134fd428e5b25330fe9da2a962/templates/vai.html), [Journal](https://docs.google.com/document/d/1i5YbwPytaD4uTgWlREmVMO6vnyi0u-PS9LWL9z5VAl0/edit) | Will use personal laptop at home and at school |
 |Siya | 7/7 | [Individual greet](https://github.com/arushi10/flask_portfolio/blob/3710ccee25addb0ae27c06f5e9a231d2cd069e5f/templates/siya.html), [Journal](https://docs.google.com/document/d/1i5YbwPytaD4uTgWlREmVMO6vnyi0u-PS9LWL9z5VAl0/edit)  | Will use personal laptop at home and at school | 
 ##
-### Week 3-4 <a id="three" name="three"></a>
-#### Team Points Week 3: 3/3
-#### Team Points Week 4: 3/3
-| Requirement | Evidence |
-|:------------|:-----|
-| Scrum Master.  Continue planning best practice, be prepared for review during class on Wednesday, for points.| see [scrumboard](https://github.com/arushi10/flask_portfolio/projects/1) |
-| Developers.  Ensure each person has Prototype and/or TT3 hack coding task.  TT3 Binary Math must be included in project with all "Hack" suggestions.  Duplicating a Hack task for multiple individuals and integrating into their personal page(s), would be wise for someone who is behind on code commits. Everyone needs code commits. | see [repository](https://github.com/arushi10/flask_portfolio) |
-| Designer.  Ensure there is a Design or Research asset for prototyping work. | see [wireframe](#wireframe) |
-| Navigator/Tester.  Build a video showing design and runtime of prototype(s). | [video](https://drive.google.com/file/d/1I_GtPVAsDd5E7xhBEfZXf8Jyouk7Bt-n/view) |
-| Groomers/Developers.  Groom Scrum Board before delivery, moving Issues to Review, and including Tangible Assets. Time boxed README entries that point to Issues! | |
-
-### Individual PBL <a id="pbl" name="pbl"></a>
-#### [Arushi and Prisha's Journal Week 3](https://docs.google.com/document/d/1hdGF7D4X7JkkrtMfOJIR6JH2kLcnd5ox9CqEXeOjQJI/edit)
-#### [Arushi and Prisha's Journal Week 4](https://docs.google.com/document/d/1LuPTiCTLw4ARhsRxPBSzySErwW8Sq25fioEkrUnXuig/edit)
-#### [Vaishavi and Siya's Journal Week 3](https://docs.google.com/document/d/1OvZ3c_YAUE8ETYB-p9Fo43T_qYTqYxtCO6uYfnqM5Xo/edit)
-#### [Vaishavi and Siya's Journal Week 4](https://docs.google.com/document/d/1A2KDoFBLGZ9pqt6DuBa7WIIFUIAzs4gKwdlekOFo61M/edit)
-#### [Scrumboard evidence of contribution](https://github.com/arushi10/flask_portfolio/projects/1)
-##
-### Individual Scoring
-| Name | Requirements | Evidence | Score |
-|:---|:---|:---|:---|
-| Arushi | Complete Mini-labs by implementing Bootstrap grid layout. Also worked on Binary.html | link to [tangible](https://github.com/arushi10/flask_portfolio/commit/ed06aff1a8a7d47e09db0a6bf76bc7f79afd87cd) | 2/2 |
-| Prisha | Update ReadMe and worked on Binary.html. Also helped a bit with CSS. | Link to [tangible](https://github.com/arushi10/flask_portfolio/commit/c7eb77c2227f5ed01c60d0a0def5050cabd943f8) | 2/2 |
-| Vai | Worked on CSS for website. Also worked on implementing a dropdown menu on the website. | link to [tangible]( |  2/2 |
-| Siya | Worked on CSS for website. Also worked on implementing a dropdown menu on the website. | link to [tangible]( | 2/2 |
-##
-### Week 5-6 <a id="five" name="five"></a>
-#### Team Points Week 5: 3/3
-#### Team Points Week 6:
-| Requirement | Evidence |
-|:----|:---|
-| Scrum/Pair activity.  Listen to OO's and TO's introduction.  Write about OOs' and TOs roles in your journal.  Brainstorm on how you think fellow student can help you in Test Prep.  Review idea with Scrum Team, then review again with Crossover team.  Each Scrum Team create summary and provide ideas to OO's | look at peer [journals](#pbl) |
-| Scrum/Pair activity and journal. Unit 3.1 work.   Follow instructions and guidance from OO's | same as above |
-| Scrum/Pair activity and journal. Unit 3.2 work.   Follow instructions and guidance from OO's | same as above |
-| Complete RGB.html | see [repository](
