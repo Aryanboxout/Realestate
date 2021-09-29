@@ -47,6 +47,8 @@
 ### 3. [Week 1-2](#two)
 ##
 ### Week 5-6 <a id="five" name="five"></a>
+#### Team Score (5): 3/3
+#### Team Score (6): 
 | Requirement | Evidence |
 |:----|:---|
 | Scrum/Pair activity.  Listen to OO's and TO's introduction.  Write about OOs' and TOs roles in your journal.  Brainstorm on how you think fellow student can help you in Test Prep.  Review idea with Scrum Team, then review again with Crossover team.  Each Scrum Team create summary and provide ideas to OO's | look at peer [journals](#pbl) |
@@ -61,14 +63,16 @@
 #### [Scrumboard evidence of contribution](https://github.com/arushi10/flask_portfolio/projects/1)
 ##
 ### Individual Scoring
-| Name | Requirements | Evidence | Score |
-|:---|:----|:----|:----|
-| Arushi | Assign issues, help take notes, fix default RGB.html | check [journal](#journal5), [commits](https://github.com/arushi10/flask_portfolio/commit/2b87d9f3c0a2eb5a9238c3a094bcb106f877dfd0) | 
-| Prisha | Update README.md, help take notes | check [journal](#journal5) and README.md |
-| Vai | Work on CSS for website, help take notes, attempt first hack | check [journal](#journal5), [commits](https://github.com/arushi10/flask_portfolio/tree/193db67adcaa0a26d6f0b4b6aec63ad2a7af4c35/templates) |
-| Siya | Work on CSS for website, help take notes | check [journal](#journal5), css edits not completed yet |
+| Name | Requirements | Evidence | Score (5) | Score (6)
+|:---|:----|:----|:----|:---|
+| Arushi | Assign issues, help take notes, fix default RGB.html | check [journal](#journal5), [commits](https://github.com/arushi10/flask_portfolio/commit/2b87d9f3c0a2eb5a9238c3a094bcb106f877dfd0) | 2/2
+| Prisha | Update README.md, help take notes | check [journal](#journal5) and README.md | 2/2
+| Vai | Work on CSS for website, help take notes, attempt first hack | check [journal](#journal5), [commits](https://github.com/arushi10/flask_portfolio/tree/193db67adcaa0a26d6f0b4b6aec63ad2a7af4c35/templates) | 2/2
+| Siya | Work on CSS for website, help take notes | check [journal](#journal5), css edits not completed yet | 2/2
 ##
 ### Week 3-4 <a id="three" name="three"></a>
+#### Team Score (3): 4/4
+#### Team Score (4): 4/4
 | Requirement | Evidence |
 |:------------|:-----|
 | Scrum Master.  Continue planning best practice, be prepared for review during class on Wednesday, for points.| see [scrumboard](https://github.com/arushi10/flask_portfolio/projects/1) |
@@ -85,14 +89,16 @@
 #### [Scrumboard evidence of contribution](https://github.com/arushi10/flask_portfolio/projects/1)
 ##
 ### Individual Scoring
-| Name | Requirements | Evidence | Score |
-|:---|:---|:---|:---|
+| Name | Requirements | Evidence | Score (3) | Score (4) |
+|:---|:---|:---|:---|:---|
 | Arushi | Complete Mini-labs by implementing Bootstrap grid layout. Also worked on Binary.html | link to [tangible](https://github.com/arushi10/flask_portfolio/commit/ed06aff1a8a7d47e09db0a6bf76bc7f79afd87cd) | 2/2 |
 | Prisha | Update ReadMe and worked on Binary.html. Also helped a bit with CSS. | Link to [tangible](https://github.com/arushi10/flask_portfolio/commit/c7eb77c2227f5ed01c60d0a0def5050cabd943f8) | 2/2 |
 | Vai | Worked on CSS for website. Also worked on implementing a dropdown menu on the website. | link to [tangible](https://github.com/arushi10/flask_portfolio/commit/951a154bd26c111b7a4506115afdc89061a794b3) |  2/2 |
 | Siya | Worked on CSS for website. Also worked on implementing a dropdown menu on the website. | link to [tangible](https://github.com/arushi10/flask_portfolio/commit/7def556f36e4b781a65be515e7c6a4ef47fd44d9) | 2/2 |
 ##
 ### Week 1-2 <a id="two" name="two"></a>
+#### Team Score (1): 4/4
+#### Team Score (2): 4/4
 | Requirement | Evidence |
 |:------------|:-----|
 |Scrum master:  Define tasks and place assignments to in-progress on the Scrum board| [Scrum board](https://github.com/arushi10/flask_portfolio/projects/1)
@@ -113,8 +119,8 @@
 ### Individual Scoring
 | Name | Score | Evidence | Laptop Plans |
 |---|----|---|---|
-|Arushi| 7/7 | [Individual greet](https://github.com/arushi10/flask_portfolio/blob/de61157d634299eeb42bd9fa4e60d6081a4613cb/templates/arushi.html), [Journal](https://docs.google.com/document/d/1loHOR3Go5zBSoCUSVq0vFdZwUMjUS2HDIdKXAYunI0k/edit?usp=sharing) | Will use personal laptop at home and at school |
-|Prisha| 7/7 | [Individual greet](https://github.com/arushi10/flask_portfolio/blob/a86e005484fd7ad64d8d4f570ce4f8e824ebccf6/templates/prisha.html), [Journal](https://docs.google.com/document/d/1loHOR3Go5zBSoCUSVq0vFdZwUMjUS2HDIdKXAYunI0k/edit?usp=sharing) | Will use personal laptop at home and at school |
-|Vai| 7/7 | [Individual greet](https://github.com/arushi10/flask_portfolio/blob/4a7c1d9286fac9134fd428e5b25330fe9da2a962/templates/vai.html), [Journal](https://docs.google.com/document/d/1i5YbwPytaD4uTgWlREmVMO6vnyi0u-PS9LWL9z5VAl0/edit) | Will use personal laptop at home and at school |
-|Siya | 7/7 | [Individual greet](https://github.com/arushi10/flask_portfolio/blob/3710ccee25addb0ae27c06f5e9a231d2cd069e5f/templates/siya.html), [Journal](https://docs.google.com/document/d/1i5YbwPytaD4uTgWlREmVMO6vnyi0u-PS9LWL9z5VAl0/edit)  | Will use personal laptop at home and at school | 
+|Arushi| 4/4 | [Individual greet](https://github.com/arushi10/flask_portfolio/blob/de61157d634299eeb42bd9fa4e60d6081a4613cb/templates/arushi.html), [Journal](https://docs.google.com/document/d/1loHOR3Go5zBSoCUSVq0vFdZwUMjUS2HDIdKXAYunI0k/edit?usp=sharing) | Will use personal laptop at home and at school |
+|Prisha| 4/4 | [Individual greet](https://github.com/arushi10/flask_portfolio/blob/a86e005484fd7ad64d8d4f570ce4f8e824ebccf6/templates/prisha.html), [Journal](https://docs.google.com/document/d/1loHOR3Go5zBSoCUSVq0vFdZwUMjUS2HDIdKXAYunI0k/edit?usp=sharing) | Will use personal laptop at home and at school |
+|Vai| 4/4 | [Individual greet](https://github.com/arushi10/flask_portfolio/blob/4a7c1d9286fac9134fd428e5b25330fe9da2a962/templates/vai.html), [Journal](https://docs.google.com/document/d/1i5YbwPytaD4uTgWlREmVMO6vnyi0u-PS9LWL9z5VAl0/edit) | Will use personal laptop at home and at school |
+|Siya | 4/4 | [Individual greet](https://github.com/arushi10/flask_portfolio/blob/3710ccee25addb0ae27c06f5e9a231d2cd069e5f/templates/siya.html), [Journal](https://docs.google.com/document/d/1i5YbwPytaD4uTgWlREmVMO6vnyi0u-PS9LWL9z5VAl0/edit)  | Will use personal laptop at home and at school | 
 ##
