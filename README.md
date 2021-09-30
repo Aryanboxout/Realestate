@@ -33,6 +33,7 @@
 ### Implementation Progress <a id="progress" name="progress"></a>
 #### (September 8th, 2021) Updated ReadMe and ensured any previous problems with greet code is fixed. Will be using greet to help with writing about page.
 #### (September 16th, 2021) Coded binary page. Created a drop down menu for about us pages. Changed navbar to include names of our website pages.
+#### (September 28th, 2021) Finished RGB setup. Added pictures and text for aboutus pages. Changed background color for some website pages.
 | Sprint Week Number | Tangibles |
 |:-------------------|:----------|
 | Week 0 | [video](https://drive.google.com/file/d/1BAJstuaF_2IjEaQy2tUoSbzXyshC-5Yw/view?usp=sharing), [slideshow](https://docs.google.com/presentation/d/1DXjuatCa1kNI5u5Jn1TSqNIcV9H1_o0ji6_ceScYdmM/edit?usp=sharing), [journals](https://drive.google.com/drive/folders/1Uk1q0Qu81vBN7ehMrA7DYf6q5P8glnQZ?usp=sharing)| 
