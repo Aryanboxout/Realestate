@@ -1,0 +1,41 @@
+<!-- Extending the base, as this file will do minor customizations -->
+{% extends "layouts/base.html" %}
+
+<!-- Setting up variables to customize "project" details to be specific to kangaroos -->
+{% set project = "Home" %}
+
+{% block body %}
+
+    <html>
+    <head>
+     <style>
+            body {
+                background-image: url(="/static/assets/Best-Aquarium-Background.jpg");
+            }
+
+            h1 {
+                color: black;
+                text-align: center;
+            }
+
+            p {
+                color: black;
+                font-family: "Times New Roman";
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+
+<h1>Team Techfish</h1>
+<p>Welcome to our website, where you can buy the best waterproof gear for your underwater adventures!</p>
+
+    </body>
+    </html>
+
+
+{% endblock %}
+<!-- Setting up a block replacement to customize background to RINGS -->
+{% block background %} (="/static/assets/Best-Aquarium-Background.jpg")
+
+{% endblock %}
