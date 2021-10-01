@@ -53,8 +53,12 @@ def image_data(path=Path.cwd() / Path("static/assets/"), img_list=None):
         # imgFullPath = imgPath + img_dict['file']
         # img = Image.open(imgFullPath)
         d1 = ImageDraw.Draw(img_reference)
+        hori_flippedImage = img_reference.transpose(Image.FLIP_LEFT_RIGHT)
+        img_reference.save(file)
+        hori_flippedImage.save(file)
+
         if img_dict['file'] == "white-square-16.png":
-            d1.text((0, 0), "Hi!",  fill =(255, 0, 0))
+            d1.text((0, 0), "Hi!",  fill=(255, 0, 0))
         elif img_dict['file'] == "lassen-volcano-256.jpg":
             d1.text((0, 0), "TechFish is the best fish!")
         else:
