@@ -195,7 +195,7 @@ def arushi_image_data(path=Path.cwd() / Path("static/arushiassets/"), img_list=N
 
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "My Camera", 'label': "Bisky", 'file': "Dog.jpg"},
+            {'source': "My Camera", 'label': "Bisky", 'file': "Dog2.jpg"},
         ]
 
     # gather analysis data and meta data for each image, adding attributes to each row in table
@@ -213,16 +213,16 @@ def arushi_image_data(path=Path.cwd() / Path("static/arushiassets/"), img_list=N
         hori_flippedImage = img_reference.transpose(Image.FLIP_TOP_BOTTOM)
         img_reference.save(file)
         hori_flippedImage.save(file)
-
+        font = ImageFont.truetype("arial.ttf", 250)
         d1 = ImageDraw.Draw(img_reference)
-        if img_dict['file'] == "Dog.jpg":
+        if img_dict['file'] == "Dog2.jpg":
             d1.text((0, 0), "As a dutiful maid would!", fill=(255, 0, 0))
         #elif img_dict['file'] == "Yanfei.png":
             #d1.text((0, 0), "Time for your arraignment!", )
         #elif img_dict['file'] == "Lisa.png":
             #d1.text((0, 0), "Blitz!", )
         else:
-            d1.text((3, 10), "This is my favorite dog", fill=(255, 255, 255))
+            d1.text((3, 10), "This is my favorite dog", fill=(255, 0, 0), font=font)
         # img_reference.show()
         img_reference.save(file)
         #img_reference.show()
