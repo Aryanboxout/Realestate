@@ -195,7 +195,7 @@ def arushi_image_data(path=Path.cwd() / Path("static/arushiassets/"), img_list=N
 
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "My Camera", 'label': "Bisky", 'file': "Dog.jpg"},
+            {'source': "Google", 'label': "dog", 'file': "Dog2.jpg"},
         ]
 
     # gather analysis data and meta data for each image, adding attributes to each row in table
@@ -213,12 +213,12 @@ def arushi_image_data(path=Path.cwd() / Path("static/arushiassets/"), img_list=N
         hori_flippedImage = img_reference.transpose(Image.FLIP_TOP_BOTTOM)
         img_reference.save(file)
         hori_flippedImage.save(file)
-        font = ImageFont.truetype("arial.ttf", 300)
+        font = ImageFont.truetype("arial.ttf", 20)
         d1 = ImageDraw.Draw(img_reference)
-        d1.text((3, 10), "This is my favorite dog", fill=(255, 0, 0), font=font)
+        d1.text((3, 10), "This is a dog", fill=(255, 0, 0), font=font)
         # img_reference.show()
-        #img_reference.save(file)
-        img_reference.show()
+        img_reference.save(file)
+        #img_reference.show()
 
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
@@ -266,7 +266,7 @@ def vaishavi_image_data(path=Path.cwd() / Path("static/vaishaviassets/"), img_li
 
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "My Camera", 'label': "Bisky", 'file': "Download.jpg"},
+            {'source': "My Camera", 'label': "OreoNapping", 'file': "oreo.jpg"},
         ]
 
     # gather analysis data and meta data for each image, adding attributes to each row in table
@@ -284,12 +284,12 @@ def vaishavi_image_data(path=Path.cwd() / Path("static/vaishaviassets/"), img_li
         hori_flippedImage = img_reference.transpose(Image.FLIP_TOP_BOTTOM)
         img_reference.save(file)
         hori_flippedImage.save(file)
-        font = ImageFont.truetype("arial.ttf", 300)
+        font = ImageFont.truetype("arial.ttf", 20)
         d1 = ImageDraw.Draw(img_reference)
-        d1.text((3, 10), "This is my favorite dog", fill=(255, 0, 0), font=font)
+        d1.text((3, 10), "This is Oreo", fill=(255, 255, 255), font=font)
         # img_reference.show()
-        #img_reference.save(file)
-        img_reference.show()
+        img_reference.save(file)
+        #img_reference.show()
 
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
@@ -337,7 +337,7 @@ def siya_image_data(path=Path.cwd() / Path("static/siyaassets/"), img_list=None)
 
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            #{'source': "My Camera", 'label': "Bisky", 'file': "Download.jpg"},
+            {'source': "Google", 'label': "Flower", 'file': "flower.jpg"},
         ]
 
     # gather analysis data and meta data for each image, adding attributes to each row in table
@@ -355,12 +355,12 @@ def siya_image_data(path=Path.cwd() / Path("static/siyaassets/"), img_list=None)
         hori_flippedImage = img_reference.transpose(Image.FLIP_TOP_BOTTOM)
         img_reference.save(file)
         hori_flippedImage.save(file)
-        font = ImageFont.truetype("arial.ttf", 300)
         d1 = ImageDraw.Draw(img_reference)
-        d1.text((3, 10), "This is my favorite dog", fill=(255, 0, 0), font=font)
+        font = ImageFont.truetype("arial.ttf", 50)
+        d1.text((3, 10), "This is cool", fill=(255, 0, 0), font=font)
         # img_reference.show()
-        #img_reference.save(file)
-        img_reference.show()
+        img_reference.save(file)
+        #img_reference.show()
 
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
