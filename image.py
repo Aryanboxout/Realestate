@@ -195,7 +195,7 @@ def arushi_image_data(path=Path.cwd() / Path("static/arushiassets/"), img_list=N
 
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "My Camera", 'label': "Bisky", 'file': "Dog2.jpg"},
+            {'source': "My Camera", 'label': "Bisky", 'file': "Dog.jpg"},
         ]
 
     # gather analysis data and meta data for each image, adding attributes to each row in table
@@ -213,19 +213,154 @@ def arushi_image_data(path=Path.cwd() / Path("static/arushiassets/"), img_list=N
         hori_flippedImage = img_reference.transpose(Image.FLIP_TOP_BOTTOM)
         img_reference.save(file)
         hori_flippedImage.save(file)
-        font = ImageFont.truetype("arial.ttf", 250)
+        font = ImageFont.truetype("arial.ttf", 300)
         d1 = ImageDraw.Draw(img_reference)
-        if img_dict['file'] == "Dog2.jpg":
-            d1.text((0, 0), "As a dutiful maid would!", fill=(255, 0, 0))
-        #elif img_dict['file'] == "Yanfei.png":
-            #d1.text((0, 0), "Time for your arraignment!", )
-        #elif img_dict['file'] == "Lisa.png":
-            #d1.text((0, 0), "Blitz!", )
-        else:
-            d1.text((3, 10), "This is my favorite dog", fill=(255, 0, 0), font=font)
+        d1.text((3, 10), "This is my favorite dog", fill=(255, 0, 0), font=font)
         # img_reference.show()
+        #img_reference.save(file)
+        img_reference.show()
+
+        img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
+        img_dict['format'] = img_reference.format
+        img_dict['mode'] = img_reference.mode
+        img_dict['size'] = img_reference.size
+        # Conversion of original Image to Base64, a string format that serves HTML nicely
+        img_dict['base64'] = image_formatter(img_reference, img_dict['format'])
+        # Numpy is used to allow easy access to data of image, python list
+        img_dict['data'] = numpy.array(img_data)
+        img_dict['hex_array'] = []
+        img_dict['binary_array'] = []
+        # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
+        for pixel in img_dict['data']:
+            # hexadecimal conversions
+            hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
+            hex_value = hex_value.replace("x", "0")
+            img_dict['hex_array'].append("#" + hex_value)
+            # binary conversions
+            bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
+            img_dict['binary_array'].append(bin_value)
+        # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/
+        img_dict['gray_data'] = []
+        for pixel in img_dict['data']:
+            average = (int(pixel[0]) + pixel[1] + pixel[2]) // 3
+            if len(pixel) > 3:
+                img_dict['gray_data'].append((average, average, average, pixel[3]))
+            else:
+                img_dict['gray_data'].append((average, average, average))
+        img_reference.putdata(img_dict['gray_data'])
+        img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
+    return img_list  # list is returned with all the attributes for each image dictionary
+
+
+# color_data prepares a series of images for data analysis
+def vaishavi_image_data(path=Path.cwd() / Path("static/vaishaviassets/"), img_list=None):
+    # def image_data(path=os.path.join("static", "assets"), img_list=None):
+    # def image_data(path=Path("static/assets/"), img_list=None):  # path of static images is defaulted
+
+    # img = Image.open(path / 'lassen-volcano-256.jpg')
+    # img = Image.open('C:/Users/prish/IdeaProjects/flask_portfolio2/static/assets/lassen-volcano-256.jpg')
+    # d1 = ImageDraw.Draw(img)
+    # d1.text((0, 0), "Sample text Prisha")
+    # img.show()
+    # img.save(path / 'lassen-volcano-256.jpg')
+
+    if img_list is None:  # color_dict is defined with defaults
+        img_list = [
+            {'source': "My Camera", 'label': "Bisky", 'file': "Download.jpg"},
+        ]
+
+    # gather analysis data and meta data for each image, adding attributes to each row in table
+    for img_dict in img_list:
+        # File to open
+        file = path / img_dict['file']  # file with path for local access (backend)
+        # file =os.path.join(path, img_dict['file'])  # file with path for local access (backend)
+        # Python Image Library
+        print(file)
+        print("testing1212")
+        img_reference = Image.open(file)
+        # imgPath = 'C:/Users/prish/IdeaProjects/flask_portfolio2/static/assets/'
+        # imgFullPath = imgPath + img_dict['file']
+        # img = Image.open(imgFullPath)
+        hori_flippedImage = img_reference.transpose(Image.FLIP_TOP_BOTTOM)
         img_reference.save(file)
-        #img_reference.show()
+        hori_flippedImage.save(file)
+        font = ImageFont.truetype("arial.ttf", 300)
+        d1 = ImageDraw.Draw(img_reference)
+        d1.text((3, 10), "This is my favorite dog", fill=(255, 0, 0), font=font)
+        # img_reference.show()
+        #img_reference.save(file)
+        img_reference.show()
+
+        img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
+        img_dict['format'] = img_reference.format
+        img_dict['mode'] = img_reference.mode
+        img_dict['size'] = img_reference.size
+        # Conversion of original Image to Base64, a string format that serves HTML nicely
+        img_dict['base64'] = image_formatter(img_reference, img_dict['format'])
+        # Numpy is used to allow easy access to data of image, python list
+        img_dict['data'] = numpy.array(img_data)
+        img_dict['hex_array'] = []
+        img_dict['binary_array'] = []
+        # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
+        for pixel in img_dict['data']:
+            # hexadecimal conversions
+            hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
+            hex_value = hex_value.replace("x", "0")
+            img_dict['hex_array'].append("#" + hex_value)
+            # binary conversions
+            bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
+            img_dict['binary_array'].append(bin_value)
+        # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/
+        img_dict['gray_data'] = []
+        for pixel in img_dict['data']:
+            average = (int(pixel[0]) + pixel[1] + pixel[2]) // 3
+            if len(pixel) > 3:
+                img_dict['gray_data'].append((average, average, average, pixel[3]))
+            else:
+                img_dict['gray_data'].append((average, average, average))
+        img_reference.putdata(img_dict['gray_data'])
+        img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
+    return img_list  # list is returned with all the attributes for each image dictionary
+
+
+# color_data prepares a series of images for data analysis
+def siya_image_data(path=Path.cwd() / Path("static/siyaassets/"), img_list=None):
+    # def image_data(path=os.path.join("static", "assets"), img_list=None):
+    # def image_data(path=Path("static/assets/"), img_list=None):  # path of static images is defaulted
+
+    # img = Image.open(path / 'lassen-volcano-256.jpg')
+    # img = Image.open('C:/Users/prish/IdeaProjects/flask_portfolio2/static/assets/lassen-volcano-256.jpg')
+    # d1 = ImageDraw.Draw(img)
+    # d1.text((0, 0), "Sample text Prisha")
+    # img.show()
+    # img.save(path / 'lassen-volcano-256.jpg')
+
+    if img_list is None:  # color_dict is defined with defaults
+        img_list = [
+            #{'source': "My Camera", 'label': "Bisky", 'file': "Download.jpg"},
+        ]
+
+    # gather analysis data and meta data for each image, adding attributes to each row in table
+    for img_dict in img_list:
+        # File to open
+        file = path / img_dict['file']  # file with path for local access (backend)
+        # file =os.path.join(path, img_dict['file'])  # file with path for local access (backend)
+        # Python Image Library
+        print(file)
+        print("testing1212")
+        img_reference = Image.open(file)
+        # imgPath = 'C:/Users/prish/IdeaProjects/flask_portfolio2/static/assets/'
+        # imgFullPath = imgPath + img_dict['file']
+        # img = Image.open(imgFullPath)
+        hori_flippedImage = img_reference.transpose(Image.FLIP_TOP_BOTTOM)
+        img_reference.save(file)
+        hori_flippedImage.save(file)
+        font = ImageFont.truetype("arial.ttf", 300)
+        d1 = ImageDraw.Draw(img_reference)
+        d1.text((3, 10), "This is my favorite dog", fill=(255, 0, 0), font=font)
+        # img_reference.show()
+        #img_reference.save(file)
+        img_reference.show()
 
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
