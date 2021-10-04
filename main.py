@@ -2,7 +2,7 @@
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 #import "packages" from flask
 from flask import Flask, render_template, request
-from image import image_data, prisha_image_data
+from image import image_data, prisha_image_data, arushi_image_data
 
 # create a Flask instance
 app = Flask(__name__)
@@ -124,10 +124,17 @@ def rgb():
     path = Path(app.root_path) / "static" / "assets"
     return render_template('/rgb.html', images=image_data(path))
 
+
 @app.route('/prishargb/')
 def prishargb():
     path = Path(app.root_path) / "static" / "prishaassets"
     return render_template('/prishrgb.html', images=prisha_image_data(path))
+
+
+@app.route('/arushirgb/')
+def arushirgb():
+    path = Path(app.root_path) / "static" / "arushiassets"
+    return render_template('/arushirgb.html', images=arushi_image_data(path))
 
 # runs the application on the development server
 if __name__ == "__main__":
