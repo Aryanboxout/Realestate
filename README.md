@@ -55,7 +55,9 @@
 | Scrum/Pair activity.  Listen to OO's and TO's introduction.  Write about OOs' and TOs roles in your journal.  Brainstorm on how you think fellow student can help you in Test Prep.  Review idea with Scrum Team, then review again with Crossover team.  Each Scrum Team create summary and provide ideas to OO's | look at peer [journals](#pbl) |
 | Scrum/Pair activity and journal. Unit 3.1 work.   Follow instructions and guidance from OO's | same as above |
 | Scrum/Pair activity and journal. Unit 3.2 work.   Follow instructions and guidance from OO's | same as above |
-| Complete RGB.html | see [repository](https://github.com/arushi10/flask_portfolio) |
+| Complete RGB.html | see [repository](https://github.com/arushi10/flask_portfolio) 
+| Research | see [Doc](https://docs.google.com/document/d/1URAFaV0vvWnKr_uAVXk9XZkrMpm0yu1Uy2D216nMfoc/edit?usp=sharing)
+| Documentation | see [Doc](https://docs.google.com/document/d/1Qu1qv-m_Qjl4qv1sOLs_NLJ1c8vye7fadSBaChOlz2E/edit?usp=sharing)
 ### Individual PBL <a id="journal5" name="journal5"></a>
 #### [Arushi and Prisha's Journal Week 5](https://docs.google.com/document/d/1dEqBTzGBRVXmCpnkx5OEtnf5KQdtc1avz0yIqAmfRa8/edit)
 #### [Arushi and Prisha's Journal Week 6](https://docs.google.com/document/d/14SVw_ZA496D7wqcoAQ8PcbaCeqzZgPamT-bkG2e2_5c/edit)
