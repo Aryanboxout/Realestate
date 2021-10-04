@@ -66,10 +66,10 @@
 ### Individual Scoring
 | Name | Requirements | Evidence | Score (5) | Score (6)
 |:---|:----|:----|:----|:---|
-| Arushi | Assign issues, help take notes, fix default RGB.html | check [journal](#journal5), [commits](https://github.com/arushi10/flask_portfolio/commit/2b87d9f3c0a2eb5a9238c3a094bcb106f877dfd0) | 2/2
-| Prisha | Update README.md, help take notes | check [journal](#journal5) and README.md | 2/2
-| Vai | Work on CSS for website, help take notes, attempt first hack | check [journal](#journal5), [commits](https://github.com/arushi10/flask_portfolio/tree/193db67adcaa0a26d6f0b4b6aec63ad2a7af4c35/templates) | 2/2
-| Siya | Work on CSS for website, help take notes | check [journal](#journal5), css edits not completed yet | 2/2
+| Arushi | Assign issues, help take notes, fix default RGB.html, create individual RGB.html | check [journal](#journal5), [commits](https://github.com/arushi10/flask_portfolio/commit/2b87d9f3c0a2eb5a9238c3a094bcb106f877dfd0) | 2/2
+| Prisha | Update README.md, help take notes, create outline for individual RGB.html's | check [journal](#journal5), README.md, [commit](https://github.com/arushi10/flask_portfolio/commit/1b2f80a2f84181a403d351fed97c4277b00d5a49) | 2/2
+| Vai | Work on CSS for website, help take notes, attempt first hack, create individual RGB.html | check [journal](#journal5), [commits](https://github.com/arushi10/flask_portfolio/tree/193db67adcaa0a26d6f0b4b6aec63ad2a7af4c35/templates) | 2/2
+| Siya | Work on CSS for website, help take notes, create individual RGB.html | check [journal](#journal5), css edits not completed yet | 2/2
 ##
 ### Week 3-4 <a id="three" name="three"></a>
 #### Team Score (3): 4/4
