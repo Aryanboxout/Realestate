@@ -19,8 +19,8 @@
 <!-- Hack: Set bulbs and pass as variables via Python render_template
            add new images (ie PNGs) to project -->
 <!-- use your PNGs as default -->
-{% set imgBulbOn = "/static/assets/techfish_banner (1).png" %}
-{% set imgBulbOff = "/static/assets/techfish_banner (1).png" %}
+{% set imgBulbOn = "/static/assets/bulb_on.gif" %}
+{% set imgBulbOff = "/static/assets/bulb_off.png" %}
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}
 
@@ -127,7 +127,7 @@
     <h1 class="text-center">Binary Math with Conversions</h1>
     <div class="container">
         <div class="row justify-content-md-center">
-<!-- Table on page -->
+            <!-- Table on page -->
             <div class="col-8">
                 <table class="table">
                     <tr id="table">
@@ -157,7 +157,7 @@
             <div class="col-12">
                 <table class="table">
                     <tr>
-                    <!-- for loop -->
+                        <!-- for loop -->
                         {% for i in range(BITS) %}
                             <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
                                 <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
