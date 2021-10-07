@@ -49,7 +49,12 @@
              DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
              below ASCII for more ideas of where to make changes
              */
-            document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(binary, 2));
+            {#document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(binary, 2));#}
+            {#document.getElementById('unicode').innerHTML = parseInt(binary, 2).toString(16);#}
+
+            ucode = String.fromCharCode(parseInt(binary,2));
+
+            document.getElementById('ascii').innerHTML = ucode;
         }
 
         // algorithm to convert decimal to base using division and remainder
@@ -169,6 +174,7 @@
                         <th>Hexadecimal</th>
                         <th>Decimal</th>
                         <th>Ascii</th>
+                        {#<th>Unicode</th>#}
                         <!-- Hack: display ASCII label for printable character(s)  -->
                         <th>Minus</th>
                         <th>Shift Right</th>
@@ -181,6 +187,7 @@
                         <td id="hexadecimal">0</td>
                         <td id="decimal">0</td>
                         <td id="ascii">0</td>
+{#                      <td id="ascii">0</td>#}
                         <!-- Hack: display ASCII printable character(s)  -->
                         <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
                         <td><button type="button" id="multiply" onclick="multiply(2)">*2</button></td>
