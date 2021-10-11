@@ -1,10 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>logic_gates</title>
 </head>
+
+<style>
+    table, th, td {
+        border:1px solid black;
+    }
+</style>
+
 <body>
 
+<h2>Logic Gate Lab</h2>
+
+<table style="width:100%">
+
+    <tr>
+        <th>Input</th>
+        <th>Symbol</th>
+        <th>Logic Gate</th>
+        <th>Result</th>
+    </tr>
+
+    <td>
+        <form action="/logic_gates">
+            <input type="checkbox" id=a name="input" value=1>
+            <label for=a>a</label><br>
+            <input type="checkbox" id=b name="input" value=1>
+            <label for=b>b</label><br>
+            <button type="submit" id="results" onclick="output()">Submit</button>
+        </form>
+    </td>
+
+    <script>
+        /* This function updates logic gate table. */
+        function output() {
+            let input1 = document.getElementById("a").checked;
+            let input2 = document.getElementById("b").checked;
+            let andResult = input1 && input2;
+            let nandResult = !(input1 && input2);
+            let orResult = input1 || input2;
+            let norResult = !(input1 || input2);
+            let xorResult = input1 !== input2;
+
+            if (andResult) {
+                document.write("1");
+            } else {
+                document.write("0");
+            }
+
+            if (nandResult) {
+                document.write("1");
+            } else {
+                document.write("0")
+            }
+
+            if (orResult) {
+                document.write("1");
+            } else {
+                document.write("0")
+            }
+
+            if (norResult) {
+                document.write("1");
+            } else {
+                document.write("0")
+            }
+
+            if (xorResult) {
+                document.write("1");
+            } else {
+                document.write("0")
+            }
+        }
+
+    </script>
+
+    <td><img src="/static/assets/andGate.png"/></td>
+    <td>And Gate</td>
+    <td> </td>
+
+    <tr>
+        <td> </td>
+        <td><img src="/static/assets/nandGate.png"/></td>
+        <td>Nand Gate</td>
+        <td> </td>
+    </tr>
+
+    <tr>
+        <td> </td>
+        <td><img src="/static/assets/orGate.png"/></td>
+        <td>Or Gate</td>
+        <td> </td>
+    </tr>
+
+</table>
 </body>
 </html>
