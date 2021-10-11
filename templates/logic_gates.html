@@ -16,24 +16,19 @@
 
 <h2>Logic Gate Lab</h2>
 
+    <input type="checkbox" id=a name="input" value=1>
+    <label for=a>a</label><br>
+    <input type="checkbox" id=b name="input" value=1>
+    <label for=b>b</label><br>
+    <button type="submit" id="results" onclick="output()">Submit</button>
+
 <table style="width:100%">
 
     <tr>
-        <th>Input</th>
         <th>Symbol</th>
         <th>Logic Gate</th>
         <th>Result</th>
     </tr>
-
-    <td>
-        <form action="/logic_gates">
-            <input type="checkbox" id=a name="input" value=1>
-            <label for=a>a</label><br>
-            <input type="checkbox" id=b name="input" value=1>
-            <label for=b>b</label><br>
-            <button type="submit" id="results" onclick="output()">Submit</button>
-        </form>
-    </td>
 
     <script>
         /* This function updates logic gate table. */
@@ -47,56 +42,67 @@
             let xorResult = input1 !== input2;
 
             if (andResult) {
-                document.write("1");
+                document.getElementById("andGate").innerHTML = andResult;
             } else {
-                document.write("0");
+                document.getElementById("andGate").innerHTML = andResult;
             }
-
             if (nandResult) {
-                document.write("1");
+                document.getElementById("nandGate").innerHTML = nandResult;
             } else {
-                document.write("0")
+                document.getElementById("nandGate").innerHTML = nandResult;
             }
 
             if (orResult) {
-                document.write("1");
+                document.getElementById("orGate").innerHTML = orResult;
             } else {
-                document.write("0")
+                document.getElementById("orGate").innerHTML = orResult;
             }
 
             if (norResult) {
-                document.write("1");
+                document.getElementById("norGate").innerHTML = norResult;
             } else {
-                document.write("0")
+                document.getElementById("norGate").innerHTML = norResult;
             }
 
             if (xorResult) {
-                document.write("1");
+                document.getElementById("xorGate").innerHTML = xorResult;
             } else {
-                document.write("0")
+                document.getElementById("xorGate").innerHTML = xorResult;
             }
+
         }
 
     </script>
 
-    <td><img src="/static/assets/andGate.png"/></td>
+    <tr>
+    <td><img src="/static/assets/andGate1.png"/></td>
     <td>And Gate</td>
-    <td> </td>
+    <td id="andGate"> 0 </td>
+    </tr>
 
     <tr>
-        <td> </td>
-        <td><img src="/static/assets/nandGate.png"/></td>
+        <td><img src="/static/assets/nandGate1.png"/></td>
         <td>Nand Gate</td>
-        <td> </td>
+        <td id="nandGate"> 0 </td>
     </tr>
 
     <tr>
-        <td> </td>
-        <td><img src="/static/assets/orGate.png"/></td>
+        <td><img src="/static/assets/orGate1.png"/></td>
         <td>Or Gate</td>
-        <td> </td>
+        <td id="orGate"> 0 </td>
     </tr>
 
+    <tr>
+        <td><img src="/static/assets/norGate1.png"/></td>
+        <td>Nor Gate</td>
+        <td id="norGate"> 0 </td>
+    </tr>
+
+    <tr>
+        <td><img src="/static/assets/xorGate1.png"/></td>
+        <td>Xor Gate</td>
+        <td id="xorGate"> 0 </td>
+    </tr>
 </table>
 </body>
 </html>
