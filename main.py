@@ -72,6 +72,9 @@ def binary():
 def mini_labs():
     return render_template("mini_labs.html")
 
+@app.route('/colorcode/')
+def colorcode():
+    return render_template("colorcode.html")
 
 @app.route('/explore/', methods=['GET', 'POST'])
 def explore():
@@ -148,6 +151,15 @@ def siyargb():
     path = Path(app.root_path) / "static" / "siyaassets"
     return render_template('/siyargb.html', images=siya_image_data(path))
 
+
+@app.route("/colors", methods=['GET', 'POST'])
+def colors():
+    return render_template("demo.html")
+
+
+@app.route("/logicgates", methods=['GET', 'POST'])
+def logicgates():
+    return render_template("logicgates.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
