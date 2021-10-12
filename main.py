@@ -157,6 +157,10 @@ def colors():
     return render_template("demo.html")
 
 
+@app.route("/logicgates", methods=['GET', 'POST'])
+def logicgates():
+    return render_template("logicgates.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
