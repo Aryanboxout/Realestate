@@ -29,13 +29,10 @@
     <script>
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
         // return string with current value of each bit
-        function getBits(n) {
+        function getBits() {
             let bits = "";
-
             for(let i = 0; i < BITS; i++) {
-                let digit = 'digit'+n;
-
-                bits = bits + document.getElementById(digit + i).value;
+                bits = bits + document.getElementById('digit' + i).value;
             }
             return bits;
         }
@@ -76,12 +73,11 @@
         }
 
         // toggle selected bit and recalculate
-        function toggleBit(i,n,bulbn,buttn,digitn) {
+        function toggleBit(i) {
             //alert("Digit action: " + i );
-
-            const dig = document.getElementById(digitn + i);
-            const image = document.getElementById(bulbn + i);
-            const butt = document.getElementById(buttn + i);
+            const dig = document.getElementById('digit' + i);
+            const image = document.getElementById('bulb' + i);
+            const butt = document.getElementById('butt' + i);
             // Change digit and visual
             if (image.src.match("{{ imgBulbOn }}")) {
                 dig.value = 0;
@@ -93,12 +89,12 @@
                 butt.innerHTML = "{{ msgTurnOff }}";
             }
             // Binary numbers
-            const binary = getBits(n);
+            const binary = getBits();
             setConversions(binary);
         }
         // add is positive integer, subtract is negative integer
         function add(n) {
-            let binary = getBits(1);
+            let binary = getBits();
             // convert to decimal and do math
             let decimal = parseInt(binary, 2);
             if (n > 0) {  // PLUS
@@ -123,71 +119,8 @@
                 }
             }
         }
-        function addBins(){
-            bin1 = getBits(1);
-            bin2 = getBits(2);
-            decSum = parseInt(bin1, 2)+parseInt(bin2, 2);
-            binSum = Number(decSum).toString(2);
-//            alert("Binary: "+binSum);
-             var resultLength = binSum.length ;
-            if (resultLength < BITS)
-            {
-                binSum = binSum.padStart(BITS, "0");
-                resultLength = BITS
-            }
-
-            for(let i = 0; i< resultLength; i++) {
-                document.getElementById('digit3' + i).value = binSum.substr(i, 1);
-            }
-             document.getElementById('decsum').innerHTML = "Decimal Sum: " + decSum;
-
-        }
-
-        function negate(){
-            bin3 = getBits(3);
-            decVal = parseInt(bin3, 2);
-            decVal = -decVal;
-            binVal = Number(decVal).toString(2);
-
-            alert("Binary: "+binVal);
-            var resultLength = binVal.length ;
-
-            for(let i = 0; i< resultLength; i++) {
-                document.getElementById('digit4' + i).value = binVal.substr(i, 1);
-            }
-            document.getElementById('negval').innerHTML = "Negate Value :" + decVal;
-
-        }
-
-        function negateBin(){
-            bin3 = getBits(3);
-            decVal = parseInt(bin3, 2);
-            decVal = -decVal;
-
-            binComp = "";
-            binCompLength = bin3.length;
-            for(let i = 0; i< binCompLength; i++) {
-                if (bin3.charAt(i) == 0)
-                    binComp += 1;
-                else
-                    binComp += 0;
-            }
-            compNum = "1";
-            compNum = compNum.padStart(binCompLength, "0");
-            decSum = parseInt(binComp, 2)+parseInt(compNum, 2);
-            binSum = Number(decSum).toString(2);
-
-            var resultLength = binSum.length ;
-
-            for(let i = 0; i< resultLength; i++) {
-                document.getElementById('digit4' + i).value = binSum.substr(i, 1);
-            }
-            document.getElementById('negval').innerHTML = "Negate Value :" + decVal;
-        }
-
-
         function multiply(n) {
-            let binary = getBits(1);
+            let binary = getBits();
             // convert to decimal and do math
             let decimal = parseInt(binary, 2);
             if (n > 0) {  // PLUS
@@ -211,11 +144,6 @@
                     document.getElementById('butt' + i).innerHTML = "{{ msgTurnOn }}";
                 }
             }
-        {#function changeASCII(){#}
-        {#        if (decimal >= 128){#}
-        {#            document.getElementById("ascii").#}
-        {##}
-        {#        }#}
         }
     </script>
 
@@ -242,8 +170,8 @@
                         <th>Octal</th>
                         <th>Hexadecimal</th>
                         <th>Decimal</th>
-                        <th>Ascii/Unicode</th>
-{#                        <th>Unicode</th>#}
+                        <th>Ascii</th>
+                        <th>Unicode</th>
                         <!-- Hack: display ASCII label for printable character(s)  -->
                         <th>Minus</th>
                         <th>Shift Right</th>
@@ -256,8 +184,8 @@
                         <td id="hexadecimal">0</td>
                         <td id="decimal">0</td>
                         <td id="ascii">0</td>
-{#                        <td id="unicode">0</td>#}
-{#                        <!-- Hack: display ASCII printable character(s)  -->#}
+                        <td id="unicode">0</td>
+                        <!-- Hack: display ASCII printable character(s)  -->
                         <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
                         <td><button type="button" id="multiply" onclick="multiply(2)">*2</button></td>
                     </tr>
@@ -269,44 +197,14 @@
                     <tr>
                         <!-- for loop -->
                         {% for i in range(BITS) %}
-                            <td><img class="img-responsive py-3" id="bulb1{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                                <button type="button" id="butt1{{i}}" onclick="toggleBit('{{i}}',1,'bulb1','butt1','digit1')">{{ msgTurnOn }}</button>
+                            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                                <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
                             </td>
                         {% endfor %}
                     </tr>
                     <tr>
                         {% for i in range(BITS) %}
-                            <td><label for='digit{{i}}'></label><input type='text' id='digit1{{i}}' Value="0" size="2" readonly></td>
-                        {% endfor %}
-                    </tr>
-
-                      <tr>
-                          <!-- for loop -->
-                          {% for i in range(BITS) %}
-                              <td><img class="img-responsive py-3" id="bulb2{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                                  <button type="button" id="butt2{{i}}" onclick="toggleBit('{{i}}',1,'bulb2','butt2','digit2')">{{ msgTurnOn }}</button>
-                              </td>
-                          {% endfor %}
-                      </tr>
-                    <tr>
-                        {% for i in range(BITS) %}
-                            <td><label for='digit{{i}}'></label><input type='text' id='digit2{{i}}' Value="0" size="2" readonly></td>
-                        {% endfor %}
-                    </tr>
-                       <tr>
-                           <button type="button" id="add" onclick="addBins()">ADD</button>
-                              <p id="decsum"> Sum </p>
-                               <button type="button" id="negate" onclick="negateBin()">Negate</button>
-                               <p id="negval"> Negate </p>
-                       </tr>
-                    <tr>
-                        {% for i in range(BITS + 1) %}
-                            <td><label for='digit{{i}}'></label><input type='text' id='digit3{{i}}' Value="" size="2" readonly></td>
-                        {% endfor %}
-                    </tr>
-                    <tr>
-                        {% for i in range(BITS + 1) %}
-                            <td><label for='digit{{i}}'></label><input type='text' id='digit4{{i}}' Value="" size="2" readonly></td>
+                            <td><label for='digit{{i}}'></label><input type='text' id='digit{{i}}' Value="0" size="2" readonly></td>
                         {% endfor %}
                     </tr>
                 </table>
