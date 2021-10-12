@@ -43,35 +43,34 @@
 
 ## Weekly Progress <a id="weekly" name="weekly"></a>
 ## Mini TOC
-### 1. [Week 5-6](#five)
-### 2. [Week 3-4](#three)
-### 3. [Week 1-2](#two)
+### 1. [Week 7-8](#seven)
+### 2. [Week 5-6](#five)
+### 3. [Week 3-4](#three)
+### 4. [Week 1-2](#two)
 ##
-### Week 5-6 <a id="five" name="five"></a>
-#### Team Score (5): 3/3
+### Week 7-8 <a id="seven" name="seven"></a>
+#### Team Score (7): 3/3
 #### Team Score (6): 
 | Requirement | Evidence |
 |:----|:---|
-| Scrum/Pair activity.  Listen to OO's and TO's introduction.  Write about OOs' and TOs roles in your journal.  Brainstorm on how you think fellow student can help you in Test Prep.  Review idea with Scrum Team, then review again with Crossover team.  Each Scrum Team create summary and provide ideas to OO's | look at peer [journals](#pbl) |
-| Scrum/Pair activity and journal. Unit 3.1 work.   Follow instructions and guidance from OO's | same as above |
-| Scrum/Pair activity and journal. Unit 3.2 work.   Follow instructions and guidance from OO's | same as above |
-| Complete RGB.html | see [repository](https://github.com/arushi10/flask_portfolio) 
-| Research | see [Doc](https://docs.google.com/document/d/1URAFaV0vvWnKr_uAVXk9XZkrMpm0yu1Uy2D216nMfoc/edit?usp=sharing)
-| Documentation | see [Doc](https://docs.google.com/document/d/1Qu1qv-m_Qjl4qv1sOLs_NLJ1c8vye7fadSBaChOlz2E/edit?usp=sharing)
-### Individual PBL <a id="journal5" name="journal5"></a>
-#### [Arushi and Prisha's Journal Week 5](https://docs.google.com/document/d/1dEqBTzGBRVXmCpnkx5OEtnf5KQdtc1avz0yIqAmfRa8/edit)
-#### [Arushi and Prisha's Journal Week 6](https://docs.google.com/document/d/14SVw_ZA496D7wqcoAQ8PcbaCeqzZgPamT-bkG2e2_5c/edit)
-#### [Vaishavi and Siya's Journal Week 5](https://docs.google.com/document/d/1zomj1pCGm6hdcCjeyCqZuvsJI8_RhQ8S_J3c45hXpks/edit)
-#### [Vaishavi and Siya's Journal Week 6](https://docs.google.com/document/d/1aq47Wbhh-m9E98xqy90z85pHWFkNHqHgBnFjwsnRL00/edit)
+| Multiply and Divide by 2 (Shift).  In this example, make the Bits change positions.  Start 2^0 to 2^15.  If you multiply by 2 then 2^0 bit becomes 2^1, 2^1 to 2^2.  If you divide 2^15 becomes 2^14. | look at [binary](#binary) |
+| Extend/Switch ASCII  to Unicode.   Use representation of U-0000 to U-FFFF for your bits.  The extension of ASCII to Unicode mode allows you to show even more Characters and Character ranges.  Look at Unicode on Wikipedia (Links to an external site.). | same as above |
+| Color Codes.  Display three rows of 8 bits.  Allow for code to be 0 to 255, show color for RGB.  Also, show color for R,G,B independently.  This may require a different HTML layout. | same as above |
+| Unsigned Addition, Subtraction (Default).  Whole Numbers. Max number move from 255 to 65535.  Essentially 8 bits to 16 bits.  16 bits is often called a "Short Integer". | same as above | 
+| Logic Gates.   CB requires an understanding of Expressions.  These are routed in Logic Gates (as language is routed in Latin). Consider an entirely different presentation area and idea.  In this example, you may have two inputs (a,b) and see how changing those inputs changes logic gate outputs (c).  This will likely require a different HTML. | same as above |
+| Signed Addition, Subtraction (Selection).  Integer Numbers.  Subtraction (8th bit is a Sign, max number is  +127 and negative -128, overflow now produces negative number.  If sign bit is set the calculation is 128-bits.  | same as above |
+### Individual PBL <a id="journal7" name="journal7"></a>
+#### [Arushi and Prisha's Journal Week 7](https://docs.google.com/document/d/1seDbOB2NuwYPlKrZT3_Xj2PZT_M2fXd8vsJQjcmVbLU/edit?usp=sharing)
+#### [Siya and Vaishavi's Journal Week 7](https://docs.google.com/document/d/1JGEBFmo1_pH4qD9R48OEbQY1QGPZnUzHsenFQVhc_N0/edit?usp=sharing)
 #### [Scrumboard evidence of contribution](https://github.com/arushi10/flask_portfolio/projects/1)
 ##
 ### Individual Scoring
 | Name | Requirements | Evidence | Score (5) | Score (6)
 |:---|:----|:----|:----|:---|
-| Arushi | Assign issues, help take notes, fix default RGB.html, create individual RGB.html | check [journal](#journal5), [commits](https://github.com/arushi10/flask_portfolio/commit/2b87d9f3c0a2eb5a9238c3a094bcb106f877dfd0) | 2/2
-| Prisha | Update README.md, help take notes, create outline for individual RGB.html's | check [journal](#journal5), README.md, [commit](https://github.com/arushi10/flask_portfolio/commit/1b2f80a2f84181a403d351fed97c4277b00d5a49) | 2/2
-| Vai | Work on CSS for website, help take notes, attempt first hack, create individual RGB.html | check [journal](#journal5), [commits](https://github.com/arushi10/flask_portfolio/tree/193db67adcaa0a26d6f0b4b6aec63ad2a7af4c35/templates) | 2/2
-| Siya | Work on CSS for website, help take notes, create individual RGB.html | check [journal](#journal5), css edits not completed yet | 2/2
+| Arushi | Assign issues, help take notes, helped finish RGB, completed Logic Gates | check [journal](#journal7)  | 2/2
+| Prisha | Helped finish RGB, help take notes, worked on Unsigned Addition, completed Signed Addition | check [journal](#journal7) | 2/2
+| Vai | Work on CSS for website, help take notes, completed Color Codes | check [journal](#journal7), | 2/2
+| Siya | Work on CSS for website, help take notes, worked on Unsigned Addition, helped a bit on Color Codes, updated README.md | check [journal](#journal7), | 2/2
 ##
 ### Week 3-4 <a id="three" name="three"></a>
 #### Team Score (3): 4/4
@@ -126,4 +125,36 @@
 |Prisha| 4/4 | [Individual greet](https://github.com/arushi10/flask_portfolio/blob/a86e005484fd7ad64d8d4f570ce4f8e824ebccf6/templates/prisha.html), [Journal](https://docs.google.com/document/d/1loHOR3Go5zBSoCUSVq0vFdZwUMjUS2HDIdKXAYunI0k/edit?usp=sharing) | Will use personal laptop at home and at school |
 |Vai| 4/4 | [Individual greet](https://github.com/arushi10/flask_portfolio/blob/4a7c1d9286fac9134fd428e5b25330fe9da2a962/templates/vai.html), [Journal](https://docs.google.com/document/d/1i5YbwPytaD4uTgWlREmVMO6vnyi0u-PS9LWL9z5VAl0/edit) | Will use personal laptop at home and at school |
 |Siya | 4/4 | [Individual greet](https://github.com/arushi10/flask_portfolio/blob/3710ccee25addb0ae27c06f5e9a231d2cd069e5f/templates/siya.html), [Journal](https://docs.google.com/document/d/1i5YbwPytaD4uTgWlREmVMO6vnyi0u-PS9LWL9z5VAl0/edit)  | Will use personal laptop at home and at school | 
+
+## Weekly Progress <a id="weekly" name="weekly"></a>
+## Mini TOC
+### 1. [Week 5-6](#five)
+### 2. [Week 3-4](#three)
+### 3. [Week 1-2](#two)
 ##
+### Week 5-6 <a id="five" name="five"></a>
+#### Team Score (5): 3/3
+#### Team Score (6):
+| Requirement | Evidence |
+|:----|:---|
+| Scrum/Pair activity.  Listen to OO's and TO's introduction.  Write about OOs' and TOs roles in your journal.  Brainstorm on how you think fellow student can help you in Test Prep.  Review idea with Scrum Team, then review again with Crossover team.  Each Scrum Team create summary and provide ideas to OO's | look at peer [journals](#pbl) |
+| Scrum/Pair activity and journal. Unit 3.1 work.   Follow instructions and guidance from OO's | same as above |
+| Scrum/Pair activity and journal. Unit 3.2 work.   Follow instructions and guidance from OO's | same as above |
+| Complete RGB.html | see [repository](https://github.com/arushi10/flask_portfolio)
+| Research | see [Doc](https://docs.google.com/document/d/1URAFaV0vvWnKr_uAVXk9XZkrMpm0yu1Uy2D216nMfoc/edit?usp=sharing)
+| Documentation | see [Doc](https://docs.google.com/document/d/1Qu1qv-m_Qjl4qv1sOLs_NLJ1c8vye7fadSBaChOlz2E/edit?usp=sharing)
+### Individual PBL <a id="journal5" name="journal5"></a>
+#### [Arushi and Prisha's Journal Week 5](https://docs.google.com/document/d/1dEqBTzGBRVXmCpnkx5OEtnf5KQdtc1avz0yIqAmfRa8/edit)
+#### [Arushi and Prisha's Journal Week 6](https://docs.google.com/document/d/14SVw_ZA496D7wqcoAQ8PcbaCeqzZgPamT-bkG2e2_5c/edit)
+#### [Vaishavi and Siya's Journal Week 5](https://docs.google.com/document/d/1zomj1pCGm6hdcCjeyCqZuvsJI8_RhQ8S_J3c45hXpks/edit)
+#### [Vaishavi and Siya's Journal Week 6](https://docs.google.com/document/d/1aq47Wbhh-m9E98xqy90z85pHWFkNHqHgBnFjwsnRL00/edit)
+#### [Scrumboard evidence of contribution](https://github.com/arushi10/flask_portfolio/projects/1)
+##
+### Individual Scoring
+| Name | Requirements | Evidence | Score (5) | Score (6)
+|:---|:----|:----|:----|:---|
+| Arushi | Assign issues, help take notes, fix default RGB.html, create individual RGB.html | check [journal](#journal5), [commits](https://github.com/arushi10/flask_portfolio/commit/2b87d9f3c0a2eb5a9238c3a094bcb106f877dfd0) | 2/2
+| Prisha | Update README.md, help take notes, create outline for individual RGB.html's | check [journal](#journal5), README.md, [commit](https://github.com/arushi10/flask_portfolio/commit/1b2f80a2f84181a403d351fed97c4277b00d5a49) | 2/2
+| Vai | Work on CSS for website, help take notes, attempt first hack, create individual RGB.html | check [journal](#journal5), [commits](https://github.com/arushi10/flask_portfolio/tree/193db67adcaa0a26d6f0b4b6aec63ad2a7af4c35/templates) | 2/2
+| Siya | Work on CSS for website, help take notes, create individual RGB.html | check [journal](#journal5), css edits not completed yet | 2/2
+
