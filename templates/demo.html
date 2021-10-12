@@ -1,85 +1,89 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
-
 {% block background %}
 {% endblock %}
 {% set project = "colors" %}
-
 {% block body %}
-    <title>Color Codes</title>
+    <title>Demo page</title>
     <script>
+        function change(clicked_id){
+            if (document.getElementById(clicked_id).value == "1") {
+                document.getElementById(clicked_id).value = "0";
+            } else {
+                document.getElementById(clicked_id).value = "1";
+            }
+        }
         function calcBinary(){
-		let bits_r1 = "";
-		let bits_r2 = "";
-		let bits_r3 = "";  
-		for(let i=0; i<8; i++) {
-		   bits_r1 = bits_r1 + document.getElementById('digit_r1_' + i).value;
-		   bits_r2 = bits_r2 + document.getElementById('digit_r2_' + i).value;
-		   bits_r3 = bits_r3 + document.getElementById('digit_r3_' + i).value;
-		}
-		document.getElementById('debug_r1').innerHTML = bits_r1;
-		document.getElementById('debug_r2').innerHTML = bits_r2;
-		document.getElementById('debug_r3').innerHTML = bits_r3;
-		document.getElementById('decimal_r1').innerHTML = parseInt(bits_r1, 2).toString(10);
-		document.getElementById('decimal_r2').innerHTML = parseInt(bits_r2, 2).toString(10);
-		document.getElementById('decimal_r3').innerHTML = parseInt(bits_r3, 2).toString(10);
-		// change the color panel 
-		document.getElementById('color_panel').style = "background-color:rgb(" +
-			parseInt(bits_r1, 2).toString(10) + "," + 
-			parseInt(bits_r2, 2).toString(10) + "," + 
-			parseInt(bits_r3, 2).toString(10) + ");"
+            let bits_r1 = "";
+            let bits_r2 = "";
+            let bits_r3 = "";
+            for(let i=0; i<8; i++) {
+                bits_r1 = bits_r1 + document.getElementById('digit_r1_' + i).value;
+                bits_r2 = bits_r2 + document.getElementById('digit_r2_' + i).value;
+                bits_r3 = bits_r3 + document.getElementById('digit_r3_' + i).value;
+            }
+            document.getElementById('debug_r1').innerHTML = bits_r1;
+            document.getElementById('debug_r2').innerHTML = bits_r2;
+            document.getElementById('debug_r3').innerHTML = bits_r3;
+            document.getElementById('decimal_r1').innerHTML = parseInt(bits_r1, 2).toString(10);
+            document.getElementById('decimal_r2').innerHTML = parseInt(bits_r2, 2).toString(10);
+            document.getElementById('decimal_r3').innerHTML = parseInt(bits_r3, 2).toString(10);
+            // change the color panel
+            document.getElementById('color_panel').style = "background-color:rgb(" +
+                parseInt(bits_r1, 2).toString(10) + "," +
+                parseInt(bits_r2, 2).toString(10) + "," +
+                parseInt(bits_r3, 2).toString(10) + ");"
 
-	} 
-
+        }
     </script>
     <div class="row_1">
-	<table class="table">
-	    <tr>
-		<!-- for loop -->
-		{% for i in range(8) %}
-		    <td>
-			<input type='text' id='digit_r1_{{i}}' Value="0" size="2">
-		    </td>
-		{% endfor %}
-		<td id='decimal_r1'>0</td>	        
-		<td id='debug_r1'>0</td>	        
-	    </tr>
-	</table>
+        <table class="table">
+            <tr>
+                <!-- for loop -->
+                {% for i in range(8) %}
+                    <td>
+                        <input onclick="change(this.id)" type='button' id='digit_r1_{{i}}' Value="0">
+                    </td>
+                {% endfor %}
+                <td id='decimal_r1'>0</td>
+                <td id='debug_r1'>0</td>
+            </tr>
+        </table>
     </div>
     <div class="row_2">
-	<table class="table">
-	    <tr>
-		<!-- for loop -->
-		{% for i in range(8) %}
-		    <td>
-			<input type='text' id='digit_r2_{{i}}' Value="0" size="2">
-		    </td>
-		{% endfor %}
-		<td id='decimal_r2'>0</td>	        
-		<td id='debug_r2'>0</td>	        
-	    </tr>
-	</table>
+        <table class="table">
+            <tr>
+                <!-- for loop -->
+                {% for i in range(8) %}
+                    <td>
+                        <input onclick="change(this.id)" type='button' id='digit_r2_{{i}}' Value="0">
+                    </td>
+                {% endfor %}
+                <td id='decimal_r2'>0</td>
+                <td id='debug_r2'>0</td>
+            </tr>
+        </table>
     </div>
     <div class="row_3">
-	<table class="table">
-	    <tr>
-		<!-- for loop -->
-		{% for i in range(8) %}
-		    <td>
-			<input type='text' id='digit_r3_{{i}}' Value="0" size="2">
-		    </td>
-		{% endfor %}
-		<td id='decimal_r3'>0</td>	        
-		<td id='debug_r3'>0</td>	        
-	    </tr>
-	</table>
+        <table class="table">
+            <tr>
+                <!-- for loop -->
+                {% for i in range(8) %}
+                    <td>
+                        <input onclick="change(this.id)" type='button' id='digit_r3_{{i}}' Value="0">
+                    </td>
+                {% endfor %}
+                <td id='decimal_r3'>0</td>
+                <td id='debug_r3'>0</td>
+            </tr>
+        </table>
     </div>
     <div>
-    	<table id='color_panel' width=100% style="background-color:rgb(10,0,0);">
-	    <tr><td>
-		    Colors</br></br>
+        <table id='color_panel' width=100% style="background-color:rgb(10,0,0);">
+            <tr><td>
+                Colors</br></br>
             </td></tr>
-	</table>
+        </table>
     </div>
-<input id="calculate" type="button" value="calculate" onclick="calcBinary();"/>
+    <input id="calculate" type="button" value="calculate" onclick="calcBinary();"/>
 {% endblock %}
