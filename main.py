@@ -72,9 +72,6 @@ def binary():
 def mini_labs():
     return render_template("mini_labs.html")
 
-@app.route('/colorcode/')
-def colorcode():
-    return render_template("colorcode.html")
 
 @app.route('/explore/', methods=['GET', 'POST'])
 def explore():
