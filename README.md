@@ -53,7 +53,7 @@
 #### Team Score (8):
 | Requirement | Evidence |
 |:----|:---|
-| Multiply and Divide by 2 (Shift).  In this example, make the Bits change positions.  Start 2^0 to 2^15.  If you multiply by 2 then 2^0 bit becomes 2^1, 2^1 to 2^2.  If you divide 2^15 becomes 2^14. | look at [repository](https://github.com/arushi10/flask_portfolio/projects/1) |
+| Multiply and Divide by 2 (Shift).  In this example, make the Bits change positions.  Start 2^0 to 2^15.  If you multiply by 2 then 2^0 bit becomes 2^1, 2^1 to 2^2.  If you divide 2^15 becomes 2^14. | look at [repository](https://github.com/arushi10/flask_portfolio) |
 | Extend/Switch ASCII  to Unicode.   Use representation of U-0000 to U-FFFF for your bits.  The extension of ASCII to Unicode mode allows you to show even more Characters and Character ranges.  Look at Unicode on Wikipedia (Links to an external site.). | same as above |
 | Color Codes.  Display three rows of 8 bits.  Allow for code to be 0 to 255, show color for RGB.  Also, show color for R,G,B independently.  This may require a different HTML layout. | same as above |
 | Unsigned Addition, Subtraction (Default).  Whole Numbers. Max number move from 255 to 65535.  Essentially 8 bits to 16 bits.  16 bits is often called a "Short Integer". | same as above | 
