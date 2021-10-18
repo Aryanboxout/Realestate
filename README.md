@@ -43,19 +43,43 @@
 
 ## Weekly Progress <a id="weekly" name="weekly"></a>
 ## Mini TOC
-### 1. [Week 5-6](#five)
-### 2. [Week 3-4](#three)
-### 3. [Week 1-2](#two)
+### 1. [Week 7-8](#seven)
+### 2. [Week 5-6](#five)
+### 3. [Week 3-4](#three)
+### 4. [Week 1-2](#two)
 ##
+### Week 7-8 <a id="seven" name="seven"></a>
+#### Team Score (7):
+#### Team Score (8):
+| Requirement | Evidence |
+|:----|:---|
+| Multiply and Divide by 2 (Shift).  In this example, make the Bits change positions.  Start 2^0 to 2^15.  If you multiply by 2 then 2^0 bit becomes 2^1, 2^1 to 2^2.  If you divide 2^15 becomes 2^14. | look at [repository](https://github.com/arushi10/flask_portfolio) |
+| Extend/Switch ASCII  to Unicode.   Use representation of U-0000 to U-FFFF for your bits.  The extension of ASCII to Unicode mode allows you to show even more Characters and Character ranges.  Look at Unicode on Wikipedia (Links to an external site.). | same as above |
+| Color Codes.  Display three rows of 8 bits.  Allow for code to be 0 to 255, show color for RGB.  Also, show color for R,G,B independently.  This may require a different HTML layout. | same as above |
+| Unsigned Addition, Subtraction (Default).  Whole Numbers. Max number move from 255 to 65535.  Essentially 8 bits to 16 bits.  16 bits is often called a "Short Integer". | same as above | 
+| Logic Gates.   CB requires an understanding of Expressions.  These are routed in Logic Gates (as language is routed in Latin). Consider an entirely different presentation area and idea.  In this example, you may have two inputs (a,b) and see how changing those inputs changes logic gate outputs (c).  This will likely require a different HTML. | same as above |
+| Signed Addition, Subtraction (Selection).  Integer Numbers.  Subtraction (8th bit is a Sign, max number is  +127 and negative -128, overflow now produces negative number.  If sign bit is set the calculation is 128-bits.  | same as above |
+### Individual PBL <a id="journal7" name="journal7"></a>
+#### [Arushi and Prisha's Journal Week 7](https://docs.google.com/document/d/1seDbOB2NuwYPlKrZT3_Xj2PZT_M2fXd8vsJQjcmVbLU/edit?usp=sharing)
+#### [Siya and Vaishavi's Journal Week 7](https://docs.google.com/document/d/1JGEBFmo1_pH4qD9R48OEbQY1QGPZnUzHsenFQVhc_N0/edit?usp=sharing)
+#### [Scrumboard evidence of contribution](https://github.com/arushi10/flask_portfolio/projects/1)
+##
+### Individual Scoring
+| Name | Requirements | Evidence | Score (7) | Score (8)
+|:---|:----|:----|:----|:---|
+| Arushi | Assign issues, help take notes, shifting, completed Logic Gates | check [issues](https://github.com/arushi10/flask_portfolio/issues/23), [journals](https://docs.google.com/document/d/1seDbOB2NuwYPlKrZT3_Xj2PZT_M2fXd8vsJQjcmVbLU/edit?usp=sharing), and [commits](https://github.com/arushi10/flask_portfolio/blob/e7f338875dd331cb4d59d067fa9d986206c39482/templates/logicgates.html)  |
+| Prisha | Help take notes, completed Unsigned Addition, completed Signed Addition, fixed unicode | check [commits](https://github.com/arushi10/flask_portfolio/commit/be013ed3434365a5b437d00048e6d122c076cedd) and [journals](https://docs.google.com/document/d/1seDbOB2NuwYPlKrZT3_Xj2PZT_M2fXd8vsJQjcmVbLU/edit?usp=sharing) |
+| Vai | Work on CSS for website, help take notes, completed Color Codes | check [journal](https://docs.google.com/document/d/1JGEBFmo1_pH4qD9R48OEbQY1QGPZnUzHsenFQVhc_N0/edit?usp=sharing) and [commits](https://github.com/arushi10/flask_portfolio/blob/7cc349338e7674b7392c940fd6a51efa8b3e352b/templates/demo.html) |
+| Siya | Work on CSS for website, help take notes, worked on Unsigned Addition, helped a bit on Color Codes, updated README.md | check [commits](https://github.com/arushi10/flask_portfolio/commit/f9aed4b32864cc1ebcbf9d24813415c57616ed37) and [journals](https://docs.google.com/document/d/1JGEBFmo1_pH4qD9R48OEbQY1QGPZnUzHsenFQVhc_N0/edit?usp=sharing) |
 ### Week 5-6 <a id="five" name="five"></a>
 #### Team Score (5): 3/3
-#### Team Score (6): 
+#### Team Score (6): 3/3
 | Requirement | Evidence |
 |:----|:---|
 | Scrum/Pair activity.  Listen to OO's and TO's introduction.  Write about OOs' and TOs roles in your journal.  Brainstorm on how you think fellow student can help you in Test Prep.  Review idea with Scrum Team, then review again with Crossover team.  Each Scrum Team create summary and provide ideas to OO's | look at peer [journals](#pbl) |
 | Scrum/Pair activity and journal. Unit 3.1 work.   Follow instructions and guidance from OO's | same as above |
 | Scrum/Pair activity and journal. Unit 3.2 work.   Follow instructions and guidance from OO's | same as above |
-| Complete RGB.html | see [repository](https://github.com/arushi10/flask_portfolio) 
+| Complete RGB.html | see [repository](https://github.com/arushi10/flask_portfolio)
 | Research | see [Doc](https://docs.google.com/document/d/1URAFaV0vvWnKr_uAVXk9XZkrMpm0yu1Uy2D216nMfoc/edit?usp=sharing)
 | Documentation | see [Doc](https://docs.google.com/document/d/1Qu1qv-m_Qjl4qv1sOLs_NLJ1c8vye7fadSBaChOlz2E/edit?usp=sharing)
 ### Individual PBL <a id="journal5" name="journal5"></a>

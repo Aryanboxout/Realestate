@@ -3,6 +3,8 @@ from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-
 #import "packages" from flask
 from flask import Flask, render_template, request
 from image import image_data, prisha_image_data, arushi_image_data, vaishavi_image_data, siya_image_data
+import requests
+
 
 # create a Flask instance
 app = Flask(__name__)
@@ -23,6 +25,16 @@ def arushi():
             return render_template("arushi.html", name1=name)
     # starting and empty input default
     return render_template("arushi.html", name1="TechFish User")
+
+@app.route('/AboutUs/', methods=['GET', 'POST'])
+def AboutUs():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("MainAboutUs.html", name1=name)
+    # starting and empty input default
+    return render_template("MainAboutUs.html", name1="TechFish User")
 
 
 @app.route('/prisha/', methods=['GET', 'POST'])
@@ -81,7 +93,16 @@ def explore():
         if len(name) != 0:  # input field has content
             return render_template("explore.html", name1=name)
     # starting and empty input default
-    return render_template("explore.html", name1=" ")
+    url = "https://amazon-product-reviews-keywords.p.rapidapi.com/product/reviews"
+    querystring = {"asin":"B07XQXZXJC","country":"US","variants":"1","top":"0"}
+
+    headers = {
+    'x-rapidapi-host': "amazon-product-reviews-keywords.p.rapidapi.com",
+    'x-rapidapi-key': "f74ed87200msh995f07c2f92be0bp101c14jsn28a6b622e01b"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    return render_template("/explore.html", stats=response.json())
 
 
 @app.route('/cart/', methods=['GET', 'POST'])
@@ -157,6 +178,50 @@ def colors():
 @app.route("/logicgates", methods=['GET', 'POST'])
 def logicgates():
     return render_template("logicgates.html")
+
+@app.route('/joke', methods=['GET', 'POST'])
+def joke():
+    """
+    # use this url to test on and make modification on you own machine
+    url = "http://127.0.0.1:5222/api/joke"
+    """
+    url = "https://csp.nighthawkcodingsociety.com/api/joke"
+    response = requests.request("GET", url)
+    return render_template("/joke.html", joke=response.json())
+
+
+@app.route('/jokes', methods=['GET', 'POST'])
+def jokes():
+    """
+    # use this url to test on and make modification on you own machine
+    url = "http://127.0.0.1:5222/api/jokes"
+    """
+    url = "https://csp.nighthawkcodingsociety.com/api/jokes"
+
+    response = requests.request("GET", url)
+    return render_template("/jokes.html", jokes=response.json())
+
+
+@app.route('/covid19', methods=['GET', 'POST'])
+def covid19():
+    url = "https://corona-virus-world-and-india-data.p.rapidapi.com/api"
+    headers = {
+        'x-rapidapi-key': "dec069b877msh0d9d0827664078cp1a18fajsn2afac35ae063",
+        'x-rapidapi-host': "corona-virus-world-and-india-data.p.rapidapi.com"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+    """
+    # uncomment this code to test from terminal
+    world = response.json().get('world_total')
+    countries = response.json().get('countries_stat')
+    print(world['total_cases'])
+    for country in countries:
+        print(country["country_name"])
+    """
+
+    return render_template("/covid19.html", stats=response.json())
 
 # runs the application on the development server
 if __name__ == "__main__":

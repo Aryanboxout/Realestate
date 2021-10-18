@@ -12,6 +12,21 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 {% set youtube = "https://youtu.be/dQw4w9WgXcQ" %}
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .rectangle {
+            height: 450px;
+            width: 800px;
+            background-color: blanchedalmond;
+            margin-left: 700px;
+        }
+        .rectangle li {
+            display: inline-block;
+            font-size: 20px;
+            padding: 20px;
+            color: teal;
+        }
+    </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -22,24 +37,28 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         }
 
         html, body{
-            margin: 500;
-            height: 500%;
+            margin: 0;
+            height: 100%;
             animation: fadein 2s;
             -moz-animation: fadein 2s; /* Firefox */
             -webkit-animation: fadein 2s; /* Safari and Chrome */
             -o-animation: fadein 2s; /* Opera */
-            background-image: url(![](../../static/assets/Best-Aquarium-Background.jpeg));
-            image: url(![](../../static/assets/Best-Aquarium-Background.jpeg));
+            background-image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);
+            image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169));
         }
 
         .dark-mode {
-            background-color: url
-            (![](../../static/assets/Best-Aquarium-Background.jpeg));
-            color: url(![](../../static/assets/Best-Aquarium-Background.jpeg));
+            background-image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);
+            image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);
         }
 
         h1{
             font-size: 5em;
+            color: navajowhite;
+        }
+
+        h2{
+            color: #0D1F2D;
         }
 
         a {
@@ -75,7 +94,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             border-radius: 100px;
             transition: all .2s;
             position: absolute;
-            color: black;
+            color: navajowhite;
             font-size: 2.5em;
         }
 
@@ -96,7 +115,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     </style>
 
-    <title>{{ name }} | {{ project }} </title>
+    <title> TechFish Electronics </title>
 
 </head>
 
@@ -109,38 +128,49 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 </html>
 
 {% block body %}
-<div class="container-fluid" >
-        <div class="row justify-content-end" style="padding: 2%;">
-<div class="col-2" style="text-align: right;">
-    {% block info %}
-    <!-- notice jinja style variables used in href's -->
-    <a><h5>{{name}}</h5></a>
-    <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
-    <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>
-    {% endblock %}
-</div>
-</div>
+{#    <div class="container-fluid" >#}
+{#        <div class="row justify-content-end" style="padding: 2%;">#}
+{#            <div class="col-2" style="text-align: right;">#}
+{#                {% block info %}#}
+{#                    <!-- notice jinja style variables used in href's -->#}
+{#                    <a><h5>{{name}}</h5></a>#}
+{#                    <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>#}
+{#                    <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>#}
+{#                {% endblock %}#}
+{#            </div>#}
+{#        </div>#}
 
-<div class="product" style="margin-top: 2%;">
-    <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
+        <div class="product" style="margin-top: 2%;">
+            <div class="row" style="padding: 5%; padding-top: 0%; padding-bottom: 5%;">
 
-        <div class="col-8" >
-            <h1>{{ project }} Project</h1>
+                <div class="col-8" >
+                    <h1>TechFish Electronics</h1>
+                </div>
+
+
+            </div>
+            <body>
+
+{#            <h2>Rectangle CSS</h2>#}
+            <div class="rectangle">
+                <h2 style="font-size: 40px"> Welcome to TechFish, the best place to buy the best waterproof tech gear. </h2>
+                <p style="font-size: 40px"> What would you like to shop first?</p>
+                <div class="navbar-nav">
+                    <a style="font-size: 20px;" class="nav-link" href="">Phones</a>
+                    <a style="font-size: 20px;" class="nav-link" href="">Computers/PCs</a>
+                    <a style="font-size: 20px;" class="nav-link" href="">Audio Devices</a>
+                    <a style="font-size: 20px;" class="nav-link" href="">TVs/Screens</a>
+                    <a style="font-size: 20px;" class="nav-link" href="">Smart Devices</a>
+                    <a style="font-size: 20px;" class="nav-link" href="">Outdoor Tech</a>
+
+            </div>
+
+
+            </body>
+
+
         </div>
-
     </div>
-
-    <div class="row" style="padding-left: 10%;" style="padding-right: 10%";>
-        {% block links %}
-        <body style="background-color:lightsteelblue">
-
-        Welcome to our website, where you can buy the best waterproof gear for your underwater adventures!
-
-        {% endblock %}
-    </div>
-
-</div>
-</div>
 {% endblock %}
 
 </body>

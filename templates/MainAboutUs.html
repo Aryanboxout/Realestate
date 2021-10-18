@@ -1,0 +1,22 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Vaishavi's" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+    <div class="col-12">
+        <div class="col-12">
+            <div class=""paragraph"><p>Hi, we are Team TechFish! We are dedicated to making your shopping more efficient!</p></div>
+        <img src="/static/assets/csp_mainaboutus.png" style="height: 400px" alt = "loading">
+    </div>
+</div>
+
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
