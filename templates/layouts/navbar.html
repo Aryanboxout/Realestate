@@ -22,7 +22,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="nav-link" href={{ url_for('index') }}>Home</a>
             <!-- stub is shown using the name of the route -->
-            <a class="nav-link" href={{ url_for('explore') }}>Explore</a>
+{#            <a class="nav-link" href={{ url_for('explore') }}>Explore</a>#}
             <a class="nav-link" href={{ url_for('cart') }}>Cart</a>
             <a class="nav-link" href={{ url_for('account') }}>Account</a>
 
@@ -32,6 +32,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                         Explore
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="nav-link" href={{ url_for('explore') }}>Main</a>
                         <a class="nav-link" href="{{ url_for('index') }}">Phones</a>
                         <a class="nav-link" href="{{ url_for('index') }}">Computers/PCs</a>
                         <a class="nav-link" href="{{ url_for('index') }}">Audio DEvices</a>
