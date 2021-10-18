@@ -38,11 +38,26 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                         <a class="dropdown-item" href="{{ url_for('rgb') }}">RGB</a>
                         <a class="dropdown-item" href="{{ url_for('colors') }}">Color Code</a>
                         <a class="dropdown-item" href="{{ url_for('logicgates') }}">Logic Gates</a>
-                        <a class="dropdown-item" href="{{ url_for('covid19') }}">COVID API</a>
-                        <a class="dropdown-item" href="{{ url_for('joke') }}">Joke API</a>
-                        <a class="dropdown-item" href="{{ url_for('jokes') }}">Jokes API</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            API
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ url_for('joke')}}">Joke API</a>
+                            <a class="dropdown-item" href="{{ url_for('jokes')}}">Jokes API</a>
+                            <a class="dropdown-item" href="{{ url_for('covid19')}}">Covid19 RapidAPI</a>
+                        </div>
                     </div>
                 </li>
+                {#                <li class="nav-item dropdown">#}
+                {#                    <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+                {#                        Data#}
+                {#                    </a>#}
+                {#                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">#}
+                {#                        <a class="dropdown-item" href="/api/joke">Joke RESTapi</a>#}
+                {#                        <a class="dropdown-item" href="/api/jokes">Jokes RESTapi</a>#}
+                {#                        <a class="dropdown-item" href="/crud/">SQL CRUD</a>#}
+                {#                    </div>#}
+                {#                </li>#}
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -65,3 +80,5 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         </div>
     </div>
 </nav>
+
+
