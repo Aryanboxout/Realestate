@@ -1,6 +1,7 @@
 import requests
 from flask import Blueprint, render_template
 from image import image_data
+import requests
 
 from pathlib import \
     Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
@@ -66,3 +67,16 @@ def covid19():
     """
 
     return render_template("starter/covid19.html", stats=response.json())
+
+@app_starter.route('/explore/', methods=['GET', 'POST'])
+def explore():
+    url = "https://amazon-product-reviews-keywords.p.rapidapi.com/product/reviews"
+    querystring = {"asin":"B07XQXZXJC","country":"US","variants":"1","top":"0"}
+
+    headers = {
+        'x-rapidapi-host': "amazon-product-reviews-keywords.p.rapidapi.com",
+        'x-rapidapi-key': "f74ed87200msh995f07c2f92be0bp101c14jsn28a6b622e01b"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    return render_template("/explore.html", stats=response.json())
