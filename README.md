@@ -34,12 +34,14 @@
 #### (September 8th, 2021) Updated ReadMe and ensured any previous problems with greet code is fixed. Will be using greet to help with writing about page.
 #### (September 16th, 2021) Coded binary page. Created a drop down menu for about us pages. Changed navbar to include names of our website pages.
 #### (September 28th, 2021) Finished RGB setup. Added pictures and text for aboutus pages. Changed background color for some website pages.
+#### (October 18th, 2021) Added logic gates and color code mini-labs. Added binary shifts, ascii, as well as signed, and unsigned addition. Finished setting up APIs (joke, jokes, COVID-19). Updated website home page, explore page. Created drop down for individual merch pages. 
 | Sprint Week Number | Tangibles |
 |:-------------------|:----------|
 | Week 0 | [video](https://drive.google.com/file/d/1BAJstuaF_2IjEaQy2tUoSbzXyshC-5Yw/view?usp=sharing), [slideshow](https://docs.google.com/presentation/d/1DXjuatCa1kNI5u5Jn1TSqNIcV9H1_o0ji6_ceScYdmM/edit?usp=sharing), [journals](https://drive.google.com/drive/folders/1Uk1q0Qu81vBN7ehMrA7DYf6q5P8glnQZ?usp=sharing)| 
 | Week 1 and Week 2 | [video](https://drive.google.com/file/d/1I_GtPVAsDd5E7xhBEfZXf8Jyouk7Bt-n/view?usp=sharing), [Greet code](https://github.com/arushi10/flask_portfolio/commit/6f03deaea91f89a59362b42591b5e2bef2684508)| 
 | Week 3 | [repository - README with Markdown, Mini-labs with Bootstrap Grid layout](https://github.com/arushi10/flask_portfolio/commit/f11ff293e6c28d6c18ad01d663c4f4270dc7d63b) |
 | Week 4 | [repository - binary, dropdown menu](https://github.com/arushi10/flask_portfolio/commit/7322211edfaef51ae5a65dde9fec1b23188fa3b2), [video](https://drive.google.com/file/d/1TJr9IsJiK7rCQFlS2qPCeEa0G2FSUPJe/view)|
+| Week 8| [repository - updated website](https://github.com/arushi10/flask_portfolio/commit/683144693f973511dd93d63c42c23176024c58b8)
 
 ## Weekly Progress <a id="weekly" name="weekly"></a>
 ## Mini TOC
@@ -62,14 +64,15 @@
 ### Individual PBL <a id="journal7" name="journal7"></a>
 #### [Arushi and Prisha's Journal Week 7](https://docs.google.com/document/d/1seDbOB2NuwYPlKrZT3_Xj2PZT_M2fXd8vsJQjcmVbLU/edit?usp=sharing)
 #### [Siya and Vaishavi's Journal Week 7](https://docs.google.com/document/d/1JGEBFmo1_pH4qD9R48OEbQY1QGPZnUzHsenFQVhc_N0/edit?usp=sharing)
+#### [Arushi and Prisha's Journal Week 8](https://docs.google.com/document/d/1VZnz2ssdaqQw3oNEqRcRqmQgix44CFWNOg88iobcj7g/edit?usp=sharing)
+#### [Siya and Vaishavi's Journal Week 8](https://docs.google.com/document/d/1Ht_kQXgUxqFInAo5RoJG6sS_nju5TBpfer3d8fmQnbo/edit?usp=sharing)
 #### [Scrumboard evidence of contribution](https://github.com/arushi10/flask_portfolio/projects/1)
-##
 ### Individual Scoring
 | Name | Requirements | Evidence | Score (7) | Score (8)
 |:---|:----|:----|:----|:---|
-| Arushi | Assign issues, help take notes, shifting, completed Logic Gates | check [issues](https://github.com/arushi10/flask_portfolio/issues/23), [journals](https://docs.google.com/document/d/1seDbOB2NuwYPlKrZT3_Xj2PZT_M2fXd8vsJQjcmVbLU/edit?usp=sharing), and [commits](https://github.com/arushi10/flask_portfolio/blob/e7f338875dd331cb4d59d067fa9d986206c39482/templates/logicgates.html)  |
-| Prisha | Help take notes, completed Unsigned Addition, completed Signed Addition, fixed unicode | check [commits](https://github.com/arushi10/flask_portfolio/commit/be013ed3434365a5b437d00048e6d122c076cedd) and [journals](https://docs.google.com/document/d/1seDbOB2NuwYPlKrZT3_Xj2PZT_M2fXd8vsJQjcmVbLU/edit?usp=sharing) |
-| Vai | Work on CSS for website, help take notes, completed Color Codes | check [journal](https://docs.google.com/document/d/1JGEBFmo1_pH4qD9R48OEbQY1QGPZnUzHsenFQVhc_N0/edit?usp=sharing) and [commits](https://github.com/arushi10/flask_portfolio/blob/7cc349338e7674b7392c940fd6a51efa8b3e352b/templates/demo.html) |
+| Arushi | Assign issues, help take notes, shifting, completed Logic Gates, Explore page | check [issues](https://github.com/arushi10/flask_portfolio/issues/23), [journals](https://docs.google.com/document/d/1seDbOB2NuwYPlKrZT3_Xj2PZT_M2fXd8vsJQjcmVbLU/edit?usp=sharing), and [commits](https://github.com/arushi10/flask_portfolio/blob/e7f338875dd331cb4d59d067fa9d986206c39482/templates/logicgates.html)  |
+| Prisha | Help take notes, completed Unsigned Addition, completed Signed Addition, fixed unicode, home page | check [commits](https://github.com/arushi10/flask_portfolio/commit/be013ed3434365a5b437d00048e6d122c076cedd) and [journals](https://docs.google.com/document/d/1seDbOB2NuwYPlKrZT3_Xj2PZT_M2fXd8vsJQjcmVbLU/edit?usp=sharing) |
+| Vai | Work on CSS for website, help take notes, completed Color Codes, explore drop down | check [journal](https://docs.google.com/document/d/1JGEBFmo1_pH4qD9R48OEbQY1QGPZnUzHsenFQVhc_N0/edit?usp=sharing) and [commits](https://github.com/arushi10/flask_portfolio/blob/7cc349338e7674b7392c940fd6a51efa8b3e352b/templates/demo.html) |
 | Siya | Work on CSS for website, help take notes, worked on Unsigned Addition, helped a bit on Color Codes, updated README.md | check [commits](https://github.com/arushi10/flask_portfolio/commit/f9aed4b32864cc1ebcbf9d24813415c57616ed37) and [journals](https://docs.google.com/document/d/1JGEBFmo1_pH4qD9R48OEbQY1QGPZnUzHsenFQVhc_N0/edit?usp=sharing) |
 ### Week 5-6 <a id="five" name="five"></a>
 #### Team Score (5): 3/3
