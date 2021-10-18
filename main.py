@@ -3,7 +3,7 @@ from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-
 #import "packages" from flask
 from flask import Flask, render_template, request
 from image import image_data, prisha_image_data, arushi_image_data, vaishavi_image_data, siya_image_data
-import requests
+
 
 # create a Flask instance
 app = Flask(__name__)
@@ -24,6 +24,16 @@ def arushi():
             return render_template("arushi.html", name1=name)
     # starting and empty input default
     return render_template("arushi.html", name1="TechFish User")
+
+@app.route('/AboutUs/', methods=['GET', 'POST'])
+def AboutUs():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("MainAboutUs.html", name1=name)
+    # starting and empty input default
+    return render_template("MainAboutUs.html", name1="TechFish User")
 
 
 @app.route('/prisha/', methods=['GET', 'POST'])
