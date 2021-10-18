@@ -10,21 +10,26 @@
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
 
         <div class="col-12">
-            <p>What would you like to shop for? {{name1}}</p>
+            <p style="color:white">What would you like to shop for? {{name1}}</p>
         </div>
         <div class="col-12">
             <form action= "/explore/" id="explore" method="POST">
-                <label for="name">Search </label>
+                <label for="name"><p style="color:white">Search</p> </label>
                 <input name="name" id="name">
                 <input type="submit" value="Submit">
             </form>
         </div>
+        <p style="color:yellow">Recommended for You</p>
+
+        {% set world = stats.world_total %}
+        {% set countries = stats.countries_stat %}
+
         <div class="col-12">
-            <div class=""paragraph"><p>Headphones</p></div>
+        <p style="color:white">Headphones</p>
         <img src="/static/assets/sonyheadphones.jpg" style="height: 400px" alt = "Sony Headphones">
-        <div class=""paragraph"><p>Phones</p></div>
+            <p style="color:white">Phones</p>
     <img src="/static/assets/techfishphone.jpeg" style="height: 400px" alt = "Sony Headphones">
-    <div class=""paragraph"><p>Computers</p></div>
+            <p style="color:white">Computers</p>
     <img src="/static/assets/techfishcomputers.jpg" style="height: 400px" alt = "Sony Headphones">
     </div>
     </div>
