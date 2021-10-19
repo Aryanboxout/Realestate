@@ -172,7 +172,7 @@ def siyargb():
 
 @app.route("/colors", methods=['GET', 'POST'])
 def colors():
-    return render_template("demo.html")
+    return render_template("colorcodes.html")
 
 
 @app.route("/logicgates", methods=['GET', 'POST'])
