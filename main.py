@@ -93,15 +93,17 @@ def explore():
         if len(name) != 0:  # input field has content
             return render_template("explore.html", name1=name)
     # starting and empty input default
-    url = "https://amazon-product-reviews-keywords.p.rapidapi.com/product/reviews"
-    querystring = {"asin":"B07XQXZXJC","country":"US","variants":"1","top":"0"}
+    url = "https://weatherapi-com.p.rapidapi.com/ip.json"
+
+    querystring = {"q":"<REQUIRED>"}
 
     headers = {
-    'x-rapidapi-host': "amazon-product-reviews-keywords.p.rapidapi.com",
+    'x-rapidapi-host': "weatherapi-com.p.rapidapi.com",
     'x-rapidapi-key': "f74ed87200msh995f07c2f92be0bp101c14jsn28a6b622e01b"
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
+    print(response.text)
     return render_template("/explore.html", stats=response.json())
 
 
@@ -221,7 +223,25 @@ def covid19():
         print(country["country_name"])
     """
 
-    return render_template("/covid19.html", stats=response.json())
+    return response.text
+        #render_template("/covid19.html", stats=response.json())
+
+@app.route('/weather', methods=['GET', 'POST'])
+def weather():
+    url = "https://community-open-weather-map.p.rapidapi.com/weather"
+
+    querystring = {"q":"san diego","lat":"0","lon":"0","lang":"en","units":"imperial"}
+
+    headers = {
+    'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com",
+    'x-rapidapi-key': "f74ed87200msh995f07c2f92be0bp101c14jsn28a6b622e01b"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    return render_template("/weather.html", stats=response.json())
+    #response.text
+
 
 # runs the application on the development server
 if __name__ == "__main__":
