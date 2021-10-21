@@ -9,6 +9,13 @@
     <title>Weather API</title>
     <html lang="en">
 
+    <style>
+        table, th, td {
+            border:1px solid white;
+            color: white;
+        }
+    </style>
+
     {% set coordinate = stats.coord %}
     {% set main = stats.main %}
     {% set wind = stats.wind %}
@@ -23,7 +30,7 @@
         </div>
 
         <body>
-        <table style="width:100%">
+        <table style="width:100%;">
             <tr>
                 <th>Location</th>
                 <th>Temperature</th>
@@ -50,12 +57,6 @@
                 <td> visibility: {{stats.visibility}} </td>
             </tr>
         </table>
-
-        <style>
-            table, th, td {
-                border:1px white;
-            }
-        </style>
 
         </body>
     </html>
