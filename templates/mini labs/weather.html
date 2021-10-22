@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block background %}
+{% endblock %}
+{% set project = "weather" %}
+
+{% block body %}
+    <title>Weather API</title>
+    <html lang="en">
+
+    {% set coordinate = stats.coord %}
+    {% set main = stats.main %}
+    {% set wind = stats.wind %}
+    {% set system = stats.sys %}
+
+        <!-- Title -->
+        <div class="col-12" style="text-align: center;">
+            <h1><strong>Weather RESTapi from rapidapi.com</strong></h1>
+            <form action={{url_for('.weather')}}>
+                <button>Refresh!</button>
+            </form>
+        </div>
+
+        <body>
+        <table style="width:100%">
+            <tr>
+                <th>Location</th>
+                <th>Temperature</th>
+                <th>Other</th>
+            </tr>
+            <tr>
+                <td> city: {{stats.name}}  </td>
+                <td> current temperature: {{main.temp}} </td>
+                <td> wind speed: {{wind.speed}} </td>
+            </tr>
+            <tr>
+                <td> country: {{system.country}} </td>
+                <td> feels-like temperature: {{main.feels_like}} </td>
+                <td> pressure: {{main.pressure}} </td>
+            </tr>
+            <tr>
+                <td> longitude: {{coordinate.lon}} </td>
+                <td> low: {{ main.temp_min }} </td>
+                <td> humidity: {{ main.humidity }} </td>
+            </tr>
+            <tr>
+                <td> latitude: {{coordinate.lat}} </td>
+                <td> high: {{ main.temp_max }} </td>
+                <td> visibility: {{stats.visibility}} </td>
+            </tr>
+        </table>
+
+        <style>
+            table, th, td {
+                border:1px white;
+            }
+        </style>
+
+        </body>
+    </html>
+{% endblock %}

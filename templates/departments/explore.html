@@ -1,0 +1,85 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Arushi's" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here ->
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+
+    <div class="product" style="margin-top: 2%;">
+    <div class="row" style="padding: 5%; padding-top: 0%; padding-bottom: 5%; center">
+
+        <div class="col-8" >
+            <div style="text-align:center">
+                <h1>Choose a Department Below To Get Started!</h1>
+                {#                    <h2>So will this paragraph.</h2>#}
+            </div>
+        </div>
+
+    </div>
+    <!-- -->
+    <div class="col-12">
+        <p style="color:white">What would you like to shop for?</p>
+    </div>
+    <p style="color:yellow">Recommended for You</p>
+
+    <head>
+        {#            <h3>HTML Image as link</h3>#}
+    </head>
+    <h3>
+    iPhones/Computers:<h3>
+    <a href="https://www.apple.com/iphone/">
+        <img alt="iPhone 13" src="https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iphone13_colors_09142021_big.jpg.large.jpg">
+    </a>
+</h3>
+
+
+    <head>
+        {#            <h3>HTML Image as link</h3>#}
+    </head>
+    <h3>
+    Audio Devices:<h3>
+    <a href="https://www.sony.com/headphones/">
+        <img alt="Sony Headphones" src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202107/sony_headphones_it_0.jpg?k_h07C3jsgkv4eqTpF9.kKLTQOPnBSnZ&size=1200:675">
+</h3>
+
+    <head>
+        {#            <h3>HTML Image as link</h3>#}
+    </head>
+    <h3>
+    TVs/Screens:<h3>
+    <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.samsung.com%2Flevant%2Ftvs%2Fuhd-4k-tv%2Ftu8000-65-inch-crystal-uhd-smart-tv-ua65tu8000uxtw%2F&psig=AOvVaw2saDTRJTx6XAWv8Mic6zk5&ust=1634935626643000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKDtkP2v3PMCFQAAAAAdAAAAABAd>
+        <img alt="Samsung TV" src="https://img.us.news.samsung.com/us/wp-content/uploads/2019/01/14103848/Samsung-TV_iTunes-Movies-and-TV-shows.jpg">
+    </a>
+</h3>
+    <head>
+        {#            <h3>HTML Image as link</h3>#}
+    </head>
+    <h3>
+    Smart Devices:<h3>
+    <a href="https://store.google.com/us/product/google_nest_mini">
+        <img alt="iPhone 13" src="https://www.m2sys.com/blog/wp-content/uploads/2017/09/10-iot-revolutions-that-will-be-available-in-every-smart-home-after-10-years.jpg">
+    </a>
+</h3>
+    {#        <div class="container">#}
+    {#            <img src="/static/assets/sonyheadphones.jpg" style="height: 400px" alt = "Python Flask">#}
+    {#            <input type="checkbox" class="checkbox" id="check1" />#}
+    {#        </div>#}
+    {#        <div class="container">#}
+    {#            <img src="/static/assets/techfishcomputers.jpg" style="height: 400px" alt = "Python Flask">#}
+    {#            <input type="checkbox"  class="checkbox" id="check2" />#}
+    {#        </div>#}
+    {#        <div class="container">#}
+    {#            <img src="/static/assets/techfishphone.jpeg" style="height: 400px" alt = "Python Flask">#}
+    {#            <input type="checkbox"  class="checkbox" id="check2" />#}
+    {#        </div>#}
+    {#    </div>#}
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}

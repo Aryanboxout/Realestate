@@ -22,9 +22,9 @@ def arushi():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("arushi.html", name1=name)
+            return render_template("about us/arushi.html", name1=name)
     # starting and empty input default
-    return render_template("arushi.html", name1="TechFish User")
+    return render_template("about us/arushi.html", name1="TechFish User")
 
 @app.route('/AboutUs/', methods=['GET', 'POST'])
 def AboutUs():
@@ -32,9 +32,9 @@ def AboutUs():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("MainAboutUs.html", name1=name)
+            return render_template("about us/MainAboutUs.html", name1=name)
     # starting and empty input default
-    return render_template("MainAboutUs.html", name1="TechFish User")
+    return render_template("about us/MainAboutUs.html", name1="TechFish User")
 
 
 @app.route('/prisha/', methods=['GET', 'POST'])
@@ -43,9 +43,9 @@ def prisha():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("prisha.html", name1=name)
+            return render_template("about us/prisha.html", name1=name)
     # starting and empty input default
-    return render_template("prisha.html", name1="TechFish User")
+    return render_template("about us/prisha.html", name1="TechFish User")
 
 
 @app.route('/vai/', methods=['GET', 'POST'])
@@ -54,9 +54,9 @@ def vai():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("vai.html", name1=name)
+            return render_template("about us/vai.html", name1=name)
     # starting and empty input default
-    return render_template("vai.html", name1="TechFish User")
+    return render_template("about us/vai.html", name1="TechFish User")
 
 
 @app.route('/siya/', methods=['GET', 'POST'])
@@ -65,9 +65,9 @@ def siya():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("siya.html", name1=name)
+            return render_template("about us/siya.html", name1=name)
     # starting and empty input default
-    return render_template("siya.html", name1="TechFish User")
+    return render_template("about us/siya.html", name1="TechFish User")
 
 
 @app.route("/binary", methods=['GET', 'POST'])
@@ -75,14 +75,14 @@ def binary():
     if request.form:
         bits = request.form.get("bits")
         if len(bits) != 0:  # input field has content
-            return render_template("binary.html", bits=int(bits))
+            return render_template("mini labs/binary.html", bits=int(bits))
         # starting and empty input default
-    return render_template("binary.html", bits=8)
+    return render_template("mini labs/binary.html", bits=8)
 
 
 @app.route('/mini_labs/')
 def mini_labs():
-    return render_template("mini_labs.html")
+    return render_template("mini labs/mini_labs.html")
 
 
 @app.route('/explore/', methods=['GET', 'POST'])
@@ -91,17 +91,19 @@ def explore():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("explore.html", name1=name)
+            return render_template("departments/explore.html", name1=name)
     # starting and empty input default
-    url = "https://amazon-product-reviews-keywords.p.rapidapi.com/product/reviews"
-    querystring = {"asin":"B07XQXZXJC","country":"US","variants":"1","top":"0"}
+    url = "https://weatherapi-com.p.rapidapi.com/ip.json"
+
+    querystring = {"q":"<REQUIRED>"}
 
     headers = {
-    'x-rapidapi-host': "amazon-product-reviews-keywords.p.rapidapi.com",
+    'x-rapidapi-host': "weatherapi-com.p.rapidapi.com",
     'x-rapidapi-key': "f74ed87200msh995f07c2f92be0bp101c14jsn28a6b622e01b"
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
+    print(response.text)
     return render_template("/explore.html", stats=response.json())
 
 
@@ -172,12 +174,12 @@ def siyargb():
 
 @app.route("/colors", methods=['GET', 'POST'])
 def colors():
-    return render_template("colorcodes.html")
+    return render_template("mini labs/colorcodes.html")
 
 
 @app.route("/logicgates", methods=['GET', 'POST'])
 def logicgates():
-    return render_template("logicgates.html")
+    return render_template("mini labs/logicgates.html")
 
 @app.route('/joke', methods=['GET', 'POST'])
 def joke():
@@ -221,7 +223,45 @@ def covid19():
         print(country["country_name"])
     """
 
-    return render_template("/covid19.html", stats=response.json())
+    return response.text
+        #render_template("/covid19.html", stats=response.json())
+
+@app.route('/weather', methods=['GET', 'POST'])
+def weather():
+    url = "https://community-open-weather-map.p.rapidapi.com/weather"
+
+    querystring = {"q":"san diego","lat":"0","lon":"0","lang":"en","units":"imperial"}
+
+    headers = {
+    'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com",
+    'x-rapidapi-key': "f74ed87200msh995f07c2f92be0bp101c14jsn28a6b622e01b"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    return render_template("/weather.html", stats=response.json())
+    #response.text
+
+
+@app.route('/map')
+def map():
+    return render_template("map.html")
+
+@app.route('/phonestablets')
+def phonestablets():
+    return render_template("departments/phonestablets.html")
+
+@app.route('/desktopstvs')
+def desktopstvs():
+    return render_template("departments/desktopstvs.html")
+
+@app.route('/audiodevices')
+def audiodevices():
+    return render_template("departments/audiodevices.html")
+
+@app.route('/aidevices')
+def aidevices():
+    return render_template("departments/aidevices.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
