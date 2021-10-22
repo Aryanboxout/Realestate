@@ -32,7 +32,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     <style>
         :root{
             --white: whitesmoke;
-            --black: #0D1F2D;
+            --black: #111b2d;
             --grey: #9EA3B0;
         }
 
@@ -43,7 +43,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             -moz-animation: fadein 2s; /* Firefox */
             -webkit-animation: fadein 2s; /* Safari and Chrome */
             -o-animation: fadein 2s; /* Opera */
-            background-color: #0D1F2D;
+            background-color: #111b2d;
             {#background-image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);#}
             {#image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169));#}
         }
@@ -55,15 +55,24 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
         h1{
             font-size: 5em;
-            color: #FBFCFF;
+            color: gold;
         }
 
         h2{
-            color: #0D1F2D;
+            color: #111b2d;
+        }
+
+        h3{
+            color: #e1e1e1ff;
+        }
+
+        h4{
+            font-size: 2em;
+            color: goldenrod;
         }
 
         a {
-            color: midnightblue;
+            color: #111b2d;
         }
 
         .fa{
@@ -116,7 +125,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     </style>
 
-    <title> TechFish Waterproof Technology Index </title>
+    <title> TechFish </title>
 
 </head>
 
@@ -145,16 +154,17 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             <div class="row" style="padding: 5%; padding-top: 0%; padding-bottom: 5%;">
 
                 <div class="col-8" >
-                    <h1>TechFish Electronics</h1>
+                    <h1>TechFish</h1>
+                    <h1>Electronics</h1>
                 </div>
 
 
             </div>
             <body>
 
-{#            <h2>Rectangle CSS</h2>#}
+{#            <h3>Rectangle CSS</h3>#}
             <div class="rectangle">
-                <h2 style="font-size: 40px">Welcome to TechFish, the best place to learn about waterproof technology! </h2>
+                <h2 style="font-size: 40px">Welcome to TechFish, the best place to learn about the newest technology! </h2>
                 <p style="font-size: 40px">What would you like to learn about first?</p>
                 <div class="navbar-nav">
                     <a style="font-size: 20px;" class="nav-link" href="">Phones</a>
