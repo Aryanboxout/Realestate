@@ -14,25 +14,46 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        .rectangle {
-            height: 450px;
-            width: 800px;
-            background-color: #FBFCFF;
-            margin-left: 700px;
+        .parallax {
+            /* The image used */
+            background-image: url("https://images.unsplash.com/photo-1484291470158-b8f8d608850d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+
+            /* Set a specific height */
+            min-height: 600px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
-        .rectangle li {
-            display: inline-block;
-            font-size: 20px;
-            padding: 20px;
-            color: teal;
+
+        #bar {
+            height:45%;
+            width: 100%;
+        }
+
+        table.BarTable,th,td {
+            border:1px solid black;
+            border-collapse: collapse;
+            line-height: 0;
+        }
+
+        td img{
+            display: block;
+            margin-bottom: auto;
+            margin-top: auto;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         :root{
             --white: whitesmoke;
-            --black: #0D1F2D;
+            --black: #111b2d;
             --grey: #9EA3B0;
         }
 
@@ -43,9 +64,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             -moz-animation: fadein 2s; /* Firefox */
             -webkit-animation: fadein 2s; /* Safari and Chrome */
             -o-animation: fadein 2s; /* Opera */
-            background-color: #0D1F2D;
-            {#background-image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);#}
-            {#image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169));#}
+            background-color: #111b2d;
+        {#background-image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);#}
+        {#image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169));#}
         }
 
         .dark-mode {
@@ -55,15 +76,29 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
         h1{
             font-size: 5em;
-            color: #FBFCFF;
+            color: gold;
         }
 
         h2{
-            color: #0D1F2D;
+            color: #111b2d;
+        }
+
+        h3{
+            color: #e1e1e1ff;
+        }
+
+        h4{
+            font-size: 2em;
+            color: goldenrod;
+        }
+
+        h5{
+            font-size: 3em;
+            color: gold;
         }
 
         a {
-            color: midnightblue;
+            color: #111b2d;
         }
 
         .fa{
@@ -116,7 +151,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     </style>
 
-    <title> TechFish Waterproof Technology Index </title>
+    <title> TechFish </title>
 
 </head>
 
@@ -129,48 +164,83 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 </html>
 
 {% block body %}
-{#    <div class="container-fluid" >#}
-{#        <div class="row justify-content-end" style="padding: 2%;">#}
-{#            <div class="col-2" style="text-align: right;">#}
-{#                {% block info %}#}
-{#                    <!-- notice jinja style variables used in href's -->#}
-{#                    <a><h5>{{name}}</h5></a>#}
-{#                    <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>#}
-{#                    <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>#}
-{#                {% endblock %}#}
-{#            </div>#}
-{#        </div>#}
+    {#    <div class="container-fluid" >#}
+    {#        <div class="row justify-content-end" style="padding: 2%;">#}
+    {#            <div class="col-2" style="text-align: right;">#}
+    {#                {% block info %}#}
+    {#                    <!-- notice jinja style variables used in href's -->#}
+    {#                    <a><h5>{{name}}</h5></a>#}
+    {#                    <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>#}
+    {#                    <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>#}
+    {#                {% endblock %}#}
+    {#            </div>#}
+    {#        </div>#}
 
-        <div class="product" style="margin-top: 2%;">
-            <div class="row" style="padding: 5%; padding-top: 0%; padding-bottom: 5%;">
+    <div class="product" style="margin-top: 2%;">
+        <div class="row" style="padding: 5%; padding-top: 0%; padding-bottom: 5%;">
 
-                <div class="col-8" >
-                    <h1>TechFish Electronics</h1>
-                </div>
-
-
+            <div class="col-8" >
+                <h1>TechFish Electronics </h1>
+                <h5>Pick a department to begin</h5>
             </div>
-            <body>
-
-{#            <h2>Rectangle CSS</h2>#}
-            <div class="rectangle">
-                <h2 style="font-size: 40px">Welcome to TechFish, the best place to learn about waterproof technology! </h2>
-                <p style="font-size: 40px">What would you like to learn about first?</p>
-                <div class="navbar-nav">
-                    <a style="font-size: 20px;" class="nav-link" href="">Phones</a>
-                    <a style="font-size: 20px;" class="nav-link" href="">Computers/PCs</a>
-                    <a style="font-size: 20px;" class="nav-link" href="">Audio Devices</a>
-                    <a style="font-size: 20px;" class="nav-link" href="">TVs/Screens</a>
-                    <a style="font-size: 20px;" class="nav-link" href="">Smart Devices</a>
-                    <a style="font-size: 20px;" class="nav-link" href="">Outdoor Tech</a>
-
-            </div>
-
-            </div>
-            </body>
 
 
         </div>
+        <body>
+
+        {#            <h3>Rectangle CSS</h3>#}
+        <div class="parallax">
+            <div id="bar">
+                <table class = "BarTable" style="width:100%;height: 100%">
+                    <tr>
+                        <td style="width: 35%">
+                            <img src="https://pyxis.nymag.com/v1/imgs/9d7/a2e/d3c1e85ae2db240d4c7b31b35a09067095-best-headphones-lede.rhorizontal.w700.jpg" style="height: 341px;width: 683px">
+                        </td>
+                        <td style="width: 35%">
+                            <img src="https://cdn.pocket-lint.com/r/s/970x/assets/images/154302-phones-review-iphone-12-pro-review-product-shots-image3-wd487ybwpf-jpg.webp" style="height: 341px; width: 683px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 35%">
+                            <img src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2020/09/25/16/best-computer-monitor-main-image-2020.jpg?width=990&auto=webp&quality=75&crop=968%3A645%2Csmart" style="height: 341px; width: 683px">
+                        </td>
+                        <td style="width: 35%">
+                            <img src="https://res.cloudinary.com/jerrick/image/upload/f_jpg,fl_progressive,q_auto,w_1024/ee0jixx1hutfbrhqwxar.jpg" style="height: 341px; width: 683px">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="height:1000px;background-color:#0D1F2D;font-size:36px">
+
+            </div>
+
+
+            {#            <h2>Rectangle CSS</h2>#}
+            {#            <div class="rectangle">#}
+            {#                <h2 style="font-size: 40px">Welcome to TechFish, the best place to learn about waterproof technology! </h2>#}
+            {#                <p style="font-size: 40px">What would you like to learn about first?</p>#}
+            {#                <div class="navbar-nav">#}
+            {#                    <a style="font-size: 20px;" class="nav-link" href="">Phones</a>#}
+            {#                    <a style="font-size: 20px;" class="nav-link" href="">Computers/PCs</a>#}
+            {#                    <a style="font-size: 20px;" class="nav-link" href="">Audio Devices</a>#}
+            {#                    <a style="font-size: 20px;" class="nav-link" href="">TVs/Screens</a>#}
+            {#                    <a style="font-size: 20px;" class="nav-link" href="">Smart Devices</a>#}
+            {#                    <a style="font-size: 20px;" class="nav-link" href="">Outdoor Tech</a>#}
+            {##}
+            {#            </div>#}
+
+
+        </body>
+
+
+    </div>
+    </div>
+
+
+        </body>
+
+
+    </div>
     </div>
 {% endblock %}
 
@@ -178,5 +248,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 {% block background %}
 {% endblock %}
+
 
 </html>

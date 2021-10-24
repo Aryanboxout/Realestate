@@ -1,0 +1,54 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Audio Devices" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here ->
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+
+    <div class="product" style="margin-top: 2%;">
+    <div class="row" style="padding: 5%; padding-top: 0%; padding-bottom: 5%; center">
+
+        <div class="col-8" >
+            <div style="text-align:center">
+                <h1>Audio Devices</h1>
+            </div>
+        </div>
+
+    </div>
+    <!-- -->
+    {#    <div class="col-12">#}
+    {#        <p style="color:white">What would you like to shop for?</p>#}
+    {#    </div>#}
+    {#    <p style="color:yellow">Recommended for You</p>#}
+    <h3>Sony WH-1000XM4 Wireless Noise Cancelling Headphones:<h3>
+    <a href="https://www.sony.com/ug/electronics/headband-headphones/wh-1000xm4">
+        <img alt="iPhone 13" src="https://www.sony.com/image/5d02da5df552836db894cead8a68f5f3?fmt=pjpeg&wid=165&bgcolor=FFFFFF&bgc=FFFFFF">
+    </a>
+    <p style="color:white">"It’s just you and your music with the WH-1000XM4 headphones. The easy way to enjoy less noise and even purer sound, with smart listening technology that automatically personalises your experience.
+        (sony.com)"</p>
+</h3>
+    <h3>
+
+        <table border="1">
+            <tr>
+                <th>Pros</th><th>Cons</th>
+            </tr>
+            <tr>
+                <td>Sturdy and Comfortable Design</td><td>30 hour battery life</td>
+            </tr>
+            <tr>
+                <td>Highly Priced</td><td>Plastic Headband</td>
+            </tr>
+        </table>
+    </h3>
+    https://pulse2.com/sony-wh-1000xm3-pros-and-cons/
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}

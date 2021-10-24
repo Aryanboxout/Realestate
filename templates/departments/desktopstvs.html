@@ -1,0 +1,54 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Desktops and TVs" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here ->
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+
+    <div class="product" style="margin-top: 2%;">
+    <div class="row" style="padding: 5%; padding-top: 0%; padding-bottom: 5%; center">
+
+        <div class="col-8" >
+            <div style="text-align:center">
+                <h1>Desktops and TVs</h1>
+            </div>
+        </div>
+
+    </div>
+    <!-- -->
+    {#    <div class="col-12">#}
+    {#        <p style="color:white">What would you like to shop for?</p>#}
+    {#    </div>#}
+    {#    <p style="color:yellow">Recommended for You</p>#}
+    <h3>Samsung TV:<h3>
+    <a href="https://www.samsung.com/us/tvs/">
+        <img alt="Samsung TV" src="https://images.samsung.com/is/image/samsung/assets/us/tvs/02262021/TVPCD-NeoQLED-Fullbleed.jpg?$FB_TYPE_A_JPG$">
+    </a>
+    <p style="color:white">"Samsung takes movies, sports, games and anything else you can show on a screen to excessively impressive levels—with razor-sharp images, ultra-bright output and insanely crisp colors. Because you shouldn’t have to settle for a reasonable home entertainment experience. (samsung.com)"</p>
+</h3>
+    <h3>
+
+
+        <table border="1">
+            <tr>
+                <th>Pros</th><th>Cons</th>
+            </tr>
+            <tr>
+                <td>QLED TV Anti-Glare Technology</td><td>Professional Gaming Features</td>
+            </tr>
+            <tr>
+                <td>May be uncomfortable to grip</td><td>Need to buy charger/accessories seperatley</td>
+            </tr>
+        </table>
+    </h3>
+    https://www.oispice.com/apple-iphone-13-pros-and-cons/
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
