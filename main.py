@@ -87,24 +87,7 @@ def mini_labs():
 
 @app.route('/explore/', methods=['GET', 'POST'])
 def explore():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("departments/explore.html", name1=name)
-    # starting and empty input default
-    url = "https://weatherapi-com.p.rapidapi.com/ip.json"
-
-    querystring = {"q":"<REQUIRED>"}
-
-    headers = {
-    'x-rapidapi-host': "weatherapi-com.p.rapidapi.com",
-    'x-rapidapi-key': "f74ed87200msh995f07c2f92be0bp101c14jsn28a6b622e01b"
-    }
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    print(response.text)
-    return render_template("/explore.html", stats=response.json())
+    return render_template("departments/allDepartments.html")
 
 
 @app.route('/cart/', methods=['GET', 'POST'])
@@ -145,31 +128,31 @@ def blog():
 @app.route('/rgb/')
 def rgb():
     path = Path(app.root_path) / "static" / "assets"
-    return render_template('/rgb.html', images=image_data(path))
+    return render_template('mini labs/rgb.html', images=image_data(path))
 
 
 @app.route('/prishargb/')
 def prishargb():
     path = Path(app.root_path) / "static" / "prishaassets"
-    return render_template('/prishrgb.html', images=prisha_image_data(path))
+    return render_template('about us/prishrgb.html', images=prisha_image_data(path))
 
 
 @app.route('/arushirgb/')
 def arushirgb():
     path = Path(app.root_path) / "static" / "arushiassets"
-    return render_template('/arushirgb.html', images=arushi_image_data(path))
+    return render_template('about us/arushirgb.html', images=arushi_image_data(path))
 
 
 @app.route('/vaishavirgb/')
 def vaishavirgb():
     path = Path(app.root_path) / "static" / "vaishaviassets"
-    return render_template('/vaishavirgb.html', images=vaishavi_image_data(path))
+    return render_template('about us/vaishavirgb.html', images=vaishavi_image_data(path))
 
 
 @app.route('/siyargb/')
 def siyargb():
     path = Path(app.root_path) / "static" / "siyaassets"
-    return render_template('/siyargb.html', images=siya_image_data(path))
+    return render_template('about us/siyargb.html', images=siya_image_data(path))
 
 
 @app.route("/colors", methods=['GET', 'POST'])
@@ -181,6 +164,7 @@ def colors():
 def logicgates():
     return render_template("mini labs/logicgates.html")
 
+
 @app.route('/joke', methods=['GET', 'POST'])
 def joke():
     """
@@ -189,7 +173,7 @@ def joke():
     """
     url = "https://csp.nighthawkcodingsociety.com/api/joke"
     response = requests.request("GET", url)
-    return render_template("/joke.html", joke=response.json())
+    return render_template("mini labs/API/joke.html", joke=response.json())
 
 
 @app.route('/jokes', methods=['GET', 'POST'])
@@ -201,7 +185,7 @@ def jokes():
     url = "https://csp.nighthawkcodingsociety.com/api/jokes"
 
     response = requests.request("GET", url)
-    return render_template("/jokes.html", jokes=response.json())
+    return render_template("mini labs/API/jokes.html", jokes=response.json())
 
 
 @app.route('/covid19', methods=['GET', 'POST'])
@@ -223,14 +207,15 @@ def covid19():
         print(country["country_name"])
     """
 
-    return response.text
-        #render_template("/covid19.html", stats=response.json())
+    return render_template("mini labs/covid19.html", stats=response.json())
+        #response.text
+
 
 @app.route('/weather', methods=['GET', 'POST'])
 def weather():
     url = "https://community-open-weather-map.p.rapidapi.com/weather"
 
-    querystring = {"q":"san diego","lat":"0","lon":"0","lang":"en","units":"imperial"}
+    querystring = {"q": "san diego", "lat": "0", "lon": "0", "lang": "en", "units": "imperial"}
 
     headers = {
     'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com",
@@ -247,21 +232,26 @@ def weather():
 def map():
     return render_template("map.html")
 
+
 @app.route('/phonestablets')
 def phonestablets():
     return render_template("departments/phonestablets.html")
+
 
 @app.route('/desktopstvs')
 def desktopstvs():
     return render_template("departments/desktopstvs.html")
 
+
 @app.route('/audiodevices')
 def audiodevices():
     return render_template("departments/audiodevices.html")
 
+
 @app.route('/aidevices')
 def aidevices():
     return render_template("departments/aidevices.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
