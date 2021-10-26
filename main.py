@@ -26,6 +26,7 @@ def arushi():
     # starting and empty input default
     return render_template("about us/arushi.html", name1="TechFish User")
 
+
 @app.route('/AboutUs/', methods=['GET', 'POST'])
 def AboutUs():
     # submit button has been pushed
