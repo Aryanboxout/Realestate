@@ -10,11 +10,23 @@
         <div class="col-12">
             <div class="col-12">
                 <div class=""paragraph"><p>Hi, I'm Siya Dixit! I am an Operations Officer of TechFish!</p></div>
-            <img src="/static/assets/siyaslack.jpg" style="height: 400px" alt = "no">
             <img src="/static/siyaassets/siyacsp.jpg" style="height: 400px" alt = "loading">
+    <div class="side-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;"></div>
+        <div class="<p>Click the button to display "Hello!", only if the time is less than 20:00.</p>
+            <button onclick="myFunction()">Try it</button>
+            <p id="demo"></p>
+            <script>
+function myFunction() {
+  var time = new Date().getHours();
+  if (time < 20) {
+    document.getElementById("demo").innerHTML = "Hello!";
+  }
+}
+            }"
 
         </div>
     </div>
+
 
 
 {% endblock %}
