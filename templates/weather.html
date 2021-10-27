@@ -1,5 +1,116 @@
 <!DOCTYPE html>
-{% extends "layouts/base.html" %}
+<html lang="en" xmlns:background-image="http://www.w3.org/1999/xhtml">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    :root{
+        --white: whitesmoke;
+        --black: #111b2d;
+        --grey: #9EA3B0;
+    }
+
+    html, body{
+        margin: 0;
+        height: 100%;
+        animation: fadein 2s;
+        -moz-animation: fadein 2s; /* Firefox */
+        -webkit-animation: fadein 2s; /* Safari and Chrome */
+        -o-animation: fadein 2s; /* Opera */
+        background-color: #111b2d;
+    }
+
+    .dark-mode {
+        background-image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);
+        image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);
+    }
+
+    h1{
+        font-size: 5em;
+        color: gold;
+    }
+
+    h2{
+        color: #111b2d;
+    }
+
+    h3{
+        color: #e1e1e1ff;
+    }
+
+    h4{
+        font-size: 2em;
+        color: goldenrod;
+    }
+
+    h5{
+        font-size: 3em;
+        color: gold;
+    }
+
+    a {
+        color: #111b2d;
+    }
+
+    .fa{
+        font-size: 3em;
+        letter-spacing: 1em;
+        transition: all .2s;
+        color: black;
+
+    }
+
+    .fa:hover{
+        transform: translateY(10px);
+    }
+
+    .fa-youtube-play:hover{
+        color: #050505;
+    }
+
+    .fa-github:hover{
+        color: #050505;
+    }
+
+    .btn:link,
+    .btn:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s;
+        position: absolute;
+        color: #FBFCFF;
+        font-size: 2.5em;
+    }
+
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .row{
+        margin: auto;
+    }
+
+</style>
+
+<title> TechFish </title>
+
+
+
+
+{% include "layouts/navbar.html" %}
+
+
+</html>
 
 {% block background %}
 {% endblock %}
