@@ -252,6 +252,10 @@ def audiodevices():
 def aidevices():
     return render_template("departments/aidevices.html")
 
+@app.route('/addition')
+def addition():
+    return render_template("mini labs/addition.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
