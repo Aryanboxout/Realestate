@@ -3,7 +3,7 @@ from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-
 #import "packages" from flask
 from flask import Flask, render_template, request
 from image import image_data, prisha_image_data, arushi_image_data, vaishavi_image_data, siya_image_data
-
+import requests
 
 
 # create a Flask instance
@@ -252,6 +252,10 @@ def audiodevices():
 @app.route('/aidevices')
 def aidevices():
     return render_template("departments/aidevices.html")
+
+@app.route('/addition')
+def addition():
+    return render_template("mini labs/addition.html")
 
 
 # runs the application on the development server
