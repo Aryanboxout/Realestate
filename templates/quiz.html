@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:background-image="http://www.w3.org/1999/xhtml">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    :root{
+        --white: whitesmoke;
+        --black: #111b2d;
+        --grey: #9EA3B0;
+    }
+
+    html, body{
+        margin: 0;
+        height: 100%;
+        animation: fadein 2s;
+        -moz-animation: fadein 2s; /* Firefox */
+        -webkit-animation: fadein 2s; /* Safari and Chrome */
+        -o-animation: fadein 2s; /* Opera */
+        background-color: white;
+    }
+
+    .dark-mode {
+        background-image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);
+        image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);
+    }
+
+    h1{
+        font-size: 5em;
+        color: gold;
+    }
+
+    h2{
+        color: #111b2d;
+    }
+
+    h3{
+        color: #e1e1e1ff;
+    }
+
+    h4{
+        font-size: 2em;
+        color: goldenrod;
+    }
+
+    h5{
+        font-size: 3em;
+        color: gold;
+    }
+
+    a {
+        color: #111b2d;
+    }
+
+    .fa{
+        font-size: 3em;
+        letter-spacing: 1em;
+        transition: all .2s;
+        color: black;
+
+    }
+
+    .fa:hover{
+        transform: translateY(10px);
+    }
+
+    .fa-youtube-play:hover{
+        color: #050505;
+    }
+
+    .fa-github:hover{
+        color: #050505;
+    }
+
+    .btn:link,
+    .btn:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s;
+        position: absolute;
+        color: #FBFCFF;
+        font-size: 2.5em;
+    }
+
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .row{
+        margin: auto;
+    }
+    </style>
+
+<title> TechFish </title>
+
+{% include "layouts/navbar.html" %}
+
+</html>
+
+{% block background %}
+{% endblock %}
+{% set project = "quiz" %}
+
+{% block body %}
+    <h1> Technology Quiz! </h1>
+
+{#    <div holds the quiz#}
+    <div id="quiz"></div>
+{#    button submits the quiz#}
+    <button id="submit">Submit Quiz</button>
+{#    <div displays results#}
+    <div id="results"></div>
+
+    <script>
+        // Functions
+        function buildQuiz(){
+            // variable to store the HTML output including question and answer choices
+            const output = [];
+
+            // for loop loops through each question (iteration)
+            //parameters are current value (currentQuestion) and index (questionNumber)
+            myQuestions.forEach(
+                (currentQuestion, questionNumber) => {
+
+                    // variable to store the list of possible answers
+                    const answers = [];
+
+                    // and for each available answer...
+                    for(letter in currentQuestion.answers){
+
+                        // HTML radio buttons are enclosed in <label> element
+                        answers.push(
+                            `<label>
+                             <input type="radio" name="question${questionNumber}" value="${letter}">
+                             ${letter} :
+                             ${currentQuestion.answers[letter]}
+                            </label>`
+                        );
+                    }
+                    // add this question and its answers to the output
+                    output.push(
+                        `<div class="question"> ${currentQuestion.question} </div>
+                        <div class="answers"> ${answers.join('')} </div>`
+                    );
+                }
+            );
+
+            // finally combine our output list into one string of HTML and put it on the page
+            quizContainer.innerHTML = output.join('');
+        }
+        // Runs when user clicks Submit button
+        // Loops over answers, checks them, and shows results
+        function showResults(){
+            // gather answer containers from our quiz
+            const answerContainers = quizContainer.querySelectorAll('.answers');
+
+            // keep track of user's answers
+            let numCorrect = 0;
+
+            // for each question...
+            myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+                // find selected answer
+                const answerContainer = answerContainers[questionNumber];
+                const selector = `input[name=question${questionNumber}]:checked`;
+                const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+                // if answer is correct
+                if(userAnswer === currentQuestion.correctAnswer){
+                    // add to the number of correct answers
+                    numCorrect++;
+
+                    // color the answers green
+                    answerContainers[questionNumber].style.color = 'lightgreen';
+                }
+                // if answer is wrong or blank
+                else{
+                    // color the answers red
+                    answerContainers[questionNumber].style.color = 'red';
+                }
+            });
+
+            // show number of correct answers out of total
+            resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+        }
+
+        // HTML elements are stored in variables
+        const quizContainer = document.getElementById('quiz');
+        const resultsContainer = document.getElementById('results');
+        const submitButton = document.getElementById('submit');
+        //Using object literals (fixed values in source code) + array to hold quiz questions
+        //Since this is an array, questions will appear in the order they are listed
+
+        const myQuestions = [
+            {
+                question: "Who founded the Apple Computer?",
+                answers: {
+                    a: "Stephen Fry",
+                    b: "Bill Gates",
+                    c: "Steve Jobs",
+                    d: "Stephen Hawking"
+                },
+                correctAnswer: "c"
+            },
+            {
+                question: "Which of these is not a kind of computer?",
+                answers: {
+                    a: "Apple",
+                    b: "Lenovo",
+                    c: "Toshiba",
+                    d: "Lada"
+                },
+                correctAnswer: "d"
+            },
+            {
+                question: "Which of these products is not made by the Apple Corporation?",
+                answers: {
+                    a: "IMAX",
+                    b: "iPhone",
+                    c: "iMac",
+                    d: "iPod"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "Who created the first computer?",
+                answers: {
+                    a: "Steve Jobs",
+                    b: "Charles Babbage",
+                    c: "Elon Musk",
+                    d: "David Packard"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "Who created the first telephone?",
+                answers: {
+                    a: "Alenxander Graham Bell",
+                    b: "Thomas Edison",
+                    c: "Ralph H. Baer",
+                    d: "Allan Alcorn"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "Who invented the first gaming console?",
+                answers: {
+                    a: "Antonio Meucci",
+                    b: "Amos Dolbear",
+                    c: "John Peirce",
+                    d: "Ralph H. Baer"
+                },
+                correctAnswer: "d"
+            },
+            {
+                question: "When was the flatscreen TV first launched in the market?",
+                answers: {
+                    a: "1997",
+                    b: "1970",
+                    c: "1980",
+                    d: "1999"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "When was the first portable computer made?",
+                answers: {
+                    a: "1978",
+                    b: "1981",
+                    c: "1990",
+                    d: "1993"
+                },
+                correctAnswer: "b"
+            },
+        ];
+
+        // Runs immediately after page is opened
+        buildQuiz();
+
+        // on submit, show results
+        submitButton.addEventListener('click', showResults);
+
+    </script>
+
+{% endblock %}
