@@ -5,7 +5,7 @@
         // Hack: add java script function to toggle image from original to gray and back (toggle)
 
         function toggleImage() {
-            if (document.getElementById("button1").value == "Gray")
+            if (document.getElementById("button1").value === "Gray")
             {
                 document.getElementById("img1").src = document.getElementById("img_gray1").innerHTML;
                 document.getElementById("button1").value = "Original";
@@ -21,12 +21,13 @@
     </script>
     <title>RGB starter</title>
 
-    <h1 class="text-center">RGB values within an Image</h1>
+    <h1 class="text-center">RGB Values Within an Image</h1>
     <div class="container">
         <div class="row justify-content-md-center">
             <table class="table">
                 <thead>
                 <tr>
+                <tr style="color:white">
                     <th>Meta Data</th>
                     <th>Image</th>
                     <th>Data</th>
@@ -35,6 +36,7 @@
                 <tbody>
                 {% for image in images %}
                     <tr>
+                    <tr style="color:white">
                         <td>
                             <div>{{image.file}}</div>
                             <div>{{image.format}}</div>
@@ -55,10 +57,11 @@
                             <input type="button" id="button1" value="Gray" onclick="toggleImage()">
                         </td>
                         <td>
-                            <div class="overflow-auto" style="height: 256px">
+                            <div class="overflow-auto" style="height: 256px;color:white">
                                 <table class="table">
                                     <thead>
                                     <tr>
+                                    <tr style="color:white">
                                         <th>#</th>
                                         <th>{{image.mode}}</th>
                                         <th>Hex Code</th>
@@ -68,6 +71,7 @@
                                     <tbody>
                                     {% for row in image.data[:256:+1] %}
                                         <tr>
+                                        <tr style="color:white">
                                             <td>{{loop.index}}</td>
                                             <td>{{row}}</td>
                                             <td>{{image.hex_array[loop.index - 1]}}</td>
