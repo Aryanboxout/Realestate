@@ -10,23 +10,18 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 -->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="https://github.com/arushi10/flask_portfolio">TechFish</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <a class="dropdown-item" href="/starter/rgb">RGB Intro</a>
-        <a class="dropdown-item" href="/starter/joke">Joke API</a>
-        <a class="dropdown-item" href="/starter/jokes">Jokes API</a>
-        <a class="dropdown-item" href="/starter/covid19">Covid19 RapidAPI</a>
-        <span class="navbar-toggler-icon"></span>
-    </button>
+{#    <a class="navbar-brand" href="https://github.com/arushi10/flask_portfolio">TechFish</a>#}
+{#    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">#}
+{#        <a class="dropdown-item" href="/starter/rgb">RGB Intro</a>#}
+{#        <a class="dropdown-item" href="/starter/joke">Joke API</a>#}
+{#        <a class="dropdown-item" href="/starter/jokes">Jokes API</a>#}
+{#        <a class="dropdown-item" href="/starter/covid19">Covid19 RapidAPI</a>#}
+{#        <span class="navbar-toggler-icon"></span>#}
+{#    </button>#}
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="nav-link" href={{ url_for('index') }}>Home</a>
-            <a class="nav-link" href={{ url_for('weather') }}>Weather</a>
-            <!-- stub is shown using the name of the route -->
-{#            <a class="nav-link" href={{ url_for('explore') }}>Explore</a>#}
-{#            <a class="nav-link" href={{ url_for('cart') }}>Cart</a>#}
-{#            <a class="nav-link" href={{ url_for('account') }}>Account</a>#}
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <li class="nav-item dropdown">
@@ -43,7 +38,31 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 </li>
             </div>
 
+            <a class="nav-link" href={{ url_for('quiz') }}>Quiz</a>
+            <a class="nav-link" href={{ url_for('weather') }}>Weather</a>
 
+{#            <a class="nav-link" href={{ url_for('explore') }}>Explore</a>#}
+{#            <a class="nav-link" href={{ url_for('cart') }}>Cart</a>#}
+{#            <a class="nav-link" href={{ url_for('account') }}>Account</a>#}
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="nav-link" href="{{ url_for('AboutUs') }}">Our Team</a>
+                        <a class="nav-link" href="{{ url_for('arushi') }}">Arushi</a>
+                        <a class="dropdown-item" href="{{ url_for('arushirgb') }}">ArushiRGB</a>
+                        <a class="nav-link" href="{{ url_for('prisha') }}">Prisha</a>
+                        <a class="dropdown-item" href="{{ url_for('prishargb') }}">PrishaRGB</a>
+                        <a class="nav-link" href="{{ url_for('vai') }}">Vaishavi</a>
+                        <a class="dropdown-item" href="{{ url_for('vaishavirgb') }}">VaishaviRGB</a>
+                        <a class="nav-link" href="{{ url_for('siya') }}">Siya</a>
+                        <a class="dropdown-item" href="{{ url_for('siyargb') }}">SiyaRGB</a>
+                    </div>
+                </li>
+            </div>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <li class="nav-item dropdown">
@@ -77,24 +96,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 {#                        <a class="dropdown-item" href="/crud/">SQL CRUD</a>#}
                 {#                    </div>#}
                 {#                </li>#}
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            About Us
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="nav-link" href="{{ url_for('AboutUs') }}">Our Team</a>
-                            <a class="nav-link" href="{{ url_for('arushi') }}">Arushi</a>
-                            <a class="dropdown-item" href="{{ url_for('arushirgb') }}">ArushiRGB</a>
-                            <a class="nav-link" href="{{ url_for('prisha') }}">Prisha</a>
-                            <a class="dropdown-item" href="{{ url_for('prishargb') }}">PrishaRGB</a>
-                            <a class="nav-link" href="{{ url_for('vai') }}">Vaishavi</a>
-                            <a class="dropdown-item" href="{{ url_for('vaishavirgb') }}">VaishaviRGB</a>
-                            <a class="nav-link" href="{{ url_for('siya') }}">Siya</a>
-                            <a class="dropdown-item" href="{{ url_for('siyargb') }}">SiyaRGB</a>
-                        </div>
-                    </li>
-                </div>
+
             </div>
         </div>
     </div>

@@ -257,6 +257,10 @@ def aidevices():
 def addition():
     return render_template("mini labs/addition.html")
 
+@app.route('/quiz')
+def quiz():
+    return render_template("quiz.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
