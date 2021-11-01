@@ -259,7 +259,7 @@ def addition():
 
 @app.route('/quiz')
 def quiz():
-    return render_template("quiz.html")
+    return render_template("mini labs/quiz.html")
 
 
 # runs the application on the development server
