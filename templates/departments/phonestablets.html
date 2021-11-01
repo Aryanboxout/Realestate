@@ -50,6 +50,11 @@
         color: gold;
     }
 
+    h6{
+        font-size: 3em;
+        color: #020405;
+    }
+
     a {
         color: #111b2d;
     }
@@ -190,31 +195,37 @@
             font-size: 35px;
             cursor: pointer;
         }
+
+        table, th, td {
+            border:1px solid black;
+
+        }
     </style>
     </div>
     <div>
 
     <div style="text-align:center">
-        <h3>Apple's 2021 iPhone 13 Series</h3>
-        <h2>Click on the images below:</h2>
+        <h2>Apple's 2021 iPhone 13 Series</h2>
+        <h3>Click on the images below to enlarge them:</h3>
     </div>
 
     <!-- The four columns -->
+    <h6>
     <div class="row">
         <div class="column">
-            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-2021-gallery-4?wid=2824&hei=2400&fmt=jpeg&qlt=80&.v=1630169272000" alt="iPhone 13" style="width:100%" onclick="myFunction(this);">
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/SOL-87130-iphone13_der-34fea294-f51f-4e9d-a935-f7ce45af0650.jpg" alt="iPhone 13" style="width:200px" onclick="myFunction(this);">
         </div>
         <div class="column">
-            <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202106/iphone_12_pro_grpahite.jpg?Cwe35o9uk4J145P7GgwnXUCiMDRKY952&size=1200:675" alt="iPhone 13 Max" style="width:100%" onclick="myFunction(this);">
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/SOL-87130-iphone13-promax_der-42a60237-3826-4790-b4eb-ec9796eb2a85.jpg" alt="iPhone 13 Max" style="width:200px" onclick="myFunction(this);">
         </div>
         <div class="column">
-            <img src="https://cdn.images.express.co.uk/img/dynamic/59/590x/secondary/Apple-iPhone-13-3659592.jpg?r=1633380347574" alt="iPhone 13 Mini" style="width:100%" onclick="myFunction(this);">
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/SOL-87130-iphone13-mini_der-53f03255-cd39-4075-b697-b2da018fcd75.jpg" alt="iPhone 13 Mini" style="width:200px" onclick="myFunction(this);">
         </div>
         <div class="column">
-            <img src="https://cdn.wccftech.com/wp-content/uploads/2021/09/iPhone-13-Pro-matte-black-1-740x524.jpg" alt="iPhone 13 Pro" style="width:100%" onclick="myFunction(this);">
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/SOL-87130-iphone13-pro_der-3d972223-142f-4f04-8383-2d0bce118958.jpg" alt="iPhone 13 Pro" style="width:200px" onclick="myFunction(this);">
         </div>
     </div>
-
+    </h6>
     <div class="container">
         <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
         <img id="expandedImg" style="width:100%">
@@ -255,9 +266,35 @@
             </tr>
         </table>
     </h3>
+    <h2> ------------------------------------------------------</h2>
 
+    <body>
 
-
+    <h2>Some of our other favorite products:</h2>
+<h3>
+    <table style="width:100%; align-content:center">
+        <tr>
+            <td>
+                <a href="https://store.google.com/product/pixel_6?hl=en-US">
+                    <img alt="Google Pixel 6" src="https://lh3.googleusercontent.com/QjdOODZnr7ja5v7WeEZA4gfWtToF0fShi6OLqAtgirnFFe5voUSCGFc9Ir5y08e-RTnmp7vp7kGcd_NBp8javQXQpAHa5FCPhQP6=rw-e365-w1024" style="height: 200px">
+                </a>
+            </td>
+            <td><a href="https://www.samsung.com/us/tablets/tab-s7/">
+                <img alt="Galaxy Tab S7" src="https://image-us.samsung.com/SamsungUS/home/mobile/tablets/tab-s7-s7plus/02-04-2021/s7/PDP-GALLERY-tabS7-Mystic-Navy-12-1600x1200.jpg?$product-details-jpg$" style="height: 200px">
+            </a></td>
+            <td><a href="https://www.apple.com/shop/buy-ipad/ipad-pro">
+                <img alt=“iPad Pro” src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-12-11-select-202104?wid=545&hei=550&fmt=jpeg&qlt=95&.v=1617067380000" style="height: 200px">
+            </a></td>
+        </tr>
+        <tr>
+            <td>Google Pixel 6</td>
+            <td>Galaxy Tab S7</td>
+            <td>iPad Pro</td>
+        </tr>
+    </table>
+</h3>
+    <p>.......</p>
+    </body>
 {% endblock %}
 </h3>
 </div>
