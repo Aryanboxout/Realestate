@@ -3,6 +3,8 @@
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{#<div style="background-image:url('https://about.att.com/ecms/dam/snr/2020/November2020/StoryLevelBanner/11042020_iPhoneProMax_STORY_LEVEL_BANNER_1600x483.jpg'); height:200px; background-position:top;">&nbsp;</div>#}
+
 <style>
     :root{
         --white: whitesmoke;
@@ -31,7 +33,7 @@
     }
 
     h2{
-        color: #111b2d;
+        color: #e8e8f5;
     }
 
     h3{
@@ -110,8 +112,8 @@
 {% include "layouts/navbar.html" %}
 
 
-</html>
 
+</html>
 <!- This variable sets name of browser tab  -->
 {% set project = "Phones and Tablets" %}
 
@@ -121,7 +123,7 @@
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
 
     <div class="product" style="margin-top: 2%;">
-    <div class="row" style="padding: 5%; padding-top: 0%; padding-bottom: 5%; center">
+    <div class="row" style="padding: 5%; padding-top: 0%; padding-bottom: 5%">
 
         <div class="col-8" >
             <div style="text-align:center">
@@ -130,14 +132,112 @@
         </div>
 
     </div>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        /* The grid: Four equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 25%;
+            padding: 10px;
+        }
+
+        /* Style the images inside the grid */
+        .column img {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .column img:hover {
+            opacity: 1;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* The expanding image container */
+        .container {
+            position: relative;
+            display: none;
+        }
+
+        /* Expanding image text */
+        #imgtext {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: white;
+            font-size: 20px;
+        }
+
+        /* Closable button inside the expanded image */
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+    </style>
+    </div>
+    <div>
+
+    <div style="text-align:center">
+        <h3>Apple's 2021 iPhone 13 Series</h3>
+        <h2>Click on the images below:</h2>
+    </div>
+
+    <!-- The four columns -->
+    <div class="row">
+        <div class="column">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-2021-gallery-4?wid=2824&hei=2400&fmt=jpeg&qlt=80&.v=1630169272000" alt="iPhone 13" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202106/iphone_12_pro_grpahite.jpg?Cwe35o9uk4J145P7GgwnXUCiMDRKY952&size=1200:675" alt="iPhone 13 Max" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="https://cdn.images.express.co.uk/img/dynamic/59/590x/secondary/Apple-iPhone-13-3659592.jpg?r=1633380347574" alt="iPhone 13 Mini" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="https://cdn.wccftech.com/wp-content/uploads/2021/09/iPhone-13-Pro-matte-black-1-740x524.jpg" alt="iPhone 13 Pro" style="width:100%" onclick="myFunction(this);">
+        </div>
+    </div>
+
+    <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+    </div>
+
+    <script>
+        function myFunction(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+    </script>
     <!-- -->
     {#    <div class="col-12">#}
     {#        <p style="color:white">What would you like to shop for?</p>#}
     {#    </div>#}
     {#    <p style="color:yellow">Recommended for You</p>#}
-    <h3>Apple's iPhone 13:<h3>
+    <h3>Click the image below to see this on the official website! <h3>
     <a href="https://www.apple.com/iphone/">
-        <img alt="iPhone 13" src="https://cdn.osxdaily.com/wp-content/uploads/2021/09/iphone-13-series-610x406.jpg" style="height: 200px""">
+        <img alt="iPhone 13" src="https://cdn.osxdaily.com/wp-content/uploads/2021/09/iphone-13-series-610x406.jpg" style="height: 200px">
     </a>
     <p style="color:white">"Your new superpower. Buy now. Our most advanced dual-camera system ever. Special AT&T offer available at apple.com. Huge camera upgrade. Privacy built in. 5G. Super Retina XDR display. A15 Bionic chip. Services: Fast and free shipping, Finance with Apple Card (apple.com)"</p>
 </h3>
@@ -151,13 +251,17 @@
                 <td>Super Retina XDR OLED display</td><td>Powerful HDR camera</td>
             </tr>
             <tr>
-                <td>May be uncomfortable to grip</td><td>Need to buy charger/accessories seperatley</td>
+                <td>May be uncomfortable to grip</td><td>Need to buy charger/accessories separately</td>
             </tr>
         </table>
     </h3>
 
-{% endblock %}
 
+
+{% endblock %}
+</h3>
+</div>
+</div>
 <!- This is turning off birds background from base.html -->
 {% block background %}
 {% endblock %}
