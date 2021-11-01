@@ -81,11 +81,6 @@ def binary():
     return render_template("mini labs/binary.html", bits=8)
 
 
-@app.route('/mini_labs/')
-def mini_labs():
-    return render_template("mini labs/mini_labs.html")
-
-
 @app.route('/explore/', methods=['GET', 'POST'])
 def explore():
     return render_template("departments/allDepartments.html")
