@@ -7,7 +7,7 @@
     :root{
         --white: whitesmoke;
         --black: #111b2d;
-        --grey: #9EA3B0;
+        --grey: #b2bbd3;
     }
 
     html, body{
@@ -17,7 +17,9 @@
         -moz-animation: fadein 2s; /* Firefox */
         -webkit-animation: fadein 2s; /* Safari and Chrome */
         -o-animation: fadein 2s; /* Opera */
-        background-color: white;
+        background-color: #071036;
+        line-height: 2 ;
+        line-grid-mode: 2;
     }
 
     .dark-mode {
@@ -107,11 +109,10 @@
 
 </html>
 
-{% block background %}
-{% endblock %}
+
 {% set project = "quiz" %}
 
-{% block body %}
+<h3>
     <h1> Technology Quiz! </h1>
 
 {#    <div holds the quiz#}
@@ -120,7 +121,6 @@
     <button id="submit">Submit Quiz</button>
 {#    <div displays results#}
     <div id="results"></div>
-
     <script>
         // Functions
         function buildQuiz(){
@@ -201,89 +201,90 @@
         //Using object literals (fixed values in source code) + array to hold quiz questions
         //Since this is an array, questions will appear in the order they are listed
 
+
         const myQuestions = [
             {
                 question: "Who founded the Apple Computer?",
                 answers: {
-                    a: "Stephen Fry",
-                    b: "Bill Gates",
-                    c: "Steve Jobs",
-                    d: "Stephen Hawking"
+                    a: "Stephen Fry⠀",
+                    b: "Bill Gates⠀",
+                    c: "Steve Jobs⠀",
+                    d: "Stephen Hawking⠀"
                 },
                 correctAnswer: "c"
             },
             {
                 question: "Which of these is not a kind of computer?",
                 answers: {
-                    a: "Apple",
-                    b: "Lenovo",
-                    c: "Toshiba",
-                    d: "Lada"
+                    a: "Apple⠀",
+                    b: "Lenovo⠀",
+                    c: "Toshiba⠀",
+                    d: "Lada⠀"
                 },
                 correctAnswer: "d"
             },
             {
                 question: "Which of these products is not made by the Apple Corporation?",
                 answers: {
-                    a: "IMAX",
-                    b: "iPhone",
-                    c: "iMac",
-                    d: "iPod"
+                    a: "IMAX⠀",
+                    b: "iPhone⠀",
+                    c: "iMac⠀",
+                    d: "iPod⠀"
                 },
                 correctAnswer: "a"
             },
             {
                 question: "Who created the first computer?",
                 answers: {
-                    a: "Steve Jobs",
-                    b: "Charles Babbage",
-                    c: "Elon Musk",
-                    d: "David Packard"
+                    a: "Steve Jobs⠀",
+                    b: "Charles Babbage⠀",
+                    c: "Elon Musk⠀",
+                    d: "David Packard⠀"
                 },
                 correctAnswer: "b"
             },
             {
                 question: "Who created the first telephone?",
                 answers: {
-                    a: "Alenxander Graham Bell",
-                    b: "Thomas Edison",
-                    c: "Ralph H. Baer",
-                    d: "Allan Alcorn"
+                    a: "Alexander Graham Bell⠀",
+                    b: "Thomas Edison⠀",
+                    c: "Ralph H. Baer⠀",
+                    d: "Allan Alcorn⠀"
                 },
                 correctAnswer: "a"
             },
             {
                 question: "Who invented the first gaming console?",
                 answers: {
-                    a: "Antonio Meucci",
-                    b: "Amos Dolbear",
-                    c: "John Peirce",
-                    d: "Ralph H. Baer"
+                    a: "Antonio Meucci⠀",
+                    b: "Amos Dolbear⠀",
+                    c: "John Peirce⠀",
+                    d: "Ralph H. Baer⠀"
                 },
                 correctAnswer: "d"
             },
             {
                 question: "When was the flatscreen TV first launched in the market?",
                 answers: {
-                    a: "1997",
-                    b: "1970",
-                    c: "1980",
-                    d: "1999"
+                    a: "1997⠀",
+                    b: "1970⠀",
+                    c: "1980⠀",
+                    d: "1999⠀"
                 },
                 correctAnswer: "a"
             },
             {
                 question: "When was the first portable computer made?",
                 answers: {
-                    a: "1978",
-                    b: "1981",
-                    c: "1990",
-                    d: "1993"
+                    a: "1978⠀",
+                    b: "1981⠀",
+                    c: "1990⠀",
+                    d: "1993⠀"
                 },
                 correctAnswer: "b"
             },
         ];
-
+        document.getElementById('quiz').style.color = 'white';
         // Runs immediately after page is opened
         buildQuiz();
 
@@ -291,5 +292,4 @@
         submitButton.addEventListener('click', showResults);
 
     </script>
-
-{% endblock %}
+</h3>
