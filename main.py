@@ -81,11 +81,6 @@ def binary():
     return render_template("mini labs/binary.html", bits=8)
 
 
-@app.route('/explore/', methods=['GET', 'POST'])
-def explore():
-    return render_template("departments/allDepartments.html")
-
-
 @app.route('/cart/', methods=['GET', 'POST'])
 def cart():
     # submit button has been pushed
