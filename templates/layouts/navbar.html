@@ -5,24 +5,99 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
 </head>
-<!-- Navigation Bar from bootstrap
-This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
--->
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    li {
+        position: relative;
+        padding: 0 20px;
+        height: 100%;
+        display: flex;
+    }
+    a {
+        z-index: 1;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 18px;
+        padding: 10px 5px;
+    }
+    li::before {
+        content: "";
+        position: absolute;
+        height: 33.3%;
+        width: 0;
+        background-color: goldenrod;
+        right: 0;
+        z-index: 0;
+        top: 33.33%;
+        transition: all 0.5s;
+    }
+    li::after {
+        content: "";
+        position: absolute;
+        height: 33.3%;
+        width: 0;
+        background-color: goldenrod;
+        left: 0;
+        z-index: 0;
+        bottom: 0;
+        transition: all 0.5s;
+    }
+    a::before {
+        position: absolute;
+        content: "";
+        height: 33.3%;
+        width: 0;
+        background-color: goldenrod;
+        bottom: 130%;
+        left: 0;
+        transition: all 0.5s;
+    }
+    li:hover:before,
+    li:hover::after,
+    li:hover a::before{
+        width: 100%;
+    }
+</style>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://github.com/arushi10/flask_portfolio">TechFish</a>
-{#    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">#}
-{#        <a class="dropdown-item" href="/starter/rgb">RGB Intro</a>#}
-{#        <a class="dropdown-item" href="/starter/joke">Joke API</a>#}
-{#        <a class="dropdown-item" href="/starter/jokes">Jokes API</a>#}
-{#        <a class="dropdown-item" href="/starter/covid19">Covid19 RapidAPI</a>#}
-{#        <span class="navbar-toggler-icon"></span>#}
-{#    </button>#}
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="dropdown-item" href={{ url_for('rgb') }}>RGB Intro</a>
+        <a class="dropdown-item" href={{ url_for('joke') }}>Joke API</a>
+        <a class="dropdown-item" href={{ url_for('jokes') }}>Jokes API</a>
+        <a class="dropdown-item" href={{ url_for('covid19') }}>Covid19 RapidAPI</a>
+        <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" href={{ url_for('index') }}>Home</a>
-
+            <li>
+                <a class="nav-link" href={{ url_for('index') }}>Home</a>
+            </li>
+            <li>
+                <a class="nav-link" href={{ url_for('weather') }}>Weather</a>
+            </li>
+            <li>
+                <a class="nav-link" href={{ url_for('quiz') }}>Quiz</a>
+            </li>
+            <!-- stub is shown using the name of the route -->
+            {#            <a class="nav-link" href={{ url_for('explore') }}>Explore</a>#}
+            {#            <a class="nav-link" href={{ url_for('cart') }}>Cart</a>#}
+            {#            <a class="nav-link" href={{ url_for('account') }}>Account</a>#}
+            {#            <div class="glow-on-hover">#}
+            {#                <div type="button">HOVER ME, THEN CLICK ME!</div>#}
+{#            <li>#}
+{#                <a class="nav-link" href={{ url_for('language') }}>Language</a>#}
+{#            </li>#}
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -38,31 +113,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 </li>
             </div>
 
-            <a class="nav-link" href={{ url_for('quiz') }}>Quiz</a>
-            <a class="nav-link" href={{ url_for('weather') }}>Weather</a>
 
-{#            <a class="nav-link" href={{ url_for('explore') }}>Explore</a>#}
-{#            <a class="nav-link" href={{ url_for('cart') }}>Cart</a>#}
-{#            <a class="nav-link" href={{ url_for('account') }}>Account</a>#}
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        About Us
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="nav-link" href="{{ url_for('AboutUs') }}">Our Team</a>
-                        <a class="nav-link" href="{{ url_for('arushi') }}">Arushi</a>
-                        <a class="dropdown-item" href="{{ url_for('arushirgb') }}">ArushiRGB</a>
-                        <a class="nav-link" href="{{ url_for('prisha') }}">Prisha</a>
-                        <a class="dropdown-item" href="{{ url_for('prishargb') }}">PrishaRGB</a>
-                        <a class="nav-link" href="{{ url_for('vai') }}">Vaishavi</a>
-                        <a class="dropdown-item" href="{{ url_for('vaishavirgb') }}">VaishaviRGB</a>
-                        <a class="nav-link" href="{{ url_for('siya') }}">Siya</a>
-                        <a class="dropdown-item" href="{{ url_for('siyargb') }}">SiyaRGB</a>
-                    </div>
-                </li>
-            </div>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <li class="nav-item dropdown">
@@ -74,7 +125,10 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                         <a class="dropdown-item" href="{{ url_for('rgb') }}">RGB</a>
                         <a class="dropdown-item" href="{{ url_for('colors') }}">Color Code</a>
                         <a class="dropdown-item" href="{{ url_for('logicgates') }}">Logic Gates</a>
-                        <a class="dropdown-item" href="{{ url_for('addition') }}">Addition</a>
+                        <a class="dropdown-item" href="{{ url_for('arushirgb') }}">ArushiRGB</a>
+                        <a class="dropdown-item" href="{{ url_for('prishargb') }}">PrishaRGB</a>
+                        <a class="dropdown-item" href="{{ url_for('vaishavirgb') }}">VaishaviRGB</a>
+                        <a class="dropdown-item" href="{{ url_for('siyargb') }}">SiyaRGB</a>
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             API
                         </a>
@@ -95,7 +149,20 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 {#                        <a class="dropdown-item" href="/crud/">SQL CRUD</a>#}
                 {#                    </div>#}
                 {#                </li>#}
-
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About Us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="nav-link" href="{{ url_for('AboutUs') }}">Our Team</a>
+                            <a class="nav-link" href="{{ url_for('arushi') }}">Arushi</a>
+                            <a class="nav-link" href="{{ url_for('prisha') }}">Prisha</a>
+                            <a class="nav-link" href="{{ url_for('vai') }}">Vaishavi</a>
+                            <a class="nav-link" href="{{ url_for('siya') }}">Siya</a>
+                        </div>
+                    </li>
+                </div>
             </div>
         </div>
     </div>
