@@ -1,10 +1,122 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
-{% block background %}
-{% endblock %}
 {% set project = "colors" %}
 {% block body %}
     <title>Demo page</title>
+    <style>
+        :root{
+            --white: whitesmoke;
+            --black: #111b2d;
+            --grey: #9EA3B0;
+        }
+        table.BarTable,th,td {
+            border:1px solid black;
+            line-height: 0;
+            padding: 14px 28px;
+        }
+
+        .block {
+            display: block;
+            width: 100%;
+            border: none;
+            background-color: #04AA6D;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        html, body{
+            margin: auto;
+            height: 100%;
+            animation: fadein 2s;
+            -moz-animation: fadein 2s; /* Firefox */
+            -webkit-animation: fadein 2s; /* Safari and Chrome */
+            -o-animation: fadein 2s; /* Opera */
+            background-color: #111b2d;
+        }
+
+        .dark-mode {
+            background-image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);
+            image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);
+        }
+
+        h1{
+            font-size: 5em;
+            color: gold;
+        }
+
+        h2{
+            color: white;
+        }
+
+        h3{
+            color: #e1e1e1ff;
+        }
+
+        h4{
+            font-size: 2em;
+            color: goldenrod;
+        }
+
+        h5{
+            font-size: 3em;
+            color: gold;
+        }
+
+        a {
+            color: #111b2d;
+        }
+
+        .fa{
+            font-size: 3em;
+            letter-spacing: 1em;
+            transition: all .2s;
+            color: black;
+
+        }
+
+        .fa:hover{
+            transform: translateY(10px);
+        }
+
+        .fa-youtube-play:hover{
+            color: #050505;
+        }
+
+        .fa-github:hover{
+            color: #050505;
+        }
+
+        .btn:link,
+        .btn:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 40px;
+            display: inline-block;
+            border-radius: 100px;
+            transition: all .2s;
+            position: absolute;
+            color: #FBFCFF;
+            font-size: 2.5em;
+        }
+
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .row{
+            margin: auto;
+        }
+
+    </style>
     <script>
         function change(clicked_id){
             if (document.getElementById(clicked_id).value == "1") {
@@ -33,7 +145,7 @@
                 parseInt(bits_r1, 2).toString(10) + "," +
                 parseInt(bits_r2, 2).toString(10) + "," +
                 parseInt(bits_r3, 2).toString(10) + ");"
-
+            document.getElementById('decimal_r1').style.color = 'white';
         }
     </script>
     <div class="row_1">
