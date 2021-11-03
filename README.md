@@ -36,6 +36,9 @@
 #### (September 28th, 2021) Finished RGB setup. Added pictures and text for aboutus pages. Changed background color for some website pages.
 #### (October 18th, 2021) Added logic gates and color code mini-labs. Added binary shifts, ascii, as well as signed, and unsigned addition. Finished setting up APIs (joke, jokes, COVID-19). Updated website home page, explore page. Created drop down for individual merch pages. 
 #### (October 25th, 2021) Changed home page. Added weather API. Added individual department pages. Arushi and Siya about us pages. Main about us. Changed background for all pages.
+#### (November 3rd, 2021) Website complete.
+
+## Weekly Progress <a id="weekly" name="weekly"></a>
 | Sprint Week Number | Tangibles |
 |:-------------------|:----------|
 | Week 0 | [video](https://drive.google.com/file/d/1BAJstuaF_2IjEaQy2tUoSbzXyshC-5Yw/view?usp=sharing), [slideshow](https://docs.google.com/presentation/d/1DXjuatCa1kNI5u5Jn1TSqNIcV9H1_o0ji6_ceScYdmM/edit?usp=sharing), [journals](https://drive.google.com/drive/folders/1Uk1q0Qu81vBN7ehMrA7DYf6q5P8glnQZ?usp=sharing)| 
@@ -44,15 +47,17 @@
 | Week 4 | [repository - binary, dropdown menu](https://github.com/arushi10/flask_portfolio/commit/7322211edfaef51ae5a65dde9fec1b23188fa3b2), [video](https://drive.google.com/file/d/1TJr9IsJiK7rCQFlS2qPCeEa0G2FSUPJe/view)|
 | Week 8 | [repository - updated website](https://github.com/arushi10/flask_portfolio/commit/683144693f973511dd93d63c42c23176024c58b8)
 | Week 9 | [repository - updated website](https://github.com/arushi10/flask_portfolio/commit/661396c424e1d879f2a4ba69907d8cd4ff39adb1)
+| Week 10| [repository - updated website](https://github.com/arushi10/flask_portfolio/commit/2fbcd2502d144378fab414d09a374606888ab84e)
+| Week 11| [repository - updated website](https://github.com/arushi10/flask_portfolio/commit/8fe8747b8565d2be9121405ea7300b02d702fabc)
 
-## Weekly Progress <a id="weekly" name="weekly"></a>
+
 ## Mini TOC
-### 1. [Week 9](#nine)
+### 1. [Week 9-10](#nine)
 ### 2. [Week 7-8](#seven)
 ### 3. [Week 5-6](#five)
 ### 4. [Week 3-4](#three)
 ### 5. [Week 1-2](#two)
-##
+## 
 ###Week 9 <a id="nine" name="nine"></a>
 ####[Link to review ticket](https://github.com/arushi10/flask_portfolio/projects/1#card-71405934)
 
