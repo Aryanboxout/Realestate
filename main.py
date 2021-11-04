@@ -199,7 +199,7 @@ def covid19():
     """
 
     return render_template("mini labs/covid19.html", stats=response.json())
-        #response.text
+    #response.text
 
 
 @app.route('/weather', methods=['GET', 'POST'])
@@ -209,8 +209,8 @@ def weather():
     querystring = {"q": "san diego", "lat": "0", "lon": "0", "lang": "en", "units": "imperial"}
 
     headers = {
-    'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com",
-    'x-rapidapi-key': "f74ed87200msh995f07c2f92be0bp101c14jsn28a6b622e01b"
+        'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com",
+        'x-rapidapi-key': "f74ed87200msh995f07c2f92be0bp101c14jsn28a6b622e01b"
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
@@ -250,6 +250,10 @@ def addition():
 @app.route('/quiz')
 def quiz():
     return render_template("mini labs/quiz.html")
+
+@app.route('/googlemap')
+def googlemap():
+    return render_template("googlemap.html")
 
 
 # runs the application on the development server
