@@ -2,6 +2,9 @@
 
 ## [Scrum Board](https://github.com/arushi10/flask_portfolio/projects/1)
 
+## Mission Statement
+#### Our goal is to make it easy for tech nerds to catch up on the latest tech. To use this website, you can either click on one of the four departments highlighted above by the four images or you can go to departments and click on one of the four dropdown buttons. Happy viewing!
+
 ## Table of Contents
 ### 1. [Contributors](#contributers)
 ### 2. [Pair Share Journals](#journals)
