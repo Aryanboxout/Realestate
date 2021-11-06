@@ -26,9 +26,9 @@
 
 ## Ideation <a id="idea" name="idea"></a>
 ### Main Idea:
-#### Create a page where people can shop for different types of water proof technology.
+#### Create a page where people can explore the newest technology.
 ### Visual Brainstorm:
-#### Organize with Bootstrap menu.
+#### Organize with Bootstrap menu & Figma.
 #### Add drop down menu and search bar in navbar.
 #### Use embed function to show different pictures of technology.
 #### Use hrefs to embed links to personal about pages. Also use hrefs to send users to different places based on what they click.
