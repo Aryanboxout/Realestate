@@ -1,6 +1,6 @@
 # import "packages" from flask
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
-#import "packages" from flask
+# import "packages" from flask
 from flask import Flask, render_template, request
 from image import image_data, prisha_image_data, arushi_image_data, vaishavi_image_data, siya_image_data
 import requests
@@ -199,7 +199,7 @@ def covid19():
     """
 
     return render_template("mini labs/covid19.html", stats=response.json())
-    #response.text
+        #response.text
 
 
 @app.route('/weather', methods=['GET', 'POST'])
@@ -209,8 +209,8 @@ def weather():
     querystring = {"q": "san diego", "lat": "0", "lon": "0", "lang": "en", "units": "imperial"}
 
     headers = {
-        'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com",
-        'x-rapidapi-key': "f74ed87200msh995f07c2f92be0bp101c14jsn28a6b622e01b"
+    'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com",
+    'x-rapidapi-key': "f74ed87200msh995f07c2f92be0bp101c14jsn28a6b622e01b"
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
@@ -247,9 +247,14 @@ def aidevices():
 def addition():
     return render_template("mini labs/addition.html")
 
-@app.route('/quiz')
+@app.route('/quiz', methods=['GET', 'POST'])
 def quiz():
-    return render_template("mini labs/quiz.html")
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("quiz.html", name1=name)
+    # starting and empty input default
+    return render_template("quiz.html", name1="TechFish User")
 
 @app.route('/googlemap')
 def googlemap():

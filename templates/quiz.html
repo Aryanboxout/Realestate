@@ -103,17 +103,32 @@
     }
 </style>
 
-<title> TechFish </title>
-
 {% include "layouts/navbar.html" %}
-
-</html>
-
 
 {% set project = "quiz" %}
 
-<h3>
-    <h1> Technology Quiz! </h1>
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+<div class="header">
+<h1><strong>Technology Quiz!</strong></h1>
+</div>
+
+<link rel="stylesheet" type="text/css" href="/static/css/quiz.css">
+
+{% block content %}
+{#    <label for="name">Name (4 to 8 characters):</label>#}
+{##}
+{#    <input type="text" id="name" name="name" required#}
+{#           minlength="4" maxlength="8" size="10">#}
+{#    #}
+{##}
+    <p style="color: white"> Hello, User {{name}}!</p>
+    <div class="col-12">
+        <form action="/quiz" id="greet" method="POST" >
+            <label for="name"><h3> What is your name? </h3></label>
+            <input name="name" id="name">
+            <input type="submit" value="Greetings!">
+        </form>
+    </div>
 
     {#    <div holds the quiz#}
     <div id="quiz"></div>
@@ -292,4 +307,7 @@
         submitButton.addEventListener('click', showResults);
 
     </script>
-</h3>
+    </div>
+</div>
+    </html>
+{% endblock %}
