@@ -1,167 +1,151 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
 {% block body %}
-<title>Demo page</title>
-<style>
-    :root{
-        --white: whitesmoke;
-        --black: #111b2d;
-        --grey: #9EA3B0;
-    }
-    table.BarTable,th,td {
-        border:1px;
-        line-height: 0;
-        padding: 14px 28px;
-    }
+    <title>Demo page</title>
+    <style>
+        :root{
+            --white: whitesmoke;
+            --black: #111b2d;
+            --grey: #9EA3B0;
+        }
+        table.BarTable,th,td {
+            border:1px;
+            line-height: 0;
+            padding: 14px 28px;
+        }
 
-    .block {
-        display: block;
-        width: 100%;
-        border: none;
-        background-color: #04AA6D;
-        padding: 14px 28px;
-        font-size: 16px;
-        cursor: pointer;
-        text-align: center;
-    }
+        .block {
+            display: block;
+            width: 100%;
+            border: none;
+            background-color: #04AA6D;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }
 
-    html, body{
-        margin: auto;
-        height: 100%;
-        animation: fadein 2s;
-        -moz-animation: fadein 2s; /* Firefox */
-        -webkit-animation: fadein 2s; /* Safari and Chrome */
-        -o-animation: fadein 2s; /* Opera */
-        background-color: #111b2d;
-    }
+        html, body{
+            margin: auto;
+            height: 100%;
+            animation: fadein 2s;
+            -moz-animation: fadein 2s; /* Firefox */
+            -webkit-animation: fadein 2s; /* Safari and Chrome */
+            -o-animation: fadein 2s; /* Opera */
+            background-color: #111b2d;
+        }
 
-    .dark-mode {
-        background-image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);
-        image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);
-    }
+        .dark-mode {
+            background-image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);
+            image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);
+        }
 
-    h1{
-        font-size: 5em;
-        color: gold;
-    }
+        h1{
+            font-size: 5em;
+            color: gold;
+        }
 
-    h2{
-        color: white;
-    }
+        h2{
+            color: white;
+        }
 
-    h3{
-        color: #e1e1e1ff;
-    }
+        h3{
+            color: #e1e1e1ff;
+        }
 
-    h4{
-        font-size: 2em;
-        color: goldenrod;
-    }
+        h4{
+            font-size: 2em;
+            color: goldenrod;
+        }
 
-    h5{
-        font-size: 3em;
-        color: gold;
-    }
+        h5{
+            font-size: 3em;
+            color: gold;
+        }
 
-    a {
-        color: #111b2d;
-    }
+        a {
+            color: #111b2d;
+        }
 
-    .fa{
-        font-size: 3em;
-        letter-spacing: 1em;
-        transition: all .2s;
-        color: black;
+        .fa{
+            font-size: 3em;
+            letter-spacing: 1em;
+            transition: all .2s;
+            color: black;
 
-    }
+        }
 
-    .fa:hover{
-        transform: translateY(10px);
-    }
+        .fa:hover{
+            transform: translateY(10px);
+        }
 
-    .fa-youtube-play:hover{
-        color: #050505;
-    }
+        .fa-youtube-play:hover{
+            color: #050505;
+        }
 
-    .fa-github:hover{
-        color: #050505;
-    }
+        .fa-github:hover{
+            color: #050505;
+        }
 
-    .btn:link,
-    .btn:visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 15px 40px;
-        display: inline-block;
-        border-radius: 100px;
-        transition: all .2s;
-        position: absolute;
-        color: #FBFCFF;
-        font-size: 2.5em;
-    }
+        .btn:link,
+        .btn:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 40px;
+            display: inline-block;
+            border-radius: 100px;
+            transition: all .2s;
+            position: absolute;
+            color: #FBFCFF;
+            font-size: 2.5em;
+        }
 
 
-    .btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
-    }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+        }
 
-    .btn:active {
-        transform: translateY(-1px);
-        box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
-    }
+        .btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+        }
 
-    .row{
-        margin: auto;}
-
-    .box {
-        transition: box-shadow .3s;
-        width: 300px;
-        height: 500px;
-        margin: 50px;
-        border-radius:10px;
-        border: 1px solid #ccc;
-        background: #fff;
-        float: left;
-
-    }
-    .box:hover {
-        box-shadow: 0 0 11px rgba(33,33,33,.2);
-    }
-</style>
-<body>
-<h1> Tech Stores In San Diego: </h1>
-<div class="box">
-<table style="width:100%; align-content:center">
-    <tr>
-        <td>
-            <h3> Best Buy: </h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26775.3334316028!2d-117.083868!3d32.9796!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x13d311cc2c8ed695!2sBest%20Buy!5e0!3m2!1sen!2sus!4v1635886882414!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>\
-        </td>
-        <td>
-            <h3>Geek Squad:</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13387.579244628248!2d-117.09286713022459!3d32.980176900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dbf9feeb41df1b%3A0xd649278029ef8fa3!2sGeek%20Squad!5e0!3m2!1sen!2sus!4v1635886200472!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </td>
-        <td>
-            <h3>Myriad Software:</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13383.432764648884!2d-117.11483795036969!3d33.007513983387454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dbf6df87897019%3A0x33f8141cd395c5b5!2sMyriad%20Software!5e0!3m2!1sen!2sus!4v1635886269914!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <h3>Apple Store:</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107067.41858266748!2d-117.17618741852431!3d33.00754984721777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dbf1582ff01805%3A0x3b641db17d87639a!2sApple%20North%20County!5e0!3m2!1sen!2sus!4v1636004876332!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </td>
-        <td>
-           <h3>AT&T:</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107066.81454002703!2d-117.17687428175385!3d33.008047455218566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc089ca2949d61%3A0x6c703bd39d009541!2sAT%26T%20Store!5e0!3m2!1sen!2sus!4v1636004946900!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </td>
-        <td>
-           <h3>Target Mobile:</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107066.51251743243!2d-117.1772177133682!3d33.00829625777402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dbf6ff415a4ff1%3A0xc20e94d21b4b3942!2sTarget%20Mobile!5e0!3m2!1sen!2sus!4v1636005006065!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </td>
-    </tr>
-</table>
-</div>
-</body>
+        .row{
+            margin: auto;
+        }
+    </style>
+    <body>
+    <h1> Tech Stores In San Diego: </h1>
+    <table style="width:100%; align-content:center">
+        <tr>
+            <td>
+                <h3> Best Buy: </h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26775.3334316028!2d-117.083868!3d32.9796!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x13d311cc2c8ed695!2sBest%20Buy!5e0!3m2!1sen!2sus!4v1635886882414!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>\
+            </td>
+            <td>
+                <h3>Geek Squad:</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13387.579244628248!2d-117.09286713022459!3d32.980176900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dbf9feeb41df1b%3A0xd649278029ef8fa3!2sGeek%20Squad!5e0!3m2!1sen!2sus!4v1635886200472!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </td>
+            <td>
+                <h3>Myriad Software:</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13383.432764648884!2d-117.11483795036969!3d33.007513983387454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dbf6df87897019%3A0x33f8141cd395c5b5!2sMyriad%20Software!5e0!3m2!1sen!2sus!4v1635886269914!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Apple Store:</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107067.41858266748!2d-117.17618741852431!3d33.00754984721777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dbf1582ff01805%3A0x3b641db17d87639a!2sApple%20North%20County!5e0!3m2!1sen!2sus!4v1636004876332!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </td>
+            <td>
+                <h3>AT&T:</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107066.81454002703!2d-117.17687428175385!3d33.008047455218566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc089ca2949d61%3A0x6c703bd39d009541!2sAT%26T%20Store!5e0!3m2!1sen!2sus!4v1636004946900!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </td>
+            <td>
+                <h3>Target Mobile:</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107066.51251743243!2d-117.1772177133682!3d33.00829625777402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dbf6ff415a4ff1%3A0xc20e94d21b4b3942!2sTarget%20Mobile!5e0!3m2!1sen!2sus!4v1636005006065!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </td>
+        </tr>
+    </table>
+    </body>
 {% endblock %}
