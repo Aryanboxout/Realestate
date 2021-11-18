@@ -2,7 +2,6 @@
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 # import "packages" from flask
 from flask import Flask, render_template, request
-from image import image_data, prisha_image_data, arushi_image_data, vaishavi_image_data, siya_image_data
 import requests
 
 
