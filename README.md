@@ -20,8 +20,8 @@ This is helpful to new teachers who might want to reference things about our sch
   - [Week 5](https://github.com/arushi10/codefish#week-0)
   - [Week 4](https://github.com/arushi10/codefish#week-0)
   - [Week 3](https://github.com/arushi10/codefish#week-0)
-  - [Week 2](https://github.com/arushi10/codefish#week-0
-  - [Week 1](https://github.com/arushi10/codefish#week-0
+  - [Week 2](https://github.com/arushi10/codefish#week-0)
+  - [Week 1](https://github.com/arushi10/codefish#week-0)
   - [Week 0](https://github.com/arushi10/codefish#week-0)
 
 
