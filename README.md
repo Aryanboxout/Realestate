@@ -34,6 +34,9 @@ This is helpful to new teachers who might want to reference things about our sch
 | Aryan | Aryanboxout | [@Aryanboxout](https://github.com/Aryanboxout) | [Issues](https://github.com/VidhiKulkarni/flask_portfolio/issues?q=is%3Aopen+assignee%3AAryanboxout) | [Journal](https://drive.google.com/drive/folders/1pPq0Z7uad7MY3NJkkuK4iWQqUds9fYDI?usp=sharing) | [Commits](https://github.com/VidhiKulkarni/flask_portfolio/commits?author=Aryanboxout) |
 
 ## Week 0
+
+Wireframe #1: https://www.figma.com/file/n16OaVY1LlJcv6nCfocGzo/Untitled?node-id=0%3A1
+
 Ideation, planning
 
 | Name | Journal | Score |
