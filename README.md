@@ -19,7 +19,7 @@ This is helpful to new teachers who might want to reference things about our sch
 | Arushi | arushi10 | [@arushi10](https://github.com/arushi10) | [Issues](https://github.com/VidhiKulkarni/flask_portfolio/issues?q=is%3Aopen+assignee%3Aarushi10) | [Journal](https://drive.google.com/drive/folders/1pPq0Z7uad7MY3NJkkuK4iWQqUds9fYDI?usp=sharing) | [Commits](https://github.com/VidhiKulkarni/flask_portfolio/commits?author=arushi10) |
 | Aryan | Aryanboxout | [@Aryanboxout](https://github.com/Aryanboxout) | [Issues](https://github.com/VidhiKulkarni/flask_portfolio/issues?q=is%3Aopen+assignee%3AAryanboxout) | [Journal](https://drive.google.com/drive/folders/1pPq0Z7uad7MY3NJkkuK4iWQqUds9fYDI?usp=sharing) | [Commits](https://github.com/VidhiKulkarni/flask_portfolio/commits?author=Aryanboxout) |
 
-## Week 0 PBL Team
+## Week 0
 Ideation, planning
 
 | Name | Journal | Score |
