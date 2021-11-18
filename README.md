@@ -10,6 +10,20 @@ The overall idea of our website is to assist all DNHS individuals in their educa
 ## Purpose
 This is helpful to new teachers who might want to reference things about our school quickly or who might want to take attendance quickly. It gives students and opportunity to plan well and lets them know what they have to do each day, as well as allowing them to quickly communicate with peers and teachers.
 
+## History
+  - [Week 11](https://github.com/arushi10/codefish#week-0)
+  - [Week 10](https://github.com/arushi10/codefish#week-0)
+  - [Week 9](https://github.com/arushi10/codefish#week-0)
+  - [Week 8](https://github.com/arushi10/codefish#week-0)
+  - [Week 7](https://github.com/arushi10/codefish#week-0)
+  - [Week 6](https://github.com/arushi10/codefish#week-0)
+  - [Week 5](https://github.com/arushi10/codefish#week-0)
+  - [Week 4](https://github.com/arushi10/codefish#week-0)
+  - [Week 3](https://github.com/arushi10/codefish#week-0)
+  - [Week 2](https://github.com/arushi10/codefish#week-0
+  - [Week 1](https://github.com/arushi10/codefish#week-0
+  - [Week 0](https://github.com/arushi10/codefish#week-0)
+
 
 | Name | Github Username | Github Profile | Issue | Journals | Commits |
 | - | - | - | - | - | - |
