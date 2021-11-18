@@ -49,26 +49,36 @@ def prisha():
     return render_template("about us/prisha.html", name1="TechFish User")
 
 
-@app.route('/vai/', methods=['GET', 'POST'])
-def vai():
+@app.route('/vidhi/', methods=['GET', 'POST'])
+def vidhi():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("about us/vai.html", name1=name)
+            return render_template("about us/vidhi.html", name1=name)
     # starting and empty input default
-    return render_template("about us/vai.html", name1="TechFish User")
+    return render_template("about us/vidhi.html", name1="TechFish User")
 
 
-@app.route('/siya/', methods=['GET', 'POST'])
-def siya():
+@app.route('/saumya/', methods=['GET', 'POST'])
+def saumya():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("about us/siya.html", name1=name)
+            return render_template("about us/saumya.html", name1=name)
     # starting and empty input default
-    return render_template("about us/siya.html", name1="TechFish User")
+    return render_template("about us/saumya.html", name1="TechFish User")
+
+@app.route('/aryan/', methods=['GET', 'POST'])
+def aryan():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("about us/aryan.html", name1=name)
+    # starting and empty input default
+    return render_template("about us/aryan.html", name1="TechFish User")
 
 
 @app.route("/binary", methods=['GET', 'POST'])
