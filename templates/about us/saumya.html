@@ -1,11 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Saumya</title>
-    <h2>Hi, I'm Saumya, a sophomore at Del Norte High School!</h2>
-</head>
-<body>
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
 
-</body>
-</html>
+<!- This variable sets name of browser tab  -->
+{% set project = "Saumya's" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+{#    <head>#}
+{##}
+{#        <style>#}
+{#            body {#}
+{#                color: white;#}
+{#            }#}
+{#        </style>#}
+{#    </head>#}
+{##}
+{#    <style>#}
+{#        html, body{#}
+{#            margin: 0;#}
+{#            height: 100%;#}
+{#            animation: fadein 2s;#}
+{#            -moz-animation: fadein 2s; /* Firefox */#}
+{#            -webkit-animation: fadein 2s; /* Safari and Chrome */#}
+{#            -o-animation: fadein 2s; /* Opera */#}
+{#            background-color: #071036;#}
+{#            line-height: 2 ;#}
+{#            line-grid-mode: 2;#}
+{#        }#}
+{##}
+{#        * {#}
+{#            box-sizing: border-box;#}
+{#        }#}
+{##}
+{#        body {#}
+{#            margin: 0;#}
+{#            font-family: Arial;#}
+{#        }#}
+{##}
+{#        .header {#}
+{#            text-align: center;#}
+{#            padding: 32px;#}
+{#        }#}
+{#    </style>#}
+
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+        <div class="col-12">
+            <div class="paragraph">
+                <div class="header">
+                    <h1>Saumya Palakodety</h1>
+                    <h3>Hi, I'm Saumya Palakodety! I am the designer of CodeFish!</h3>
+                </div>
+            </div>
+
+            <img id="myImage" onclick="changeImage()" src="/static/assets/saumyaimages/newimage.jpg" width="400" height="800">
+
+            <script>
+                function changeImage() {
+                    var image = document.getElementById('myImage');
+                    if (image.src.match("/static/assets/saumyaimages/newimage.jpg")) {
+                        image.src = "/static/assets/saumyaimages/apple-pink-lady.png";
+                    } else {
+                        image.src = "/static/assets/saumyaimages/newimage.jpg";
+                    }
+                }
+            </script>
+        </div>
+    </div>
+{% endblock %}
