@@ -269,7 +269,26 @@ def quiz():
 def googlemap():
     return render_template("googlemap.html")
 
+@app.route('/newapi', methods=['GET', 'POST'])
+def newapi():
+# import requests
+
+    url = "https://motivational-quotes1.p.rapidapi.com/motivation"
+
+    payload = "{\r\n    \"key1\": \"value\",\r\n    \"key2\": \"value\"\r\n}"
+    headers = {
+        'content-type': "application/json",
+        'x-rapidapi-host': "motivational-quotes1.p.rapidapi.com",
+        'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
+    }
+
+    response = requests.request("POST", url, data=payload, headers=headers)
+
+    return (response.text)
+
+    return render_template("newapi.html", stats=response.json())
+
 
 # runs the application on the development server
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,port=8000)
