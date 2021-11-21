@@ -36,6 +36,7 @@ This is helpful to new teachers who might want to reference things about our sch
 ## Week 0
 
 Wireframe #1: https://www.figma.com/file/n16OaVY1LlJcv6nCfocGzo/Untitled?node-id=0%3A1
+Wireframe #2: https://www.figma.com/file/c1JRlsula2lcyTCbLWOZdx/wireframe-%232-(student-%2B-teacher-mode)?node-id=0%3A1
 
 Ideation, planning
 
