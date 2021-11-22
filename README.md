@@ -35,8 +35,8 @@ This is helpful to new teachers who might want to reference things about our sch
 
 ## Week 0
 
-- [Wireframe 1] (https://www.figma.com/file/n16OaVY1LlJcv6nCfocGzo/wireframe-%231-(brief%2C-goes-over-initial-contents%2C-will-develop-student%2Fteacher-mode-later))
-- [Wireframe 2] (https://www.figma.com/file/c1JRlsula2lcyTCbLWOZdx/wireframe-%232-(student-%2B-teacher-mode)?node-id=0%3A1)
+- [Wireframe 1](https://www.figma.com/file/n16OaVY1LlJcv6nCfocGzo/wireframe-%231-(brief%2C-goes-over-initial-contents%2C-will-develop-student%2Fteacher-mode-later))
+- [Wireframe 2](https://www.figma.com/file/c1JRlsula2lcyTCbLWOZdx/wireframe-%232-(student-%2B-teacher-mode)?node-id=0%3A1)
 
 
 Ideation, planning
