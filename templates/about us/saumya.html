@@ -70,15 +70,15 @@
 
 
             <h4>Click to toggle!</h4>
-            <img id="myImage" onclick="changeImage()" src="/static/assets/saumyaimages/newimage.jpg" width="400" height="800">
+            <img id="myImage" onclick="changeImage()" src="/static/assets/saumyaimages/maskon.jpg" width="450" height="600">
 
             <script>
                 function changeImage() {
                     var image = document.getElementById('myImage');
-                    if (image.src.match("/static/assets/saumyaimages/newimage.jpg")) {
-                        image.src = "/static/assets/saumyaimages/apple-pink-lady.png";
+                    if (image.src.match("/static/assets/saumyaimages/maskon.jpg")) {
+                        image.src = "/static/assets/saumyaimages/maskoff.jpg";
                     } else {
-                        image.src = "/static/assets/saumyaimages/newimage.jpg";
+                        image.src = "/static/assets/saumyaimages/maskon.jpg";
                     }
                 }
             </script>
