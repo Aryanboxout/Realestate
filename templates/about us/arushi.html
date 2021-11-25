@@ -1,100 +1,124 @@
-<!-- Extending the predefined project layout -->
-{% extends "layouts/base.html" %}
+<!DOCTYPE html>
+<html lang="en" xmlns:background-image="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!- This variable sets name of browser tab  -->
-{% set project = "Arushi's" %}
+<style>
+    :root{
+        --white: whitesmoke;
+        --black: #111b2d;
+        --grey: #9EA3B0;
+    }
 
-<!- This is a replacement block for Body in base.html -->
+    html, body{
+        margin: auto;
+        height: 100%;
+        animation: fadein 2s;
+        -moz-animation: fadein 2s; /* Firefox */
+        -webkit-animation: fadein 2s; /* Safari and Chrome */
+        -o-animation: fadein 2s; /* Opera */
+        background-color: #8b008b;
+    }
+
+    h1{
+        font-size: 5em;
+        color: gold;
+    }
+
+    h2{
+        color: white;
+    }
+
+    h3{
+        color: #e1e1e1ff;
+    }
+
+    h4{
+        font-size: 2em;
+        color: goldenrod;
+    }
+
+    h5{
+        font-size: 3em;
+        color: gold;
+    }
+
+    a {
+        color: #111b2d;
+    }
+
+</style>
+
+{% include "layouts/navbar.html" %}
+
 {% block body %}
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
-        <div class="col-12">
-                <div class="paragraph">
 
-                <head>
-                    <style>
-                        body {
-                            color: white;
-                        }
+{#title text#}
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: gilroy,serif;">
+        <html class="col-12">
+            <h1>Arushi Bharadwaj</h1>
+            <h3>Hi, I'm Arushi Bharadwaj! I am the Scrum Master of CodeFish!</h3>
 
-                    </style>
-                </head>
+            <h4>Trimester 2 Journal</h4>
+            <iframe width="1200" height="400" src="https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit?usp=sharing" title="Trimester 1 Personal Journal" frameborder="8"></iframe>
 
-                <style>
-                    html, body{
-                        margin: 0;
-                        height: 100%;
-                        animation: fadein 2s;
-                        -moz-animation: fadein 2s; /* Firefox */
-                        -webkit-animation: fadein 2s; /* Safari and Chrome */
-                        -o-animation: fadein 2s; /* Opera */
-                        background-color: #071036;
-                        line-height: 2 ;
-                        line-grid-mode: 2;
-                    }
-                * {
-                box-sizing: border-box;
+            <h4> Commits and Issues</h4>
+            <a href="https://github.com/arushi10/codefish/commits?author=arushi10" >
+                <button type="button" class="btn btn-info">Commits</button>
+            </a>
+            <a href="https://github.com/arushi10/codefish/issues/assigned/arushi10" >
+                <button type="button" class="btn btn-info">Issues</button>
+            </a>
+
+            <h4>Days RESTapi from rapidapi.com</h4>
+
+{#table style#}
+            <style>
+                table, th, td {
+                    border:1px solid white;
+                    color: white;
                 }
+            </style>
 
-                body {
-                margin: 0;
-                font-family: Arial;
+            {% set start = stats.first_interpreted_date %}
+            {% set end = stats.second_interpreted_date %}
+            {% set days = stats.business_days %}
+
+{#            refresh button - API has limit of 1000 runs/month #}
+{#            <form action={{url_for('.arushi')}}>#}
+{#                <button>Refresh!</button>#}
+{#            </form>#}
+
+            <table style="width:100%;">
+
+                            <tr>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Number of School Days</th>
+                            </tr>
+
+                            <tr>
+                                <td> {{start}}</td>
+                                <td> {{end}} </td>
+                                <td> {{days}} </td>
+                            </tr>
+            </table>
+        </html>
+
+            <h4>Click Image to Toggle</h4>
+
+    <img id="myImage" onclick="changeImage()" src="/static/assets/arushi_images/maskless_pic.jpg" width="20%" height="20%" style="margin: 0 40% 60%">
+
+    <script>
+        function changeImage() {
+            let image = document.getElementById('myImage');
+            if (image.src.match("/static/arushiassets/maskless_pic.jpg")) {
+                image.src = "/static/arushiassets/mask_pic.jpg";
+                } else {
+                    image.src = "/static/arushiassets/maskless_pic.jpg";
                 }
-
-                .header {
-                text-align: center;
-                padding: 32px;
-                }
-
-                /* Create two equal columns that floats next to each other */
-                .column {
-                float: left;
-                width: 30%;
-                padding: 10px;
-                }
-
-                .column img {
-                margin-top: 12px;
-                }
-
-                /* Clear floats after the columns */
-                .row:after {
-                content: "";
-                display: table;
-                clear: both;
-                }
-                </style>
-
-                    <div class="header">
-                        <h1>Arushi Bharadwaj</h1>
-                        <h3>Hi, I'm Arushi Bharadwaj! I am the SM/OO of TechFish!</h3>
-                    </div>
-
-                    <div class="column">
-                        <img src="/static/arushiassets/arushiPic1.jpg" style="height: 400px" alt = "no">
-                    </div>
-
-                    <div class="column">
-                        <img src="/static/arushiassets/arushiPic2.jpg" style="height: 400px" alt = "no">
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
+        }
+    </script>
     </div>
 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            img:hover {
-                -webkit-transform: scaleX(-1);
-                transform: scaleX(-1);
-            }
-        </style>
-    </head>
-
-{% endblock %}
-
-<!- This is turning off birds background from base.html -->
-{% block background %}
 {% endblock %}
