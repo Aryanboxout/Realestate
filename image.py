@@ -101,7 +101,7 @@ def image_data(path=Path.cwd() / Path("static/assets/"), img_list=None):
 
 
 # color_data prepares a series of images for data analysis
-def prisha_image_data(path=Path.cwd() / Path("static/prishaassets/"), img_list=None):
+def prisha_image_data(path=Path.cwd() / Path("static/assets/prisha_images/"), img_list=None):
     # def image_data(path=os.path.join("static", "assets"), img_list=None):
     # def image_data(path=Path("static/assets/"), img_list=None):  # path of static images is defaulted
 
@@ -182,7 +182,7 @@ def prisha_image_data(path=Path.cwd() / Path("static/prishaassets/"), img_list=N
 
 
 # color_data prepares a series of images for data analysis
-def arushi_image_data(path=Path.cwd() / Path("static/arushiassets/"), img_list=None):
+def arushi_image_data(path=Path.cwd() / Path("static/assets/arushi_images/"), img_list=None):
     # def image_data(path=os.path.join("static", "assets"), img_list=None):
     # def image_data(path=Path("static/assets/"), img_list=None):  # path of static images is defaulted
 
@@ -195,7 +195,7 @@ def arushi_image_data(path=Path.cwd() / Path("static/arushiassets/"), img_list=N
 
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "Google", 'label': "dog", 'file': "Dog2.jpg"},
+            {'source': "Google", 'label': "dog", 'file': "dog.jpg"},
         ]
 
     # gather analysis data and meta data for each image, adding attributes to each row in table
