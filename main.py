@@ -28,8 +28,8 @@ def weather():
 
     response = requests.request("GET", url, headers=headers, params=querystring)
 
-    #return render_template("/weather.html", stats=response.json())
-    return response.text
+    return render_template("/weather.html", stats=response.json())
+    #return response.text
 
 
 @app.route('/quiz', methods=['GET', 'POST'])
@@ -213,21 +213,6 @@ def arushi():
 
     # return response.text
     return render_template("about us/arushi.html", stats=response.json())
-# @app.route('/weather', methods=['GET', 'POST'])
-# def weather():
-#     url = "https://community-open-weather-map.p.rapidapi.com/weather"
-#
-#     querystring = {"q": "san diego", "lat": "0", "lon": "0", "lang": "en", "units": "imperial"}
-#
-#     headers = {
-#         'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com",
-#         'x-rapidapi-key': "f74ed87200msh995f07c2f92be0bp101c14jsn28a6b622e01b"
-#     }
-#
-#     response = requests.request("GET", url, headers=headers, params=querystring)
-#
-#     return render_template("/weather.html", stats=response.json())
-#     #response.text
 
 @app.route('/prisha/', methods=['GET', 'POST'])
 def prisha():
