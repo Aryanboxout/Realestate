@@ -37,6 +37,7 @@ This is helpful to new teachers who might want to reference things about our sch
 
 - [Wireframe 1](https://www.figma.com/file/n16OaVY1LlJcv6nCfocGzo/wireframe-%231-(brief%2C-goes-over-initial-contents%2C-will-develop-student%2Fteacher-mode-later))
 - [Wireframe 2](https://www.figma.com/file/5dIwyYfxmsMTvoyAWeVLWV/student%2Fteacher-mode-(refurbished)?node-id=0%3A1)
+- [Brain Write](https://docs.google.com/document/d/1nU1ejLqO0gPv7Cup1q8HywVb-_kGvDmOjYcVEJabvQQ/edit?usp=sharing)
 
 
 Ideation, planning
