@@ -1,11 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Vidhi</title>
-</head>
-<h1> This is My About Me Page.</h1>
-<body>
-
-</body>
-</html>
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+<!- This variable sets name of browser tab  -->
+{% set project = "Vidhi" %}
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left;">
+    <div class="col-12">
+    <div class="paragraph">
+    <head>
+        <style>
+            body {
+                margin: 0;
+                height: 100%;
+                color: white;
+                background-color: darkslategray;
+            }
+        </style>
+    </head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        .header {
+            text-align: center;
+            padding: 32px;
+        }
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 30%;
+            padding: 10px;
+        }
+        .column img {
+            margin-top: 12px;
+        }
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+    <div class="header">
+        <h1>Vidhi Kulkarni</h1>
+        <h3>Hi, I'm Vidhi Kulkarni! I am the Github Admin for CodeFish!</h3>
+    </div>
+{% endblock %}
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}

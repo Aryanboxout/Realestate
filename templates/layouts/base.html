@@ -5,41 +5,14 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 ... code reuse
 -->
 <!DOCTYPE HTML>
+<body>
 <html xmlns:background-image="http://www.w3.org/1999/xhtml">
 <head>
     {% set name = "Home" %}
     {% set github = "https://github.com/nighthawkcoders" %}
     {% set youtube = "https://youtu.be/dQw4w9WgXcQ" %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        .parallax {
-            /* The image used */
-            background-image: url("https://images.unsplash.com/photo-1484291470158-b8f8d608850d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
-            /* Set a specific height */
-            min-height: 600px;
-            /* Create the parallax scrolling effect */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        #bar {
-            height:45%;
-            width: 100%;
-        }
-        table.BarTable,th,td {
-            border:1px solid black;
-            border-collapse: collapse;
-            line-height: 0;
-        }
-        td img{
-            display: block;
-            margin-bottom: auto;
-            margin-top: auto;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -58,6 +31,11 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             background-color: #111B2D;
         {#background-image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);#}
         {#image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169));#}
+        }
+
+        body{
+            margin: 0;
+            font-family: "Bell MT";
         }
         .dark-mode {
             background-image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);
@@ -125,8 +103,11 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             margin: auto;
         }
     </style>
-    <title> TechFish </title>
-    {% include "layouts/navbar.html" %}
+</head>
+
+
+<title> CodeFish </title>
+{% include "layouts/navbar.html" %}
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script
             src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -186,17 +167,17 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 </head>
 </html>
 {% block body %}
-    {#    <div class="container-fluid" >#}
-    {#        <div class="row justify-content-end" style="padding: 2%;">#}
-    {#            <div class="col-2" style="text-align: right;">#}
-    {#                {% block info %}#}
-    {#                    <!-- notice jinja style variables used in href's -->#}
-    {#                    <a><h5>{{name}}</h5></a>#}
-    {#                    <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>#}
-    {#                    <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>#}
-    {#                {% endblock %}#}
-    {#            </div>#}
-    {#        </div>#}
+{#    <div class="container-fluid" >#}
+{#        <div class="row justify-content-end" style="padding: 2%;">#}
+{#            <div class="col-2" style="text-align: right;">#}
+{#                {% block info %}#}
+{#                    <!-- notice jinja style variables used in href's -->#}
+{#                    <a><h5>{{name}}</h5></a>#}
+{#                    <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>#}
+{#                    <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>#}
+{#                {% endblock %}#}
+{#            </div>#}
+{#        </div>#}
     <div class="container">
         <div class="row">
             <div class="col-sm">
@@ -217,18 +198,46 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     <div class="product" style="margin-top: 2%;">
         <div class="row" style="padding: 5%; padding-top: 0%; padding-bottom: 5%;">
             <div class="col-8" >
-                <h1>TechFish Electronics </h1>
-                <h5 id="langChange">Pick a department to begin</h5>
+                <h1>CodeFish Webpage </h1>
+{#                <h5 id="langChange">Pick a department to begin</h5>#}
             </div>
         </div>
         <body>
-        {#            <h3>Rectangle CSS</h3>#}
+        <style>
+            .parallax {
+                /* The image used */
+                background-image: url("https://images.unsplash.com/photo-1484291470158-b8f8d608850d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+                /* Set a specific height */
+                min-height: 600px;
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            #bar {
+                height:45%;
+                width: 100%;
+            }
+            table.BarTable,th,td {
+                border:1px solid black;
+                border-collapse: collapse;
+                line-height: 0;
+            }
+            td img{
+                display: block;
+                margin-bottom: auto;
+                margin-top: auto;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
         <div class="parallax">
             <div id="bar">
                 <table class = "BarTable" style="width:100%;height: 100%">
                     <tr>
                         <td style="width: 35%">
-                            <a href="http://127.0.0.1:5000/audiodevices"><img src="https://www.gannett-cdn.com/presto/2020/11/16/USAT/adcb9de9-c9b1-4f61-99c0-53c6983b6c70-Sony_WH-1000XM4_Headphones_-_BY.jpg?width=660&height=372&fit=crop&format=pjpg&auto=webp" style="height: 341px; width: 683px"></a>
+                            <a href="http://127.0.0.1:5000/audiodevices"><img src="https://media.istockphoto.com/vectors/year-2022-calendar-horizontal-vector-design-template-simple-and-clean-vector-id1212959313" style="height: 341px; width: 683px"></a>
                         </td>
                         <td style="width: 35%">
                             <a href="http://127.0.0.1:5000/phonestablets"><img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/17DDC/production/_120565779_iphone13colours.png" style="height: 341px; width: 683px"></a>
@@ -246,9 +255,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             </div>
             <div style="height:300px;background-color:#0D1F2D">
                 <h1> Mission Statement </h1>
-                <h2> Our goal is to make it easy for tech geeks to catch up on the latest technology. To use this website,
-                    you can either click on one of the four departments highlighted above by the four images or you can go to departments
-                    and click on one of the four dropdown buttons. Happy viewing!</h2>
+                <h2> Our goal is to make it easy for students and teachers to organize their busy school lives. Have a great school year!</h2>
             </div>
         </div>
         </body>
@@ -257,4 +264,5 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     </div>
     </div>
 {% endblock %}
+</body>
 </html>

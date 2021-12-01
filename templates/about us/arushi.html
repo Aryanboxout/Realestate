@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% set project = "Arushi" %}
+{#{% block body %}#}
 <html lang="en" xmlns:background-image="http://www.w3.org/1999/xhtml">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,10 +22,6 @@
         background-color: #8b008b;
     }
 
-    body {
-        margin: 0;
-        font-family: "Bell MT";
-    }
 
     h1{
         font-size: 5em;
@@ -54,12 +52,14 @@
 
 </style>
 
-{% include "layouts/navbar.html" %}
-
-{% block body %}
-
 {#title text#}
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: Bell MT;">
+{% block body %}
+    <style>
+    body{
+        background-color: #8b008b;
+    }
+    </style>
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:center;">
         <html class="col-12">
             <h1>Arushi Bharadwaj</h1>
             <h3>Hi, I'm Arushi Bharadwaj! I am the Scrum Master of CodeFish!</h3>
