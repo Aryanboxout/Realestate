@@ -136,27 +136,6 @@ def covid19():
     return render_template("API/covid19.html", stats=response.json())
     # return response.text
 
-
-@app.route('/newapi', methods=['GET', 'POST'])
-def newapi():
-    # import requests
-
-    url = "https://motivational-quotes1.p.rapidapi.com/motivation"
-
-    payload = "{\r\n    \"key1\": \"value\",\r\n    \"key2\": \"value\"\r\n}"
-    headers = {
-        'content-type': "application/json",
-        'x-rapidapi-host': "motivational-quotes1.p.rapidapi.com",
-        'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
-    }
-
-    response = requests.request("POST", url, data=payload, headers=headers)
-
-    return (response.text)
-
-    return render_template("newapi.html", stats=response.json())
-
-
 @app.route('/rgb/')
 def rgb():
     path = Path(app.root_path) / "static" / "assets"
@@ -256,6 +235,22 @@ def aryan():
             return render_template("about us/aryan.html", name1=name)
     # starting and empty input default
     return render_template("about us/aryan.html", name1="TechFish User")
+
+@app.route('/saumyaapi', methods=['GET', 'POST'])
+def saumyaapi():
+
+    url = "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly"
+
+    querystring = {"lat":"35.5","lon":"-78.5"}
+
+    headers = {
+        'x-rapidapi-host': "weatherbit-v1-mashape.p.rapidapi.com",
+        'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    # return(response.text)
+    return render_template("api/saumyaapi.html", stats=response.json())
 
 
 # @app.route('/cart/', methods=['GET', 'POST'])
