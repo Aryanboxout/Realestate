@@ -133,8 +133,8 @@ def covid19():
     for country in countries:
         print(country["country_name"])
     """
-    #return render_template("API/covid19.html", stats=response.json())
-    return response.text
+    return render_template("API/covid19.html", stats=response.json())
+    # return response.text
 
 
 @app.route('/newapi', methods=['GET', 'POST'])
