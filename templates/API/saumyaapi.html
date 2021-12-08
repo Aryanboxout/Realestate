@@ -15,7 +15,7 @@
     <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
         <!-- Title -->
         <div class="col-12" style="text-align: center;">
-            <h1><strong>Current Weather Data from rapidapi.com</strong></h1>
+            <h3><strong>Current Weather Data In Various Cities from rapidapi.com</strong></h3>
             <form action={{url_for('saumyaapi')}}>
                 <button>Refresh!</button>
             </form>
@@ -28,10 +28,9 @@
                 <tr>
                     <th>Timestamp </th>
                     <th> Solar Rad </th>
-                    <th>City Name  </th>
                     <th>Wind Speed  </th>
-                    <th>State Code</th>
-                    <th>Sunset  </th>
+{#                    <th>State Code</th>#}
+{#                    <th>Sunset  </th>#}
                     <th>Dew</th>
                     <th>Snow</th>
                     <th>Precipitation  </th>
@@ -49,10 +48,9 @@
                             <tr>
                                 <td> {{info.timestamp_utc}} </td>
                                 <td> {{info.solar_rad}} </td>
-                                <td> {{info.city_name}} </td>
                                 <td> {{info.wind_spd}} </td>
-                                <td> {{info.state_code}} </td>
-                                <td> {{info.sunset}} </td>
+{#                                <td> {{info.state_code}} </td>#}
+{#                                <td> {{info.sunset}} </td>#}
                                 <td> {{info.dewpt}} </td>
                                 <td> {{info.snow}} </td>
                                 <td> {{info.precip}} </td>
