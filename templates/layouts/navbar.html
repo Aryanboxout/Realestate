@@ -82,42 +82,45 @@
                 <a class="nav-link" href={{ url_for('index') }}>Home</a>
             </li>
             <li>
-                <a class="nav-link" href={{ url_for('weather') }}>Weather</a>
+                <a class="nav-link" href={{ url_for('attendance') }}>Attendance</a>
             </li>
-            <li>
-                <a class="nav-link" href={{ url_for('quiz') }}>Quiz</a>
-            </li>
-            <li>
-                <a class="nav-link" href={{ url_for('googlemap') }}>Locations</a>
-            </li>
+{#            <li>#}
+{#                <a class="nav-link" href={{ url_for('weather') }}>Weather</a>#}
+{#            </li>#}
+{#            <li>#}
+{#                <a class="nav-link" href={{ url_for('quiz') }}>Quiz</a>#}
+{#            </li>#}
+{#            <li>#}
+{#                <a class="nav-link" href={{ url_for('googlemap') }}>Locations</a>#}
+{#            </li>#}
 
             <!-- DEPARTMENTS DROPDOWN -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Departments
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="nav-link" href="{{ url_for('phonestablets') }}">Phones and Tablets</a>
-                        <a class="nav-link" href="{{ url_for('desktopstvs') }}">Desktops/TVs</a>
-                        <a class="nav-link" href="{{ url_for('audiodevices') }}">Audio Devices</a>
-                        <a class="nav-link" href="{{ url_for('aidevices') }}">AI Devices</a>
-                    </div>
-                </li>
-            </div>
+{#            <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
+{#                <li class="nav-item dropdown">#}
+{#                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#                        Departments#}
+{#                    </a>#}
+{#                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">#}
+{#                        <a class="nav-link" href="{{ url_for('phonestablets') }}">Phones and Tablets</a>#}
+{#                        <a class="nav-link" href="{{ url_for('desktopstvs') }}">Desktops/TVs</a>#}
+{#                        <a class="nav-link" href="{{ url_for('audiodevices') }}">Audio Devices</a>#}
+{#                        <a class="nav-link" href="{{ url_for('aidevices') }}">AI Devices</a>#}
+{#                    </div>#}
+{#                </li>#}
+{#            </div>#}
 
-            <!-- MINI LABS DROPDOWN -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Mini Labs
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url_for('binary') }}">Binary</a>
-                        <a class="dropdown-item" href="{{ url_for('colors') }}">Color Code</a>
-                        <a class="dropdown-item" href="{{ url_for('addition') }}">Addition</a>
-                        <a class="dropdown-item" href="{{ url_for('logicgates') }}">Logic Gates</a>
-                    </div>
+{#            <!-- MINI LABS DROPDOWN -->#}
+{#            <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
+{#                <li class="nav-item dropdown">#}
+{#                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#                        Mini Labs#}
+{#                    </a>#}
+{#                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">#}
+{#                        <a class="dropdown-item" href="{{ url_for('binary') }}">Binary</a>#}
+{#                        <a class="dropdown-item" href="{{ url_for('colors') }}">Color Code</a>#}
+{#                        <a class="dropdown-item" href="{{ url_for('addition') }}">Addition</a>#}
+{#                        <a class="dropdown-item" href="{{ url_for('logicgates') }}">Logic Gates</a>#}
+{#                    </div>#}
                 <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             API
@@ -129,20 +132,20 @@
                             <a class="dropdown-item" href="{{ url_for('saumyaapi')}}">saumya's api</a>
                         </div>
                 </li>
-                <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="rgbDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            RGB
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="rgbDropdown">
-                            <a class="dropdown-item" href="{{ url_for('rgb') }}">RGB</a>
-                            <a class="dropdown-item" href="{{ url_for('arushirgb') }}">ArushiRGB</a>
-                            <a class="dropdown-item" href="{{ url_for('prishargb') }}">PrishaRGB</a>
-                            <a class="dropdown-item" href="{{ url_for('vaishavirgb') }}">VaishaviRGB</a>
-                            <a class="dropdown-item" href="{{ url_for('siyargb') }}">SiyaRGB</a>
-                        </div>
-                </li>
-                </li>
-            </div>
+{#                <li class="nav-item dropdown">#}
+{#                        <a class="nav-link dropdown-toggle" href="#" id="rgbDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#                            RGB#}
+{#                        </a>#}
+{#                        <div class="dropdown-menu" aria-labelledby="rgbDropdown">#}
+{#                            <a class="dropdown-item" href="{{ url_for('rgb') }}">RGB</a>#}
+{#                            <a class="dropdown-item" href="{{ url_for('arushirgb') }}">ArushiRGB</a>#}
+{#                            <a class="dropdown-item" href="{{ url_for('prishargb') }}">PrishaRGB</a>#}
+{#                            <a class="dropdown-item" href="{{ url_for('vaishavirgb') }}">VaishaviRGB</a>#}
+{#                            <a class="dropdown-item" href="{{ url_for('siyargb') }}">SiyaRGB</a>#}
+{#                        </div>#}
+{#                </li>#}
+{#                </li>#}
+{#            </div>#}
 
                 <!-- ABOUT US DROPDOWN -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">

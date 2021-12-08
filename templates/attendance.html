@@ -1,0 +1,59 @@
+{% extends "layouts/base.html" %}
+{% set project = "Attendance" %}
+{% block body %}
+
+<style>
+    html, body{
+        background-color: #071036;
+    }
+</style>
+
+<div class="center-block" style="margin: 2% 5% 5%; text-align:center;">
+    <html class="col-12">
+    <h1>Attendance</h1>
+    </html>
+</div>
+
+    <style>
+        table, th, td {
+            border:1px solid white;
+            color: white;
+        }
+    </style>
+
+    <table style="width:100%;">
+        <tr>
+            <th>Name</th>
+            <th>Present</th>
+            <th>Absent</th>
+        </tr>
+        <tr>
+            <td> Bob Joe  </td>
+            <td>
+            <input type="checkbox">
+            </td>
+            <td>
+                <input type="checkbox">
+            </td>
+        </tr>
+        <tr>
+            <td> Prish Fish </td>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>
+                <input type="checkbox">
+            </td>
+        </tr>
+        <tr>
+            <td> Johnny </td>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>
+                <input type="checkbox">
+            </td>
+        </tr>
+    </table>
+
+{% endblock %}

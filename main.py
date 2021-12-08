@@ -14,6 +14,9 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route('/attendance', methods=['GET', 'POST'])
+def attendance():
+    return render_template("attendance.html")
 
 @app.route('/weather', methods=['GET', 'POST'])
 def weather():
