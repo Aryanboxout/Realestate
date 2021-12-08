@@ -194,15 +194,30 @@ def arushi():
     return render_template("about us/arushi.html", stats=response.json())
 
 
+
+# @app.route('/prisha/', methods=['GET', 'POST'])
+# def prisha():
+#     # submit button has been pushed
+#     if request.form:
+#         name = request.form.get("name")
+#         if len(name) != 0:  # input field has content
+#             return render_template("about us/prisha.html", name1=name)
+#     # starting and empty input default
+#     return render_template("about us/prisha.html", name1="TechFish User")
+
+
 @app.route('/prisha/', methods=['GET', 'POST'])
 def prisha():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("about us/prisha.html", name1=name)
-    # starting and empty input default
-    return render_template("about us/prisha.html", name1="TechFish User")
+    url = "https://corona-virus-world-and-india-data.p.rapidapi.com/api"
+    headers = {
+        'x-rapidapi-key': "dec069b877msh0d9d0827664078cp1a18fajsn2afac35ae063",
+        'x-rapidapi-host': "corona-virus-world-and-india-data.p.rapidapi.com"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+    return render_template("about us/prisha.html", stats=response.json())
+    # return response.text
 
 
 @app.route('/vidhi/', methods=['GET', 'POST'])
@@ -257,40 +272,5 @@ def saumyaapi():
     return render_template("api/saumyaapi.html", stats=response.json())
 
 
-# @app.route('/cart/', methods=['GET', 'POST'])
-# def cart():
-#     # submit button has been pushed
-#     if request.form:
-#         name = request.form.get("name")
-#         if len(name) != 0:  # input field has content
-#             return render_template("cart.html", name1=name)
-#     # starting and empty input default
-#     return render_template("cart.html", name1=" ")
-#
-#
-# @app.route('/account/', methods=['GET', 'POST'])
-# def account():
-#     # submit button has been pushed
-#     if request.form:
-#         name = request.form.get("name")
-#         if len(name) != 0:  # input field has content
-#             return render_template("account.html", name1=name)
-#     # starting and empty input default
-#     return render_template("account.html", name1=" ")
-#
-#
-# @app.route('/blog')
-# def blog():
-#     return'''
-#      <html>
-#     <head>Techfish  Home . . . Explore . . . Cart . . . Account . . . Mini Labs . . . About Us . . . </head>
-#     <body>
-#         <h2> Welcome to TechFish, the best place to buy the best waterproof tech gear! </h2>
-#         <p> We sell waterproof tech gear! </p>
-#     </body>
-#     </html>
-#     '''
-
-# runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True,port=8000)
