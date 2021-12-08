@@ -1,11 +1,27 @@
 {% extends "layouts/base.html" %}
-{% set project = "Arushi" %}
+{% set project = "Vidhi" %}
 {% block body %}
 
     <style>
         html, body{
             background-color: #8b1022;
+            margin: 0;
+            height: 100%;
+            padding-bottom: 20px;
         }
+
+        body {
+            margin: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6, h7{
+            margin-top:40px;
+            margin-bottom:40px;
+        }
+        .container {
+            margin-bottom: 0;
+        }
+
     </style>
 
     <div class="center-block" style="margin: 2% 5% 5%; text-align:center;">
@@ -69,19 +85,20 @@
             </tr>
         </table>
         </html>
+
+
         <h4>Click Image to Toggle</h4>
         <img id="myImage" onclick="changeImage()" src="/static/assets/vidhi_images/nomask.jpg" width="30%" height="30%" style="margin: 0 40% 60%">
 
         <script>
             function changeImage() {
                 let image = document.getElementById('myImage');
-                if (image.src.match("/static/assets/vidhi_images/maskless_pic.jpg")) {
-                    image.src = "/static/assets/vidhi_images/mask_pic.jpg";
+                if (image.src.match("/static/assets/vidhi_images/nomask.jpg")) {
+                    image.src = "/static/assets/vidhi_images/mask.jpg";
                 } else {
-                    image.src = "/static/assets/arushi_images/maskless_pic.jpg";
+                    image.src = "/static/assets/vidhi_images/nomask.jpg";
                 }
             }
         </script>
-
     </div>
 {% endblock %}
