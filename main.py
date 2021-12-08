@@ -1,8 +1,8 @@
-# import "packages" from flask
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 # import "packages" from flask
 from flask import Flask, render_template, request
 import requests
+import http.client
 
 
 # create a Flask instance
@@ -193,6 +193,7 @@ def arushi():
     # return response.text
     return render_template("about us/arushi.html", stats=response.json())
 
+
 @app.route('/prisha/', methods=['GET', 'POST'])
 def prisha():
     # submit button has been pushed
@@ -206,13 +207,16 @@ def prisha():
 
 @app.route('/vidhi/', methods=['GET', 'POST'])
 def vidhi():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("about us/vidhi.html", name1=name)
-    # starting and empty input default
-    return render_template("about us/vidhi.html", name1="TechFish User")
+
+    url = "https://world-clock.p.rapidapi.com/json/utc/now"
+
+    headers = {
+        'x-rapidapi-host': "world-clock.p.rapidapi.com",
+        'x-rapidapi-key': "b7497e5bbbmsh13875b44b129b4dp1a492fjsnf27f047e11f5"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+    return render_template("about us/vidhi.html", stats=response.json())
 
 
 @app.route('/saumya/', methods=['GET', 'POST'])
