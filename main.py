@@ -261,6 +261,10 @@ def aryan():
 @app.route('/saumyaapi', methods=['GET', 'POST'])
 def saumyaapi():
 
+#greet function
+#set variables = number; input
+# set lat/lon = variable name
+
     url = "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly"
 
     querystring = {"lat":"35.5","lon":"-78.5"}
@@ -273,6 +277,11 @@ def saumyaapi():
     response = requests.request("GET", url, headers=headers, params=querystring)
     # return(response.text)
     return render_template("api/saumyaapi.html", stats=response.json())
+
+@app.route('/calendar')
+def calendar():
+    return render_template("calendar.html")
+
 
 
 if __name__ == "__main__":
