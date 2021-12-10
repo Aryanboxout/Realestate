@@ -20,9 +20,9 @@ This is helpful to new teachers who might want to reference things about our sch
   - [Week 5](https://github.com/arushi10/codefish#week-0)
   - [Week 4](https://github.com/arushi10/codefish#week-0)
   - [Week 3](https://github.com/arushi10/codefish#week-0)
-  - [Week 2](https://github.com/arushi10/codefish#week-0)
-  - [Week 1](https://github.com/arushi10/codefish#week-0)
-  - [Week 0](https://github.com/arushi10/codefish#week-0)
+  - [Week 2](#two)
+  - [Week 1](#one)
+  - [Week 0](#zero)
 
 
 | Name | Github Username | Github Profile | Issue | Journals | Commits |
@@ -33,7 +33,7 @@ This is helpful to new teachers who might want to reference things about our sch
 | Arushi | arushi10 | [@arushi10](https://github.com/arushi10) | [Issues](https://github.com/VidhiKulkarni/flask_portfolio/issues?q=is%3Aopen+assignee%3Aarushi10) | [Journal](https://drive.google.com/drive/folders/1pPq0Z7uad7MY3NJkkuK4iWQqUds9fYDI?usp=sharing) | [Commits](https://github.com/arushi10/codefish/commits?author=arushi10) |
 | Aryan | Aryanboxout | [@Aryanboxout](https://github.com/Aryanboxout) | [Issues](https://github.com/VidhiKulkarni/flask_portfolio/issues?q=is%3Aopen+assignee%3AAryanboxout) | [Journal](https://drive.google.com/drive/folders/1pPq0Z7uad7MY3NJkkuK4iWQqUds9fYDI?usp=sharing) | [Commits](https://github.com/arushi10/codefish/commits?author=Aryanboxout) |
 
-## Week 2
+## Week 2 <a id="two" name="two"></a>
 
 Home Pages, Deployment, and Create Task Plans
 
@@ -45,7 +45,7 @@ Home Pages, Deployment, and Create Task Plans
 | Arushi | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) |  |
 | Aryan | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) |  |
 
-## Week 1
+## Week 1 <a id="one" name="one"></a>
 
 Project approval
 
@@ -57,7 +57,7 @@ Project approval
 | Arushi | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) | full |
 | Aryan | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) | full |
 
-## Week 0
+## Week 0 <a id="zero" name="zero"></a>
 
 - [Wireframe 1](https://www.figma.com/file/n16OaVY1LlJcv6nCfocGzo/wireframe-%231-(brief%2C-goes-over-initial-contents%2C-will-develop-student%2Fteacher-mode-later))
 - [Wireframe 2](https://www.figma.com/file/5dIwyYfxmsMTvoyAWeVLWV/student%2Fteacher-mode-(refurbished)?node-id=0%3A1)
