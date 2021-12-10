@@ -4,16 +4,29 @@
 {% set project = "Aryan" %}
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:left;">
-    <div class="col-12">
-    <div class="paragraph">
+
+
+
+
     <head>
         <style>
             body {
                 margin: 0;
                 height: 100%;
                 color: white;
-                background-color: darkred;
+                background-color: lightyellow;
+            }
+            a:link, a:visited {
+                background-color: #E6E6FA;
+                color: black;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+
+            a:hover, a:active {
+                background-color: #E6E6FA;
             }
         </style>
     </head>
@@ -43,12 +56,45 @@
             display: table;
             clear: both;
         }
+
+
+
+
+
+
+
     </style>
-    <div class="header">
-        <h1>Aryan Shah</h1>
-        <h3>Hi, I'm Aryan Shah! I am the Deployment Manager for CodeFish!</h3>
-    </div>
+
+
+    <h1>Aryan Shah</h1>
+    <h3>Hi, I'm Aryan Shah! I am the Deployment Manager for CodeFish!</h3>
+
+
+    <a href="https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit" target="_blank">pairs journal</a>
+    <a href="http://127.0.0.1:8000/aryansapi" target="_blank">Aryan 99 names API</a>
+
+
+
+
+    <h4>Click to toggle!</h4>
+    <img id="myImage" onclick="changeImage()" src="/static/assets/saumya_images/Aryanmask.jpeg" width="450" height="600">
+
+    <script>
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            if (image.src.match("/static/assets/saumya_images/Aryanmask.jpeg")) {
+                image.src = "/static/assets/saumya_images/Maskless.jpeg";
+            } else {
+                image.src = "/static/assets/saumya_images/Aryanmask.jpeg";
+            }
+        }
+    </script>
+
+
+
+
 {% endblock %}
-<!- This is turning off birds background from base.html -->
+
 {% block background %}
 {% endblock %}
+
