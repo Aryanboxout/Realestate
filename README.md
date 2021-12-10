@@ -33,6 +33,30 @@ This is helpful to new teachers who might want to reference things about our sch
 | Arushi | arushi10 | [@arushi10](https://github.com/arushi10) | [Issues](https://github.com/VidhiKulkarni/flask_portfolio/issues?q=is%3Aopen+assignee%3Aarushi10) | [Journal](https://drive.google.com/drive/folders/1pPq0Z7uad7MY3NJkkuK4iWQqUds9fYDI?usp=sharing) | [Commits](https://github.com/arushi10/codefish/commits?author=arushi10) |
 | Aryan | Aryanboxout | [@Aryanboxout](https://github.com/Aryanboxout) | [Issues](https://github.com/VidhiKulkarni/flask_portfolio/issues?q=is%3Aopen+assignee%3AAryanboxout) | [Journal](https://drive.google.com/drive/folders/1pPq0Z7uad7MY3NJkkuK4iWQqUds9fYDI?usp=sharing) | [Commits](https://github.com/arushi10/codefish/commits?author=Aryanboxout) |
 
+## Week 2
+
+Home Pages, Deployment, and Create Task Plans
+
+| Name | Journal | Score |
+| - | - | - | 
+| Saumya | [Journal](https://docs.google.com/document/d/1EXl1swo0bu7gyd5L3cyih_qrAqvfPnW-5OEac6n07zs/edit) |  |
+| Prisha | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) |  |
+| Vidhi | [Journal](https://docs.google.com/document/d/1EXl1swo0bu7gyd5L3cyih_qrAqvfPnW-5OEac6n07zs/edit) |  |
+| Arushi | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) |  |
+| Aryan | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) |  |
+
+## Week 1
+
+Project approval
+
+| Name | Journal | Score |
+| - | - | - | 
+| Saumya | [Journal](https://docs.google.com/document/d/1EXl1swo0bu7gyd5L3cyih_qrAqvfPnW-5OEac6n07zs/edit) | full |
+| Prisha | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) | full |
+| Vidhi | [Journal](https://docs.google.com/document/d/1EXl1swo0bu7gyd5L3cyih_qrAqvfPnW-5OEac6n07zs/edit) | full |
+| Arushi | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) | full |
+| Aryan | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) | full |
+
 ## Week 0
 
 - [Wireframe 1](https://www.figma.com/file/n16OaVY1LlJcv6nCfocGzo/wireframe-%231-(brief%2C-goes-over-initial-contents%2C-will-develop-student%2Fteacher-mode-later))
