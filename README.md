@@ -68,8 +68,8 @@ Ideation, planning
 
 | Name | Journal | Score |
 | - | - | - | 
-| Saumya | [Journal](https://docs.google.com/document/d/1EXl1swo0bu7gyd5L3cyih_qrAqvfPnW-5OEac6n07zs/edit) | Score |
-| Prisha | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) | Score |
-| Vidhi | [Journal](https://docs.google.com/document/d/1EXl1swo0bu7gyd5L3cyih_qrAqvfPnW-5OEac6n07zs/edit) | Score |
-| Arushi | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) | Score |
-| Aryan | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) | Score |
+| Saumya | [Journal](https://docs.google.com/document/d/1EXl1swo0bu7gyd5L3cyih_qrAqvfPnW-5OEac6n07zs/edit) | full |
+| Prisha | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) | full |
+| Vidhi | [Journal](https://docs.google.com/document/d/1EXl1swo0bu7gyd5L3cyih_qrAqvfPnW-5OEac6n07zs/edit) | full |
+| Arushi | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) | full |
+| Aryan | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) | full |
