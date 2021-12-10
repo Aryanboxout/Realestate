@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
+{% set Data = stats.main %}
+
+<head>
+    <style>
+        body, html {
+            background-color: mediumslateblue;
+        }
+    </style>
+</head>
+<body>
+<div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+    <!-- Title -->
+    <div class="col-12" style="text-align: center;">
+        <h1><strong>99 Names Api</strong></h1>
+
+
+        <table class="table">
+            <tbody>
+            <thead>
+            <tr>
+                <th>id  </th>
+                <th>Arabic name  </th>
+                {#                    <th>Clouds</th>#}
+                <th>English Name</th>
+                <th>meaning </th>
+                <th>explanation </th>
+                <th>Benefit</th>
+
+
+
+            </thead>
+            <tbody>
+            <tr>
+                <div class="col-12" style="text-align: left; ">
+                    {% for info in Data %}
+            <tr>
+                {#                                    <td> {{info.rh}} </td>#}
+                {#                                    <td> {{info.pod}} </td>#}
+                {#                                    <td> {{info.lon}} </td>#}
+                {#                                    <td> {{info.pres}} </td>#}
+                <td> {{info.id}} </td>
+                <td> {{info.arName}} </td>
+                <td> {{info.enName}} </td>
+                <td> {{info.meaning}} </td>
+                <td> {{info.explanation}} </td>
+                <td> {{info.benefit}} </td>
+
+                {#                                    <td> {{info.description}} </td>#}
+
+
+                {# <td> {{info.ob_time}} </td>#}
+                {#                                    <td> {{info.country_code}} </td>#}
+                {#                                    <td> {{info.clouds}} </td>#}
+                {#                                    <td> {{info.ts}} </td>#}
+                {#                                    <td> {{info.solar_rad}} </td>#}
+                {#                                    <td> {{info.city_name}} </td>#}
+                {#                                    <td> {{info.wind_spd}} </td>#}
+                {#                                    <td> {{info.wind_cdir_full}} </td>#}
+                {#                                    <td> {{info.wind_cdir}} </td>#}
+                {#                                    <td> {{info.slp}} </td>#}
+                {#                                    <td> {{info.vis}} </td>#}
+                {#                                    <td> {{info.h_angle}} </td>#}
+                {#                                    <td> {{info.sunset}} </td>#}
+                {#                                    <td> {{info.dni}} </td>#}
+                {#                                    <td> {{info.uv}} </td>#}
+                {#                                    <td> {{info.precip}} </td>#}
+                {#                                    <td> {{info.wind_dir}} </td>#}
+                {#                                    <td> {{info.sunrise}} </td>#}
+                {#                                    <td> {{info.ghi}} </td>#}
+                {#                                    <td> {{info.dhi}} </td>#}
+                {#                                    <td> {{info.aqi}} </td>#}
+                {#                                    <td> {{info.lat}} </td>#}
+                {#                                    <td> {{info.station}} </td>#}
+                {#                                    <td> {{info.elev_angle}} </td>#}
+                {#                                    <td> {{info.app_temp}} </td>#}
+                {#                                    <td> {{info.count}} </td>#}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</div>
+<style>
+    table, td, th {
+    {#border: 1px solid var(--dblue);#}
+    }
+    td, th {
+        text-align:left;
+    }
+</style>
+</div>
+{% endblock %}
