@@ -2,7 +2,7 @@
 Runtime link: https://portfolio.nighthawkcodingsociety.com/
 ### N22P4 CODEFISH
 # Betta Network
-> Assistance for new teachers and students!
+> BETTA assistance for new teachers and students!
 
 ## Ideation
 The overall idea of our website is to assist all DNHS individuals in their educational experiences in both learning and teaching through effective organization and productivity. We have two modes, for students and teachers, allowing them to document each day through the usage of calendars, planners, quick feedback, etc. 
