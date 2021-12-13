@@ -1,0 +1,43 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+    <script>
+
+    </script>
+
+    <h3>Study Music</h3>
+    <iframe width="200" height="200" src="https://www.youtube.com/watch?v=mJW57E7GpSo" title="Study Timer" frameborder="8"></iframe>
+    <h3>Pomodoro Method</h3>
+    <iframe width="900" height="300" src="https://tomato-timer.com/" title="Study Timer" frameborder="8"></iframe>
+
+
+    <html>
+    <head>
+        <style>
+            body {
+                background-color: mediumpurple;
+            }
+
+            h1 {
+                color: black;
+                text-align: center;
+            }
+
+        </style>
+
+
+
+{% endblock %}
+
+</html>
+</div>
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
