@@ -37,11 +37,11 @@ This is helpful to new teachers who might want to reference things about our sch
 
 | Name | Pull Requests | Commits | Issues |
 | - | - | - | - |
-| Saumya | [Pull Requests]() | [Commits](https://github.com/arushi10/codefish/commits?author=saumyapalk23) | [Issues](https://github.com/arushi10/codefish/issues/assigned/saumyapalk23) |
-| Prisha | [Pull Requests](https://docs.google.com/document/d/1EXl1swo0bu7gyd5L3cyih_qrAqvfPnW-5OEac6n07zs/edit) | [Commits]() | [Issues]() |
-| Vidhi | [Pull Requests](https://docs.google.com/document/d/1EXl1swo0bu7gyd5L3cyih_qrAqvfPnW-5OEac6n07zs/edit) | [Commits]() | [Issues]() |
-| Arushi | [Pull Requests](https://docs.google.com/document/d/1EXl1swo0bu7gyd5L3cyih_qrAqvfPnW-5OEac6n07zs/edit) | [Commits]() | [Issues]() |
-| Aryan | [Pull Requests](https://docs.google.com/document/d/1EXl1swo0bu7gyd5L3cyih_qrAqvfPnW-5OEac6n07zs/edit) | [Commits]() | [Issues]() |
+| Saumya | [Pull Requests](https://github.com/arushi10/codefish/pulls?q=is%3Apr+is%3Aclosed+author%3Asaumyapalk23) | [Commits](https://github.com/arushi10/codefish/commits?author=saumyapalk23) | [Issues](https://github.com/arushi10/codefish/issues/assigned/saumyapalk23) |
+| Prisha | [Pull Requests](https://github.com/arushi10/codefish/pulls/PrishaB) | [Commits](https://github.com/arushi10/codefish/commits?author=PrishaB) | [Issues](https://github.com/arushi10/codefish/issues/assigned/PrishaB) |
+| Vidhi | [Pull Requests](https://github.com/arushi10/codefish/pulls/VidhiKulkarni) | [Commits](https://github.com/arushi10/codefish/commits?author=VidhiKulkarni) | [Issues](https://github.com/arushi10/codefish/issues/assigned/VidhiKulkarni) |
+| Arushi | [Pull Requests](https://github.com/arushi10/codefish/pulls/arushi10) | [Commits](https://github.com/arushi10/codefish/commits?author=arushi10) | [Issues](https://github.com/arushi10/codefish/issues/assigned/arushi10) |
+| Aryan | [Pull Requests](https://github.com/arushi10/codefish/pulls/Aryanboxout) | [Commits](https://github.com/arushi10/codefish/commits?author=Aryanboxout) | [Issues](https://github.com/arushi10/codefish/issues/assigned/Aryanboxout) |
 
 ## Week 2 <a id="two" name="two"></a>
 
