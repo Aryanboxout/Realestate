@@ -1,0 +1,115 @@
+{% extends "layouts/base.html" %}
+{% set project = "Attendance" %}
+{% block body %}
+
+    <style>
+        html, body{
+            background-color: #071036;
+        }
+    </style>
+
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:center;">
+        <html class="col-12">
+        <h1>To-Do List</h1>
+        <h2>Date:<input type="text" class="text-center" required="" placeholder="Enter Date Here"></h2>
+        </html>
+    </div>
+
+    <style>
+        table, th, td {
+            border:1px solid white;
+            color: white;
+        }
+    </style>
+
+    <table id="table"></table>
+    <table style="width:100%;">
+        <tr>
+            <th>Priority</th>
+            <th>Task</th>
+            <th>Complete?</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>
+                <input type="text" class="text-center" required="" placeholder="Enter Task Here"></td>
+            <td>
+                <input type="checkbox">
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>
+                <input type="text" class="text-center" required="" placeholder="Enter Task Here"></td>
+            <td>
+                <input type="checkbox">
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>
+                <input type="text" class="text-center" required="" placeholder="Enter Task Here"></td>
+            <td>
+                <input type="checkbox">
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>
+                <input type="text" class="text-center" required="" placeholder="Enter Task Here"></td>
+            <td>
+                <input type="checkbox">
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>
+                <input type="text" class="text-center" required="" placeholder="Enter Task Here"></td>
+            <td>
+                <input type="checkbox">
+            </td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>
+                <input type="text" class="text-center" required="" placeholder="Enter Task Here"></td>
+            <td>
+                <input type="checkbox">
+            </td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>
+                <input type="text" class="text-center" required="" placeholder="Enter Task Here"></td>
+            <td>
+                <input type="checkbox">
+            </td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>
+                <input type="text" class="text-center" required="" placeholder="Enter Task Here"></td>
+            <td>
+                <input type="checkbox">
+            </td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>
+                <input type="text" class="text-center" required="" placeholder="Enter Task Here"></td>
+            <td>
+                <input type="checkbox">
+            </td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>
+                <input type="text" class="text-center" required="" placeholder="Enter Task Here"></td>
+            <td>
+                <input type="checkbox">
+            </td>
+        </tr>
+    </table>
+    </script>
+
+{% endblock %}
