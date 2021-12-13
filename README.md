@@ -19,7 +19,7 @@ This is helpful to new teachers who might want to reference things about our sch
   - [Week 6](https://github.com/arushi10/codefish#week-0)
   - [Week 5](https://github.com/arushi10/codefish#week-0)
   - [Week 4](https://github.com/arushi10/codefish#week-0)
-  - [Week 3](https://github.com/arushi10/codefish#week-0)
+  - [Week 3](#three)
   - [Week 2](#two)
   - [Week 1](#one)
   - [Week 0](#zero)
