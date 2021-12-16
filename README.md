@@ -41,7 +41,7 @@ Scrum Master and Technical Officer
 - [PBL Highlights](#three)
 - [Video](https://drive.google.com/drive/folders/1AzDHor0j_Hj5ITc66qK31WZnor3GChpz?usp=sharing)
 
-Design Manager Tangibles:
+Design Manager Tangibles
 - Front End Feature Screen Runtime link: [source link](https://github.com/arushi10/codefish/blob/main/templates/studytimer.html), [runtime link](http://127.0.0.1:8000/studytimer) 
 - [Front End Screen 2](http://127.0.0.1:8000/to_do_list)
 - [Front End Screen 3](http://127.0.0.1:8000/pagetwo)
