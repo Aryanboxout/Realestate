@@ -316,6 +316,16 @@ def aryansapi():
     return render_template("api/aryansapi.html", stats=response.json())
 
 
+@app.route('/studytimer', methods=['GET', 'POST'])
+def studytimer():
+    return render_template("studytimer.html")
+
+
+@app.route('/pagetwo', methods=['GET', 'POST'])
+def pagetwo():
+    return render_template("pagetwo.html")
+
+
 @app.route('/crud', methods=['GET', 'POST'])
 def crud():
     return render_template("crud.html")
