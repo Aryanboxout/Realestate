@@ -304,7 +304,13 @@ def aryansapi():
     response = requests.request("GET", url, headers=headers)
     return render_template("api/aryansapi.html", stats=response.json())
 
+@app.route('/studytimer', methods=['GET', 'POST'])
+def studytimer():
+    return render_template("studytimer.html")
 
+@app.route('/pagetwo', methods=['GET', 'POST'])
+def pagetwo():
+    return render_template("pagetwo.html")
 
 if __name__ == "__main__":
     app.run(debug=True,port=8000)
