@@ -4,10 +4,21 @@ from flask import Flask, render_template, request
 import requests
 import http.client
 
+from flask import render_template
+from __init__ import app
 
-# create a Flask instance
-app = Flask(__name__)
+# from starter.starter import app_starter
+# from algorithm.algorithm import app_algorithm
+from app_crud import app_crud
+# from y2022 import app_y2022
 
+# # create a Flask instance
+# app = Flask(__name__)
+
+# app.register_blueprint(app_starter)
+# app.register_blueprint(app_algorithm)
+app.register_blueprint(app_crud)
+# app.register_blueprint(app_y2022)
 
 # connects default URL of server to render kangaroos.html
 @app.route('/')
@@ -305,6 +316,19 @@ def aryansapi():
     return render_template("api/aryansapi.html", stats=response.json())
 
 
+@app.route('/crud', methods=['GET', 'POST'])
+def crud():
+    return render_template("crud.html")
+
+
+@app.route('/search', methods=['GET', 'POST'])
+def search():
+    return render_template("search.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True,port=8000)
+
+if __name__ == "__main__":
+    # runs the application on the repl development server
+    app.run(debug=True, port=5222)
