@@ -40,11 +40,11 @@ To-Do List, Study Hall Timer, Study and Health Habits, Deployment, Databases
 ## Design Manager tangibles:
 
 Layout. <source link>
-Front End Feature Screen Runtime link: http://127.0.0.1:8000/studytimer>
+Front End Feature Screen Runtime link: http://127.0.0.1:8000/studytimer
 
-Front End Screen 2: <http://127.0.0.1:8000/to_do_list>
+Front End Screen 2: http://127.0.0.1:8000/to_do_list
 
-Front End Screen 3: <http://127.0.0.1:8000/pagetwo>
+Front End Screen 3: http://127.0.0.1:8000/pagetwo
 
   
 GitHub Admin Tangibles
