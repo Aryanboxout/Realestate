@@ -42,7 +42,6 @@ Scrum Master and Technical Officer
 - [Video](https://drive.google.com/drive/folders/1AzDHor0j_Hj5ITc66qK31WZnor3GChpz?usp=sharing)
 
 Design Manager Tangibles:
-- Layout. <source link>
 - Front End Feature Screen Runtime link: [source link](https://github.com/arushi10/codefish/blob/main/templates/studytimer.html), [runtime link](http://127.0.0.1:8000/studytimer) 
 - [Front End Screen 2](http://127.0.0.1:8000/to_do_list)
 - [Front End Screen 3](http://127.0.0.1:8000/pagetwo)
@@ -64,7 +63,6 @@ Technical officer Tangibles
 Deployment Manager Tangibles
 - [Update procedure](https://github.com/arushi10/codefish/wiki/Deployment#backup-plant)
 - [Nginx config](https://github.com/arushi10/codefish/wiki/Nginxconfig)
-- [Deployment guide] containing paste of configuration file>
 - [Service config](https://github.com/arushi10/codefish/wiki/Serviceconfig)
 
 GitHub Admin Tangibles
