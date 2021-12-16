@@ -42,6 +42,10 @@ Layout. <source link>
 Front End Feature Screen <source link> <Student Connect>
 Front End Screen 2: <Student Connect>
 Front End Screen 3: <Student Connect>
+  
+GitHub Admin Tangibles
+- [Commit, pull request procedure](https://github.com/arushi10/codefish/wiki/Github-Guidelines)
+- [Branching procedure](https://docs.google.com/document/d/106fwMxo-eivfQM1rF8qiHmfHR1w4IVHllsoHNcvz63Q/edit#bookmark=id.4z12tv2by4eh)
 
 Scrum Master and Technical Officer
 - PBL Highlights.  <a id="three" name="three"></a>
