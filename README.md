@@ -43,11 +43,9 @@ Scrum Master and Technical Officer
 
 Design Manager Tangibles:
 - Layout. <source link>
-- Front End Feature Screen Runtime link: http://127.0.0.1:8000/studytimer Source link: https://github.com/arushi10/codefish/blob/main/templates/studytimer.html
-
-
-- Front End Screen 2: http://127.0.0.1:8000/to_do_list
-- Front End Screen 3: http://127.0.0.1:8000/pagetwo
+- Front End Feature Screen Runtime link: [source link](https://github.com/arushi10/codefish/blob/main/templates/studytimer.html), [runtime link](http://127.0.0.1:8000/studytimer) 
+- [Front End Screen 2](http://127.0.0.1:8000/to_do_list)
+- [Front End Screen 3](http://127.0.0.1:8000/pagetwo)
 
 Scrum Master Tangibles
 - GitHub Scrum Board: [tickets in review link](https://github.com/arushi10/codefish/projects/1#column-16909772), [in progress link](https://github.com/arushi10/codefish/projects/1#column-17218004)
@@ -58,15 +56,16 @@ Technical officer Tangibles
   - Runtime:
     - [CRUD](http://127.0.0.1:8000/crud/)
     - [Search](http://127.0.0.1:8000/search)
-- View:
+  - View:
     - [CRUD](https://github.com/arushi10/codefish/blob/database/templates/crud.html)
     - [Search](https://github.com/arushi10/codefish/blob/database/templates/search.html)
-- [Model](https://github.com/arushi10/codefish/blob/database/model.py)
+  - [Model](https://github.com/arushi10/codefish/blob/database/model.py)
   
 Deployment Manager Tangibles
-- Update procedure: <link to deployment guid that contains procedure for someone to make an update to deployment>
-- Nginx config: <link to deployment guide containing paste of configuration file>
-- Service config: <link to deployment guide containing paste of service file>
+- [Update procedure](https://github.com/arushi10/codefish/wiki/Deployment#backup-plant)
+- [Nginx config](https://github.com/arushi10/codefish/wiki/Nginxconfig)
+- [Deployment guide] containing paste of configuration file>
+- [Service config](https://github.com/arushi10/codefish/wiki/Serviceconfig)
 
 GitHub Admin Tangibles
 - [Commit, pull request procedure](https://github.com/arushi10/codefish/wiki/Github-Guidelines)
