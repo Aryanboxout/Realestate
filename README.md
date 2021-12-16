@@ -50,7 +50,7 @@ Design Manager Tangibles:
 - Front End Screen 3: http://127.0.0.1:8000/pagetwo
 
 Scrum Master Tangibles
-- GitHub Scrum Board: [tickets in review link](https://github.com/arushi10/codefish/projects/1#column-16909772), [in progress link](https://github.com/arushi10/codefish/projects/1#column-16909772)
+- GitHub Scrum Board: [tickets in review link](https://github.com/arushi10/codefish/projects/1#column-16909772), [in progress link](https://github.com/arushi10/codefish/projects/1#column-17218004)
 - [Scrum Board](https://github.com/arushi10/codefish/projects/1#column-16898952)
   
 Technical officer Tangibles
@@ -61,7 +61,7 @@ Technical officer Tangibles
 - View:
     - [CRUD](https://github.com/arushi10/codefish/blob/database/templates/crud.html)
     - [Search](https://github.com/arushi10/codefish/blob/database/templates/search.html)
-    - [Model](https://github.com/arushi10/codefish/blob/database/model.py)
+- [Model](https://github.com/arushi10/codefish/blob/database/model.py)
   
 Deployment Manager Tangibles
 - Update procedure: <link to deployment guid that contains procedure for someone to make an update to deployment>
@@ -71,6 +71,8 @@ Deployment Manager Tangibles
 GitHub Admin Tangibles
 - [Commit, pull request procedure](https://github.com/arushi10/codefish/wiki/Github-Guidelines)
 - [Branching procedure](https://docs.google.com/document/d/106fwMxo-eivfQM1rF8qiHmfHR1w4IVHllsoHNcvz63Q/edit#bookmark=id.4z12tv2by4eh)
+
+[AP MCQ Test and Corrections](https://drive.google.com/drive/folders/1pPq0Z7uad7MY3NJkkuK4iWQqUds9fYDI?usp=sharing)
 
 | Name | Pull Requests | Commits | Issues |
 | - | - | - | - |
