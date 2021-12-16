@@ -48,7 +48,7 @@ Design Manager Tangibles:
 - Front End Screen 3: http://127.0.0.1:8000/pagetwo
 
 Scrum Master Tangibles
-- GitHub Scrum Board: [tickets in review link](https://github.com/arushi10/codefish/projects/1#column-16909772) [in progress link](https://github.com/arushi10/codefish/projects/1#column-16909772)
+- GitHub Scrum Board: [tickets in review link](https://github.com/arushi10/codefish/projects/1#column-16909772), [in progress link](https://github.com/arushi10/codefish/projects/1#column-16909772)
 - [Scrum Board](https://github.com/arushi10/codefish/projects/1#column-16898952)
   
 Technical officer Tangibles
