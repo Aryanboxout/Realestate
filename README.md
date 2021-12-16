@@ -37,6 +37,12 @@ This is helpful to new teachers who might want to reference things about our sch
 
 To-Do List, Study Hall Timer, Study and Health Habits, Deployment, Databases
 
+Design Manager tangibles
+Layout. <source link>
+Front End Feature Screen <source link> <Student Connect>
+Front End Screen 2: <Student Connect>
+Front End Screen 3: <Student Connect>
+
 Scrum Master and Technical Officer
 - PBL Highlights.  <a id="three" name="three"></a>
 - Video <https://drive.google.com/drive/folders/1AzDHor0j_Hj5ITc66qK31WZnor3GChpz?usp=sharing>
