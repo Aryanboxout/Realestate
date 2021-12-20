@@ -50,7 +50,7 @@ Scrum Master Tangibles
 - GitHub Scrum Board: [tickets in review link](https://github.com/arushi10/codefish/projects/1#column-16909772), [in progress link](https://github.com/arushi10/codefish/projects/1#column-17218004)
 - [Scrum Board](https://github.com/arushi10/codefish/projects/1#column-16898952)
   
-Technical officer Tangibles
+Technical Officer Tangibles
 - Database with CRUD:
   - Runtime:
     - [CRUD](http://127.0.0.1:8000/crud/)
