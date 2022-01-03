@@ -37,6 +37,40 @@ This is helpful to new teachers who might want to reference things about our sch
 
 To-Do List, Study Hall Timer, Study and Health Habits, Deployment, Databases
 
+Scrum Master and Technical Officer
+- [PBL Highlights](#three)
+- [Video](https://drive.google.com/drive/folders/1AzDHor0j_Hj5ITc66qK31WZnor3GChpz?usp=sharing)
+
+Design Manager Tangibles
+- Front End Feature Screen Runtime link: [source link](https://github.com/arushi10/codefish/blob/main/templates/studytimer.html), [runtime link](http://127.0.0.1:8000/studytimer) 
+- [Front End Screen 2](http://127.0.0.1:8000/to_do_list)
+- [Front End Screen 3](http://127.0.0.1:8000/pagetwo)
+
+Scrum Master Tangibles
+- GitHub Scrum Board: [tickets in review link](https://github.com/arushi10/codefish/projects/1#column-16909772), [in progress link](https://github.com/arushi10/codefish/projects/1#column-17218004)
+- [Scrum Board](https://github.com/arushi10/codefish/projects/1#column-16898952)
+  
+Technical Officer Tangibles
+- Database with CRUD:
+  - Runtime:
+    - [CRUD](http://127.0.0.1:8000/crud/)
+    - [Search](http://127.0.0.1:8000/search)
+  - View:
+    - [CRUD](https://github.com/arushi10/codefish/blob/database/templates/crud.html)
+    - [Search](https://github.com/arushi10/codefish/blob/database/templates/search.html)
+  - [Model](https://github.com/arushi10/codefish/blob/database/model.py)
+  
+Deployment Manager Tangibles
+- [Update procedure](https://github.com/arushi10/codefish/wiki/Deployment#backup-plant)
+- [Nginx config](https://github.com/arushi10/codefish/wiki/Nginxconfig)
+- [Service config](https://github.com/arushi10/codefish/wiki/Serviceconfig)
+
+GitHub Admin Tangibles
+- [Commit, pull request procedure](https://github.com/arushi10/codefish/wiki/Github-Guidelines)
+- [Branching procedure](https://docs.google.com/document/d/106fwMxo-eivfQM1rF8qiHmfHR1w4IVHllsoHNcvz63Q/edit#bookmark=id.4z12tv2by4eh)
+
+[AP MCQ Test and Corrections](https://drive.google.com/drive/folders/1pPq0Z7uad7MY3NJkkuK4iWQqUds9fYDI?usp=sharing)
+
 | Name | Pull Requests | Commits | Issues |
 | - | - | - | - |
 | Saumya | [Pull Requests](https://github.com/arushi10/codefish/pulls?q=is%3Apr+is%3Aclosed+author%3Asaumyapalk23) | [Commits](https://github.com/arushi10/codefish/commits?author=saumyapalk23) | [Issues](https://github.com/arushi10/codefish/issues/assigned/saumyapalk23) |
