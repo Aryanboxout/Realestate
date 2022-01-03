@@ -4,10 +4,21 @@ from flask import Flask, render_template, request
 import requests
 import http.client
 
+from flask import render_template
+from __init__ import app
 
-# create a Flask instance
-app = Flask(__name__)
+# from starter.starter import app_starter
+# from algorithm.algorithm import app_algorithm
+from app_crud import app_crud
+# from y2022 import app_y2022
 
+# # create a Flask instance
+# app = Flask(__name__)
+
+# app.register_blueprint(app_starter)
+# app.register_blueprint(app_algorithm)
+app.register_blueprint(app_crud)
+# app.register_blueprint(app_y2022)
 
 # connects default URL of server to render kangaroos.html
 @app.route('/')
@@ -268,9 +279,9 @@ def aryan():
 @app.route('/saumyaapi', methods=['GET', 'POST'])
 def saumyaapi():
 
-#greet function
-#set variables = number; input
-# set lat/lon = variable name
+    #greet function
+    #set variables = number; input
+    # set lat/lon = variable name
 
     url = "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly"
 
@@ -297,20 +308,33 @@ def aryansapi():
     url = "https://allah-name.p.rapidapi.com/name"
 
     headers = {
-    'x-rapidapi-host': "allah-name.p.rapidapi.com",
-    'x-rapidapi-key': "a53d1a4acemsh90db192dc27d5f7p1028a2jsn2e483944f85c"
+        'x-rapidapi-host': "allah-name.p.rapidapi.com",
+        'x-rapidapi-key': "a53d1a4acemsh90db192dc27d5f7p1028a2jsn2e483944f85c"
     }
 
     response = requests.request("GET", url, headers=headers)
     return render_template("api/aryansapi.html", stats=response.json())
 
+
 @app.route('/studytimer', methods=['GET', 'POST'])
 def studytimer():
     return render_template("studytimer.html")
+
 
 @app.route('/pagetwo', methods=['GET', 'POST'])
 def pagetwo():
     return render_template("pagetwo.html")
 
+
+@app.route('/crud', methods=['GET', 'POST'])
+def crud():
+    return render_template("crud.html")
+
+
+@app.route('/search', methods=['GET', 'POST'])
+def search():
+    return render_template("search.html")
+
+
 if __name__ == "__main__":
-    app.run(debug=True,port=8000)
+    app.run(debug=True, port=5222)
