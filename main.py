@@ -279,9 +279,9 @@ def aryan():
 @app.route('/saumyaapi', methods=['GET', 'POST'])
 def saumyaapi():
 
-#greet function
-#set variables = number; input
-# set lat/lon = variable name
+    #greet function
+    #set variables = number; input
+    # set lat/lon = variable name
 
     url = "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly"
 
@@ -308,8 +308,8 @@ def aryansapi():
     url = "https://allah-name.p.rapidapi.com/name"
 
     headers = {
-    'x-rapidapi-host': "allah-name.p.rapidapi.com",
-    'x-rapidapi-key': "a53d1a4acemsh90db192dc27d5f7p1028a2jsn2e483944f85c"
+        'x-rapidapi-host': "allah-name.p.rapidapi.com",
+        'x-rapidapi-key': "a53d1a4acemsh90db192dc27d5f7p1028a2jsn2e483944f85c"
     }
 
     response = requests.request("GET", url, headers=headers)
@@ -337,8 +337,4 @@ def search():
 
 
 if __name__ == "__main__":
-    app.run(debug=True,port=8000)
-
-if __name__ == "__main__":
-    # runs the application on the repl development server
     app.run(debug=True, port=5222)
