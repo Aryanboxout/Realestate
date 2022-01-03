@@ -35,6 +35,8 @@ This is helpful to new teachers who might want to reference things about our sch
 
 ## Week 3 <a id="three" name="three"></a>
 
+To-Do List, Study Hall Timer, Study and Health Habits, Deployment, Databases
+
 | Name | Pull Requests | Commits | Issues |
 | - | - | - | - |
 | Saumya | [Pull Requests](https://github.com/arushi10/codefish/pulls?q=is%3Apr+is%3Aclosed+author%3Asaumyapalk23) | [Commits](https://github.com/arushi10/codefish/commits?author=saumyapalk23) | [Issues](https://github.com/arushi10/codefish/issues/assigned/saumyapalk23) |
