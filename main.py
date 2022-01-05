@@ -72,6 +72,9 @@ def googlemap():
 def phonestablets():
     return render_template("departments/phonestablets.html")
 
+@app.route('/contactus')
+def contactus():
+    return render_template("contactus.html")
 
 @app.route('/desktopstvs')
 def desktopstvs():
