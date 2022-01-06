@@ -1,4 +1,7 @@
-{{ layout: default }}
+---
+layout: default
+title: About
+---
 
 # About
 
