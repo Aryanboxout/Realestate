@@ -338,6 +338,10 @@ def crud():
 def search():
     return render_template("search.html")
 
+@app.route('/DNHSinformative', methods=['GET', 'POST'])
+def DNHSinformative():
+    return render_template("DNHSinformative.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5222)
