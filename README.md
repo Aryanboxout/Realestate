@@ -18,7 +18,7 @@ This is helpful to new teachers who might want to reference things about our sch
   - [Week 7](https://github.com/arushi10/codefish#week-0)
   - [Week 6](https://github.com/arushi10/codefish#week-0)
   - [Week 5](https://github.com/arushi10/codefish#week-0)
-  - [Week 4](https://github.com/arushi10/codefish#week-0)
+  - [Week 4](#four)
   - [Week 3](#three)
   - [Week 2](#two)
   - [Week 1](#one)
@@ -32,6 +32,9 @@ This is helpful to new teachers who might want to reference things about our sch
 | Vidhi | VidhiKulkarni | [@VidhiKulkarni](https://github.com/VidhiKulkarni) | [Issues](https://github.com/arushi10/codefish/issues/assigned/VidhiKulkarni) | [Journal](https://drive.google.com/drive/folders/1pPq0Z7uad7MY3NJkkuK4iWQqUds9fYDI?usp=sharing) | [Commits](https://github.com/arushi10/codefish/commits?author=VidhiKulkarni) |
 | Arushi | arushi10 | [@arushi10](https://github.com/arushi10) | [Issues](https://github.com/VidhiKulkarni/flask_portfolio/issues?q=is%3Aopen+assignee%3Aarushi10) | [Journal](https://drive.google.com/drive/folders/1pPq0Z7uad7MY3NJkkuK4iWQqUds9fYDI?usp=sharing) | [Commits](https://github.com/arushi10/codefish/commits?author=arushi10) |
 | Aryan | Aryanboxout | [@Aryanboxout](https://github.com/Aryanboxout) | [Issues](https://github.com/VidhiKulkarni/flask_portfolio/issues?q=is%3Aopen+assignee%3AAryanboxout) | [Journal](https://drive.google.com/drive/folders/1pPq0Z7uad7MY3NJkkuK4iWQqUds9fYDI?usp=sharing) | [Commits](https://github.com/arushi10/codefish/commits?author=Aryanboxout) |
+
+## Week 4 <a id="four" name="four"></a>
+Dark Mode, Formatted base.html, Contact Us, DNHS Information, Github Page, Challenge, Deployment, Bell Schedule
 
 ## Week 3 <a id="three" name="three"></a>
 
