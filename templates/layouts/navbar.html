@@ -95,10 +95,7 @@
                 <a class="nav-link" href={{ url_for('pagetwo') }}>Study and Health Habits</a>
             </li>
             <li>
-                <a class="nav-link" href={{ url_for('crud') }}>Crud</a>
-            </li>
-            <li>
-                <a class="nav-link" href={{ url_for('search') }}>Search</a>
+                <a class="nav-link" href={{ url_for('calender') }}>Calendar</a>
             </li>
             <a class="nav-link" href={{ url_for('DNHSinformative') }}>DNHS Information</a>
             </li>
@@ -141,18 +138,26 @@
 {#                        <a class="dropdown-item" href="{{ url_for('addition') }}">Addition</a>#}
 {#                        <a class="dropdown-item" href="{{ url_for('logicgates') }}">Logic Gates</a>#}
 {#                    </div>#}
-                <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            API
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url_for('joke')}}">Joke API</a>
-                            <a class="dropdown-item" href="{{ url_for('jokes')}}">Jokes API Masterlist</a>
-{#                            <a class="dropdown-item" href="{{ url_for('covid19')}}">Covid19 RapidAPI</a>#}
-                            <a class="dropdown-item" href="{{ url_for('saumyaapi')}}">saumya's api</a>
-                                <a class="dropdown-item" href="{{ url_for('aryansapi')}}">AryansApi</a>
-                        </div>
-                </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Practice
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ url_for('crud')}}">Crud</a>
+                    <a class="dropdown-item" href="{{ url_for('search')}}">Search</a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    API
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ url_for('joke')}}">Joke API</a>
+                    <a class="dropdown-item" href="{{ url_for('jokes')}}">Jokes API Masterlist</a>
+                    {#                            <a class="dropdown-item" href="{{ url_for('covid19')}}">Covid19 RapidAPI</a>#}
+                    <a class="dropdown-item" href="{{ url_for('saumyaapi')}}">saumya's api</a>
+                    <a class="dropdown-item" href="{{ url_for('aryansapi')}}">AryansApi</a>
+                </div>
+                </div>
+            </li>
+
 {#                <li class="nav-item dropdown">#}
 {#                        <a class="nav-link dropdown-toggle" href="#" id="rgbDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
 {#                            RGB#}
@@ -183,6 +188,10 @@
                             <a class="nav-link" href="{{ url_for('aryan') }}">Aryan</a>
                         </div>
                     </li>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                 </div>
             </div>
     </div>
