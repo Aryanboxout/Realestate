@@ -11,6 +11,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     {% set github = "https://github.com/nighthawkcoders" %}
     {% set youtube = "https://youtu.be/dQw4w9WgXcQ" %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -36,8 +37,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             font-family: "Bell MT";
         }
         .dark-mode {
-            background-image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);
-            image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);
+            background-color: black;
+            color: white;
         }
         h1{
             font-size: 5em;
@@ -102,20 +103,24 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         }
     </style>
 
-    <title> Student Connect </title>
-    {% include "layouts/navbar.html" %}
+    <script>
+        function darkMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+</head>
 
-    <div class="product" style="margin-top: 0%;">
-        <div class="row" style="padding: 0%; padding-top: 0%; padding-bottom: 5%;">
+
+<title> Student Connect </title>
+{% include "layouts/navbar.html" %}
+
+{% block body %}
+    <div class="product" style="margin-top: 2%;">
+        <div class="row" style="padding: 5%; padding-top: 0%; padding-bottom: 5%;">
             <div class="col-8" >
                 <h4>Betta Network</h4>
                 <h3>BETTA assistance for new teachers and students!</h3>
-            </div>
-        </div>
-
-</head>
-
-{% block body %}
 
         <style>
             .parallax {
@@ -151,11 +156,14 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             </div>
         </div>
 
-            <div style="height:300px;background-color:#0D1F2D">
-                <h1> Mission Statement </h1>
-                <h2> Our goal is to make it easy for students and teachers to organize their busy school lives. Have a great school year!</h2>
-            </div>
+        <div style="height:300px;background-color:#0D1F2D">
+            <h1> Mission Statement </h1>
+            <h2> Our goal is to make it easy for students and teachers to organize their busy school lives. Have a great school year!</h2>
+        </div>
+        </style>
+    </div>
+    </body>
 
-        </body>
 {% endblock %}
 </html>
+
