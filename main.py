@@ -72,6 +72,9 @@ def googlemap():
 def phonestablets():
     return render_template("departments/phonestablets.html")
 
+@app.route('/contactus')
+def contactus():
+    return render_template("contactus.html")
 
 @app.route('/desktopstvs')
 def desktopstvs():
@@ -339,6 +342,11 @@ def search():
 def DNHSinformative():
     return render_template("DNHSinformative.html")
 
+
+#
+# @app.route('/calender', methods=['GET', 'POST'])
+# def calender():
+#     return render_template("calender.html")
 
 if __name__ == "__main__":
     app.run(debug=True, port=5222)
