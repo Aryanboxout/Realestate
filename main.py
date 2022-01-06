@@ -338,6 +338,9 @@ def crud():
 def search():
     return render_template("search.html")
 
+@app.route('/calender', methods=['GET', 'POST'])
+def calender():
+    return render_template("calender.html")
 
 if __name__ == "__main__":
     app.run(debug=True, port=5222)
