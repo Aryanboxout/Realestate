@@ -1,5 +1,8 @@
 
-{{ layout: default }}
+---
+layout: default
+title: Codefish
+---
 
 # Github Page
 
