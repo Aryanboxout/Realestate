@@ -19,3 +19,8 @@ team_members:
   - 
     name: "Aryan Shah"
     role: "Deployment Manager"
+    
+    
+  collections:
+    blogposts:
+      output: true
