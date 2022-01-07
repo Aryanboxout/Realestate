@@ -3,6 +3,10 @@ email: "codefish123@gmail.com"
 
 theme: jekyll-theme-cayman
 
+collections:
+  blogposts:
+    output: true
+
 team_members:
   -
     name: "Arushi Bharadwaj"
@@ -19,7 +23,4 @@ team_members:
   - 
     name: "Aryan Shah"
     role: "Deployment Manager"
-      
-  collections:
-    blogposts:
-      output: true
+
