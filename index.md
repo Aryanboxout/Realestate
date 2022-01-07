@@ -9,10 +9,10 @@ title: Codefish
 {{ site.description }}
 
 ## Blog Posts
-
 {% for post in site.blogposts %}
 - {{ post.date | date_to_string }}: [{{ post.title }}]({{ post.url | relative_url }})
 {% endfor %}
+
 
 More details about the project are available from the [About page](about).
 
