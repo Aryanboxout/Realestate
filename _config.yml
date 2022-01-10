@@ -1,5 +1,25 @@
-theme: jekyll-theme-hacker
-description: "This GitHub project provides Advance Placement Computer Science Principles (AP-CSP) code, training, and teaching materials.  This page is a 'GitHub Pages' website and contains guidance and development activities.   Cloning the GitHub Project provides Python-Flask webserver code.  Explore this page and links to develop, build, and deploy a Web Server."
-email: "nighthawkcodingsociety@gmail.com"
-webserver: "csp.nighthawkcodingsociety.com"
-twitter: "twitter.com/NighthawkCoding"
+description: "BETTA assistance for new teachers and students!"
+email: "codefish123@gmail.com"
+
+theme: jekyll-theme-slate
+
+collections:
+  blogposts:
+    output: true
+
+team_members:
+  -
+    name: "Arushi Bharadwaj"
+    role: "Scrum Master"
+  -
+    name: "Vidhi Kulkarni"
+    role: "Github Admin"
+  -
+    name: "Prisha Boreddy"
+    role: "Technical Officer"
+  - 
+    name: "Saumya Palakodety"
+    role: "Design"
+  - 
+    name: "Aryan Shah"
+    role: "Deployment Manager"
