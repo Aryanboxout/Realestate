@@ -1,8 +1,26 @@
+
+
+# Github Page
+## Description
+{{ site.description }}
+
+More details about the project are available from the [About page](about).
+
+Have any questions about what we do? [We'd love to hear from you!](mailto:{{ site.email }})
+
+## Blog Posts
+
+{% for post in site.blogposts %}
+- {{ post.date | date_to_string }}: [{{ post.title }}]({{ post.url | relative_url }})
+{% endfor %}
+
+# ReadMe
+
 ## [Code Fish](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
 Runtime link: https://portfolio.nighthawkcodingsociety.com/
 ### N22P4 CODEFISH
 # Betta Network
-> BETTA assistance for new teachers and students!
+> BETTA assistance for new teachers and students!!!
 
 ## Ideation
 The overall idea of our website is to assist all DNHS individuals in their educational experiences in both learning and teaching through effective organization and productivity. We have two modes, for students and teachers, allowing them to document each day through the usage of calendars, planners, quick feedback, etc. 
@@ -122,3 +140,4 @@ Ideation, planning
 | Vidhi | [Journal](https://docs.google.com/document/d/1EXl1swo0bu7gyd5L3cyih_qrAqvfPnW-5OEac6n07zs/edit) | full |
 | Arushi | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) | full |
 | Aryan | [Journal](https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit) | full |
+
