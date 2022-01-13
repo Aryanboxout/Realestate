@@ -1,3 +1,2 @@
-plugins: jekyll-feed
+#plugins: jekyll-feed
 theme: jekyll-theme-cayman
-
