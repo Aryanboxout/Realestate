@@ -1,6 +1,4 @@
----
-layout: default
----
+
 
 # Github Page
 ## Description
