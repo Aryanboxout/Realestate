@@ -1,10 +1,4 @@
-#---
-#layout: default
-#title: Codefish
-#---
-
 # Github Page
-
 ## Description
 {{ site.description }}
 
