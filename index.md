@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Github Page
 ## Description
 {{ site.description }}
