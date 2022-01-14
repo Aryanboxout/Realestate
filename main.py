@@ -255,6 +255,7 @@ def saumyaapi():
     # return(response.text)
     return render_template("api/saumyaapi.html", stats=response.json())
 
+
 @app.route('/calendar')
 def calendar():
     return render_template("calendar.html")
@@ -273,7 +274,9 @@ def aryansapi():
 
     response = requests.request("GET", url, headers=headers)
     return render_template("api/aryansapi.html", stats=response.json())
-
+@app.route('/asc', methods=['GET', 'POST'])
+def asc():
+    return render_template("api/asc.html")
 
 @app.route('/studytimer', methods=['GET', 'POST'])
 def studytimer():
@@ -294,9 +297,13 @@ def crud():
 def search():
     return render_template("search.html")
 
+
+
+
 @app.route('/calender', methods=['GET', 'POST'])
 def calender():
     return render_template("calender.html")
 
 if __name__ == "__main__":
     app.run(debug=True, port=5222)
+

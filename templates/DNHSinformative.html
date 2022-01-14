@@ -1,0 +1,46 @@
+{% extends "layouts/base.html" %}
+{% set project = "Attendance" %}
+{% block body %}
+
+    <style>
+        html, body{
+            background-color: #8b008b;}
+
+
+    </style>
+    </div>
+
+    <div id="section2" class="container-fluid">
+        </script>
+        <h2>Find all our information on our website!</h2>
+        <a href="https://www.powayusd.com/Schools/HS/DNHS/home" >
+            <button type="button" class="btn btn-info">Check out our website!</button>
+        </a>
+        <a href="" >
+            <button type="button" class="btn btn-info"></button>
+        </a>
+        <a href="https://www.powayusd.com/en-US/Schools/HS/DNHS/home/Announcements" >
+            <button type="button" class="btn btn-info">Announcements</button>
+
+        </a>
+
+        <h3>Del Norte Main Calendar/Events</h3>
+        <iframe src="https://calendar.google.com/calendar/embed?src=uvm7vigoud9i452s81l8n6u4pk%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+
+        <h4>Click to toggle the bell schedule!</h4>
+        <img id="myImage" onclick="changeImage()" src="/static/assets/saumya_images/schedule1.JPG" width="400" height="800">
+
+        <script>
+            function changeImage() {
+                var image = document.getElementById('myImage');
+                if (image.src.match("/static/assets/saumya_images/schedule1.JPG")) {
+                    image.src = "/static/assets/saumya_images/schedule2.JPG";
+                } else {
+                    image.src = "/static/assets/saumya_images/shcedule3.JPG";
+                }
+            }
+        </script>
+        </a>
+    </div>
+{% endblock %}
