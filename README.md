@@ -1,5 +1,5 @@
 ## [Code Fish](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
-Runtime link: https://portfolio.nighthawkcodingsociety.com/
+Runtime link: http://dnhscodefish.tk/
 ### N22P4 CODEFISH
 # Betta Network
 > BETTA assistance for new teachers and students!
