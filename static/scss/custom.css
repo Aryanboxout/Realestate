@@ -11178,6 +11178,10 @@ textarea.form-control-lg {
 html, body {
   background-color: #091e3f;
 }
+html body, body body {
+  margin: 0;
+  font-family: "Bell MT";
+}
 
 .dark-mode {
   /* redefine theme colors */
