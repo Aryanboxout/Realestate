@@ -57,6 +57,16 @@ class Palindrome:
 # Tester Code
 if __name__ == "__main__":
     '''Value for testing'''
-    n = input("Put in a word")
-    palindrome = Palindrome(n)
-    print(f"Is it a palindrome? {n} = {Palindrome(n).isPalindrome}")
+    string = ["bob", "mom", "racecar", "saumya", "computer", "dad"]
+    for i in string:
+        for i in range(0, int(len(str)/2)):
+            if str[i] != str[len(str)-i-1]:
+    # # n = input("Put in a word")
+    # # print(n)
+    # for i in range(len(n)):
+    #     print(f"Is it a palindrome? {i} = {Palindrome(i).isPalindrome}")
+    # '''Constructor of Class object'''
+    # # palindrome = Palindrome(i)
+
+
+    '''Using getters to obtain data from object'''
