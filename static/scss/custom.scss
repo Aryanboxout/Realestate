@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-{% extends "layouts/base.html" %}
-
 /* For design in bootstrap look at:
  Colors and Text: https://getbootstrap.com/docs/5.0/utilities/colors/
  Background: https://getbootstrap.com/docs/5.0/utilities/background/
+
 Key Colors
 $blue:    #0d6efd;
 $indigo:  #6610f2;
@@ -18,6 +16,7 @@ $cyan:    #0dcaf0;
 $gray-100: #f8f9fa;
 $gray-600: #6c757d;
 $gray-900: #212529;
+
 Key Colors map to ...
 $primary:       $blue;
 $secondary:     $gray-600;
@@ -27,6 +26,7 @@ $warning:       $yellow;
 $danger:        $red;
 $light:         $gray-100;
 $dark:          $gray-900;
+
 Key colors are are mapped to words we use in HTML (text-primary, text-dark, bg-primary, bg-dark)
 $theme-colors: (
   "primary":    $primary,
@@ -37,23 +37,39 @@ $theme-colors: (
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark
+  $white:    #fff;
+  $gray-100: #f8f9fa;
+  $gray-200: #e9ecef;
+  $gray-300: #dee2e6;
+  $gray-400: #ced4da;
+  $gray-500: #adb5bd;
+  $gray-600: #6c757d;
+  $gray-700: #495057;
+  $gray-800: #343a40;
+  $gray-900: #212529;
+  $black:    #000;
+
+ */
 );
+
 */
 
 // redefine colors
-$primary: #6798e3;
-$secondary: #475d98;
-$body-bg: #1c4054;
+$primary: #5B9D82;
+$secondary: #a1a9bd;
+$body-bg: #cfd8dc;
 
 // redefine body background
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
- //setup default background
+// setup default background
 html, body {
-  background-image: var(--bs-gradient);
-  background-color: var(--bs-body-bg);
-}
+  background-color: #091e3f;
+  margin: 0;
+  font-family: "Bell MT";
+  }
 
+}
 
 // setup dark mode styling
 .dark-mode {
@@ -79,13 +95,6 @@ html, body {
   @each $color, $value in $theme-colors-rgb {
     --#{$variable-prefix}#{$color}-rgb: #{$value};
   }
-  // Your variable overrides
-  $body-bg: #ad3a3a;
-  $body-color: #7c3737;
-
-  $theme-colors: (
-          "custom-color": #900
-  );
 
   @import "../../node_modules/bootstrap/scss/bootstrap";
 }
