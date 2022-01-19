@@ -1,5 +1,5 @@
 ## [Code Fish](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
-Runtime link: https://portfolio.nighthawkcodingsociety.com/
+Runtime link: http://dnhscodefish.tk/
 ### N22P4 CODEFISH
 # Betta Network
 > BETTA assistance for new teachers and students!
@@ -37,7 +37,7 @@ This is helpful to new teachers who might want to reference things about our sch
 Attendance Page with database, Github Page, Calendar, CSS/Bootstrap, search bar, blueprint, deployment, Fetch
 
 ## Week 4 <a id="four" name="four"></a>
-Dark Mode, Formatted base.html, Contact Us, DNHS Information, [Github Page](https://vidhikulkarni.github.io/codefish/), Challenge, Deployment, Bell Schedule
+Dark Mode, Formatted base.html, Contact Us, DNHS Information, [Github Page](http://fishpages.dnhscodefish.tk/), Challenge, Deployment, Bell Schedule
 
 ## Week 3 <a id="three" name="three"></a>
 
