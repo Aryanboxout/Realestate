@@ -6,6 +6,10 @@
     <!-- Bootstrap CSS -->
 </head>
 <style>
+    body {
+        margin: 0;
+        font-family: "Bell MT";
+    }
     ul {
         list-style-type: none;
         margin: 0;
@@ -89,17 +93,10 @@
                 <a class="nav-link" href={{ url_for('to_do_list') }}>To-Do List</a>
             </li>
             <li>
-            <a class="nav-link" href={{ url_for('studytimer') }}>Study Timer</a>
+                <a class="nav-link" href={{ url_for('studytimer') }}>Study Timer</a>
             </li>
             <li>
                 <a class="nav-link" href={{ url_for('pagetwo') }}>Study and Health Habits</a>
-            </li>
-            <li>
-                <a class="nav-link" href={{ url_for('crud') }}>Crud</a>
-            </li>
-
-            <li>
-                <a class="nav-link" href={{ url_for('search') }}>Search</a>
             </li>
             <li>
                 <a class="nav-link" href={{ url_for('calender') }}>Calendar</a>
@@ -107,92 +104,166 @@
             <li>
                 <a class="nav-link" href={{ url_for('contactus') }}>Contact Us</a>
             </li>
-
-
+            <li>
+                <a class="nav-link" href={{ url_for('DNHSinformative') }}>DNHS Information</a>
+            </li>
 
 
 
             {#            <li>#}
-{#                <a class="nav-link" href={{ url_for('weather') }}>Weather</a>#}
-{#            </li>#}
-{#            <li>#}
-{#                <a class="nav-link" href={{ url_for('quiz') }}>Quiz</a>#}
-{#            </li>#}
-{#            <li>#}
-{#                <a class="nav-link" href={{ url_for('googlemap') }}>Locations</a>#}
-{#            </li>#}
+            {#                <a class="nav-link" href={{ url_for('weather') }}>Weather</a>#}
+            {#            </li>#}
+            {#            <li>#}
+            {#                <a class="nav-link" href={{ url_for('quiz') }}>Quiz</a>#}
+            {#            </li>#}
+            {#            <li>#}
+            {#                <a class="nav-link" href={{ url_for('googlemap') }}>Locations</a>#}
+            {#            </li>#}
 
             <!-- DEPARTMENTS DROPDOWN -->
-{#            <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
-{#                <li class="nav-item dropdown">#}
-{#                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
-{#                        Departments#}
-{#                    </a>#}
-{#                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">#}
-{#                        <a class="nav-link" href="{{ url_for('phonestablets') }}">Phones and Tablets</a>#}
-{#                        <a class="nav-link" href="{{ url_for('desktopstvs') }}">Desktops/TVs</a>#}
-{#                        <a class="nav-link" href="{{ url_for('audiodevices') }}">Audio Devices</a>#}
-{#                        <a class="nav-link" href="{{ url_for('aidevices') }}">AI Devices</a>#}
-{#                    </div>#}
-{#                </li>#}
-{#            </div>#}
+            {#            <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
+            {#                <li class="nav-item dropdown">#}
+            {#                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+            {#                        Departments#}
+            {#                    </a>#}
+            {#                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">#}
+            {#                        <a class="nav-link" href="{{ url_for('phonestablets') }}">Phones and Tablets</a>#}
+            {#                        <a class="nav-link" href="{{ url_for('desktopstvs') }}">Desktops/TVs</a>#}
+            {#                        <a class="nav-link" href="{{ url_for('audiodevices') }}">Audio Devices</a>#}
+            {#                        <a class="nav-link" href="{{ url_for('aidevices') }}">AI Devices</a>#}
+            {#                    </div>#}
+            {#                </li>#}
+            {#            </div>#}
 
-{#            <!-- MINI LABS DROPDOWN -->#}
-{#            <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
-{#                <li class="nav-item dropdown">#}
-{#                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
-{#                        Mini Labs#}
-{#                    </a>#}
-{#                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">#}
-{#                        <a class="dropdown-item" href="{{ url_for('binary') }}">Binary</a>#}
-{#                        <a class="dropdown-item" href="{{ url_for('colors') }}">Color Code</a>#}
-{#                        <a class="dropdown-item" href="{{ url_for('addition') }}">Addition</a>#}
-{#                        <a class="dropdown-item" href="{{ url_for('logicgates') }}">Logic Gates</a>#}
-{#                    </div>#}
+            {#            <!-- MINI LABS DROPDOWN -->#}
+            {#            <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
+            {#                <li class="nav-item dropdown">#}
+            {#                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+            {#                        Mini Labs#}
+            {#                    </a>#}
+            {#                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">#}
+            {#                        <a class="dropdown-item" href="{{ url_for('binary') }}">Binary</a>#}
+            {#                        <a class="dropdown-item" href="{{ url_for('colors') }}">Color Code</a>#}
+            {#                        <a class="dropdown-item" href="{{ url_for('addition') }}">Addition</a>#}
+            {#                        <a class="dropdown-item" href="{{ url_for('logicgates') }}">Logic Gates</a>#}
+            {#                    </div>#}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Practice
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ url_for('crud')}}">Crud</a>
+                    <a class="dropdown-item" href="{{ url_for('search')}}">Search</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        API
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ url_for('joke')}}">Joke API</a>
+                        <a class="dropdown-item" href="{{ url_for('jokes')}}">Jokes API Masterlist</a>
+                        {#                            <a class="dropdown-item" href="{{ url_for('covid19')}}">Covid19 RapidAPI</a>#}
+                        <a class="dropdown-item" href="{{ url_for('saumyaapi')}}">saumya's api</a>
+                        <a class="dropdown-item" href="{{ url_for('aryansapi')}}">AryansApi</a>
+                    </div>
+                </div>
+            </li>
+
+            {#                <li class="nav-item dropdown">#}
+            {#                        <a class="nav-link dropdown-toggle" href="#" id="rgbDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+            {#                            RGB#}
+            {#                        </a>#}
+            {#                        <div class="dropdown-menu" aria-labelledby="rgbDropdown">#}
+            {#                            <a class="dropdown-item" href="{{ url_for('rgb') }}">RGB</a>#}
+            {#                            <a class="dropdown-item" href="{{ url_for('arushirgb') }}">ArushiRGB</a>#}
+            {#                            <a class="dropdown-item" href="{{ url_for('prishargb') }}">PrishaRGB</a>#}
+            {#                            <a class="dropdown-item" href="{{ url_for('vaishavirgb') }}">VaishaviRGB</a>#}
+            {#                            <a class="dropdown-item" href="{{ url_for('siyargb') }}">SiyaRGB</a>#}
+            {#                        </div>#}
+            {#                </li>#}
+            {#                </li>#}
+            {#            </div>#}
+
+            <!-- ABOUT US DROPDOWN -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            API
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url_for('joke')}}">Joke API</a>
-                            <a class="dropdown-item" href="{{ url_for('jokes')}}">Jokes API Masterlist</a>
-{#                            <a class="dropdown-item" href="{{ url_for('covid19')}}">Covid19 RapidAPI</a>#}
-                            <a class="dropdown-item" href="{{ url_for('saumyaapi')}}">saumya's api</a>
-                                <a class="dropdown-item" href="{{ url_for('aryansapi')}}">AryansApi</a>
-                            <a class="dropdown-item" href="{{ url_for('asc')}}">Asynch</a>
-                        </div>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="nav-link" href="{{ url_for('AboutUs') }}">Our Team</a>
+                        <a class="nav-link" href="{{ url_for('arushi.arushi') }}">Arushi</a>
+                        <a class="nav-link" href="{{ url_for('prisha.prisha') }}">Prisha</a>
+                        <a class="nav-link" href="{{ url_for('vidhi.vidhi') }}">Vidhi</a>
+                        <a class="nav-link" href="{{ url_for('saumya.saumya') }}">Saumya</a>
+                        <a class="nav-link" href="{{ url_for('aryan') }}">Aryan</a>
+                    </div>
                 </li>
-{#                <li class="nav-item dropdown">#}
-{#                        <a class="nav-link dropdown-toggle" href="#" id="rgbDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
-{#                            RGB#}
-{#                        </a>#}
-{#                        <div class="dropdown-menu" aria-labelledby="rgbDropdown">#}
-{#                            <a class="dropdown-item" href="{{ url_for('rgb') }}">RGB</a>#}
-{#                            <a class="dropdown-item" href="{{ url_for('arushirgb') }}">ArushiRGB</a>#}
-{#                            <a class="dropdown-item" href="{{ url_for('prishargb') }}">PrishaRGB</a>#}
-{#                            <a class="dropdown-item" href="{{ url_for('vaishavirgb') }}">VaishaviRGB</a>#}
-{#                            <a class="dropdown-item" href="{{ url_for('siyargb') }}">SiyaRGB</a>#}
-{#                        </div>#}
-{#                </li>#}
-{#                </li>#}
-{#            </div>#}
-
-                <!-- ABOUT US DROPDOWN -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            About Us
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="nav-link" href="{{ url_for('AboutUs') }}">Our Team</a>
-                            <a class="nav-link" href="{{ url_for('arushi') }}">Arushi</a>
-                            <a class="nav-link" href="{{ url_for('prisha') }}">Prisha</a>
-                            <a class="nav-link" href="{{ url_for('vidhi') }}">Vidhi</a>
-                            <a class="nav-link" href="{{ url_for('saumya') }}">Saumya</a>
-                            <a class="nav-link" href="{{ url_for('aryan') }}">Aryan</a>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="term" placeholder="enter search term">
+                                    <label></label> <!-- used for spacer -->
+                                </div>
+                                <button class="btn btn-primary bg-secondary" onclick="search_data();">Search</button>
+                            </div>
                         </div>
-                    </li>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row" id="result">
+        </div>
     </div>
 </nav>
+
+<script>
+    function search_data() {
+        // fetch standard requires data set to a name-value pair
+        const term = document.getElementById("term");
+        const body = {
+            term: term.value
+        };
+
+        // fetch call with header options
+        fetch('/crud/search/term/', {
+            method: "POST",
+            credentials: "include",
+            body: JSON.stringify(body),
+            cache: "no-cache",
+            headers: new Headers({
+                "content-type": "application/json"
+            })
+        })
+            // async then replies with response header
+            .then(function (response) {
+                // prepare HTML search result container for new output
+                const resultContainer = document.getElementById("result");
+                // clean up from previous search
+                while (resultContainer.firstChild) {
+                    resultContainer.removeChild(resultContainer.firstChild);
+                }
+                // trap error response from Web API
+                if (response.status !== 200) {
+                    const errorMsg = 'Database response error: ' + response.status;
+                    console.log(errorMsg);
+                    const div = document.createElement("div");
+                    div.innerHTML = errorMsg;
+                    resultContainer.appendChild(div);
+                    return;
+                }
+                // response contains valid result
+                response.json().then(function(data) {
+                    // loop through JSON and build HTML output
+                    for (let i = 0; i < data.length; i++) {
+                        const div = document.createElement("div");
+                        div.innerHTML = data[i].name + ' ' + data[i].email;
+                        resultContainer.appendChild(div);
+                    }
+                })
+            })
+    }
+</script>

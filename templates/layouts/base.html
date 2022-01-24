@@ -5,22 +5,19 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 ... code reuse
 -->
 <!DOCTYPE HTML>
-<body>
 <html xmlns:background-image="http://www.w3.org/1999/xhtml">
-<head>
-    {% set name = "Home" %}
+{% set name = "Home" %}
     {% set github = "https://github.com/nighthawkcoders" %}
     {% set youtube = "https://youtu.be/dQw4w9WgXcQ" %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href={{url_for( "static", filename="scss/custom.css", version='3') }}>
     <style>
-        :root{
-            --white: whitesmoke;
-            --black: #111B2D;
-            --grey: #9EA3B0;
-        }
+        {#:root{#}
+        {#    --white: whitesmoke;#}
+        {#    --black: #111B2D;#}
+        {#    --grey: #9EA3B0;#}
         html, body{
             margin: 0;
             height: 100%;
@@ -28,29 +25,30 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             -moz-animation: fadein 2s; /* Firefox */
             -webkit-animation: fadein 2s; /* Safari and Chrome */
             -o-animation: fadein 2s; /* Opera */
-            background-color: #111B2D;
-        {#background-image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);#}
-        {#image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169));#}
+            {#background-color: #091e3f;#}
+            {#background-image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169);#}
+            {#image: url(https://cdnb.artstation.com/p/assets/images/images/001/197/915/large/alex-gallegos-underwater.jpg?1441996169));#}
         }
 
         body{
             margin: 0;
             font-family: "Bell MT";
         }
-        .dark-mode {
-            background-color: black;
-            color: white;
+        {#.dark-mode {#}
+        {#    background-color: #000000;#}
         }
         h1{
-            font-size: 5em;
-            color: gold;
+            font-size: 3em;
+            color: goldenrod;
         }
+
         h2{
             font-size: 2em;
             color: goldenrod;
         }
         h3{
-            color: #e1e1e1ff;
+            font-size: 2em;
+            color: goldenrod;
         }
         h4{
             font-size: 2em;
@@ -110,10 +108,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             element.classList.toggle("dark-mode");
         }
     </script>
-
-    {% block meta %}
-    {% endblock %}
-
 </head>
 
 
@@ -122,13 +116,11 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 {% block body %}
     <div class="product" style="margin-top: 2%;">
-        <div class="row" style="padding: 5%; padding-top: 0%; padding-bottom: 5%;">
-            <div class="col-8" >
-                <h1>Betta Network</h1>
-                <h5>BETTA assistance for new teachers and students!</h5>
-            </div>
+    <div class="row" style="padding: 5%; padding-top: 0%; padding-bottom: 5%;">
+        <div class="col-8" >
+            <h4>Betta Network</h4>
+            <h3>BETTA assistance for new teachers and students!</h3>
         </div>
-        <body>
 
         <style>
             .parallax {
@@ -141,7 +133,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
-            }
+            {#            }#}
             #bar {
                 height:45%;
                 width: 100%;
@@ -164,19 +156,16 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             </div>
         </div>
 
-        <div style="height:300px;background-color:#0D1F2D">
-            <h1> Mission Statement </h1>
+        <div style="height:300px;background-color:#092034">
+            <h2> Mission Statement </h2>
             <h2> Our goal is to make it easy for students and teachers to organize their busy school lives. Have a great school year!</h2>
         </div>
-
-
-        </body>
+        </style>
     </div>
-    </html>
     </body>
-    </div>
 
-    </div>
 {% endblock %}
-</body>
+</div>
 </html>
+
+

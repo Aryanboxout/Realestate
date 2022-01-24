@@ -1,12 +1,11 @@
 {% extends "layouts/base.html" %}
 {% set project = "Attendance" %}
-{% block body %}
 
-<style>
-    html, body{
-        background-color: #071036;
-    }
-</style>
+{#<style>#}
+{#    html, body{#}
+{#        background-color: #071036;#}
+{#    }#}
+{#</style>#}
 
 <div class="center-block" style="margin: 2% 5% 5%; text-align:center;">
     <html class="col-12">
@@ -14,53 +13,215 @@
     </html>
 </div>
 
-    <style>
-        table, th, td {
-            border:1px solid white;
-            color: white;
-        }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+    }
+</style>
 
-    <table id="table"></table>
-    <table style="width:100%;">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Present</th>
-            <th>Absent</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>
-                <input type="text" class="text-center" required="" placeholder="Enter Student Name"></td>
-            <td>
-            <input type="checkbox">
-            </td>
-            <td>
-                <input type="checkbox">
-            </td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td> Prish Fish </td>
-            <td>
-                <input type="checkbox">
-            </td>
-            <td>
-                <input type="checkbox">
-            </td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td> Johnny </td>
-            <td>
-                <input type="checkbox">
-            </td>
-            <td>
-                <input type="checkbox">
-            </td>
-        </tr>
-    </table>
-    </script>
+{% block body %}
 
+    <div class="container py-4 text-light bg-success">
+        <header class="pb-3 mb-4 border-bottom">
+            <div class="d-flex align-items-center text-light text-decoration-none">
+                <span class="fs-4">CRUD in Database</span>
+            </div>
+        </header>
+
+        <div class="container py-4">
+            <div class="p-5 mb-4 bg-light text-dark rounded-3">
+                <h2>Attendance</h2>
+
+                <div class="row align-items-md-stretch">
+                    <div class="container-fluid py-5">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Student ID</th>
+                                <th>Student Name</th>
+                                <th>Period Number</th>
+                                <th>Teacher Name</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <!-- Loop through rows in table -->
+                            {% for row in table %}
+                                <!--
+                                Prepare table for display
+                                    caution: phone number needs "~" format step to force type to string
+                                -->
+                                {#                                {% set pn = "" ~ row['phone'] %}#}
+                                {#                                {% set pnf = "(" ~ pn[0:3] ~ ")" ~ pn[3:6] ~ "-" ~ pn[6:10] %}#}
+                                <tr>
+                                    <td>{{ row['userID'] }}</td>
+                                    <td>{{ row['name'] }}</td>
+                                    <td>{{ row['email'] }}</td>
+                                    <td>{{ row['password'] }}</td>
+                                    <td>{{ row['phone'] }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-4">
+            <div class="p-5 mb-4 bg-light text-dark rounded-3">
+                <h2>Add Absent Student</h2>
+
+                <form method="POST" ID="create" action={{url_for('crud.create')}} >
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th><label for="number">Student ID Number</label></th>
+                            <th><label for="name">Student Name</label></th>
+                            <th><label for="period">Period Number</label></th>
+                            <th><label for="teacher">Teacher</label></th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td><input type="number" name="number" id="name" placeholder="Student ID Number" required></td>
+                            <td><input type="text" name="name" id="email" placeholder="Student Name" required></td>
+                            <td><input type="number" name="period" id="password" placeholder="Period Number" required></td>
+                            <td><input type="text" name="teacher" id="phone" placeholder="Teacher Name" required></td>
+                            <td><input type="submit" value="Create"></td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+                </form>
+            </div>
+        </div>
+
+        <div class="container py-4">
+            <div class="row mb-4 bg-light text-dark rounded-3">
+                <div class="col-md-3">
+                    <div class="p-5 mb-4 bg-light text-dark rounded-3">
+                        <h2>Read</h2>
+                        <form method="POST" ID="read" action={{url_for('crud.read')}} >
+                            <table id="read_table">
+                                <tr><th><label for="read_userid">ID</label></th></tr>
+                                <tr>
+                                    <td>
+                                        <select name="userid" id="read_userid">
+                                            <optgroup label="userid">
+                                                {% for row in table %}
+                                                    <option label="{{ row['userID'] }}">{{ row['userID'] }}</option>
+                                                {% endfor %}
+                                            </optgroup>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="submit" value="Read">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-5 mb-4 bg-light text-dark rounded-3">
+                        <h2>Update</h2>
+                        <form method="POST" ID="update" action={{url_for('crud.update')}} >
+                            <table id="update_table">
+                                <tr>
+                                    <th><label for="update_userid">ID</label></th>
+                                    <th><label for="update_name">Student ID</label></th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select name="userid" id="update_userid">
+                                            <optgroup label="userid">
+                                                {% for row in table %}
+                                                    <option label="{{ row['userID'] }}">{{ row['userID'] }}</option>
+                                                {% endfor %}
+                                            </optgroup>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" name="name" id="update_name" required></td>
+                                    <td><input type="submit" value="Update"></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="p-5 mb-4 bg-light text-dark rounded-3">
+                        <h2>Delete</h2>
+                        <form method="POST" ID="read" action={{url_for('crud.delete')}} >
+                            <table id="read_table">
+                                <tr><th><label for="delete_userid">ID</label></th></tr>
+                                <tr>
+                                    <td>
+                                        <select name="userid" id="delete_userid">
+                                            <optgroup label="userid">
+                                                {% for row in table %}
+                                                    <option label="{{ row['userID'] }}">{{ row['userID'] }}</option>
+                                                {% endfor %}
+                                            </optgroup>
+                                        </select>
+                                    </td>
+                                    <td><input type="submit" value="Delete"></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {#    <table id="table"></table>#}
+    {#    <table style="width:100%;">#}
+    {#        <tr>#}
+    {#            <th>ID</th>#}
+    {#            <th>Name</th>#}
+    {#            <th>Present</th>#}
+    {#            <th>Absent</th>#}
+    {#        </tr>#}
+    {#        <tr>#}
+    {#            <td>1</td>#}
+    {#            <td>#}
+    {#                <input type="text" class="text-center" required="" placeholder="Enter Student Name"></td>#}
+    {#            <td>#}
+    {#            <input type="checkbox">#}
+    {#            </td>#}
+    {#            <td>#}
+    {#                <input type="checkbox">#}
+    {#            </td>#}
+    {#        </tr>#}
+    {#        <tr>#}
+    {#            <td>2</td>#}
+    {#            <td> Prish Fish </td>#}
+    {#            <td>#}
+    {#                <input type="checkbox">#}
+    {#            </td>#}
+    {#            <td>#}
+    {#                <input type="checkbox">#}
+    {#            </td>#}
+    {#        </tr>#}
+    {#        <tr>#}
+    {#            <td>3</td>#}
+    {#            <td> Johnny </td>#}
+    {#            <td>#}
+    {#                <input type="checkbox">#}
+    {#            </td>#}
+    {#            <td>#}
+    {#                <input type="checkbox">#}
+    {#            </td>#}
+    {#        </tr>#}
+    {#    </table>#}
 {% endblock %}

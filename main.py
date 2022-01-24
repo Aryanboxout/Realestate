@@ -10,14 +10,22 @@ from __init__ import app
 # from starter.starter import app_starter
 # from algorithm.algorithm import app_algorithm
 from app_crud import app_crud
+from app_vidhi import app_vidhi
+from app_saumya import app_saumya
+from app_arushi import app_arushi
+from app_prisha import app_prisha
 # from y2022 import app_y2022
 
 # # create a Flask instance
-# app = Flask(__name__)
+app = Flask(__name__)
 
 # app.register_blueprint(app_starter)
 # app.register_blueprint(app_algorithm)
 app.register_blueprint(app_crud)
+app.register_blueprint(app_vidhi)
+app.register_blueprint(app_saumya)
+app.register_blueprint(app_arushi)
+app.register_blueprint(app_prisha)
 # app.register_blueprint(app_y2022)
 
 # connects default URL of server to render kangaroos.html
@@ -66,6 +74,11 @@ def quiz():
 @app.route('/googlemap')
 def googlemap():
     return render_template("locations.html")
+
+
+@app.route('/registrationform')
+def registrationform():
+    return render_template("registration_form.html")
 
 
 @app.route('/phonestablets')
@@ -201,24 +214,6 @@ def AboutUs():
     return render_template("about us/MainAboutUs.html", name1="TechFish User")
 
 
-@app.route('/arushi/', methods=['GET', 'POST'])
-def arushi():
-    url = "https://daysapi.p.rapidapi.com/business/delta"
-
-    querystring = {"second_date":"2022-06-09","first_date":"2021-08-18"}
-
-    headers = {
-        'x-rapidapi-host': "daysapi.p.rapidapi.com",
-        'x-rapidapi-key': "f74ed87200msh995f07c2f92be0bp101c14jsn28a6b622e01b"
-    }
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-
-    # return response.text
-    return render_template("about us/arushi.html", stats=response.json())
-
-
-
 # @app.route('/prisha/', methods=['GET', 'POST'])
 # def prisha():
 #     # submit button has been pushed
@@ -228,45 +223,6 @@ def arushi():
 #             return render_template("about us/prisha.html", name1=name)
 #     # starting and empty input default
 #     return render_template("about us/prisha.html", name1="TechFish User")
-
-
-@app.route('/prisha/', methods=['GET', 'POST'])
-def prisha():
-    url = "https://corona-virus-world-and-india-data.p.rapidapi.com/api"
-    headers = {
-        'x-rapidapi-key': "dec069b877msh0d9d0827664078cp1a18fajsn2afac35ae063",
-        'x-rapidapi-host': "corona-virus-world-and-india-data.p.rapidapi.com"
-    }
-
-    response = requests.request("GET", url, headers=headers)
-
-    return render_template("about us/prisha.html", stats=response.json())
-    # return response.text
-
-
-@app.route('/vidhi/', methods=['GET', 'POST'])
-def vidhi():
-
-    url = "https://world-clock.p.rapidapi.com/json/utc/now"
-
-    headers = {
-        'x-rapidapi-host': "world-clock.p.rapidapi.com",
-        'x-rapidapi-key': "b7497e5bbbmsh13875b44b129b4dp1a492fjsnf27f047e11f5"
-    }
-
-    response = requests.request("GET", url, headers=headers)
-    return render_template("about us/vidhi.html", stats=response.json())
-
-
-@app.route('/saumya/', methods=['GET', 'POST'])
-def saumya():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("about us/saumya.html", name1=name)
-    # starting and empty input default
-    return render_template("about us/saumya.html", name1="TechFish User")
 
 
 @app.route('/aryan/', methods=['GET', 'POST'])
@@ -342,11 +298,14 @@ def search():
     return render_template("search.html")
 
 
+@app.route('/DNHSinformative', methods=['GET', 'POST'])
+def DNHSinformative():
+    return render_template("DNHSinformative.html")
 
 
 @app.route('/calender', methods=['GET', 'POST'])
 def calender():
-    return render_template("calender.html")
+    return render_template("calendar.html")
 
 if __name__ == "__main__":
     app.run(debug=True, port=5222)
