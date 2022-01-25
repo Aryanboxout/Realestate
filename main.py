@@ -34,6 +34,11 @@ def index():
     return render_template("index.html")
 
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    return render_template("login.html")
+
+
 @app.route('/attendance', methods=['GET', 'POST'])
 def attendance():
     return render_template("attendance.html")
@@ -298,6 +303,11 @@ def search():
     return render_template("search.html")
 
 
+@app.route('/realsearch', methods=['GET', 'POST'])
+def realsearch():
+    return render_template("realsearch.html")
+
+
 @app.route('/DNHSinformative', methods=['GET', 'POST'])
 def DNHSinformative():
     return render_template("DNHSinformative.html")
@@ -306,6 +316,7 @@ def DNHSinformative():
 @app.route('/calender', methods=['GET', 'POST'])
 def calender():
     return render_template("calendar.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5222)
