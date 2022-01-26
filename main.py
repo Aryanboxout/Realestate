@@ -307,6 +307,12 @@ def DNHSinformative():
 def calender():
     return render_template("calendar.html")
 
+
+@app.route('/snake', methods=['GET', 'POST'])
+def snake():
+    return render_template("snake.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True, port=5222)
 
