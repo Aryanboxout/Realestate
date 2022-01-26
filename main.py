@@ -17,7 +17,7 @@ from app_prisha import app_prisha
 # from y2022 import app_y2022
 
 # # create a Flask instance
-app = Flask(__name__)
+# app = Flask(__name__)
 
 # app.register_blueprint(app_starter)
 # app.register_blueprint(app_algorithm)
