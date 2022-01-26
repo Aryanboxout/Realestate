@@ -17,7 +17,7 @@ from app_prisha import app_prisha
 # from y2022 import app_y2022
 
 # # create a Flask instance
-app = Flask(__name__)
+# app = Flask(__name__)
 
 # app.register_blueprint(app_starter)
 # app.register_blueprint(app_algorithm)
@@ -32,6 +32,11 @@ app.register_blueprint(app_prisha)
 @app.route('/')
 def index():
     return render_template("index.html")
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    return render_template("login.html")
 
 
 @app.route('/attendance', methods=['GET', 'POST'])
@@ -298,6 +303,11 @@ def search():
     return render_template("search.html")
 
 
+@app.route('/realsearch', methods=['GET', 'POST'])
+def realsearch():
+    return render_template("realsearch.html")
+
+
 @app.route('/DNHSinformative', methods=['GET', 'POST'])
 def DNHSinformative():
     return render_template("DNHSinformative.html")
@@ -306,11 +316,6 @@ def DNHSinformative():
 @app.route('/calender', methods=['GET', 'POST'])
 def calender():
     return render_template("calendar.html")
-
-
-@app.route('/snake', methods=['GET', 'POST'])
-def snake():
-    return render_template("snake.html")
 
 
 if __name__ == "__main__":
