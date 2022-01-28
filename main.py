@@ -10,6 +10,7 @@ from __init__ import app
 # from starter.starter import app_starter
 # from algorithm.algorithm import app_algorithm
 from app_crud import app_crud
+from app_attendance import app_attendance
 from app_vidhi import app_vidhi
 from app_saumya import app_saumya
 from app_arushi import app_arushi
@@ -17,11 +18,12 @@ from app_prisha import app_prisha
 # from y2022 import app_y2022
 
 # # create a Flask instance
-app = Flask(__name__)
+# app = Flask(__name__)
 
 # app.register_blueprint(app_starter)
 # app.register_blueprint(app_algorithm)
 app.register_blueprint(app_crud)
+app.register_blueprint(app_attendance)
 app.register_blueprint(app_vidhi)
 app.register_blueprint(app_saumya)
 app.register_blueprint(app_arushi)
@@ -34,10 +36,26 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/attendance', methods=['GET', 'POST'])
-def attendance():
-    return render_template("attendance.html")
+@app.route('/snake', methods=['GET', 'POST'])
+def snake():
+    return render_template("snake.html")
 
+@app.route('/saumyaapi2', methods=['GET', 'POST'])
+def saumyaapi2():
+
+    url = "https://recipesapi2.p.rapidapi.com/recipes/tomato%20soup"
+
+    querystring = {"maxRecipes":"2"}
+
+    headers = {
+        'x-rapidapi-host': "recipesapi2.p.rapidapi.com",
+        'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    # return(response.text)
+    return render_template("api/saumyaapi2.html", stats=response.json())
 
 @app.route('/to_do_list', methods=['GET', 'POST'])
 def to_do_list():
@@ -297,6 +315,15 @@ def pagetwo():
 @app.route('/crud', methods=['GET', 'POST'])
 def crud():
     return render_template("crud.html")
+
+@app.route('/side', methods=['GET', 'POST'])
+def side():
+    return render_template("side.html")
+
+
+@app.route('/attendance', methods=['GET', 'POST'])
+def attendance():
+    return render_template("attendance.html")
 
 
 @app.route('/search', methods=['GET', 'POST'])
