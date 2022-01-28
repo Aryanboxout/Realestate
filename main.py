@@ -260,6 +260,32 @@ def saumyaapi():
     # return(response.text)
     return render_template("api/saumyaapi.html", stats=response.json())
 
+@app.route('/saumyaapi2', methods=['GET', 'POST'])
+def saumyaapi2():
+
+    url = "https://recipesapi2.p.rapidapi.com/recipes/tomato%20soup"
+
+    querystring = {"maxRecipes":"2"}
+
+    headers = {
+        'x-rapidapi-host': "recipesapi2.p.rapidapi.com",
+        'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    # return(response.text)
+    return render_template("api/saumyaapi2.html", stats=response.json())
+
+
+
+
+
+
+
+
+
+
 
 @app.route('/calendar')
 def calendar():
@@ -313,9 +339,13 @@ def DNHSinformative():
     return render_template("DNHSinformative.html")
 
 
-@app.route('/calender', methods=['GET', 'POST'])
+@app.route('/calendar', methods=['GET', 'POST'])
 def calender():
     return render_template("calendar.html")
+
+@app.route('/snake', methods=['GET', 'POST'])
+def snake():
+    return render_template("snake.html")
 
 
 if __name__ == "__main__":
