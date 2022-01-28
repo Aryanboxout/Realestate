@@ -262,6 +262,8 @@ def calendar():
 
 
 
+
+
 @app.route('/aryansapi', methods=['GET', 'POST'])
 def aryansapi():
 
@@ -306,6 +308,10 @@ def DNHSinformative():
 @app.route('/calender', methods=['GET', 'POST'])
 def calender():
     return render_template("calendar.html")
+
+@app.route('/chat')
+def chat():
+    return render_template("chat.html")
 
 if __name__ == "__main__":
     app.run(debug=True, port=5222)
