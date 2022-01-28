@@ -318,6 +318,11 @@ def calender():
     return render_template("calendar.html")
 
 
+@app.route('/results', methods=['GET', 'POST'])
+def results():
+    return render_template("results.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True, port=5222)
 
