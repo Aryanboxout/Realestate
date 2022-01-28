@@ -89,6 +89,10 @@ def phonestablets():
 def contactus():
     return render_template("contactus.html")
 
+@app.route('/contactothers')
+def contactothers():
+    return render_template("contactothers.html")
+
 @app.route('/desktopstvs')
 def desktopstvs():
     return render_template("departments/desktopstvs.html")
