@@ -145,6 +145,9 @@ def colors():
 def addition():
     return render_template("mini labs/addition.html")
 
+@app.route('/login')
+def login():
+    return render_template("login.html")
 
 @app.route("/logicgates", methods=['GET', 'POST'])
 def logicgates():
