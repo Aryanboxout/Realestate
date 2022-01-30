@@ -1,8 +1,8 @@
 {% extends "layouts/base.html" %}
 {% set project = "Attendance" %}
 {% block body %}
-{#    <html lang="en">#}
-{#<head>#}
+    {#    <html lang="en">#}
+    {#<head>#}
 
     <h2>Student Calendar</h2>
     <meta charset="UTF-8" />
@@ -31,8 +31,8 @@
         }
 
         .container {
-            {#width: 100%;#}
-            {#height: 100vh;#}
+        {#width: 100%;#}
+        {#height: 100vh;#}
             background-color: #800000;
             color: #eee;
             display: flex;
@@ -130,120 +130,205 @@
             background-color: #C0C0C0;
         }
     </style>
-</head>
-<body>
-<div class="container">
-    <div class="calendar">
-        <div class="month">
-            <i class="fas fa-angle-left prev"></i>
-            <div class="date">
-                <h1></h1>
-                <p></p>
+    </head>
+    <body>
+    <div class="container">
+        <div class="calendar">
+            <div class="month">
+                <i class="fas fa-angle-left prev"></i>
+                <div class="date">
+                    <h1></h1>
+                    <p></p>
+                </div>
+                <i class="fas fa-angle-right next"></i>
             </div>
-            <i class="fas fa-angle-right next"></i>
+            <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="days"></div>
         </div>
-        <div class="weekdays">
-            <div>Sun</div>
-            <div>Mon</div>
-            <div>Tue</div>
-            <div>Wed</div>
-            <div>Thu</div>
-            <div>Fri</div>
-            <div>Sat</div>
-        </div>
-        <div class="days"></div>
     </div>
-</div>
 
-<script>
-    const date = new Date();
+    <script>
+        const date = new Date();
 
-    const renderCalendar = () => {
-        date.setDate(1);
+        const renderCalendar = () => {
+            date.setDate(1);
 
-        const monthDays = document.querySelector(".days");
+            const monthDays = document.querySelector(".days");
 
-        const lastDay = new Date(
-            date.getFullYear(),
-            date.getMonth() + 1,
-            0
-        ).getDate();
+            const lastDay = new Date(
+                date.getFullYear(),
+                date.getMonth() + 1,
+                0
+            ).getDate();
 
-        const prevLastDay = new Date(
-            date.getFullYear(),
-            date.getMonth(),
-            0
-        ).getDate();
+            const prevLastDay = new Date(
+                date.getFullYear(),
+                date.getMonth(),
+                0
+            ).getDate();
 
-        const firstDayIndex = date.getDay();
+            const firstDayIndex = date.getDay();
 
-        const lastDayIndex = new Date(
-            date.getFullYear(),
-            date.getMonth() + 1,
-            0
-        ).getDay();
+            const lastDayIndex = new Date(
+                date.getFullYear(),
+                date.getMonth() + 1,
+                0
+            ).getDay();
 
-        const nextDays = 7 - lastDayIndex - 1;
+            const nextDays = 7 - lastDayIndex - 1;
 
-        const months = [
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December",
-        ];
+            const months = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
+            ];
 
-        document.querySelector(".date h1").innerHTML = months[date.getMonth()];
+            document.querySelector(".date h1").innerHTML = months[date.getMonth()];
 
-        document.querySelector(".date p").innerHTML = new Date().toDateString();
+            document.querySelector(".date p").innerHTML = new Date().toDateString();
 
-        let days = "";
+            let days = "";
 
-        for (let x = firstDayIndex; x > 0; x--) {
-            days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
+            for (let x = firstDayIndex; x > 0; x--) {
+                days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
+            }
+
+            for (let i = 1; i <= lastDay; i++) {
+                if (
+                    i === new Date().getDate() &&
+                    date.getMonth() === new Date().getMonth()
+                ) {
+                    days += `<div class="today">${i}</div>`;
+                } else {
+                    days += `<div>${i}</div>`;
+                }
+            }
+
+            for (let j = 1; j <= nextDays; j++) {
+                days += `<div class="next-date">${j}</div>`;
+                monthDays.innerHTML = days;
+            }
+        };
+
+        document.querySelector(".prev").addEventListener("click", () => {
+            date.setMonth(date.getMonth() - 1);
+            renderCalendar();
+        });
+
+        document.querySelector(".next").addEventListener("click", () => {
+            date.setMonth(date.getMonth() + 1);
+            renderCalendar();
+        });
+
+        renderCalendar();
+
+    </script>
+    </body>
+
+    <canvas id="canvas" width="400" height="400"
+            style="background-color:#333">
+    </canvas>
+
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var radius = canvas.height / 2;
+        ctx.translate(radius, radius);
+        radius = radius * 0.90
+        setInterval(drawClock, 1000);
+
+        function drawClock() {
+            drawFace(ctx, radius);
+            drawNumbers(ctx, radius);
+            drawTime(ctx, radius);
         }
 
-        for (let i = 1; i <= lastDay; i++) {
-            if (
-                i === new Date().getDate() &&
-                date.getMonth() === new Date().getMonth()
-            ) {
-                days += `<div class="today">${i}</div>`;
-            } else {
-                days += `<div>${i}</div>`;
+        function drawFace(ctx, radius) {
+            var grad;
+            ctx.beginPath();
+            ctx.arc(0, 0, radius, 0, 2*Math.PI);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+            grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+            grad.addColorStop(0, '#333');
+            grad.addColorStop(0.5, 'white');
+            grad.addColorStop(1, '#333');
+            ctx.strokeStyle = grad;
+            ctx.lineWidth = radius*0.1;
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+            ctx.fillStyle = '#333';
+            ctx.fill();
+        }
+
+        function drawNumbers(ctx, radius) {
+            var ang;
+            var num;
+            ctx.font = radius*0.15 + "px arial";
+            ctx.textBaseline="middle";
+            ctx.textAlign="center";
+            for(num = 1; num < 13; num++){
+                ang = num * Math.PI / 6;
+                ctx.rotate(ang);
+                ctx.translate(0, -radius*0.85);
+                ctx.rotate(-ang);
+                ctx.fillText(num.toString(), 0, 0);
+                ctx.rotate(ang);
+                ctx.translate(0, radius*0.85);
+                ctx.rotate(-ang);
             }
         }
 
-        for (let j = 1; j <= nextDays; j++) {
-            days += `<div class="next-date">${j}</div>`;
-            monthDays.innerHTML = days;
+        function drawTime(ctx, radius){
+            var now = new Date();
+            var hour = now.getHours();
+            var minute = now.getMinutes();
+            var second = now.getSeconds();
+            //hour
+            hour=hour%12;
+            hour=(hour*Math.PI/6)+
+                (minute*Math.PI/(6*60))+
+                (second*Math.PI/(360*60));
+            drawHand(ctx, hour, radius*0.5, radius*0.07);
+            //minute
+            minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+            drawHand(ctx, minute, radius*0.8, radius*0.07);
+            // second
+            second=(second*Math.PI/30);
+            drawHand(ctx, second, radius*0.9, radius*0.02);
         }
-    };
 
-    document.querySelector(".prev").addEventListener("click", () => {
-        date.setMonth(date.getMonth() - 1);
-        renderCalendar();
-    });
+        function drawHand(ctx, pos, length, width) {
+            ctx.beginPath();
+            ctx.lineWidth = width;
+            ctx.lineCap = "round";
+            ctx.moveTo(0,0);
+            ctx.rotate(pos);
+            ctx.lineTo(0, -length);
+            ctx.stroke();
+            ctx.rotate(-pos);
+        }
+    </script>
 
-    document.querySelector(".next").addEventListener("click", () => {
-        date.setMonth(date.getMonth() + 1);
-        renderCalendar();
-    });
-
-    renderCalendar();
-
-</script>
-</body>
-
-
-</html>
+    </html>
 
 {% endblock %}
 

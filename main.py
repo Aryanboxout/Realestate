@@ -17,7 +17,7 @@ from app_prisha import app_prisha
 # from y2022 import app_y2022
 
 # # create a Flask instance
-# app = Flask(__name__)
+app = Flask(__name__)
 
 # app.register_blueprint(app_starter)
 # app.register_blueprint(app_algorithm)
@@ -93,6 +93,10 @@ def phonestablets():
 @app.route('/contactus')
 def contactus():
     return render_template("contactus.html")
+
+@app.route('/contactothers')
+def contactothers():
+    return render_template("contactothers.html")
 
 @app.route('/desktopstvs')
 def desktopstvs():
@@ -267,6 +271,8 @@ def calendar():
 
 
 
+
+
 @app.route('/aryansapi', methods=['GET', 'POST'])
 def aryansapi():
 
@@ -317,11 +323,9 @@ def DNHSinformative():
 def calender():
     return render_template("calendar.html")
 
-
-@app.route('/results', methods=['GET', 'POST'])
-def results():
-    return render_template("results.html")
-
+@app.route('/chat')
+def chat():
+    return render_template("chat.html")
 
 if __name__ == "__main__":
     app.run(debug=True, port=5222)
