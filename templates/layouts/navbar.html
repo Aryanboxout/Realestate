@@ -71,7 +71,9 @@
 <!-- CODEFISH -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://github.com/arushi10/flask_portfolio">CodeFish</a>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
     <button onclick="darkMode()">Toggle Dark Mode</button>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -201,20 +203,20 @@
             {#            </div>#}
 
             <!-- ABOUT US DROPDOWN -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        About Us
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="nav-link" href="{{ url_for('AboutUs') }}">Our Team</a>
-                        <a class="nav-link" href="{{ url_for('arushi.arushi') }}">Arushi</a>
-                        <a class="nav-link" href="{{ url_for('prisha.prisha') }}">Prisha</a>
-                        <a class="nav-link" href="{{ url_for('vidhi.vidhi') }}">Vidhi</a>
-                        <a class="nav-link" href="{{ url_for('saumya.saumya') }}">Saumya</a>
-                        <a class="nav-link" href="{{ url_for('aryan') }}">Aryan</a>
-                    </div>
-                </li>
+{#            <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
+{#                <li class="nav-item dropdown">#}
+{#                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#                        About Us#}
+{#                    </a>#}
+{#                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">#}
+{#                        <a class="nav-link" href="{{ url_for('AboutUs') }}">Our Team</a>#}
+{#                        <a class="nav-link" href="{{ url_for('arushi.arushi') }}">Arushi</a>#}
+{#                        <a class="nav-link" href="{{ url_for('prisha.prisha') }}">Prisha</a>#}
+{#                        <a class="nav-link" href="{{ url_for('vidhi.vidhi') }}">Vidhi</a>#}
+{#                        <a class="nav-link" href="{{ url_for('saumya.saumya') }}">Saumya</a>#}
+{#                        <a class="nav-link" href="{{ url_for('aryan') }}">Aryan</a>#}
+{#                    </div>#}
+{#                </li>#}
 
 {#{% block body %}#}
 {#    <style>#}
@@ -286,6 +288,7 @@
     </div>
 
 </nav>
+
 <script>
     function search_data() {
         // fetch standard requires data set to a name-value pair
