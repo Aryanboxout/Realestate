@@ -350,6 +350,10 @@ def chat():
 def results():
     return render_template("results.html")
 
+@app.route('/google_searchbar')
+def google_searchbar():
+    return render_template("google_searchbar.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5222)
