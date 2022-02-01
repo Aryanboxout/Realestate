@@ -298,9 +298,12 @@ def aryansapi():
 
     response = requests.request("GET", url, headers=headers)
     return render_template("api/aryansapi.html", stats=response.json())
+
+
 @app.route('/asc', methods=['GET', 'POST'])
 def asc():
     return render_template("api/asc.html")
+
 
 @app.route('/studytimer', methods=['GET', 'POST'])
 def studytimer():
@@ -315,10 +318,6 @@ def pagetwo():
 @app.route('/crud', methods=['GET', 'POST'])
 def crud():
     return render_template("crud.html")
-
-@app.route('/side', methods=['GET', 'POST'])
-def side():
-    return render_template("side.html")
 
 
 @app.route('/attendance', methods=['GET', 'POST'])
