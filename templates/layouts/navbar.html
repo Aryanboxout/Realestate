@@ -21,7 +21,7 @@
     }
     li {
         position: relative;
-        padding: 0 20px;
+        padding: 0 10px;
         height: 100%;
         display: flex;
     }
@@ -65,14 +65,40 @@
         left: 0;
         transition: all 0.5s;
     }
+
+
+    .button {
+        background-color: white;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .button1 {
+        border: 2px solid #111B2D;
+        background-color: white;
+        color: #111B2D;
+    }
+
+    .button1:hover {
+        background-color: #111B2D;
+        color: white;
+    }
 </style>
 
 
 <!-- CODEFISH -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="https://github.com/arushi10/flask_portfolio">CodeFish</a>
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-    <button onclick="darkMode()">Toggle Dark Mode</button>
+    <a class="navbar-brand" href="https://github.com/arushi10/flask_portfolio" style = "position: relative; left: 16px;">CodeFish</a>
+    <button class = "button button1" onclick="darkMode()" style = "position: relative; left: 7px;">Toggle Dark Mode</button>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -82,7 +108,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <li>
-                <a class="nav-link" href={{ url_for('index') }}>Home</a>
+                <a class="nav-link" style = "position: relative; left: 24px; top: 24px;" href={{ url_for('index') }}>Home</a>
             </li>
             <li>
 
@@ -125,9 +151,8 @@
             {#                    </div>#}
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    New Students
-                </a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style = "position: relative; top: 24px;">
+                    New Students</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ url_for('attendance')}}">Attendance</a>
                     <a class="dropdown-item" href="{{ url_for('registrationform')}}">Registration Form</a>
@@ -137,9 +162,8 @@
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Contact
-                </a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style = "position: relative; top: 24px;">
+                    Contact</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ url_for('contactus')}}">Contact Us</a>
                     <a class="dropdown-item" href="{{ url_for('contactothers')}}">Contact Others</a>
@@ -147,9 +171,8 @@
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Planning
-                </a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style = "position: relative; top: 24px;">
+                    Planning</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ url_for('to_do_list')}}">To-Do List</a>
                     <a class="dropdown-item" href="{{ url_for('calendar')}}">Calendar</a>
@@ -157,9 +180,8 @@
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Study
-                </a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style = "position: relative; top: 24px;">
+                    Study</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ url_for('studytimer')}}">Study Timer</a>
                     <a class="dropdown-item" href="{{ url_for('pagetwo')}}">Study and Health Habits</a>
@@ -167,17 +189,15 @@
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Practice
-                </a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style = "position: relative; top: 24px;">
+                    Practice</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ url_for('crud')}}">Crud</a>
                     <a class="dropdown-item" href="{{ url_for('search')}}">Search</a>
                     <a class="dropdown-item" href="{{ url_for('login')}}">Login</a>
                     <a class="dropdown-item" href="{{ url_for('snake')}}">Snake Game</a>
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        API
-                    </a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style = "position: relative; top: 24px;">
+                        API</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ url_for('joke')}}">Joke API</a>
                         <a class="dropdown-item" href="{{ url_for('jokes')}}">Jokes API Masterlist</a>
@@ -262,10 +282,10 @@
             <div class="col">
                 <div class="mb-3">
                     <div class="form-group">
-                        <form role="search" id="form" method="get" action="results.html">
+                        <form role="search" id="form" method="get" action="results.html" style = "position: relative; top: 24px;">
                             <input type="text" class="form-control" id="term" placeholder="enter search term">
                             <label></label> <!-- used for spacer -->
-                    <button class="btn btn-primary bg-secondary" onclick="search_data();">Search</button>
+                            <button class="btn btn-primary bg-secondary" onclick="search_data();" style = "position: relative; left: 225px; top: -37px;">Search</button>
 {#                            <input type="text" class="form-control" id="term" name='q' placeholder="enter search term">#}
 {#                            <label></label> <!-- used for spacer -->#}
 {#                            <button onclick="search_data();">#}

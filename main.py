@@ -89,7 +89,7 @@ def quiz():
     return render_template("quiz.html", name1="TechFish User")
 
 
-@app.route('/googlemap')
+@app.route('/googlemap/')
 def googlemap():
     return render_template("locations.html")
 
