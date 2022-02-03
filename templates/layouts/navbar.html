@@ -283,15 +283,9 @@
             <div class="col">
                 <div class="mb-3">
                     <div class="form-group">
-                        <form role="search" id="form" method="get" action="results.html" style = "position: relative; top: 24px;">
-                            <input type="text" class="form-control" id="term" placeholder="enter search term">
-                            <label></label> <!-- used for spacer -->
-                            <button class="btn btn-primary bg-secondary" onclick="search_data();" style = "position: relative; left: 225px; top: -37px;">Search</button>
-{#                            <input type="text" class="form-control" id="term" name='q' placeholder="enter search term">#}
-{#                            <label></label> <!-- used for spacer -->#}
-{#                            <button onclick="search_data();">#}
-{#                                <svg viewBox="0 0 1024 1024"><path class="path1" ></path></svg>#}
-{#                            </button>#}
+                        <form action="{{ url_for('results') }}" method="POST">
+                            <input type="text" placeholder="Search.." name="term" id="term">
+                            <button type="submit"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
                 </div>

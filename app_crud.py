@@ -120,6 +120,15 @@ def search():
     return render_template("search.html")
 
 
+@app_crud.route('/results/', methods=['GET', 'POST'])
+def results():
+    if request.form:
+        term = request.form.get("term")
+        if len(term) != 0:
+            return render_template("results.html", term=term)
+    return render_template("results.html", term="")
+
+
 # Search request and response
 @app_crud.route('/search/term/', methods=["POST"])
 def search_term():

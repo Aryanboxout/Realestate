@@ -147,7 +147,7 @@ def addition():
 
 @app.route('/login')
 def login():
-    return render_template("login.html")
+    return render_template("login.html", user_authenticated=False)
 
 @app.route("/logicgates", methods=['GET', 'POST'])
 def logicgates():

@@ -1,15 +1,26 @@
 <!DOCTYPE HTML>
 <html>
+<body onload="search_data('{{ term }}')" >
+<div class="container py-4 bg-primary">
+    <!-- heading -->
+    <header class="pb-3 mb-4 border-bottom">
+        <a href="#" class="d-flex align-items-center text-light text-decoration-none">
+            <span class="fs-4">Search Results</span>
+        </a>
+    </header>
+</div>
+</body>
+<!-- result of search -->
 <div class="container">
     <div class="row" id="result">
     </div>
 </div>
 <script>
-    function search_data() {
+    function search_data(sterm) {
         // fetch standard requires data set to a name-value pair
-        const term = document.getElementById("term");
+        const searched = sterm;
         const body = {
-            term: term.value
+            term: searched
         };
 
         // fetch call with header options
