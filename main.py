@@ -31,7 +31,7 @@ app.register_blueprint(app_prisha)
 # app.register_blueprint(app_y2022)
 
 # connects default URL of server to render kangaroos.html
-@app.route('/')
+@app.route('/home')
 def index():
     return render_template("index.html")
 
@@ -152,6 +152,11 @@ def login():
 @app.route("/logicgates", methods=['GET', 'POST'])
 def logicgates():
     return render_template("mini labs/logicgates.html")
+
+
+@app.route('/')
+def home():
+    return render_template("home.html")
 
 
 @app.route('/joke', methods=['GET', 'POST'])
