@@ -30,6 +30,7 @@ app.register_blueprint(app_arushi)
 app.register_blueprint(app_prisha)
 # app.register_blueprint(app_y2022)
 
+
 # connects default URL of server to render kangaroos.html
 @app.route('/home')
 def index():
