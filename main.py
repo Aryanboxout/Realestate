@@ -333,6 +333,11 @@ def attendance():
     return render_template("attendance.html")
 
 
+@app.route('/map', methods=['GET', 'POST'])
+def map():
+    return render_template("map.html")
+
+
 @app.route('/long_term', methods=['GET', 'POST'])
 def long_term():
     return render_template("long_term.html")
