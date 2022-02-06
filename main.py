@@ -364,6 +364,10 @@ def results():
 def google_searchbar():
     return render_template("google_searchbar.html")
 
+@app.route('/pixel_art')
+def pixel_art():
+    return render_template("pixel_art.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5222)
