@@ -374,6 +374,10 @@ def google_searchbar():
 def pixel_art():
     return render_template("pixel_art.html")
 
+@app.route('/FlashCards')
+def FlashCards():
+    return render_template("FlashCards.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5222)

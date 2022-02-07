@@ -1,4 +1,3 @@
-
 <head>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -100,7 +99,6 @@
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
     <a class="navbar-brand" href="https://github.com/arushi10/flask_portfolio" style = "position: relative; left: 16px;">CodeFish</a>
     <button class = "button button1" onclick="darkMode()" style = "position: relative; left: 7px;">Toggle Dark Mode</button>
-    <button class = "button button1" onclick="googleTranslateElementInit()" style = "position: relative; left: 7px;">Translate</button>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -160,7 +158,6 @@
                     <a class="dropdown-item" href="{{ url_for('registrationform')}}">Registration Form</a>
                     <a class="dropdown-item" href="{{ url_for('DNHSinformative')}}">DNHS Information</a>
                     <a class="dropdown-item" href="{{ url_for('google_searchbar') }}">Google Search Engine</a>
-                    <a class="dropdown-item" href="{{ url_for('map') }}">School Map</a>
                 </div>
             </li>
 
@@ -179,7 +176,6 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ url_for('to_do_list')}}">To-Do List</a>
                     <a class="dropdown-item" href="{{ url_for('calendar')}}">Calendar</a>
-                    <a class="dropdown-item" href="{{ url_for('long_term')}}">Long Term</a>
                 </div>
             </li>
 
@@ -189,6 +185,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ url_for('studytimer')}}">Study Timer</a>
                     <a class="dropdown-item" href="{{ url_for('pagetwo')}}">Study and Health Habits</a>
+                    <a class="dropdown-item" href="{{ url_for('FlashCards')}}">Study Flash Cards</a>
                 </div>
             </li>
 
@@ -200,7 +197,6 @@
                     <a class="dropdown-item" href="{{ url_for('search')}}">Search</a>
                     <a class="dropdown-item" href="{{ url_for('login')}}">Login</a>
                     <a class="dropdown-item" href="{{ url_for('snake')}}">Snake Game</a>
-                    <a class="dropdown-item" href="{{ url_for('pixel_art') }}">Pixel Art</a>
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style = "position: relative; top: 24px;">
                         API</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -287,9 +283,15 @@
             <div class="col">
                 <div class="mb-3">
                     <div class="form-group">
-                        <form action="{{ url_for('results') }}" method="POST">
-                            <input type="text" placeholder="Search.." name="term" id="term">
-                            <button type="submit"><i class="fa fa-search"></i></button>
+                        <form role="search" id="form" method="get" action="results.html" style = "position: relative; top: 24px;">
+                            <input type="text" class="form-control" id="term" placeholder="Enter Search Term">
+                            <label></label> <!-- used for spacer -->
+                            <button class="btn btn-primary bg-secondary" onclick="search_data();" style = "position: relative; left: 225px; top: -37px;">Search</button>
+{#                            <input type="text" class="form-control" id="term" name='q' placeholder="enter search term">#}
+{#                            <label></label> <!-- used for spacer -->#}
+{#                            <button onclick="search_data();">#}
+{#                                <svg viewBox="0 0 1024 1024"><path class="path1" ></path></svg>#}
+{#                            </button>#}
                         </form>
                     </div>
                 </div>
@@ -308,23 +310,6 @@
     </div>
 
 </nav>
-
-<div id="google_translate_element"></div>
-
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-            {pageLanguage: 'en'},
-            'google_translate_element'
-        );
-    }
-</script>
-
-<script type="text/javascript" src=
-        "https://translate.google.com/translate_a/element.js?
-     cb=googleTranslateElementInit">
-</script>
-
 
 <script>
     function search_data() {
