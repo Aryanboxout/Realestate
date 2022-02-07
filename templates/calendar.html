@@ -20,6 +20,9 @@
     />
 
     <style>
+        h2 {
+            font-size: 29px;
+        }
 
         * {
             margin: 0;
@@ -33,13 +36,13 @@
         }
 
         .container {
-        {#width: 100%;#}
         {#height: 100vh;#}
             background-color: #800000;
             color: #eee;
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 60%;
         }
 
         .calendar {
@@ -122,6 +125,11 @@
             cursor: pointer;
         }
 
+        .days div:hover {
+            background-color: #262626;
+            border: 0.2rem solid #777;
+            cursor: pointer;
+        }
 
         .prev-date,
         .next-date {
@@ -129,10 +137,18 @@
         }
 
         .today {
-            background-color: #C0C0C0;
+            background-color: #a6a6a6;
+        }
+
+        .hide{
+            display:none;
+        }
+
+        .show{
+            display:block;
         }
     </style>
-    </head>
+
     <body>
     <div class="container">
         <div class="calendar">
@@ -155,6 +171,10 @@
             </div>
             <div class="days"></div>
         </div>
+            <input style="font-size: 15px; width: 110px; " type="button" name="answer" value="Show Text Field" onclick="onButtonClickShow()"/>
+            <input style="font-size: 15px; width: 110px; " type="button" name="answer" value="Hide Text Field" onclick="onButtonClickHide()"/>
+        <input style="float: right" class="hide" type="text" id="textInput" value="..."/>
+            <input style="font-size: 15px; width: 110px; " type="button" name="answer" value="Done" onclick="onButtonClickShowText()"/>
     </div>
 
     <script>
@@ -240,6 +260,28 @@
         });
 
         renderCalendar();
+
+        //visible
+        function onButtonClickShow() {
+            document.getElementById('textInput').className = "show";
+        }
+        //hide
+        function onButtonClickHide(){
+            document.getElementById('textInput').className= "hide";
+        }
+
+        async function onButtonClickShowText() {
+
+            let promise = new Promise((resolve, reject) => {
+                setTimeout(() => resolve("Done!"), 1000)
+            });
+
+            let result = await promise; // wait until the promise resolves (*)
+
+            alert(result); // "Done!"
+        }
+
+        onButtonClickShowText();
 
     </script>
     </body>
@@ -329,8 +371,6 @@
             ctx.rotate(-pos);
         }
     </script>
-
-    </html>
 
 {% endblock %}
 
