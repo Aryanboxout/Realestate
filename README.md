@@ -33,6 +33,10 @@ This is helpful to new teachers who might want to reference things about our sch
 | Arushi | arushi10 | [@arushi10](https://github.com/arushi10) | [Issues](https://github.com/VidhiKulkarni/flask_portfolio/issues?q=is%3Aopen+assignee%3Aarushi10) | [Journal](https://drive.google.com/drive/folders/1pPq0Z7uad7MY3NJkkuK4iWQqUds9fYDI?usp=sharing) | [Commits](https://github.com/arushi10/codefish/commits?author=arushi10) |
 | Aryan | Aryanboxout | [@Aryanboxout](https://github.com/Aryanboxout) | [Issues](https://github.com/VidhiKulkarni/flask_portfolio/issues?q=is%3Aopen+assignee%3AAryanboxout) | [Journal](https://drive.google.com/drive/folders/1pPq0Z7uad7MY3NJkkuK4iWQqUds9fYDI?usp=sharing) | [Commits](https://github.com/arushi10/codefish/commits?author=Aryanboxout) |
 
+## Week 8 <a id="eight" name="eight"></a>
+Crossover Team collaboration
+[Link to Review Ticket](https://github.com/arushi10/codefish/projects/1#card-77329212)
+
 ## Week 5 <a id="five" name="five"></a>
 Attendance Page with database, Github Page, Calendar, CSS/Bootstrap, search bar, blueprint, deployment, Fetch
 
