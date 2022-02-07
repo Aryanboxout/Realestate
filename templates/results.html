@@ -9,12 +9,13 @@
         </a>
     </header>
 </div>
-</body>
+
 <!-- result of search -->
 <div class="container">
     <div class="row" id="result">
     </div>
 </div>
+</body>
 <script>
     function search_data(sterm) {
         // fetch standard requires data set to a name-value pair
@@ -24,7 +25,7 @@
         };
 
         // fetch call with header options
-        fetch('/crud/search/term/', {
+        fetch('/crud/results/', {
             method: "POST",
             credentials: "include",
             body: JSON.stringify(body),

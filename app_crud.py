@@ -120,7 +120,7 @@ def search():
     return render_template("search.html")
 
 
-@app_crud.route('/results/', methods=['GET', 'POST'])
+@app_crud.route('/results/', methods=["GET", "POST"])
 def results():
     if request.form:
         term = request.form.get("term")
