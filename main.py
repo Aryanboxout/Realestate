@@ -30,8 +30,9 @@ app.register_blueprint(app_arushi)
 app.register_blueprint(app_prisha)
 # app.register_blueprint(app_y2022)
 
+
 # connects default URL of server to render kangaroos.html
-@app.route('/')
+@app.route('/home')
 def index():
     return render_template("index.html")
 
@@ -89,7 +90,7 @@ def quiz():
     return render_template("quiz.html", name1="TechFish User")
 
 
-@app.route('/googlemap')
+@app.route('/googlemap/')
 def googlemap():
     return render_template("locations.html")
 
@@ -145,10 +146,18 @@ def colors():
 def addition():
     return render_template("mini labs/addition.html")
 
+@app.route('/login')
+def login():
+    return render_template("login.html", user_authenticated=False)
 
 @app.route("/logicgates", methods=['GET', 'POST'])
 def logicgates():
     return render_template("mini labs/logicgates.html")
+
+
+@app.route('/')
+def home():
+    return render_template("home.html")
 
 
 @app.route('/joke', methods=['GET', 'POST'])
@@ -325,14 +334,19 @@ def attendance():
     return render_template("attendance.html")
 
 
+@app.route('/map', methods=['GET', 'POST'])
+def map():
+    return render_template("map.html")
+
+
+@app.route('/long_term', methods=['GET', 'POST'])
+def long_term():
+    return render_template("long_term.html")
+
+
 @app.route('/search', methods=['GET', 'POST'])
 def search():
     return render_template("search.html")
-
-
-@app.route('/realsearch', methods=['GET', 'POST'])
-def realsearch():
-    return render_template("realsearch.html")
 
 
 @app.route('/DNHSinformative', methods=['GET', 'POST'])
@@ -344,7 +358,6 @@ def DNHSinformative():
 def calender():
     return render_template("calendar.html")
 
-<<<<<<<<< Temporary merge branch 1
 @app.route('/chat')
 def chat():
     return render_template("chat.html")
@@ -352,6 +365,18 @@ def chat():
 @app.route('/results', methods=['GET', 'POST'])
 def results():
     return render_template("results.html")
+
+@app.route('/google_searchbar')
+def google_searchbar():
+    return render_template("google_searchbar.html")
+
+@app.route('/pixel_art')
+def pixel_art():
+    return render_template("pixel_art.html")
+
+@app.route('/FlashCards')
+def FlashCards():
+    return render_template("FlashCards.html")
 
 
 if __name__ == "__main__":
