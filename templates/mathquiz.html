@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<style>
+
+
+    @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    html {
+        font-size: 10px;
+        font-family: 'Montserrat', sans-serif;
+        scroll-behavior: smooth;
+    }
+    a {
+        text-decoration: none;
+    }
+    .container {
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    p {
+        color: black;
+        font-size: 1.4rem;
+        margin-top: 5px;
+        line-height: 2.5rem;
+        font-weight: 300;
+        letter-spacing: 0.05rem;
+    }
+    .section-title {
+        font-size: 4rem;
+        font-weight: 300;
+        color: black;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        text-align: center;
+    }
+    .section-title span {
+        color: crimson;
+    }
+
+    .cta {
+        display: inline-block;
+        padding: 10px 30px;
+        color: white;
+        background-color: transparent;
+        border: 2px solid crimson;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        margin-top: 30px;
+        transition: 0.3s ease;
+        transition-property: background-color, color;
+    }
+    .cta:hover {
+        color: white;
+        background-color: crimson;
+    }
+    .brand h1 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: white;
+    }
+    .brand h1 span {
+        color: crimson;
+    }
+
+    /* Header section */
+    #header {
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: auto;
+    }
+    #header .header {
+        min-height: 8vh;
+        background-color: rgba(31, 30, 30, 0.24);
+        transition: 0.3s ease background-color;
+    }
+    #header .nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        max-width: 1300px;
+        padding: 0 10px;
+    }
+    #header .nav-list ul {
+        list-style: none;
+        position: absolute;
+        background-color: rgb(31, 30, 30);
+        width: 100vw;
+        height: 100vh;
+        left: 100%;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        overflow-x: hidden;
+        transition: 0.5s ease left;
+    }
+    #header .nav-list ul.active {
+        left: 0%;
+    }
+    #header .nav-list ul a {
+        font-size: 2.5rem;
+        font-weight: 500;
+        letter-spacing: 0.2rem;
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        padding: 20px;
+        display: block;
+    }
+    #header .nav-list ul a::after {
+        content: attr(data-after);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        color: rgba(240, 248, 255, 0.021);
+        font-size: 13rem;
+        letter-spacing: 50px;
+        z-index: -1;
+        transition: 0.3s ease letter-spacing;
+    }
+    #header .nav-list ul li:hover a::after {
+        transform: translate(-50%, -50%) scale(1);
+        letter-spacing: initial;
+    }
+    #header .nav-list ul li:hover a {
+        color: crimson;
+    }
+    #header .hamburger {
+        height: 60px;
+        width: 60px;
+        display: inline-block;
+        border: 3px solid white;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        cursor: pointer;
+        transform: scale(0.8);
+        margin-right: 20px;
+    }
+    #header .hamburger:after {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        border: 3px solid white;
+        animation: hamburger_puls 1s ease infinite;
+    }
+    #header .hamburger .bar {
+        height: 2px;
+        width: 30px;
+        position: relative;
+        background-color: white;
+        z-index: -1;
+    }
+    #header .hamburger .bar::after,
+    #header .hamburger .bar::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        background-color: white;
+        transition: 0.3s ease;
+        transition-property: top, bottom;
+    }
+    #header .hamburger .bar::after {
+        top: 8px;
+    }
+    #header .hamburger .bar::before {
+        bottom: 8px;
+    }
+    #header .hamburger.active .bar::before {
+        bottom: 0;
+    }
+    #header .hamburger.active .bar::after {
+        top: 0;
+    }
+    /* End Header section */
+
+    /* Hero Section */
+    #hero {
+        background-image: url(./img/hero-bg.png);
+        background-size: cover;
+        background-position: top center;
+        position: relative;
+        z-index: 1;
+    }
+    #hero::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        opacity: 0.7;
+        z-index: -1;
+    }
+    #hero .hero {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 50px;
+        justify-content: flex-start;
+    }
+    #hero h1 {
+        display: block;
+        width: fit-content;
+        font-size: 4rem;
+        position: relative;
+        color: transparent;
+        animation: text_reveal 0.5s ease forwards;
+        animation-delay: 1s;
+    }
+    #hero h1:nth-child(1) {
+        animation-delay: 1s;
+    }
+    #hero h1:nth-child(2) {
+        animation-delay: 2s;
+    }
+    #hero h1:nth-child(3) {
+        animation: text_reveal_name 0.5s ease forwards;
+        animation-delay: 3s;
+    }
+    #hero h1 span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        background-color: crimson;
+        animation: text_reveal_box 1s ease;
+        animation-delay: 0.5s;
+    }
+    #hero h1:nth-child(1) span {
+        animation-delay: 0.5s;
+    }
+    #hero h1:nth-child(2) span {
+        animation-delay: 1.5s;
+    }
+    #hero h1:nth-child(3) span {
+        animation-delay: 2.5s;
+    }
+
+    /* End Hero Section */
+
+    /* Services Section */
+    #services .services {
+        flex-direction: column;
+        text-align: center;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 100px 0;
+    }
+    #services .service-top {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    #services .service-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+    #services .service-item {
+        flex-basis: 80%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 30px;
+        border-radius: 10px;
+        background-image: url(./img/img-1.png);
+        background-size: cover;
+        margin: 10px 5%;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+    }
+    #services .service-item::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+        opacity: 0.9;
+        z-index: -1;
+    }
+    #services .service-bottom .icon {
+        height: 80px;
+        width: 80px;
+        margin-bottom: 20px;
+    }
+    #services .service-item h2 {
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+    #services .service-item p {
+        color: white;
+        text-align: left;
+    }
+    /* End Services Section */
+
+    /* Projects section */
+    #projects .projects {
+        flex-direction: column;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 100px 0;
+    }
+    #projects .projects-header h1 {
+        margin-bottom: 50px;
+    }
+    #projects .all-projects {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #projects .project-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 80%;
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    #projects .project-info {
+        padding: 30px;
+        flex-basis: 50%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+        color: white;
+    }
+    #projects .project-info h1 {
+        font-size: 4rem;
+        font-weight: 500;
+    }
+    #projects .project-info h2 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+    #projects .project-info p {
+        color: white;
+    }
+    #projects .project-img {
+        flex-basis: 50%;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+    }
+    #projects .project-img:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+        opacity: 0.7;
+    }
+    #projects .project-img img {
+        transition: 0.3s ease transform;
+    }
+    #projects .project-item:hover .project-img img {
+        transform: scale(1.1);
+    }
+    /* End Projects section */
+
+    /* About Section */
+    #about .about {
+        flex-direction: column-reverse;
+        text-align: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 100px 20px;
+    }
+    #about .col-left {
+        width: 250px;
+        height: 360px;
+    }
+    #about .col-right {
+        width: 100%;
+    }
+    #about .col-right h2 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        letter-spacing: 0.2rem;
+        margin-bottom: 10px;
+    }
+    #about .col-right p {
+        margin-bottom: 20px;
+    }
+    #about .col-right .cta {
+        color: black;
+        margin-bottom: 50px;
+        padding: 10px 20px;
+        font-size: 2rem;
+    }
+    #about .col-left .about-img {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        border: 10px solid white;
+    }
+    #about .col-left .about-img::after {
+        content: '';
+        position: absolute;
+        left: -33px;
+        top: 19px;
+        height: 98%;
+        width: 98%;
+        border: 7px solid crimson;
+        z-index: -1;
+    }
+    /* End About Section */
+
+    /* contact Section */
+    #contact .contact {
+        flex-direction: column;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 90%;
+    }
+    #contact .contact-items {
+        /* max-width: 400px; */
+        width: 100%;
+    }
+    #contact .contact-item {
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        padding: 30px;
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0px 0px 18px 0 #0000002c;
+        transition: 0.3s ease box-shadow;
+    }
+    #contact .contact-item:hover {
+        box-shadow: 0px 0px 5px 0 #0000002c;
+    }
+    #contact .icon {
+        width: 70px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    #contact .contact-info h1 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    #contact .contact-info h2 {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        font-weight: 500;
+    }
+    /*End contact Section */
+
+    /* Footer */
+    #footer {
+        background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    }
+    #footer .footer {
+        min-height: 200px;
+        flex-direction: column;
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+    #footer h2 {
+        color: white;
+        font-weight: 500;
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #footer .social-icon {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    #footer .social-item {
+        height: 50px;
+        width: 50px;
+        margin: 0 5px;
+    }
+    #footer .social-item img {
+        filter: grayscale(1);
+        transition: 0.3s ease filter;
+    }
+    #footer .social-item:hover img {
+        filter: grayscale(0);
+    }
+    #footer p {
+        color: white;
+        font-size: 1.3rem;
+    }
+    /* End Footer */
+
+    /* Keyframes */
+    @keyframes hamburger_puls {
+        0% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(1.4);
+        }
+    }
+    @keyframes text_reveal_box {
+        50% {
+            width: 100%;
+            left: 0;
+        }
+        100% {
+            width: 0;
+            left: 100%;
+        }
+    }
+    @keyframes text_reveal {
+        100% {
+            color: white;
+        }
+    }
+    @keyframes text_reveal_name {
+        100% {
+            color: crimson;
+            font-weight: 500;
+        }
+    }
+    /* End Keyframes */
+
+    /* Media Query For Tablet */
+    @media only screen and (min-width: 768px) {
+        .cta {
+            font-size: 2.5rem;
+            padding: 20px 60px;
+        }
+        h1.section-title {
+            font-size: 6rem;
+        }
+
+        /* Hero */
+        #hero h1 {
+            font-size: 7rem;
+        }
+        /* End Hero */
+
+        /* Services Section */
+        #services .service-bottom .service-item {
+            flex-basis: 45%;
+            margin: 2.5%;
+        }
+        /* End Services Section */
+
+        /* Project */
+        #projects .project-item {
+            flex-direction: row;
+        }
+        #projects .project-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        #projects .project-item {
+            height: 400px;
+            margin: 0;
+            width: 100%;
+            border-radius: 0;
+        }
+        #projects .all-projects .project-info {
+            height: 100%;
+        }
+        #projects .all-projects .project-img {
+            height: 100%;
+        }
+        /* End Project */
+
+        /* About */
+        #about .about {
+            flex-direction: row;
+        }
+        #about .col-left {
+            width: 600px;
+            height: 400px;
+            padding-left: 60px;
+        }
+        #about .about .col-left .about-img::after {
+            left: -45px;
+            top: 34px;
+            height: 98%;
+            width: 98%;
+            border: 10px solid crimson;
+        }
+        #about .col-right {
+            text-align: left;
+            padding: 30px;
+        }
+        #about .col-right h1 {
+            text-align: left;
+        }
+        /* End About */
+
+        /* contact  */
+        #contact .contact {
+            flex-direction: column;
+            padding: 100px 0;
+            align-items: center;
+            justify-content: center;
+            min-width: 20vh;
+        }
+        #contact .contact-items {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 0;
+        }
+        #contact .contact-item {
+            width: 30%;
+            margin: 0;
+            flex-direction: row;
+        }
+        #contact .contact-item .icon {
+            height: 100px;
+            width: 100px;
+        }
+        #contact .contact-item .icon img {
+            object-fit: contain;
+        }
+        #contact .contact-item .contact-info {
+            width: 100%;
+            text-align: left;
+            padding-left: 20px;
+        }
+        /* End contact  */
+    }
+    /* End Media Query For Tablet */
+
+    /* Media Query For Desktop */
+    @media only screen and (min-width: 1200px) {
+        /* header */
+        #header .hamburger {
+            display: none;
+        }
+        #header .nav-list ul {
+            position: initial;
+            display: block;
+            height: auto;
+            width: fit-content;
+            background-color: transparent;
+        }
+        #header .nav-list ul li {
+            display: inline-block;
+        }
+        #header .nav-list ul li a {
+            font-size: 1.8rem;
+        }
+        #header .nav-list ul a:after {
+            display: none;
+        }
+        /* End header */
+
+        #services .service-bottom .service-item {
+            flex-basis: 22%;
+            margin: 1.5%;
+        }
+    }
+    /* End  Media Query For Desktop */
+    html {
+        line-height: 1.15; /* 1 */
+        -webkit-text-size-adjust: 100%; /* 2 */
+    }
+
+    /* Sections
+       ========================================================================== */
+
+    /**
+     * Remove the margin in all browsers.
+     */
+
+    body {
+        margin: 0;
+    }
+
+    /**
+     * Render the `main` element consistently in IE.
+     */
+
+    main {
+        display: block;
+    }
+
+    /**
+     * Correct the font size and margin on `h1` elements within `section` and
+     * `article` contexts in Chrome, Firefox, and Safari.
+     */
+
+    h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+    }
+
+    /* Grouping content
+       ========================================================================== */
+
+    /**
+     * 1. Add the correct box sizing in Firefox.
+     * 2. Show the overflow in Edge and IE.
+     */
+
+    hr {
+        box-sizing: content-box; /* 1 */
+        height: 0; /* 1 */
+        overflow: visible; /* 2 */
+    }
+
+    /**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+
+    pre {
+        font-family: monospace, monospace; /* 1 */
+        font-size: 1em; /* 2 */
+    }
+
+    /* Text-level semantics
+       ========================================================================== */
+
+    /**
+     * Remove the gray background on active links in IE 10.
+     */
+
+    a {
+        background-color: transparent;
+    }
+
+    /**
+     * 1. Remove the bottom border in Chrome 57-
+     * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+     */
+
+    abbr[title] {
+        border-bottom: none; /* 1 */
+        text-decoration: underline; /* 2 */
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted; /* 2 */
+    }
+
+    /**
+     * Add the correct font weight in Chrome, Edge, and Safari.
+     */
+
+    b,
+    strong {
+        font-weight: bolder;
+    }
+
+    /**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+
+    code,
+    kbd,
+    samp {
+        font-family: monospace, monospace; /* 1 */
+        font-size: 1em; /* 2 */
+    }
+
+    /**
+     * Add the correct font size in all browsers.
+     */
+
+    small {
+        font-size: 80%;
+    }
+
+    /**
+     * Prevent `sub` and `sup` elements from affecting the line height in
+     * all browsers.
+     */
+
+    sub,
+    sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+    }
+
+    sub {
+        bottom: -0.25em;
+    }
+
+    sup {
+        top: -0.5em;
+    }
+
+    /* Embedded content
+       ========================================================================== */
+
+    /**
+     * Remove the border on images inside links in IE 10.
+     */
+
+    img {
+        border-style: none;
+    }
+
+    /* Forms
+       ========================================================================== */
+
+    /**
+     * 1. Change the font styles in all browsers.
+     * 2. Remove the margin in Firefox and Safari.
+     */
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        font-family: inherit; /* 1 */
+        font-size: 100%; /* 1 */
+        line-height: 1.15; /* 1 */
+        margin: 0; /* 2 */
+    }
+
+    /**
+     * Show the overflow in IE.
+     * 1. Show the overflow in Edge.
+     */
+
+    button,
+    input { /* 1 */
+        overflow: visible;
+    }
+
+    /**
+     * Remove the inheritance of text transform in Edge, Firefox, and IE.
+     * 1. Remove the inheritance of text transform in Firefox.
+     */
+
+    button,
+    select { /* 1 */
+        text-transform: none;
+    }
+
+    /**
+     * Correct the inability to style clickable types in iOS and Safari.
+     */
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+        -webkit-appearance: button;
+    }
+
+    /**
+     * Remove the inner border and padding in Firefox.
+     */
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+    }
+
+    /**
+     * Restore the focus styles unset by the previous rule.
+     */
+
+    button:-moz-focusring,
+    [type="button"]:-moz-focusring,
+    [type="reset"]:-moz-focusring,
+    [type="submit"]:-moz-focusring {
+        outline: 1px dotted ButtonText;
+    }
+
+    /**
+     * Correct the padding in Firefox.
+     */
+
+    fieldset {
+        padding: 0.35em 0.75em 0.625em;
+    }
+
+    /**
+     * 1. Correct the text wrapping in Edge and IE.
+     * 2. Correct the color inheritance from `fieldset` elements in IE.
+     * 3. Remove the padding so developers are not caught out when they zero out
+     *    `fieldset` elements in all browsers.
+     */
+
+    legend {
+        box-sizing: border-box; /* 1 */
+        color: inherit; /* 2 */
+        display: table; /* 1 */
+        max-width: 100%; /* 1 */
+        padding: 0; /* 3 */
+        white-space: normal; /* 1 */
+    }
+
+    /**
+     * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+
+    progress {
+        vertical-align: baseline;
+    }
+
+    /**
+     * Remove the default vertical scrollbar in IE 10+.
+     */
+
+    textarea {
+        overflow: auto;
+    }
+
+    /**
+     * 1. Add the correct box sizing in IE 10.
+     * 2. Remove the padding in IE 10.
+     */
+
+    [type="checkbox"],
+    [type="radio"] {
+        box-sizing: border-box; /* 1 */
+        padding: 0; /* 2 */
+    }
+
+    /**
+     * Correct the cursor style of increment and decrement buttons in Chrome.
+     */
+
+    [type="number"]::-webkit-inner-spin-button,
+    [type="number"]::-webkit-outer-spin-button {
+        height: auto;
+    }
+
+    /**
+     * 1. Correct the odd appearance in Chrome and Safari.
+     * 2. Correct the outline style in Safari.
+     */
+
+    [type="search"] {
+        -webkit-appearance: textfield; /* 1 */
+        outline-offset: -2px; /* 2 */
+    }
+
+    /**
+     * Remove the inner padding in Chrome and Safari on macOS.
+     */
+
+    [type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+    }
+
+    /**
+     * 1. Correct the inability to style clickable types in iOS and Safari.
+     * 2. Change font properties to `inherit` in Safari.
+     */
+
+    ::-webkit-file-upload-button {
+        -webkit-appearance: button; /* 1 */
+        font: inherit; /* 2 */
+    }
+
+    /* Interactive
+       ========================================================================== */
+
+    /*
+     * Add the correct display in Edge, IE 10+, and Firefox.
+     */
+
+    details {
+        display: block;
+    }
+
+    /*
+     * Add the correct display in all browsers.
+     */
+
+    summary {
+        display: list-item;
+    }
+
+    /* Misc
+       ========================================================================== */
+
+    /**
+     * Add the correct display in IE 10+.
+     */
+
+    template {
+        display: none;
+    }
+
+    /**
+     * Add the correct display in IE 10.
+     */
+
+    [hidden] {
+        display: none;
+    }
+
+    /**
+     * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+     * A thin layer on top of normalize.css that provides a starting point more
+     * suitable for web applications.
+     */
+
+    /**
+     * 1. Prevent padding and border from affecting element width
+     * https://goo.gl/pYtbK7
+     * 2. Change the default font family in all browsers (opinionated)
+     */
+
+    html {
+        box-sizing: border-box; /* 1 */
+        font-family: sans-serif; /* 2 */
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+
+    /**
+     * Removes the default spacing and border for appropriate elements.
+     */
+
+    blockquote,
+    dl,
+    dd,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    figure,
+    p,
+    pre {
+        margin: 0;
+    }
+
+    button {
+        background: transparent;
+        padding: 0;
+    }
+
+    /**
+     * Work around a Firefox/IE bug where the transparent `button` background
+     * results in a loss of the default `button` focus styles.
+     */
+
+    button:focus {
+        outline: 1px dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+    }
+
+    sup {
+        top: -0.5em;
+    }
+
+    /* Embedded content
+       ========================================================================== */
+
+    /**
+     * Remove the border on images inside links in IE 10.
+     */
+
+    img {
+        border-style: none;
+    }
+
+    /* Forms
+       ========================================================================== */
+
+    /**
+     * 1. Change the font styles in all browsers.
+     * 2. Remove the margin in Firefox and Safari.
+     */
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        font-family: inherit; /* 1 */
+        font-size: 100%; /* 1 */
+        line-height: 1.15; /* 1 */
+        margin: 0; /* 2 */
+    }
+
+    /**
+     * Show the overflow in IE.
+     * 1. Show the overflow in Edge.
+     */
+
+    button,
+    input { /* 1 */
+        overflow: visible;
+    }
+
+    /**
+     * Remove the inheritance of text transform in Edge, Firefox, and IE.
+     * 1. Remove the inheritance of text transform in Firefox.
+     */
+
+    button,
+    select { /* 1 */
+        text-transform: none;
+    }
+
+    /**
+     * Correct the inability to style clickable types in iOS and Safari.
+     */
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+        -webkit-appearance: button;
+    }
+
+    /**
+     * Remove the inner border and padding in Firefox.
+     */
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+    }
+
+    /**
+     * Restore the focus styles unset by the previous rule.
+     */
+
+    button:-moz-focusring,
+    [type="button"]:-moz-focusring,
+    [type="reset"]:-moz-focusring,
+    [type="submit"]:-moz-focusring {
+        outline: 1px dotted ButtonText;
+    }
+
+    /**
+     * Correct the padding in Firefox.
+     */
+
+    fieldset {
+        padding: 0.35em 0.75em 0.625em;
+    }
+
+    /**
+     * 1. Correct the text wrapping in Edge and IE.
+     * 2. Correct the color inheritance from `fieldset` elements in IE.
+     * 3. Remove the padding so developers are not caught out when they zero out
+     *    `fieldset` elements in all browsers.
+     */
+
+    legend {
+        box-sizing: border-box; /* 1 */
+        color: inherit; /* 2 */
+        display: table; /* 1 */
+        max-width: 100%; /* 1 */
+        padding: 0; /* 3 */
+        white-space: normal; /* 1 */
+    }
+
+    /**
+     * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+
+    progress {
+        vertical-align: baseline;
+    }
+
+    /**
+     * Remove the default vertical scrollbar in IE 10+.
+     */
+
+    textarea {
+        overflow: auto;
+    }
+
+    /**
+     * 1. Add the correct box sizing in IE 10.
+     * 2. Remove the padding in IE 10.
+     */
+
+    [type="checkbox"],
+    [type="radio"] {
+        box-sizing: border-box; /* 1 */
+        padding: 0; /* 2 */
+    }
+
+    /**
+     * Correct the cursor style of increment and decrement buttons in Chrome.
+     */
+
+    [type="number"]::-webkit-inner-spin-button,
+    [type="number"]::-webkit-outer-spin-button {
+        height: auto;
+    }
+
+    /**
+     * 1. Correct the odd appearance in Chrome and Safari.
+     * 2. Correct the outline style in Safari.
+     */
+
+    [type="search"] {
+        -webkit-appearance: textfield; /* 1 */
+        outline-offset: -2px; /* 2 */
+    }
+
+    /**
+     * Remove the inner padding in Chrome and Safari on macOS.
+     */
+
+    [type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+    }
+
+    /**
+     * 1. Correct the inability to style clickable types in iOS and Safari.
+     * 2. Change font properties to `inherit` in Safari.
+     */
+
+    ::-webkit-file-upload-button {
+        -webkit-appearance: button; /* 1 */
+        font: inherit; /* 2 */
+    }
+
+    /* Interactive
+       ========================================================================== */
+
+    /*
+     * Add the correct display in Edge, IE 10+, and Firefox.
+     */
+
+    details {
+        display: block;
+    }
+
+    /*
+     * Add the correct display in all browsers.
+     */
+
+    summary {
+        display: list-item;
+    }
+
+    /* Misc
+       ========================================================================== */
+
+    /**
+     * Add the correct display in IE 10+.
+     */
+
+    template {
+        display: none;
+    }
+
+    /**
+     * Add the correct display in IE 10.
+     */
+
+    [hidden] {
+        display: none;
+    }
+
+    /**
+     * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+     * A thin layer on top of normalize.css that provides a starting point more
+     * suitable for web applications.
+     */
+
+    /**
+     * 1. Prevent padding and border from affecting element width
+     * https://goo.gl/pYtbK7
+     * 2. Change the default font family in all browsers (opinionated)
+     */
+
+    html {
+        box-sizing: border-box; /* 1 */
+        font-family: sans-serif; /* 2 */
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+
+    /**
+     * Removes the default spacing and border for appropriate elements.
+     */
+
+    blockquote,
+    dl,
+    dd,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    figure,
+    p,
+    pre {
+        margin: 0;
+    }
+
+    button {
+        background: transparent;
+        padding: 0;
+    }
+
+    /**
+     * Work around a Firefox/IE bug where the transparent `button` background
+     * results in a loss of the default `button` focus styles.
+     */
+
+    button:focus {
+        outline: 1px dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+    }
+
+
+    .sm\:focus\:placeholder-purple-800:focus:-ms-input-placeholder {
+        color: #553c9a;
+    }
+
+    .sm\:focus\:placeholder-purple-800:focus::-ms-input-placeholder {
+        color: #553c9a;
+    }
+
+    .sm\:focus\:placeholder-purple-800:focus::placeholder {
+        color: #553c9a;
+    }
+
+    .sm\:focus\:placeholder-purple-900:focus::-webkit-input-placeholder {
+        color: #44337a;
+    }
+
+    .sm\:focus\:placeholder-purple-900:focus::-moz-placeholder {
+        color: #44337a;
+    }
+
+    .sm\:focus\:placeholder-purple-900:focus:-ms-input-placeholder {
+        color: #44337a;
+    }
+
+    .sm\:focus\:placeholder-purple-900:focus::-ms-input-placeholder {
+        color: #44337a;
+    }
+
+    .sm\:focus\:placeholder-purple-900:focus::placeholder {
+        color: #44337a;
+    }
+
+    .sm\:focus\:placeholder-pink-100:focus::-webkit-input-placeholder {
+        color: #fff5f7;
+    }
+
+    .sm\:focus\:placeholder-pink-100:focus::-moz-placeholder {
+        color: #fff5f7;
+    }
+
+    .sm\:focus\:placeholder-pink-100:focus:-ms-input-placeholder {
+        color: #fff5f7;
+    }
+
+    .sm\:focus\:placeholder-pink-100:focus::-ms-input-placeholder {
+        color: #fff5f7;
+    }
+
+    .sm\:focus\:placeholder-pink-100:focus::placeholder {
+        color: #fff5f7;
+    }
+
+    .sm\:focus\:placeholder-pink-200:focus::-webkit-input-placeholder {
+        color: #fed7e2;
+    }
+
+    .sm\:focus\:placeholder-pink-200:focus::-moz-placeholder {
+        color: #fed7e2;
+    }
+
+    .sm\:focus\:placeholder-pink-200:focus:-ms-input-placeholder {
+        color: #fed7e2;
+    }
+
+    .sm\:focus\:placeholder-pink-200:focus::-ms-input-placeholder {
+        color: #fed7e2;
+    }
+
+    .sm\:focus\:placeholder-pink-200:focus::placeholder {
+        color: #fed7e2;
+    }
+
+    .sm\:focus\:placeholder-pink-300:focus::-webkit-input-placeholder {
+        color: #fbb6ce;
+    }
+
+    .sm\:focus\:placeholder-pink-300:focus::-moz-placeholder {
+        color: #fbb6ce;
+    }
+
+    .sm\:focus\:placeholder-pink-300:focus:-ms-input-placeholder {
+        color: #fbb6ce;
+    }
+
+    .sm\:focus\:placeholder-pink-300:focus::-ms-input-placeholder {
+        color: #fbb6ce;
+    }
+
+    .sm\:focus\:placeholder-pink-300:focus::placeholder {
+        color: #fbb6ce;
+    }
+
+    .sm\:focus\:placeholder-pink-400:focus::-webkit-input-placeholder {
+        color: #f687b3;
+    }
+
+    .sm\:focus\:placeholder-pink-400:focus::-moz-placeholder {
+        color: #f687b3;
+    }
+
+    .sm\:focus\:placeholder-pink-400:focus:-ms-input-placeholder {
+        color: #f687b3;
+    }
+
+    .sm\:focus\:placeholder-pink-400:focus::-ms-input-placeholder {
+        color: #f687b3;
+    }
+
+    .sm\:focus\:placeholder-pink-400:focus::placeholder {
+        color: #f687b3;
+    }
+
+    .sm\:focus\:placeholder-pink-500:focus::-webkit-input-placeholder {
+        color: #ed64a6;
+    }
+
+    .sm\:focus\:placeholder-pink-500:focus::-moz-placeholder {
+        color: #ed64a6;
+    }
+
+    .sm\:focus\:placeholder-pink-500:focus:-ms-input-placeholder {
+        color: #ed64a6;
+
+    </style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+<!--Navbar-->
+<div class="bg-indigo-900 text-center py-4 lg:px-4">
+    <div class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
+         role="alert">
+        <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">Enjoy</span>
+        <span class="font-semibold mr-2 text-left flex-auto">Multiplication Quiz Game</span>
+        <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z" />
+        </svg>
+    </div>
+</div>
+
+<!--End Game Notification-->
+<div class="notification notification-display-none">
+    <div class="notification-text bounceUpDown">
+        <div class="main-content">
+            <div class="icon">
+                <p>Game Over</p>
+                <img src="images/close.svg" alt="" width="27px">
+            </div>
+            <div class="notification-score-div">
+                <p>Your Score is: <span class="notification-score">000</span></p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Main Container-->
+<div class="container">
+    <!--Left Section of Container-->
+    <div class="left-section">
+
+        <!--Tryagain Section-->
+        <div class="t notification-display-none">
+            <p>Try Again</p>
+        </div>
+
+        <!--question subsection-->
+        <div class="question">
+            <p>?</p>
+        </div>
+
+        <!--instruction subsection-->
+        <div class="instruction">
+            <p>Select a correct option</p>
+        </div>
+
+        <!--Options subsection-->
+        <div class="option">
+            <!--Option A-->
+            <div class="option-a">A</div>
+            <!--Option B-->
+            <div class="option-b">B</div>
+            <!--Option C-->
+            <div class="option-c">C</div>
+            <!--Option D-->
+            <div class="option-d">D</div>
+        </div>
+    </div>
+
+    <!--Left Section End-->
+
+    <!--Right Section of Container-->
+    <div class="right-section">
+
+        <!--timer subsection-->
+        <div class="timer">
+            <p class="notification-display-none">___</p>
+            <p class="seconds">Seconds</p>
+        </div>
+        <!--Remaining Time Notification-->
+        <p class="remaining-time">Remaining Time</p>
+
+        <!--Score-->
+        <div class="score">___</div>
+        <p class="current-score-notification">Score</p>
+
+        <!--reset button-->
+        <button type="button" class="start-button">Start Game</button>
+    </div>
+    <!--Right Section End-->
+</div>
+<!--Main Container End-->
+
+<script src="js/app.js"></script>
+</body>
+
+
+</html>
+
+<script>
+
+    /**
+     Multiplication Quiz Game
+     Code and Designed by: Aamir Khan Jadoon
+     Date: 15 - 8 - 2019
+     */
+
+// Elements
+    let notificationScore = document.querySelector(".notification-score");
+    let gameOverNotification = document.querySelector(".notification");
+    let closeicon = document.querySelector(".icon>img");
+    let questionBox = document.querySelector(".question>p");
+    let optionElement = document.querySelector(".option");
+    let optionA = document.querySelector(".option-a");
+    let optionB = document.querySelector(".option-b");
+    let optionC = document.querySelector(".option-c");
+    let optionD = document.querySelector(".option-d");
+    let timer = document.querySelector(".timer>p");
+    let score = document.querySelector(".score");
+    let startButton = document.querySelector("button");
+    let tryAgainSection = document.querySelector(".t");
+    let firstNumber = 0;
+    let secondNumber = 0;
+    let time = 60;
+    let scoreV = 0;
+    let flagForOptions = 0;
+
+    // Notification Display Game Over
+    function gameOver(close) {
+        if (close == 0) {
+            notificationScore.textContent = scoreV;
+            gameOverNotification.classList.remove("notification-display-none");
+            resetOptionClassList();
+            questionBox.textContent = "--";
+            score.textContent = "--";
+            timer.textContent = "--";
+            tryAgainSection.classList.add("notification-display-none");
+            tryAgainSection.classList.remove("tryAgainSection");
+            optionA.textContent = "--";
+            optionB.textContent = "--";
+            optionC.textContent = "--";
+            optionD.textContent = "--";
+            flagForOptions = 0;
+        }
+        // close the window if close == 2
+        if (close == 2) {
+            gameOverNotification.classList.add("notification-display-none");
+            scoreV = 0;
+            time = 60;
+            startGame();
+        }
+    }
+    // close gameover window
+    closeicon.addEventListener("click", () => {
+        gameOver(2);
+    });
+
+    // Get a Random Number
+    function getRandomNumber() {
+        return Math.floor(Math.random() * 9) + 1; //1 and 99
+    }
+
+    // Generate a Random Question
+    function generateQuestion() {
+        firstNumber = getRandomNumber();
+        secondNumber = getRandomNumber();
+        questionBox.textContent = firstNumber + " x " + secondNumber;
+        generateOptions(firstNumber, secondNumber);
+    }
+
+    // Generate Random Option
+    function generateOptions(firstNumber, secondNumber) {
+        let options = [
+            getRandomNumber() * getRandomNumber(),
+            getRandomNumber() * getRandomNumber(),
+            getRandomNumber() * getRandomNumber(),
+            firstNumber * secondNumber
+        ];
+        let optionsReference = [optionA, optionB, optionC, optionD];
+        let optionschoice = [];
+
+        while (optionschoice.length < 4) {
+            let x = Math.floor(Math.random() * 4);
+            if (!optionschoice.includes(x)) {
+                optionschoice.push(x);
+            }
+        }
+
+        for (let i in optionschoice) {
+            optionsReference[i].textContent = options[optionschoice[i]];
+        }
+    }
+
+    // start/reset button
+    let flag;
+    let t;
+
+    function startTimer() {
+        t = setInterval(() => {
+            //Update Score element TextContent
+            timer.textContent = time;
+
+            if (flag == 0) {
+                clearInterval(t);
+                timer.textContent = "---";
+            } else if (time == 0) {
+                clearInterval(t);
+                gameOver(0);
+            }
+            time--;
+        }, 1000); // end of setInterval()
+    } // end of startTimer()
+
+    startButton.addEventListener("click", () => {
+        if (startButton.textContent == "Start Game") {
+            startButton.textContent = "Reset Game";
+            startButton.classList.remove("start-button");
+            startButton.classList.add("reset-button");
+            timer.classList.remove("notification-display-none");
+            flag = 1;
+            flagForOptions = 1;
+            time = 60;
+            generateQuestion();
+            tryAgainSection.classList.add("notification-display-none");
+            tryAgainSection.classList.remove("tryAgainSection");
+            startTimer();
+        } else if (startButton.textContent == "Reset Game") {
+            startGame();
+        }
+    });
+
+    function startGame() {
+        flagForOptions = 0;
+        startButton.textContent = "Start Game";
+        startButton.classList.remove("reset-button");
+        startButton.classList.add("start-button");
+        flag = 0;
+        questionBox.textContent = "--";
+        optionA.textContent = "--";
+        optionB.textContent = "--";
+        optionC.textContent = "--";
+        optionD.textContent = "--";
+        score.textContent = "--";
+        resetOptionClassList();
+        tryAgainSection.classList.add("notification-display-none");
+        tryAgainSection.classList.remove("tryAgainSection");
+    }
+    // OptionSelection and score update
+    // each right answer = 10 score
+
+    function resetOptionClassList() {
+        optionA.classList.remove("right");
+        optionA.classList.remove("wrong");
+        optionB.classList.remove("right");
+        optionB.classList.remove("wrong");
+        optionC.classList.remove("right");
+        optionC.classList.remove("wrong");
+        optionD.classList.remove("right");
+        optionD.classList.remove("wrong");
+    }
+
+    optionElement.addEventListener("click", e => {
+        //reset
+        resetOptionClassList();
+
+        // correct?
+        if (
+            e.target.textContent == firstNumber * secondNumber &&
+            flagForOptions == 1
+        ) {
+            e.target.classList.add("right");
+            scoreV += 10;
+            score.textContent = scoreV;
+            tryAgainSection.classList.add("notification-display-none");
+            tryAgainSection.classList.remove("tryAgainSection");
+            generateQuestion();
+        }
+
+        // wrong?
+        else if (
+            e.target.textContent != firstNumber * secondNumber &&
+            e.target.classList.value != "option" &&
+            flagForOptions == 1
+        ) {
+            e.target.classList.add("wrong");
+            tryAgainSection.classList.remove("notification-display-none");
+            tryAgainSection.classList.add("tryAgainSection");
+        }
+    });
+    </script>
+
+

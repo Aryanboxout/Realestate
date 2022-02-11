@@ -1,0 +1,290 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+<html>
+
+    <style>
+        h5 {
+            font-size: 24px;
+            color: black;
+        }
+
+        .filterDiv {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .container2 {
+            height: 50vh;
+            width: 50vh;
+            margin: 0rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 20px 20px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .btn:hover {
+            background-color: #ddd;
+        }
+
+        .btn.active {
+            background-color: #777777;
+            color: white;
+        }
+
+
+        .cell {
+            color: white;
+            font-size: 40px;
+            text-align: center;
+            padding: 5px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .cell-1 {
+            background: whitesmoke;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .cell-2 {
+            background: whitesmoke;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .cell-3 {
+            background: whitesmoke;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .cell-4 {
+            background: whitesmoke;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .card-body {
+            background: whitesmoke;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .card-title{
+        }
+        .card {
+            background: whitesmoke;
+            font-family: 'Ubuntu', sans-serif;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .collapsible {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .active2, .collapsible:hover {
+            background-color: #282828;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .collapsible:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .active2:after {
+            content: "\2212";
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .content {
+            padding: 0 0px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #282828;
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+        }
+    </style>
+
+    <h1 style = "color: white; position: relative; text-align: center; top: 24px;">Study Flash Cards</h1>
+    <h2 style = "color: white; position: relative; left: 300px; top: 32px;">Filter Difficulty:</h2>
+    <div id="myBtnContainer" style = "white-space: nowrap; position: relative; text-align: center; top: -14px;" >
+        <button class="btn" onclick="filterSelection('All')" style = "color: #111B2D;"> Show All</button>
+        <button class="btn" onclick="filterSelection('Beginner')" style = "color: #111B2D;">Beginner</button>
+        <button class="btn" onclick="filterSelection('Intermediate')" style = "color: #111B2D;">Intermediate</button>
+        <button class="btn" onclick="filterSelection('Advanced')" style = "color: #111B2D;">Advanced</button>
+    </div>
+
+    <div class="container" style = "position: relative; text-align: center; top: 48px;">
+        <div class="container2">
+            <div class="filterDiv Beginner">
+                <div class="card" style="width: 24rem;"><div class="cell cell-1" style = "color: black;">Limits:
+                    <img src = "https://www.math-exercises.com/images/math-exercises/exercises/065%20Limit%20of%20a%20function%2001.png" alt="Greeting" width="370" height="300">
+                </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Beginner</h5>
+                        <button class="collapsible">Check Answers:</button>
+                        <div class="content">
+                            <img src = "https://www.math-exercises.com/images/math-exercises/answers/065%20Limit%20of%20a%20function%2001.png" alt="Greeting" width="350" height="280">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filterDiv Beginner">
+                <div class="card" style="width: 24rem;"><div class="cell cell-1" style = "color: black;">Derivatives:
+                    <img src = "https://www.math-exercises.com/images/math-exercises/exercises/066%20Derivative%20of%20a%20function%2003.png" alt="Greeting" width="370" height="300">
+                </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Beginner</h5>
+                        <button class="collapsible">Check Answers:</button>
+                        <div class="content">
+                            <img src = "https://www.math-exercises.com/images/math-exercises/answers/066%20Derivative%20of%20a%20function%2003.png" alt="Greeting" width="350" height="280">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filterDiv Intermediate">
+                <div class="card" style="width: 24rem;"><div class="cell cell-1" style = "color: black;">Indefinite Integrals:
+                <img src = "https://www.math-exercises.com/images/math-exercises/exercises/067%20Indefinite%20integral%20of%20a%20function%2007.png" alt="Greeting" width="370" height="300">
+                </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Intermediate</h5>
+                        <button class="collapsible">Check Answers:</button>
+                        <div class="content">
+                            <img src = "https://www.math-exercises.com/images/math-exercises/answers/067%20Indefinite%20integral%20of%20a%20function%2007.png" alt="Greeting" width="350" height="280">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filterDiv Intermediate">
+                <div class="card" style="width: 24rem;"><div class="cell cell-1" style = "color: black; font-size: 28px; padding: 11px;">Local Extrema of Functions:
+                    <img src = "https://www.math-exercises.com/images/math-exercises/exercises/077%20Local%20extrema%20of%20a%20function%2001.png" alt="Greeting" width="370" height="300">
+                </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Intermediate</h5>
+                        <button class="collapsible">Check Answers:</button>
+                        <div class="content">
+                            <img src = "https://www.math-exercises.com/images/math-exercises/answers/077%20Local%20extrema%20of%20a%20function%2001.png" alt="Greeting" width="350" height="340">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filterDiv Advanced">
+                <div class="card" style="width: 24rem;"><div class="cell cell-1" style = "color: black;">Definite Integrals:
+                    <img src = "https://www.math-exercises.com/images/math-exercises/exercises/068%20Definite%20integral%20of%20a%20function%2001.png" alt="Greeting" width="370" height="300">
+                </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Advanced</h5>
+                        <button class="collapsible">Check Answers:</button>
+                        <div class="content">
+                            <img src = "https://www.math-exercises.com/images/math-exercises/answers/068%20Definite%20integral%20of%20a%20function%2001.png" alt="Greeting" width="350" height="280">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script>
+        /* Flash Cards Dropdown */
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active2");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+
+        /* Topic Filter */
+        filterSelection("All")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "All") c = "";
+            for (i = 0; i < x.length; i++) {
+                RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+            }
+        }
+
+        function AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+            }
+        }
+
+        function RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function(){
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+{% endblock %}
+
+</html>
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}

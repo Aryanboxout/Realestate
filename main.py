@@ -10,6 +10,7 @@ from __init__ import app
 # from starter.starter import app_starter
 # from algorithm.algorithm import app_algorithm
 from app_crud import app_crud
+from app_attendance import app_attendance
 from app_vidhi import app_vidhi
 from app_saumya import app_saumya
 from app_arushi import app_arushi
@@ -22,27 +23,40 @@ from app_prisha import app_prisha
 # app.register_blueprint(app_starter)
 # app.register_blueprint(app_algorithm)
 app.register_blueprint(app_crud)
+app.register_blueprint(app_attendance)
 app.register_blueprint(app_vidhi)
 app.register_blueprint(app_saumya)
 app.register_blueprint(app_arushi)
 app.register_blueprint(app_prisha)
 # app.register_blueprint(app_y2022)
 
+
 # connects default URL of server to render kangaroos.html
-@app.route('/')
+@app.route('/home')
 def index():
     return render_template("index.html")
 
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    return render_template("login.html")
+@app.route('/snake', methods=['GET', 'POST'])
+def snake():
+    return render_template("snake.html")
 
+@app.route('/saumyaapi2', methods=['GET', 'POST'])
+def saumyaapi2():
 
-@app.route('/attendance', methods=['GET', 'POST'])
-def attendance():
-    return render_template("attendance.html")
+    url = "https://recipesapi2.p.rapidapi.com/recipes/tomato%20soup"
 
+    querystring = {"maxRecipes":"2"}
+
+    headers = {
+        'x-rapidapi-host': "recipesapi2.p.rapidapi.com",
+        'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    # return(response.text)
+    return render_template("api/saumyaapi2.html", stats=response.json())
 
 @app.route('/to_do_list', methods=['GET', 'POST'])
 def to_do_list():
@@ -76,7 +90,7 @@ def quiz():
     return render_template("quiz.html", name1="TechFish User")
 
 
-@app.route('/googlemap')
+@app.route('/googlemap/')
 def googlemap():
     return render_template("locations.html")
 
@@ -93,6 +107,14 @@ def phonestablets():
 @app.route('/contactus')
 def contactus():
     return render_template("contactus.html")
+
+@app.route('/tictactoe')
+def tictactoe():
+    return render_template("tic-tac-toe.html")
+
+@app.route('/contactothers')
+def contactothers():
+    return render_template("contactothers.html")
 
 @app.route('/desktopstvs')
 def desktopstvs():
@@ -128,10 +150,18 @@ def colors():
 def addition():
     return render_template("mini labs/addition.html")
 
+@app.route('/login')
+def login():
+    return render_template("login.html", user_authenticated=False)
 
 @app.route("/logicgates", methods=['GET', 'POST'])
 def logicgates():
     return render_template("mini labs/logicgates.html")
+
+
+@app.route('/')
+def home():
+    return render_template("home.html")
 
 
 @app.route('/joke', methods=['GET', 'POST'])
@@ -260,36 +290,12 @@ def saumyaapi():
     # return(response.text)
     return render_template("api/saumyaapi.html", stats=response.json())
 
-@app.route('/saumyaapi2', methods=['GET', 'POST'])
-def saumyaapi2():
-
-    url = "https://recipesapi2.p.rapidapi.com/recipes/tomato%20soup"
-
-    querystring = {"maxRecipes":"2"}
-
-    headers = {
-        'x-rapidapi-host': "recipesapi2.p.rapidapi.com",
-        'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
-    }
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-
-    # return(response.text)
-    return render_template("api/saumyaapi2.html", stats=response.json())
-
-
-
-
-
-
-
-
-
-
 
 @app.route('/calendar')
 def calendar():
     return render_template("calendar.html")
+
+
 
 
 
@@ -305,9 +311,12 @@ def aryansapi():
 
     response = requests.request("GET", url, headers=headers)
     return render_template("api/aryansapi.html", stats=response.json())
+
+
 @app.route('/asc', methods=['GET', 'POST'])
 def asc():
     return render_template("api/asc.html")
+
 
 @app.route('/studytimer', methods=['GET', 'POST'])
 def studytimer():
@@ -324,14 +333,24 @@ def crud():
     return render_template("crud.html")
 
 
+@app.route('/attendance', methods=['GET', 'POST'])
+def attendance():
+    return render_template("attendance.html")
+
+
+@app.route('/map', methods=['GET', 'POST'])
+def map():
+    return render_template("map.html")
+
+
+@app.route('/long_term', methods=['GET', 'POST'])
+def long_term():
+    return render_template("long_term.html")
+
+
 @app.route('/search', methods=['GET', 'POST'])
 def search():
     return render_template("search.html")
-
-
-@app.route('/realsearch', methods=['GET', 'POST'])
-def realsearch():
-    return render_template("realsearch.html")
 
 
 @app.route('/DNHSinformative', methods=['GET', 'POST'])
@@ -339,14 +358,33 @@ def DNHSinformative():
     return render_template("DNHSinformative.html")
 
 
-@app.route('/calendar', methods=['GET', 'POST'])
+@app.route('/calender', methods=['GET', 'POST'])
 def calender():
     return render_template("calendar.html")
 
-@app.route('/snake', methods=['GET', 'POST'])
-def snake():
-    return render_template("snake.html")
+@app.route('/chat')
+def chat():
+    return render_template("chat.html")
 
+@app.route('/results', methods=['GET', 'POST'])
+def results():
+    return render_template("results.html")
+
+@app.route('/google_searchbar')
+def google_searchbar():
+    return render_template("google_searchbar.html")
+
+@app.route('/pixel_art')
+def pixel_art():
+    return render_template("pixel_art.html")
+
+@app.route('/FlashCards')
+def FlashCards():
+    return render_template("FlashCards.html")
+
+@app.route('/mathquiz')
+def mathquiz():
+    return render_template("mathquiz.html")
 
 if __name__ == "__main__":
     app.run(debug=True, port=5222)

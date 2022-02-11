@@ -47,10 +47,14 @@
     #log{
     width: 300px;
     height: 30px;
+    text-align: center;
     border: none;
     border-radius: 17px;
     padding-left: 7px;
-    color: blue;
+    padding-top: 7px;
+    color: #08ffd1;
+    background-color: slategray;
+    position: relative;
 
 
     }
@@ -68,22 +72,20 @@
 <h2>Login Page</h2><br>
 <div class="login">
     <form id="login" method="get" action="login.php">
-        <label><b>User Name
-        </b>
-        </label>
+        <label><b>User Name</b></label>
+        <br><br>
         <input type="text" name="Uname" id="Uname" placeholder="Username">
         <br><br>
-        <label><b>Password
-        </b>
-        </label>
+        <label><b>Password</b></label>
+        <br><br>
         <input type="Password" name="Pass" id="Pass" placeholder="Password">
         <br><br>
-        <input type="button" name="log" id="log" value="Log In Here">
-        <br><br>
+        <a type="submit" name = "log" id="log" href = '/home' style = "left: -77px; top: 7px;">Log In Here</a>
+        <br><br><br>
         <input type="checkbox" id="check">
         <span>Remember me</span>
-        <br><br>
-        Forgot <a href="#">Password</a>
+        <br>
+        <p style = "color: white;">Forgot</p> <a style = "position: relative; left: -270px; top: -35px; background-color: transparent; color: #08ffd1" href="#">Password</a>
     </form>
 </div>
 </body>
