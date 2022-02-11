@@ -1,4 +1,5 @@
 """ database dependencies to support Users db examples """
+
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
 from flask_migrate import Migrate
@@ -20,20 +21,20 @@ Migrate(app, db)
 # -- a.) db.Model is like an inner layer of the onion in ORM
 # -- b.) Users represents data we want to store, something that is built on db.Model
 # -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL
-class Users(db.Model):
+class School(db.Model):
     # define the Users schema
     userID = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255), unique=False, nullable=False)
-    email = db.Column(db.String(255), unique=True, nullable=False)
-    password = db.Column(db.String(255), unique=False, nullable=False)
-    phone = db.Column(db.String(255), unique=False, nullable=False)
+    number = db.Column(db.String(255), unique=True, nullable=False)
+    teacher = db.Column(db.String(255), unique=False, nullable=False)
+    subject = db.Column(db.String(255), unique=False, nullable=False)
 
     # constructor of a User object, initializes of instance variables within object
-    def __init__(self, name, email, password, phone):
+    def __init__(self, name, number, teacher, subject):
         self.name = name
-        self.email = email
-        self.password = password
-        self.phone = phone
+        self.number = number
+        self.teacher = teacher
+        self.subject = subject
 
     # CRUD create/add a new record to the table
     # returns self or None on error
@@ -53,22 +54,22 @@ class Users(db.Model):
         return {
             "userID": self.userID,
             "name": self.name,
-            "email": self.email,
-            "password": self.password,
-            "phone": self.phone,
+            "number": self.number,
+            "teacher": self.teacher,
+            "subject": self.subject,
             "query": "by_alc"  # This is for fun, a little watermark
         }
 
     # CRUD update: updates users name, password, phone
     # returns self
-    def update(self, name, password="", phone=""):
+    def update(self, name, teacher="", subject=""):
         """only updates values with length"""
         if len(name) > 0:
             self.name = name
-        if len(password) > 0:
-            self.password = password
-        if len(phone) > 0:
-            self.phone = phone
+        if len(teacher) > 0:
+            self.teacher = teacher
+        if len(subject) > 0:
+            self.subject = subject
         db.session.commit()
         return self
 
@@ -89,14 +90,14 @@ def model_tester():
     print("--------------------------")
     db.create_all()
     """Tester data for table"""
-    u1 = Users(name='Thomas Edison', email='tedison@example.com', password='123toby', phone="1111111111")
-    u2 = Users(name='Nicholas Tesla', email='ntesla@example.com', password='123niko', phone="1111112222")
-    u3 = Users(name='Alexander Graham Bell', email='agbell@example.com', password='123lex', phone="1111113333")
-    u4 = Users(name='Eli Whitney', email='eliw@example.com', password='123whit', phone="1111114444")
-    u5 = Users(name='John Mortensen', email='jmort1021@gmail.com', password='123qwerty', phone="8587754956")
-    u6 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8587754956")
+    u1 = School(name='Thomas Edison', number='tedison@example.com', teacher='123toby', subject="1111111111")
+    u2 = School(name='Nicholas Tesla', number='ntesla@example.com', teacher='123niko', subject="1111112222")
+    u3 = School(name='Alexander Graham Bell', number='agbell@example.com', teacher='123lex', subject="1111113333")
+    u4 = School(name='Eli Whitney', number='eliw@example.com', teacher='123whit', subject="1111114444")
+    u5 = School(name='John Mortensen', number='jmort1021@gmail.com', teacher='123qwerty', subject="8587754956")
+    u6 = School(name='John Mortensen', number='jmort1021@yahoo.com', teacher='123qwerty', subject="8587754956")
     # U7 intended to fail as duplicate key
-    u7 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8586791294")
+    u7 = School(name='John Mortensen', number='jmort1021@yahoo.com', teacher='123qwerty', subject="8586791294")
     table = [u1, u2, u3, u4, u5, u6, u7]
     for row in table:
         try:
@@ -104,19 +105,20 @@ def model_tester():
             db.session.commit()
         except IntegrityError:
             db.session.remove()
-            print(f"Records exist, duplicate email, or error: {row.email}")
+            print(f"Records exist, duplicate email, or error: {row.number}")
 
 
 def model_printer():
     print("------------")
     print("Table: users with SQL query")
     print("------------")
-    result = db.session.execute('select * from users')
+    result = db.session.execute('select * from school')
     print(result.keys())
     for row in result:
         print(row)
 
 
 if __name__ == "__main__":
-    model_tester()  # builds model of Users
+    model_tester()
+    # builds model of Users
     model_printer()

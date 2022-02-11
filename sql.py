@@ -1,4 +1,4 @@
-from __init__ import app
+from __init__ import db
 from model import Users
 import random
 
