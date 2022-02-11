@@ -108,6 +108,10 @@ def phonestablets():
 def contactus():
     return render_template("contactus.html")
 
+@app.route('/tictactoe')
+def tictactoe():
+    return render_template("tic-tac-toe.html")
+
 @app.route('/contactothers')
 def contactothers():
     return render_template("contactothers.html")
