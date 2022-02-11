@@ -9,6 +9,68 @@
         background-color: cadetblue;
     }
     </style>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        li {
+            position: relative;
+            padding: 0 20px;
+            height: 100%;
+            display: flex;
+        }
+        a {
+            z-index: 1;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 10px 5px;
+        }
+        li::before {
+            content: "";
+            position: absolute;
+            height: 33.3%;
+            width: 0;
+            background-color: goldenrod;
+            right: 0;
+            z-index: 0;
+            top: 33.33%;
+            transition: all 0.5s;
+        }
+        li::after {
+            content: "";
+            position: absolute;
+            height: 33.3%;
+            width: 0;
+            background-color: goldenrod;
+            left: 0;
+            z-index: 0;
+            bottom: 0;
+            transition: all 0.5s;
+        }
+        a::before {
+            position: absolute;
+            content: "";
+            height: 33.3%;
+            width: 0;
+            background-color: goldenrod;
+            bottom: 130%;
+            left: 0;
+            transition: all 0.5s;
+        }
+        li:hover:before,
+        li:hover::after,
+        li:hover a::before{
+            width: 100%;
+        }
+    </style>
 
     <div class="center-block" style="margin: 2% 5% 5%; text-align:center;">
         <body>
@@ -36,16 +98,21 @@
             <iframe width="1200" height="700" src="https://docs.google.com/document/d/16o3o5L5B4DmtTVELuLkJn74eIoZSZdqsb6bwgiK-lzw/edit?usp=sharing" title="Trimester 1 Personal Journal" frameborder="8"></iframe>
 
             <h4> Commits and Issues</h4>
+            <li>
             <a href="https://github.com/arushi10/codefish/commits?author=PrishaB" >
                 <button type="button" class="btn btn-info">Commits</button>
             </a>
+            </li>
+            <li>
             <a href="https://github.com/arushi10/codefish/issues/assigned/PrishaB" >
                 <button type="button" class="btn btn-info">Issues</button>
             </a>
-
+            </li>
+            <li>
             <a href="https://docs.google.com/document/d/19xqpdJ8wg1uiUlmnDK7WFyWfZSM4K9RTFYAZ4WzmNBg/edit?usp=sharing" >
                 <button type="button" class="btn btn-info">Create Task</button>
             </a>
+            </li>
     <h1> Covid-19 API</h1>
             <style>
                         table, td, th {

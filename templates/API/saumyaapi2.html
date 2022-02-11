@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    {% set Data = stats.data %}
+
+    <head>
+        <style>
+            body, html {
+                background-color: midnightblue;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="center-block" style="margin: 2% 5% 5%; font-family: 'Arial Rounded MT Bold'">
+        <!-- Title -->
+        <div class="col-12" style="text-align: center;">
+            <h3><strong>Daily Recipes</strong></h3>
+            <form action={{url_for('saumyaapi2')}}>
+                <button>Refresh!</button>
+            </form>
+        </div>
+        <!-- Sequence -->
+        <div class="col-20" style="text-align: left; ">
+            <table class="table">
+                <tbody>
+                <thead>
+                <tr>
+                    <th>Name </th>
+                    <th> Ingredients </th>
+                    <th>Instructions  </th>
+                </thead>
+                <tbody>
+                <tr>
+                    <div class="col-12" style="text-align: left; ">
+                        {% for info in Data %}
+                            <tr>
+                                <td> {{info.name}} </td>
+                                <td> {{info.ingredients}} </td>
+                                <td> {{info.instructions}} </td>
+                            </tr>
+                        {% endfor %}
+            </table>
+        </div>
+
+    </div>
+    <style>
+        table, td, th {
+        {#border: 1px solid var(--dblue);#}
+        }
+        td, th {
+            text-align:left;
+        }
+    </style>
+    </div>
+
+{% endblock %}
+
