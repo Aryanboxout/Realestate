@@ -17,7 +17,7 @@ from app_prisha import app_prisha
 # from y2022 import app_y2022
 
 # # create a Flask instance
-app = Flask(__name__)
+# app = Flask(__name__)
 
 # app.register_blueprint(app_starter)
 # app.register_blueprint(app_algorithm)
@@ -32,6 +32,11 @@ app.register_blueprint(app_prisha)
 @app.route('/')
 def index():
     return render_template("index.html")
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    return render_template("login.html")
 
 
 @app.route('/attendance', methods=['GET', 'POST'])
@@ -88,10 +93,6 @@ def phonestablets():
 @app.route('/contactus')
 def contactus():
     return render_template("contactus.html")
-
-@app.route('/contactothers')
-def contactothers():
-    return render_template("contactothers.html")
 
 @app.route('/desktopstvs')
 def desktopstvs():
@@ -259,12 +260,36 @@ def saumyaapi():
     # return(response.text)
     return render_template("api/saumyaapi.html", stats=response.json())
 
+@app.route('/saumyaapi2', methods=['GET', 'POST'])
+def saumyaapi2():
+
+    url = "https://recipesapi2.p.rapidapi.com/recipes/tomato%20soup"
+
+    querystring = {"maxRecipes":"2"}
+
+    headers = {
+        'x-rapidapi-host': "recipesapi2.p.rapidapi.com",
+        'x-rapidapi-key': "8d571b2f72msh44f8fd48e083624p19cce1jsnfb1e373c1716"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    # return(response.text)
+    return render_template("api/saumyaapi2.html", stats=response.json())
+
+
+
+
+
+
+
+
+
+
 
 @app.route('/calendar')
 def calendar():
     return render_template("calendar.html")
-
-
 
 
 
@@ -304,18 +329,24 @@ def search():
     return render_template("search.html")
 
 
+@app.route('/realsearch', methods=['GET', 'POST'])
+def realsearch():
+    return render_template("realsearch.html")
+
+
 @app.route('/DNHSinformative', methods=['GET', 'POST'])
 def DNHSinformative():
     return render_template("DNHSinformative.html")
 
 
-@app.route('/calender', methods=['GET', 'POST'])
+@app.route('/calendar', methods=['GET', 'POST'])
 def calender():
     return render_template("calendar.html")
 
-@app.route('/chat')
-def chat():
-    return render_template("chat.html")
+@app.route('/snake', methods=['GET', 'POST'])
+def snake():
+    return render_template("snake.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5222)
