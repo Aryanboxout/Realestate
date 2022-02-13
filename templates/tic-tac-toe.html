@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <div id = "level"></div>
     <meta charset="UTF-8">
     <title>Title</title>
+    <h1> Tic-Tac-Toe Modified </h1>
+    <style>
+        td{
+            height: 150px;
+            width: 150px;
+            border: 10px black solid;
+        }
+        html, body{
+            background-color: tan;
+        }
+        h1{
+            text-align: center;
+            font-family: "Garamond"
+        }
+
+    </style>
+    <script>
+        function placex() {
+            var id1 = document.getElementById('oned');
+            var idinner = id1.innerHTML
+            idinner.innerHTML = 'X'
+        }
+
+    </script>
+    <table align="center" id="easy">
+        <tr>
+            <td id="oned" onclick = placex()>1</td>
+            <td id="2">2</td>
+            <td id="3">3</td>
+        </tr>
+        <tr>
+            <td id="4">4</td>
+            <td id="5">5</td>
+            <td id="6">6</td>
+        </tr>
+        <tr>
+            <td id="7">7</td>
+            <td id="8">8</td>
+            <td id="9">9</td>
+        </tr>
+    </table>
+    <button type="button" id="restart" onclick="restartgame()">Restart Game</button>
+    <script>
+        function restartgame() {
+            location.reload();
+        }
+    </script>
     <script>
         var name = window.prompt("Enter your name: ");
         alert("Hello " + name + ". Welcome to Tic Tac Toe Modified!");
+        var difficulty = window.prompt("Enter the difficulty you would like to play at (Easy or Hard): ");
+        alert("Gearing game for " + difficulty + " difficulty... ")
+
     </script>
+{#    <script>#}
+{#        if (difficulty) = "Easy"#}
+{#        level = easy#}
+{##}
+{#    </script>#}
 </head>
 <body>
 
