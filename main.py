@@ -110,7 +110,7 @@ def contactus():
 
 @app.route('/tictactoe')
 def tictactoe():
-    return render_template("tic-tac-toe.html")
+    return render_template("tic-tac-toe(easylev).html")
 
 @app.route('/contactothers')
 def contactothers():
@@ -385,6 +385,11 @@ def FlashCards():
 @app.route('/mathquiz')
 def mathquiz():
     return render_template("mathquiz.html")
+
+@app.route('/tictactoeHARD')
+def tictactoeHARD():
+    return render_template("tic-tac-toeHARD.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5222)
