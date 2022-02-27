@@ -5,6 +5,10 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+<script>
+    var name = window.prompt("Enter your name: ");
+    alert("Hello " + name + ". Welcome to Tic Tac Toe Modified!");
+</script>
 <style>
     td {
         border: 2px solid;
@@ -86,8 +90,8 @@
     <div id="scoreplayer4">0</div>
 
 <script>
-    var scoreplayer1 = 0
-    var scoreplayer2 = 0
+    var scoreplayer1 = 0;
+    var scoreplayer2 = 0;
     var scoreboard;
     const player1 = '0';
     const player2 = 'X';
@@ -127,7 +131,7 @@ startGame();
         if(typeof scoreboard[square.target.id] == 'number') {
             turn(square.target.id, player1)
             {# just checks if a box still has a number meaning it hasn't been played in yet #}
-        if (!checkTie()) turn(spot2(), player2);
+        if (!checkTie()) turn(spot2(), player2); //if there is no tie -> tie is checked when all spots
         }
         // {# ^here, logs the id of whatever squre was clicked #}
 
@@ -206,10 +210,10 @@ startGame();
     }
 
     function checkTie() {
-        if (emptyS().length == 0) {
-            for (var i = 0; i < cells.length; i++) {
-                cells[i].style.backgroundColor = "purple";
-                cells[i].removeEventListener('click', turnClick, false);
+        if (emptyS().length == 0) { //no empty squares
+            for (var i = 0; i < cells.length; i++) { //if there is a tie - no empty squres -- equals 0 (goes through every cell and turns it purple)
+                cells[i].style.backgroundColor = "purple"; // cells.length is finding the number of cells on the whole -- if there is a tie (all
+                cells[i].removeEventListener('click', turnClick, false); //if there is a tie the user can't click anymore --> game is over --> color is changed and win message is displayed
                 {# for loop for tie; checks if there's no boxes left, and if not, turns them all green and enables inability to click more #}
             }
             if ((emptyS().length) == 0)
@@ -221,7 +225,6 @@ startGame();
         }
         return false;
     }
-
 </script>
 </body>
 </html>
