@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+    container {
+        border: 1px solid;
+        padding: 10px;
+        box-shadow: 5px 10px;
+    }
+    </style>
+
+
+<body>
+<section>
+    <div class="container">
+        <h>NUMBERHUB</h>
+        </BR>
+        <form >
+            <input type="number" placeholder="Enter a number">
+            <button type="submit">Submit</button>
+        </form>
+        <div class="number-fact">Give a number and I will tell you a interesting fact and if it is even or odd and if it's prime or not.</div>
+    </div>
+</section>
+
+
+
+
+</body>
+</html>
+
+
+<script>
+
+
+    function evenodd(x){
+        let remainder= (x % 2)
+        let evodd;
+        if (remainder == 0) {
+            evodd = "even";
+        } else {
+            evodd = "odd";
+        }
+        alert(evodd)
+
+    }
+
+
+    function prime(y){
+let res;
+        if (y == 1) {
+           alert("neither prime or composite")
+        }
+
+        else;
+        if (y < 1) {
+            alert("not prime")
+        } else {
+
+            for (let i = 2; i < y; i++) {
+
+                if (y % i == 0) {
+                   res = y+" It is not prime"
+
+                } else {
+                    res = y+" is a prime number"
+
+                }
+            }
+            alert(res)
+        }
+
+
+    }
+
+    const form = document.querySelector('form');
+    const factDiv = document.querySelector('.number-fact');
+
+    form.addEventListener('submit', (e) =>  {
+
+
+        const number = e.target.querySelector('input[type="number"]').value;
+       prime(number);
+        evenodd(number)
+        e.preventDefault();
+        const loadText ="loading";
+        factDiv.innerHTML = loadText;
+
+        fetch("https://numbersapi.p.rapidapi.com/"+number+"/math?fragment=true&json=true", {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "numbersapi.p.rapidapi.com",
+                "x-rapidapi-key": "d662d2483fmshf46709c9dffc32dp1c40d9jsn5fe886aec79f"
+            }
+        })
+            .then(response => response.text())
+            .then(text => factDiv.innerHTML = text);
+
+
+    })
+</script>

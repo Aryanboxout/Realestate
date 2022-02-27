@@ -377,6 +377,13 @@ def pixel_art():
 @app.route('/FlashCards')
 def FlashCards():
     return render_template("FlashCards.html")
+@app.route('/numb')
+def numb():
+    return render_template("numb.html")
+
+@app.route('/Numbers')
+def Numbers():
+    return render_template("Numbers.html")
 
 @app.route('/mathquiz')
 def mathquiz():
@@ -384,4 +391,5 @@ def mathquiz():
 
 if __name__ == "__main__":
     app.run(debug=True, port=5222)
+
 
