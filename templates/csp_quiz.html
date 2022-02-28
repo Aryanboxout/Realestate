@@ -1,0 +1,194 @@
+{% extends "layouts/base.html" %}
+{% set project = "CSP Quiz" %}
+{% block body %}
+
+    {#    header#}
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:center;">
+        <html class="col-12">
+        <h1 style = "color: white;">CSP Quiz</h1>
+        </html>
+    </div>
+
+    {#table formatting#}
+    <style>
+
+        table, th, td {
+            border: 0.3px solid black;
+            color: black;
+            background-color: white;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        td {
+            height: 37px;
+        }
+
+        .ColumnType1 {
+            background-color: lightgray;
+            text-align: center;
+        }
+
+    </style>
+
+{#    <h2>Score:</h2>#}
+{#    <h2 id="score"> 0 </h2>#}
+
+    {#table column headings#}
+    <table id="table"></table>
+    <table style="width:100%;">
+        <tr style = "height: 40px;">
+            <th style="background-color: dodgerblue; color: white; text-align: center;">Question Number</th>
+            <th style="background-color: dodgerblue; color: white; text-align: center;">Question</th>
+            <th style="background-color: dodgerblue; color: white; text-align: center;">Answer</th>
+        </tr>
+        <tr>
+            <td class = "ColumnType1">1</td>
+            <td> A class is a blueprint </td>
+            <td>
+                <button type="submit" id="truee" onclick="truee()">True</button>
+                <button type="submit" id="falsee" onclick="falsee()">False</button>
+{#                <input type="checkbox" id=a name="input1" value=true>#}
+{#                <label for=a><p>True</p></label>#}
+{#                <input type="checkbox" id=b name="input2" value=true>#}
+{#                <label for=b><p>False</p></label>#}
+            </td>
+        </tr>
+{#        <tr>#}
+{#            <td class = "ColumnType1">2</td>#}
+{#            <td id="question2"> </td>#}
+{#            <td>#}
+{#                <input type="checkbox" id=c name="input3" value=true>#}
+{#                <label for=c><p>True</p></label>#}
+{#                <input type="checkbox" id=d name="input4" value=true>#}
+{#                <label for=d><p>False</p></label>#}
+{#            </td>#}
+{#        </tr>#}
+{#        <tr>#}
+{#            <td class = "ColumnType1">3</td>#}
+{#            <td id="question3"> </td>#}
+{#            <td>#}
+{#                <input type="checkbox" id=e name="input5" value=true>#}
+{#                <label for=e><p>True</p></label>#}
+{#                <input type="checkbox" id=f name="input6" value=true>#}
+{#                <label for=f><p>False</p></label>#}
+{#            </td>#}
+{#        </tr>#}
+{#        <tr>#}
+{#            <td class = "ColumnType1">4</td>#}
+{#            <td id="question4"> </td>#}
+{#            <td>#}
+{#                <input type="checkbox" id=g name="input7" value=true>#}
+{#                <label for=g><p>True</p></label>#}
+{#                <input type="checkbox" id=h name="input8" value=true>#}
+{#                <label for=h><p>False</p></label>#}
+{#            </td>#}
+{#        </tr>#}
+{#        <tr>#}
+{#            <td class = "ColumnType1">5</td>#}
+{#            <td id="question5"> </td>#}
+{#            <td>#}
+{#                <input type="checkbox" id=i name="input9" value=true>#}
+{#                <label for=i><p>True</p></label>#}
+{#                <input type="checkbox" id=j name="input10" value=true>#}
+{#                <label for=j><p>False</p></label>#}
+{#            </td>#}
+{#        </tr>#}
+    </table>
+
+{#    <button type="submit" id="submit" onclick="calculateScore()">Submit</button>#}
+
+    <script>
+
+    function showQuiz(){
+        var questionArray = ["Question 1", "Question 2", "Question 3", "Question 4", "Question 5"]
+        var answerArray = [true, false, false, true, true]
+        score = 0;
+        {#document.getElementById("score").innerHTML = score;#}
+        {#var answerArray = [#}
+        {#    {"id": 1, "value": true},#}
+        {#    {"id": 2, "value": false},#}
+        {#    {"id": 3, "value": true},#}
+        {#    {"id": 4, "value": true},#}
+        {#    {"id": 5, "value": true}#}
+        {#];#}
+
+
+        {#document.getElementById("question1").innerHTML = questionArray[0];#}
+        {#document.getElementById("question2").innerHTML = questionArray[1];#}
+        {#document.getElementById("question3").innerHTML = questionArray[2];#}
+        {#document.getElementById("question4").innerHTML = questionArray[3];#}
+        {#document.getElementById("question5").innerHTML = questionArray[4];#}
+
+        {#let input1 = document.getElementById('a').checked;#}
+        {#let input2 = document.getElementById('b').checked;#}
+        {#let input3 = document.getElementById('c').checked;#}
+        {#let input4 = document.getElementById('d').checked;#}
+        {#let input5 = document.getElementById('e').checked;#}
+        {#let input6 = document.getElementById('f').checked;#}
+        {#let input7 = document.getElementById('g').checked;#}
+        {#let input8 = document.getElementById('h').checked;#}
+        {#let input9 = document.getElementById('i').checked;#}
+        {#let input10 = document.getElementById('j').checked;#}
+
+        {#let andResult = input1 && input2;#}
+        {#let nandResult = !(input1 && input2);#}
+        {#let ans1 = input1;#}
+        {#let ans2 = input2;#}
+
+        {#altScore(score);#}
+        {##}
+        {#let altScore = function(caculateScore){#}
+        {#    score.innerHTML = String(calculateScore);#}
+        {#function calculateScore(){#}
+        {#    score = 0;#}
+        {#    if (input1){#}
+        {#        score = score + 1;#}
+        {#    }#}
+        {#    else{#}
+        {#        score = score;#}
+        {#    }#}
+        {#    window.alert("hi");#}
+                {#for (let row = 0; row < 5;) {#}
+            {#input1.addEventListener('change', e => {#}
+            {#        if (e.target.checked) {#}
+            {#            score = score + 1;#}
+            {#        }#}
+            {#        });#}
+            {#input4.addEventListener('change', e => {#}
+            {#    if (e.target.checked) {#}
+            {#        score = score + 1;#}
+            {#    }#}
+
+            {#input5.addEventListener('change', e => {#}
+            {#    if (e.target.checked) {#}
+            {#        score = score + 1;#}
+            {#    }#}
+
+            {#input6.addEventListener('change', e => {#}
+            {#    if (e.target.checked) {#}
+            {#        score = score + 1;#}
+            {#    }#}
+
+            {#input8.addEventListener('change', e => {#}
+            {#    if (e.target.checked) {#}
+            {#        score = score + 1;#}
+            {#    }#}
+                        {#row = row + 1;#}
+                    {#    row = row + 1;#}
+        }
+
+        {#displayScore();#}
+
+    function truee(){
+        score = score + 1;
+        window.alert(score);
+    }
+
+    function falsee(){
+        score = 0;
+        window.alert(score);
+    }
+    showQuiz();
+    </script>
+
+{% endblock %}

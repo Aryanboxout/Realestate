@@ -341,6 +341,16 @@ def attendance():
     return render_template("attendance.html")
 
 
+@app.route('/csp_quiz', methods=['GET', 'POST'])
+def csp_quiz():
+    return render_template("csp_quiz.html")
+
+
+@app.route('/csp_quiz2', methods=['GET', 'POST'])
+def csp_quiz2():
+    return render_template("csp_quiz2.html")
+
+
 @app.route('/map', methods=['GET', 'POST'])
 def map():
     return render_template("map.html")
