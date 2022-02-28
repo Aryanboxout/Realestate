@@ -6,37 +6,6 @@
 
 </head>
 <style>
-    html, body{
-    {#background-color: tan;#}
-    }
-    h1{
-        text-align: center;
-        font-family: "Garamond"
-    }
-
-    .scores {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        color: indigo;
-        font-family: 'Leelawadee UI', "Times New Roman" ;
-    }
-    .scoreboardplayer1 {
-        padding:10px;
-        text-align: center;
-    }
-    .scoreboardplayer2 {
-        padding: 10px;
-        text-align: center;
-    }
-    .scoreplayer3 {
-        padding: 10px;
-        text-align: center;
-    }
-    .scoreplayer4 {
-        padding: 10px;
-        text-align: center;
-    }
-
     td {
         border: 2px solid;
         height: 100px;
@@ -133,18 +102,17 @@
 
 <div class="scores">
     <div class="scoreboardplayer1">Player 1</div>
-    <div class="scoreboardplayer2">Computer</div>
-<div>
-
-</div>
-    <div class="scoreplayer3">0</div>
-    <div class="scoreplayer4">0</div>
+    <div class="scoreboardplayer2">Player 2</div>
+    <div id="scoreplayer3">0</div>
+    <div id="scoreplayer4">0</div>
 
 
 <script src="script.js"></script>
 
 
 <script>
+    var scoreplayer3 = 0;
+    var scoreplayer4 = 0;
     var scoreboard;
     const player1 = '0';
     const player2 = 'X';
@@ -240,6 +208,12 @@
             {#if ((gameWon.index) = "orange")#}
             {#    alert("great job player 1!");#}
         }
+        if ((gameWon.player) == player1)
+            scoreplayer3 = scoreplayer3 + 1
+        else
+            scoreplayer4 = scoreplayer4 + 1
+        document.getElementById("scoreplayer3").innerHTML = scoreplayer3;
+        document.getElementById("scoreplayer4").innerHTML = scoreplayer4;
         {# highlights the winning combination blue or orange based on the player that won #}
         declareWinner(gameWon.player == player1 ? "You win!" : "You lose.");
     }
@@ -267,6 +241,9 @@
                 cells[i].removeEventListener('click', turnClick, false);
                 {# for loop for tie; checks if there's no boxes left, and if not, turns them all green and enables inability to click more #}
             }
+            if ((emptyS().length) == 0)
+                scoreplayer3 = scoreplayer3 + 1
+                scoreplayer4 = scoreplayer4 + 1
             declareWinner("Tie Game!")
             return true;
             {# simply declares a tie #}

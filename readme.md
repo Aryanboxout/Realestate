@@ -14,7 +14,7 @@ This is helpful to new teachers who might want to reference things about our sch
   - [Week 11](https://github.com/arushi10/codefish#week-0)
   - [Week 10](https://github.com/arushi10/codefish#week-0)
   - [Week 9](https://github.com/arushi10/codefish#week-0)
-  - [Week 8](https://github.com/arushi10/codefish#week-0)
+  - [Week 8](#eight)
   - [Week 7](https://github.com/arushi10/codefish#week-0)
   - [Week 6](https://github.com/arushi10/codefish#week-0)
   - [Week 5](#five)
@@ -32,6 +32,10 @@ This is helpful to new teachers who might want to reference things about our sch
 | Vidhi | VidhiKulkarni | [@VidhiKulkarni](https://github.com/VidhiKulkarni) | [Issues](https://github.com/arushi10/codefish/issues/assigned/VidhiKulkarni) | [Journal](https://drive.google.com/drive/folders/1pPq0Z7uad7MY3NJkkuK4iWQqUds9fYDI?usp=sharing) | [Commits](https://github.com/arushi10/codefish/commits?author=VidhiKulkarni) |
 | Arushi | arushi10 | [@arushi10](https://github.com/arushi10) | [Issues](https://github.com/VidhiKulkarni/flask_portfolio/issues?q=is%3Aopen+assignee%3Aarushi10) | [Journal](https://drive.google.com/drive/folders/1pPq0Z7uad7MY3NJkkuK4iWQqUds9fYDI?usp=sharing) | [Commits](https://github.com/arushi10/codefish/commits?author=arushi10) |
 | Aryan | Aryanboxout | [@Aryanboxout](https://github.com/Aryanboxout) | [Issues](https://github.com/VidhiKulkarni/flask_portfolio/issues?q=is%3Aopen+assignee%3AAryanboxout) | [Journal](https://drive.google.com/drive/folders/1pPq0Z7uad7MY3NJkkuK4iWQqUds9fYDI?usp=sharing) | [Commits](https://github.com/arushi10/codefish/commits?author=Aryanboxout) |
+
+## Week 8 <a id="eight" name="eight"></a>
+Crossover Team collaboration
+[Link to Review Ticket](https://github.com/arushi10/codefish/projects/1#card-77329212)
 
 ## Week 5 <a id="five" name="five"></a>
 Attendance Page with database, Github Page, Calendar, CSS/Bootstrap, search bar, blueprint, deployment, Fetch
