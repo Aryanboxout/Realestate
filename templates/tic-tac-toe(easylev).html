@@ -128,7 +128,9 @@
             [1,4,7],
             [2,5,8],
             [0,4,8],
-            [6,4,2]
+            [6,4,2],
+            [6,7,8],
+            [2,4,6]
         ]
         // {# array full of arrays; all possible winning combinations #}
         const cells = document.querySelectorAll('.cell');
@@ -210,6 +212,7 @@
                 scoreplayer1 = scoreplayer1 + 1
             else
                 scoreplayer2 = scoreplayer2 + 1
+
             {#if ((gameWon.index) = player2)#}
             {#    scoreplayer2 = scoreplayer2 + 1#}
             document.getElementById("scoreplayer3").innerHTML = scoreplayer1;
