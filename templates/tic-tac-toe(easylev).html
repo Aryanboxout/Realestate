@@ -10,6 +10,9 @@
     alert("Hello " + name + ". Welcome to Tic Tac Toe Modified!");
 </script>
 <style>
+    html{
+        background-color:#0d6efd;
+    }
     td {
         border: 2px solid;
         height: 100px;
@@ -50,7 +53,29 @@
 
     .declareWinner {
         size: 50px;
-                       }
+    }
+
+    .scores {
+        display: grid;
+        {#top:-240px;#}
+        {#grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;#}
+        color: indigo;
+        font-family: 'Leelawadee UI', "Times New Roman" ;
+    }
+
+    .scoreboardplayer1 {
+        color:#f9fafb;
+    }
+    .scoreboardplayer2 {
+        color:#be98d7;
+    }
+    .scoreplayer3 {
+        color:#f9fafb;
+    }
+    .scoreplayer4 {
+        color:#be98d7;
+    }
+
 
 </style>
 <body>
@@ -59,23 +84,23 @@
         <td class="cell" id="0"></td>
         <td class="cell" id="1"></td>
         <td class="cell" id="2"></td>
-        </tr>
-        <tr>
+    </tr>
+    <tr>
         <td class="cell" id="3"></td>
         <td class="cell" id="4"></td>
         <td class="cell" id="5"></td>
-        </tr>
-        <tr>
+    </tr>
+    <tr>
         <td class="cell" id="6"></td>
         <td class="cell" id="7"></td>
         <td class="cell" id="8"></td>
-        </tr>
+    </tr>
 </table>
 
-    <div class="gameend">
-        <div class="text"></div>
-    </div>
-    <button onClick="startGame()">Reset</button>
+<div class="gameend">
+    <div class="text"></div>
+</div>
+<button onClick="startGame()">Reset</button>
 
 <script src="script.js"></script>
 
@@ -85,70 +110,70 @@
 
 <div class="scores">
     <div class="scoreboardplayer1">Player 1</div>
-    <div class="scoreboardplayer2">Player 2</div>
+    <div class="scoreboardplayer2">Computer</div>
     <div id="scoreplayer3">0</div>
     <div id="scoreplayer4">0</div>
 
-<script>
-    var scoreplayer1 = 0;
-    var scoreplayer2 = 0;
-    var scoreboard;
-    const player1 = '0';
-    const player2 = 'X';
-    const winCombos =[
-        [0,1,2],
-        [3,4,5],
-        [5,6,7],
-        [0,3,6],
-        [1,4,7],
-        [2,5,8],
-        [0,4,8],
-        [6,4,2]
-    ]
-    // {# array full of arrays; all possible winning combinations #}
-const cells = document.querySelectorAll('.cell');
-startGame();
-    // {# cells variable stores a reference to each cell/element with a class of cell #}
- function startGame() {
-        // {# just starts game #}
-        document.querySelector(".gameend").style.display = "none";
-        // {# modify css style; display property, to none, but it's alr set to none, but to make sure it stays at none when game is replayed #}
-        scoreboard = Array.from(Array(9).keys());
-        // {# fancy way of saying array is every number from 0 to 9 #}
-        for (var i = 0; i < cells.length; i++) {
-            // {# throughout game we'll have x's and o's but restarting should eliminated them ^ thus, for loop #}
-            cells[i].innerText='';
-            // {# nothing in the cell to begin #}
-            cells[i].style.removeProperty('background-color');
-            // {# we wanna remove bgcolor bc when someone wins we alr want to highlight combination but we want it to reset when game is reset#}
-            cells[i].addEventListener('click', turnClick, false);
-            // {# when someone clicks one of these boxes, turnclick is called #}
+    <script>
+        var scoreplayer1 = 0;
+        var scoreplayer2 = 0;
+        var scoreboard;
+        const player1 = '0';
+        const player2 = 'X';
+        const winCombos =[
+            [0,1,2],
+            [3,4,5],
+            [5,6,7],
+            [0,3,6],
+            [1,4,7],
+            [2,5,8],
+            [0,4,8],
+            [6,4,2]
+        ]
+        // {# array full of arrays; all possible winning combinations #}
+        const cells = document.querySelectorAll('.cell');
+        startGame();
+        // {# cells variable stores a reference to each cell/element with a class of cell #}
+        function startGame() {
+            // {# just starts game #}
+            document.querySelector(".gameend").style.display = "none";
+            // {# modify css style; display property, to none, but it's alr set to none, but to make sure it stays at none when game is replayed #}
+            scoreboard = Array.from(Array(9).keys());
+            // {# fancy way of saying array is every number from 0 to 9 #}
+            for (var i = 0; i < cells.length; i++) {
+                // {# throughout game we'll have x's and o's but restarting should eliminated them ^ thus, for loop #}
+                cells[i].innerText='';
+                // {# nothing in the cell to begin #}
+                cells[i].style.removeProperty('background-color');
+                // {# we wanna remove bgcolor bc when someone wins we alr want to highlight combination but we want it to reset when game is reset#}
+                cells[i].addEventListener('click', turnClick, false);
+                // {# when someone clicks one of these boxes, turnclick is called #}
+            }
         }
-    }
-    // {# defining turnclick function #}
-    // {# square passed in as click event #}
-    function turnClick(square) {
-        if(typeof scoreboard[square.target.id] == 'number') {
-            turn(square.target.id, player1)
-            {# just checks if a box still has a number meaning it hasn't been played in yet #}
-        if (!checkTie()) turn(spot2(), player2); //if there is no tie -> tie is checked when all spots
-        }
-        // {# ^here, logs the id of whatever squre was clicked #}
+        // {# defining turnclick function #}
+        // {# square passed in as click event #}
+        function turnClick(square) {
+            if(typeof scoreboard[square.target.id] == 'number') {
+                turn(square.target.id, player1)
+                {# just checks if a box still has a number meaning it hasn't been played in yet #}
+                if (!checkTie()) turn(spot2(), player2); //if there is no tie -> tie is checked when all spots
+            }
+            // {# ^here, logs the id of whatever squre was clicked #}
 
-    }
-    //defining turn function
-    function turn(squareId, player) {
-        scoreboard [squareId] = player;
-        document.getElementById(squareId).innerText = player;
-        let gameWon = checkWin(scoreboard, player)
-        {# passes in array and player #}
-        if (gameWon) gameOver(gameWon)
-        {# if game has been won, call gameover function #}
-    }
-    function checkWin(board, player) {
+        }
+        //defining turn function
+        function turn(squareId, player) {
+            scoreboard [squareId] = player;
+            document.getElementById(squareId).innerText = player;
+            let gameWon = checkWin(scoreboard, player)
+            {# passes in array and player #}
+            if (gameWon) gameOver(gameWon)
+            {# if game has been won, call gameover function #}
+        }
+        function checkWin(board, player) {
             {# fancy line coming up; basically looks at all the spots alr been played in #}
-        let plays = board.reduce((a, e, i) =>
-            (e === player) ? a.concat(i) : a, []);
+            let plays = board.reduce((a, e, i) =>
+                (e === player) ? a.concat(i) : a, []);
             {# reduce method: goes through element method of the board and give back a value#}
             {# accumulator: value at the end #}
             {# initializing accumulator into a single array #}
@@ -156,16 +181,16 @@ startGame();
             {# i is the index #}
             {# if the element equals the player, we're going to add the index of the array #}
             {# if the e is NOT the player, we will return the accumulator with NO CONCATENATION  #}
-        let gameWon = null;
+            let gameWon = null;
             {# for loop to check if game HAS been won #}
             {# referencing win combos #}
 
-        for (let [index, win] of winCombos.entries()) {
+            for (let [index, win] of winCombos.entries()) {
                 {# wincombos of entries gets the index and the win --> ex: index 0, with 0,1,2 #}
-            if (win.every(elem => plays.indexOf(elem) > -1)) {
+                if (win.every(elem => plays.indexOf(elem) > -1)) {
                     {# LOOKS VERY COMPLICATED. IS JUST SAYING that ever element in the win ex 0,1,2, we're checking if the plays or places which have been played on the boards..we're checking if the index of the element is more than -1.#}
                     {# has the player played in every spot that counts as a win for that win? basically loops through the combos. Has 0,1,2 been played? 3,4,5? etc.#}
-                gameWon = {index: index, player: player};
+                    gameWon = {index: index, player: player};
                     {# we know which win combo and which player has one #}
                     break;
                 }
@@ -193,38 +218,39 @@ startGame();
             declareWinner(gameWon.player == player1 ? "You win!" : "You lose.");
         }
 
-    function declareWinner(who) {
-        document.querySelector(".gameend").style.display = "block";
-        document.querySelector(".gameend .text").innerText = who;
-    }
-    {# identifies who based on selection so endgame function knows how to proceed #}
-
-    function emptyS() {
-        return scoreboard.filter(s => typeof s == 'number');
-    }
-
-    function spot2() {
-        return emptyS()[0];
-
-        {# first filters board of those with a number bc lack of number means box has been played (has an x or an o) and thus that returns 0 #}
-    }
-
-    function checkTie() {
-        if (emptyS().length == 0) { //no empty squares
-            for (var i = 0; i < cells.length; i++) { //if there is a tie - no empty squres -- equals 0 (goes through every cell and turns it purple)
-                cells[i].style.backgroundColor = "purple"; // cells.length is finding the number of cells on the whole -- if there is a tie (all
-                cells[i].removeEventListener('click', turnClick, false); //if there is a tie the user can't click anymore --> game is over --> color is changed and win message is displayed
-                {# for loop for tie; checks if there's no boxes left, and if not, turns them all green and enables inability to click more #}
-            }
-            if ((emptyS().length) == 0)
-                scoreplayer1 = scoreplayer1 + 1
-                scoreplayer2 = scoreplayer2 + 1
-            declareWinner("Tie Game!")
-            return true;
-            {# simply declares a tie #}
+        function declareWinner(who) {
+            document.querySelector(".gameend").style.display = "block";
+            document.querySelector(".gameend .text").innerText = who;
         }
-        return false;
-    }
-</script>
+        {# identifies who based on selection so endgame function knows how to proceed #}
+
+        function emptyS() {
+            return scoreboard.filter(s => typeof s == 'number');
+        }
+
+        function spot2() {
+            return emptyS()[0];
+
+            {# first filters board of those with a number bc lack of number means box has been played (has an x or an o) and thus that returns 0 #}
+        }
+
+        function checkTie() {
+            if (emptyS().length == 0) { //no empty squares
+                for (var i = 0; i < cells.length; i++) { //if there is a tie - no empty squres -- equals 0 (goes through every cell and turns it purple)
+                    cells[i].style.backgroundColor = "purple"; // cells.length is finding the number of cells on the whole -- if there is a tie (all
+                    cells[i].removeEventListener('click', turnClick, false); //if there is a tie the user can't click anymore --> game is over --> color is changed and win message is displayed
+                    {# for loop for tie; checks if there's no boxes left, and if not, turns them all green and enables inability to click more #}
+                }
+                if ((emptyS().length) == 0)
+                    scoreplayer1 = scoreplayer1 + 1
+                scoreplayer2 = scoreplayer2 + 1
+                declareWinner("Tie Game!")
+                return true;
+                {# simply declares a tie #}
+            }
+            return false;
+        }
+    </script>
+</div>
 </body>
 </html>
