@@ -15,6 +15,8 @@ from app_vidhi import app_vidhi
 from app_saumya import app_saumya
 from app_arushi import app_arushi
 from app_prisha import app_prisha
+from app_aryan import app_aryan
+
 # from y2022 import app_y2022
 
 # # create a Flask instance
@@ -28,6 +30,7 @@ app.register_blueprint(app_vidhi)
 app.register_blueprint(app_saumya)
 app.register_blueprint(app_arushi)
 app.register_blueprint(app_prisha)
+app.register_blueprint(app_aryan)
 # app.register_blueprint(app_y2022)
 
 
@@ -260,15 +263,15 @@ def AboutUs():
 #     return render_template("about us/prisha.html", name1="TechFish User")
 
 
-@app.route('/aryan/', methods=['GET', 'POST'])
-def aryan():
+#@app.route('/aryan/', methods=['GET', 'POST'])
+#def aryan():
     # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("about us/aryan.html", name1=name)
+ #   if request.form:
+  #      name = request.form.get("name")
+   #     if len(name) != 0:  # input field has content
+    #        return render_template("about us/aryan.html", name1=name)
     # starting and empty input default
-    return render_template("about us/aryan.html", name1="TechFish User")
+    #return render_template("about us/aryan.html", name1="TechFish User")
 
 @app.route('/saumyaapi', methods=['GET', 'POST'])
 def saumyaapi():
